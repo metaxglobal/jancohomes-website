@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+/* 
+  Global styles for Janco Home & Construction
+  Design tokens are defined in tailwind.config.ts
+*/
+
+@theme {
+  /* Primary Brand Color */
+  --color-primary: #7cb342;
+  --color-primary-50: #f1f8e9;
+  --color-primary-100: #dcedc8;
+  --color-primary-200: #c5e1a5;
+  --color-primary-300: #aed581;
+  --color-primary-400: #9ccc65;
+  --color-primary-500: #7cb342;
+  --color-primary-600: #689f38;
+  --color-primary-700: #558b2f;
+  --color-primary-800: #33691e;
+  --color-primary-900: #1b5e20;
+
+  /* Secondary Color (Dark) */
+  --color-secondary: #1a1a1a;
+  --color-secondary-support: rgb(26 26 26 / 0.75);
+
+  /* Background Colors */
+  --color-background-1: #e8e5dc;
+  --color-background-2: #d9d9d9;
+  --color-background-3: #f7f7f7;
+  --color-background-footer: #0b0b0a;
+
+  /* Base Colors */
+  --color-white-input: rgb(255 255 255 / 0.1);
+  --color-white-stroke: rgb(255 255 255 / 0.2);
+
+  /* Neutral */
+  --color-ash: #c2c2c2;
+
+  /* Semantic Colors */
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --color-error: #f44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* 1rem = 16px base */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
