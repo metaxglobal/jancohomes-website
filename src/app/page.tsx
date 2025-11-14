@@ -1,5 +1,8 @@
 import { MobileNav } from "@/components/features/MobileNav";
 import { Hero } from "@/components/features/Hero";
+import { About } from "@/components/features/About";
+import { Services } from "@/components/features/Services";
+import { Projects } from "@/components/features/Projects";
 
 export default function Home() {
   return (
@@ -14,6 +17,21 @@ export default function Home() {
         {/* Hero Section - Mobile */}
         <section className="md:hidden pt-[112px]">
           <Hero />
+        </section>
+
+        {/* About Section - Mobile */}
+        <section className="md:hidden">
+          <About />
+        </section>
+
+        {/* Services Section - Mobile */}
+        <section className="md:hidden">
+          <Services />
+        </section>
+
+        {/* Projects Section - Mobile */}
+        <section className="md:hidden">
+          <Projects />
         </section>
 
         {/* Desktop placeholder - will be built later */}
