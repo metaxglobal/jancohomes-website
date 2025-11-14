@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, Phone, Mail, ArrowDownRight, X } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Menu, X, Phone, Mail, ArrowDownRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -18,56 +17,57 @@ export function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <>
-      {/* Top Contact Bar */}
-      <div className="w-full bg-secondary border-b border-white-stroke">
-        <div className="px-4 py-2.5 flex items-center justify-end gap-6">
-          {/* Phone */}
-          <a
-            href="tel:+94777599299"
-            className="flex items-center gap-2 text-ash text-xs hover:text-white transition-colors"
-          >
-            <Phone size={12} strokeWidth={2} />
-            <span>+94 777 599 299</span>
-          </a>
+    <div className="relative">
+      {/* Fixed Top Section (Always Visible) */}
+      <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
+        {/* Top Contact Bar */}
+        <div className="w-full h-11 px-4 pb-px bg-secondary border-b border-white-stroke flex flex-col items-end justify-start">
+          <div className="w-full h-11 flex items-center justify-end gap-6">
+            {/* Phone */}
+            <a
+              href="tel:+94777599299"
+              className="flex items-center gap-2.25 h-4"
+            >
+              <Phone size={12} color="#C2C2C2" strokeWidth={1} />
+              <span className="text-ash text-xs font-normal leading-4">
+                +94 777 599 299
+              </span>
+            </a>
 
-          {/* Email */}
-          <a
-            href="mailto:info@janco.lk"
-            className="flex items-center gap-2 text-ash text-xs hover:text-white transition-colors"
-          >
-            <Mail size={12} strokeWidth={2} />
-            <span>info@janco.lk</span>
-          </a>
-        </div>
-      </div>
-
-      {/* Main Navigation Bar */}
-      <div className="w-full bg-secondary">
-        <div className="px-4 h-[68px] flex items-center justify-between">
-          {/* Logo */}
-          <div className="relative w-[49px] h-[47px]">
-            <Image
-              src="/janco-logo.svg"
-              alt="Janco Home & Construction"
-              width={49}
-              height={47}
-              priority
-            />
+            {/* Email */}
+            <a
+              href="mailto:info@janco.lk"
+              className="flex items-center gap-2.25 h-4"
+            >
+              <Mail size={12} color="#C2C2C2" strokeWidth={1} />
+              <span className="text-ash text-xs font-normal leading-4">
+                info@janco.lk
+              </span>
+            </a>
           </div>
+        </div>
+
+        {/* Main Navigation Bar */}
+        <div className="w-full h-[68px] px-4 bg-secondary flex items-center justify-between overflow-hidden">
+          {/* Logo */}
+          <Image
+            src="/janco-logo.svg"
+            alt="Janco Home & Construction"
+            width={49}
+            height={47}
+            priority
+            className="w-[49px] h-[47px]"
+          />
 
           {/* Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={cn(
-              "w-12 h-12 flex items-center justify-center rounded-lg transition-all",
-              "hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            )}
+            className="w-12 h-12 min-w-10 min-h-10 flex items-center justify-center rounded-[7px]"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
-              <X size={24} color="#FFFFFF" strokeWidth={2} />
+              <X size={24} color="#FFFFFF" strokeWidth={2.5} />
             ) : (
               <Menu size={24} color="#FFFFFF" strokeWidth={2} />
             )}
@@ -75,63 +75,61 @@ export function MobileNav() {
         </div>
       </div>
 
-      {/* Expanded Menu Overlay */}
+      {/* Expanded Menu Dropdown (Slides down from nav bar) */}
       <div
         className={cn(
-          "fixed inset-0 top-[112px] bg-secondary z-50 transition-all duration-300 ease-in-out",
-          isMenuOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full pointer-events-none"
+          "fixed top-[112px] left-0 right-0 bg-secondary transition-all duration-300 ease-in-out overflow-hidden",
+          isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <div className="px-4 pt-8 pb-8 flex flex-col items-center gap-6">
+        <div className="pt-8 pb-8 px-4 flex flex-col items-center gap-4">
           {/* Contact Info in Menu */}
-          <div className="flex flex-col items-center gap-3">
+          <div className="w-full max-w-[361px] flex flex-col items-center gap-3">
             <a
               href="tel:+94777599299"
-              className="flex items-center gap-2 text-ash text-xs hover:text-white transition-colors"
+              className="flex items-center gap-2.25 h-4"
             >
-              <Phone size={12} strokeWidth={2} />
-              <span>+94 777 599 299</span>
+              <Phone size={12} color="#C2C2C2" strokeWidth={1} />
+              <span className="text-ash text-xs font-normal leading-4">
+                +94 777 599 299
+              </span>
             </a>
             <a
               href="mailto:info@janco.lk"
-              className="flex items-center gap-2 text-ash text-xs hover:text-white transition-colors"
+              className="flex items-center gap-2.25 h-4"
             >
-              <Mail size={12} strokeWidth={2} />
-              <span>info@janco.lk</span>
+              <Mail size={12} color="#C2C2C2" strokeWidth={1} />
+              <span className="text-ash text-xs font-normal leading-4">
+                info@janco.lk
+              </span>
             </a>
           </div>
 
           {/* Navigation Links */}
-          <nav className="py-6 flex flex-col items-center gap-3">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className={cn(
-                  "py-2.5 px-4 text-white/90 text-sm font-normal uppercase",
-                  "hover:text-white hover:bg-white/5 rounded-lg transition-all"
-                )}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <div className="w-full py-6 flex flex-col items-center gap-8">
+            <nav className="flex flex-col items-center gap-3">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="w-[107px] h-11 py-2.5 flex items-center justify-center text-white/90 text-sm font-normal uppercase leading-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
 
-          {/* CTA Button */}
-          <Button
-            variant="primary"
-            className="px-5 py-2.5 rounded-xl flex items-center gap-2"
-          >
-            <span className="text-base font-medium">
-              Book a free consultation
-            </span>
-            <ArrowDownRight size={20} color="#FFFFFF" strokeWidth={1.5} />
-          </Button>
+            {/* CTA Button */}
+            <button className="px-5 py-2.5 bg-primary rounded-xl flex items-center justify-center gap-2">
+              <span className="text-white text-base font-medium leading-5">
+                Book a free consultation
+              </span>
+              <ArrowDownRight size={20} color="#FFFFFF" strokeWidth={1.5} />
+            </button>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
