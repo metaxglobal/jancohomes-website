@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Phone, Mail, ArrowDownRight } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  ArrowDownRight01Icon,
+  Mail01Icon,
+  CallingIcon,
+  MultiplicationSignIcon,
+  Menu03Icon,
+} from "@hugeicons/core-free-icons";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -26,9 +33,14 @@ export function MobileNav() {
             {/* Phone */}
             <a
               href="tel:+94777599299"
-              className="flex items-center gap-2.25 h-4"
+              className="flex items-center gap-[9px] h-4"
             >
-              <Phone size={12} color="#C2C2C2" strokeWidth={1} />
+              <HugeiconsIcon
+                icon={CallingIcon}
+                size={12}
+                color="#C2C2C2"
+                strokeWidth={1}
+              />
               <span className="text-ash text-xs font-normal leading-4">
                 +94 777 599 299
               </span>
@@ -37,9 +49,14 @@ export function MobileNav() {
             {/* Email */}
             <a
               href="mailto:info@janco.lk"
-              className="flex items-center gap-2.25 h-4"
+              className="flex items-center gap-[9px] h-4"
             >
-              <Mail size={12} color="#C2C2C2" strokeWidth={1} />
+              <HugeiconsIcon
+                icon={Mail01Icon}
+                size={12}
+                color="#C2C2C2"
+                strokeWidth={1}
+              />
               <span className="text-ash text-xs font-normal leading-4">
                 info@janco.lk
               </span>
@@ -67,19 +84,31 @@ export function MobileNav() {
             aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
-              <X size={24} color="#FFFFFF" strokeWidth={2.5} />
+              <HugeiconsIcon
+                icon={MultiplicationSignIcon}
+                size={24}
+                color="#C2C2C2"
+                strokeWidth={1.5}
+              />
             ) : (
-              <Menu size={24} color="#FFFFFF" strokeWidth={2} />
+              <HugeiconsIcon
+                icon={Menu03Icon}
+                size={24}
+                color="#C2C2C2"
+                strokeWidth={1.5}
+              />
             )}
           </button>
         </div>
       </div>
 
-      {/* Expanded Menu Dropdown (Slides down from nav bar) */}
+      {/* Expanded Menu Dropdown (Expands to full screen height) */}
       <div
         className={cn(
-          "fixed top-[112px] left-0 right-0 bg-secondary transition-all duration-300 ease-in-out overflow-hidden",
-          isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          "fixed top-[112px] left-0 right-0 bottom-0 bg-secondary transition-all duration-300 ease-in-out overflow-hidden",
+          isMenuOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-[-100%] pointer-events-none"
         )}
       >
         <div className="pt-8 pb-8 px-4 flex flex-col items-center gap-4">
@@ -87,18 +116,28 @@ export function MobileNav() {
           <div className="w-full max-w-[361px] flex flex-col items-center gap-3">
             <a
               href="tel:+94777599299"
-              className="flex items-center gap-2.25 h-4"
+              className="flex items-center gap-[9px] h-4"
             >
-              <Phone size={12} color="#C2C2C2" strokeWidth={1} />
+              <HugeiconsIcon
+                icon={CallingIcon}
+                size={12}
+                color="#C2C2C2"
+                strokeWidth={1}
+              />
               <span className="text-ash text-xs font-normal leading-4">
                 +94 777 599 299
               </span>
             </a>
             <a
               href="mailto:info@janco.lk"
-              className="flex items-center gap-2.25 h-4"
+              className="flex items-center gap-[9px] h-4"
             >
-              <Mail size={12} color="#C2C2C2" strokeWidth={1} />
+              <HugeiconsIcon
+                icon={Mail01Icon}
+                size={12}
+                color="#C2C2C2"
+                strokeWidth={1}
+              />
               <span className="text-ash text-xs font-normal leading-4">
                 info@janco.lk
               </span>
@@ -120,12 +159,19 @@ export function MobileNav() {
               ))}
             </nav>
 
-            {/* CTA Button */}
-            <button className="px-5 py-2.5 bg-primary rounded-xl flex items-center justify-center gap-2">
+            {/* CTA Button - Exact Figma Specs */}
+            <button className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary rounded-xl">
               <span className="text-white text-base font-medium leading-5">
                 Book a free consultation
               </span>
-              <ArrowDownRight size={20} color="#FFFFFF" strokeWidth={1.5} />
+              <div className="w-5 h-5 relative overflow-hidden">
+                <HugeiconsIcon
+                  icon={ArrowDownRight01Icon}
+                  size={20}
+                  color="white"
+                  strokeWidth={1.5}
+                />
+              </div>
             </button>
           </div>
         </div>
