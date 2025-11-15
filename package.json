@@ -9,8 +9,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
-    "prepare": "husky"
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,css}\""
   },
   "dependencies": {
     "@hugeicons/core-free-icons": "^1.2.1",
@@ -32,8 +31,6 @@
     "eslint-config-next": "16.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
     "tailwindcss": "^4",
     "typescript": "^5"

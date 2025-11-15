@@ -4,6 +4,8 @@ import { About } from "@/components/features/About";
 import { Services } from "@/components/features/Services";
 import { Projects } from "@/components/features/Projects";
 import { Testimonials } from "@/components/features/Testimonials";
+import { Blogs } from "@/components/features/Blogs";
+import { RealEstate } from "@/components/features/RealEstate";
 
 export default function Home() {
   return (
@@ -38,6 +40,16 @@ export default function Home() {
         {/* Testimonials Section - Mobile */}
         <section className="md:hidden">
           <Testimonials />
+        </section>
+
+        {/* Blogs Section - Mobile */}
+        <section className="md:hidden">
+          <Blogs />
+        </section>
+
+        {/* Real Estate Section - Mobile */}
+        <section className="md:hidden">
+          <RealEstate />
         </section>
 
         {/* Desktop placeholder - will be built later */}
