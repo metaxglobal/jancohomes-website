@@ -6,6 +6,7 @@ import { Projects } from "@/components/features/Projects";
 import { Testimonials } from "@/components/features/Testimonials";
 import { Blogs } from "@/components/features/Blogs";
 import { RealEstate } from "@/components/features/RealEstate";
+import InquiryForm from "@/components/features/InquiryForm";
 
 export default function Home() {
   return (
@@ -50,6 +51,11 @@ export default function Home() {
         {/* Real Estate Section - Mobile */}
         <section className="md:hidden">
           <RealEstate />
+        </section>
+
+        {/* Inquiry Form Section - Mobile */}
+        <section className="md:hidden">
+          <InquiryForm />
         </section>
 
         {/* Desktop placeholder - will be built later */}
