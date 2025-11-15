@@ -3,6 +3,7 @@ import { Hero } from "@/components/features/Hero";
 import { About } from "@/components/features/About";
 import { Services } from "@/components/features/Services";
 import { Projects } from "@/components/features/Projects";
+import { Testimonials } from "@/components/features/Testimonials";
 
 export default function Home() {
   return (
@@ -32,6 +33,11 @@ export default function Home() {
         {/* Projects Section - Mobile */}
         <section className="md:hidden">
           <Projects />
+        </section>
+
+        {/* Testimonials Section - Mobile */}
+        <section className="md:hidden">
+          <Testimonials />
         </section>
 
         {/* Desktop placeholder - will be built later */}
