@@ -55,7 +55,8 @@ function ServiceCard({ imagePath, title, width }: ServiceCardProps) {
 
 export function Services() {
   return (
-    <div className="w-full pt-[72px] pb-16 px-4 inline-flex flex-col items-center justify-start gap-8 sm:pt-[112px]">
+    <div className="w-full bg-white">
+      <div className="w-full max-w-[393px] mx-auto px-4 pt-[72px] pb-[64px] flex flex-col items-center justify-start gap-8">
       {/* Text Section */}
       <div className="self-stretch px-4 flex flex-col items-center justify-start gap-2">
         {/* Label */}
@@ -64,7 +65,7 @@ export function Services() {
         </div>
 
         {/* Heading and Description */}
-        <div className="w-[361px] flex flex-col items-center justify-start gap-3">
+        <div className="self-stretch flex flex-col items-center justify-start gap-3">
           {/* Title */}
           <div className="self-stretch text-center">
             <span className="text-secondary text-[40px] font-medium leading-9">
@@ -76,7 +77,7 @@ export function Services() {
           </div>
 
           {/* Description */}
-          <div className="w-[361px] text-center text-secondary/75 text-sm font-normal leading-[14px]">
+          <div className="self-stretch text-center text-secondary/75 text-sm font-normal leading-[14px]">
             With our proven track record of excellence, we are committed to
             creating strategic and innovative designing and construction
             solutions for our clients that match their unique lifestyles.
@@ -89,9 +90,9 @@ export function Services() {
       </div>
 
       {/* Services Cards Grid */}
-      <div className="flex flex-col items-start justify-start gap-6">
+      <div className="self-stretch flex flex-col items-start justify-start gap-6">
         {/* Row 1 */}
-        <div className="w-[361px] inline-flex items-start justify-start gap-5">
+        <div className="self-stretch inline-flex items-start justify-start gap-5">
           <ServiceCard
             imagePath="/services/Architectural Designing.png"
             title="Architectural Designing"
@@ -105,7 +106,7 @@ export function Services() {
         </div>
 
         {/* Row 2 */}
-        <div className="w-[361px] inline-flex items-start justify-start gap-5">
+        <div className="self-stretch inline-flex items-start justify-start gap-5">
           <ServiceCard
             imagePath="/services/Renovation.png"
             title="Renovation"
@@ -119,7 +120,7 @@ export function Services() {
         </div>
 
         {/* Row 3 */}
-        <div className="w-[361px] inline-flex items-start justify-start gap-5">
+        <div className="self-stretch inline-flex items-start justify-start gap-5">
           <ServiceCard
             imagePath="/services/Structural Designing.png"
             title="Structural Designing"
@@ -133,7 +134,7 @@ export function Services() {
         </div>
 
         {/* Row 4 */}
-        <div className="w-[361px] h-[210px] inline-flex items-start justify-start gap-5">
+        <div className="self-stretch h-[210px] inline-flex items-start justify-start gap-5">
           <ServiceCard
             imagePath="/services/Construction.png"
             title="Construction"
@@ -146,6 +147,7 @@ export function Services() {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 }

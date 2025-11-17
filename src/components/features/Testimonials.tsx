@@ -19,7 +19,7 @@ interface TestimonialCardProps {
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <div
-      className="w-full p-5 rounded-[22px] inline-flex flex-col items-start justify-center gap-2.5"
+      className="w-full p-5 rounded-[22px] inline-flex flex-col items-start justify-center gap-[10px]"
       style={{
         background: "rgba(255, 255, 255, 0.10)",
         outline: "1px rgba(255, 255, 255, 0.20) solid",
@@ -139,10 +139,11 @@ export function Testimonials() {
   };
 
   return (
-    <div className="w-full pt-[72px] pb-16 bg-secondary inline-flex flex-col items-start justify-start gap-2.5 relative">
+    <div className="w-full bg-secondary relative overflow-hidden">
+      <div className="w-full max-w-[393px] mx-auto px-4 pt-[72px] pb-[64px] flex flex-col items-start justify-start gap-[10px]">
       <div className="self-stretch px-4 flex flex-col items-center justify-center gap-6">
         {/* Text Section */}
-        <div className="w-[393px] px-4 flex flex-col items-center justify-start gap-2">
+        <div className="self-stretch px-4 flex flex-col items-center justify-start gap-2">
           {/* Label */}
           <div className="self-stretch text-center text-primary text-base font-normal leading-5">
             TESTIMONIALS
@@ -211,6 +212,7 @@ export function Testimonials() {
           filter: "blur(64px)",
         }}
       />
+    </div>
     </div>
   );
 }

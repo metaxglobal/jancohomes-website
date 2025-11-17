@@ -14,7 +14,7 @@ export function About() {
       {/* Wrapper for images and text */}
       <div className="self-stretch flex flex-col items-start justify-start">
         {/* Images Section */}
-        <div className="self-stretch px-4 py-6 bg-background-3 inline-flex items-center justify-start gap-5">
+        <div className="w-full max-w-[393px] mx-auto px-4 py-6 bg-background-3 inline-flex items-center justify-center gap-5">
           <Image
             src="/janco homes about img1.jpg"
             alt="Janco Construction Project"
@@ -32,11 +32,11 @@ export function About() {
         </div>
 
         {/* Text Section */}
-        <div className="self-stretch px-4 py-8 bg-background-1 flex flex-col items-start justify-center gap-6">
+        <div className="w-full max-w-[393px] mx-auto px-4 py-[32px] bg-background-1 flex flex-col items-start justify-center gap-6">
           <div className="self-stretch flex flex-col items-start justify-center gap-6">
             {/* Heading */}
             <div className="flex flex-col items-start justify-start gap-3">
-              <div className="w-[361px] flex flex-col items-start justify-start gap-2">
+              <div className="self-stretch flex flex-col items-start justify-start gap-2">
                 {/* Label */}
                 <div className="self-stretch inline-flex items-center justify-center gap-2.5">
                   <div className="flex-1 text-primary text-base font-normal leading-5">
@@ -45,7 +45,7 @@ export function About() {
                 </div>
 
                 {/* Title */}
-                <div className="w-[361px] inline-flex items-center justify-center gap-2.5">
+                <div className="self-stretch inline-flex items-center justify-center gap-2.5">
                   <div className="flex-1">
                     <span className="text-secondary text-[40px] font-medium leading-9">
                       Why Choose
@@ -59,8 +59,8 @@ export function About() {
               </div>
 
               {/* Description */}
-              <div className="w-[361px] inline-flex items-center justify-start gap-2.5">
-                <div className="w-[361px] text-secondary/75 text-sm font-medium leading-[14px]">
+              <div className="self-stretch inline-flex items-center justify-start gap-2.5">
+                <div className="flex-1 text-secondary/75 text-sm font-medium leading-[14px]">
                   With 20 years of industry experience, Janco Home &
                   Construction has established itself as a premier construction
                   and real estate company in Sri Lanka. We blend design
@@ -76,7 +76,7 @@ export function About() {
             </div>
 
             {/* CTA Button */}
-            <button className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-secondary rounded-xl">
+            <button className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-secondary rounded-xl">
               <div className="flex items-center justify-start gap-2">
                 <div className="text-white text-base font-medium leading-5">
                   Explore More
@@ -96,7 +96,7 @@ export function About() {
       </div>
 
       {/* Cards Section */}
-      <div className="self-stretch p-4 flex flex-col items-start justify-start gap-5">
+      <div className="w-full max-w-[393px] mx-auto px-4 py-8 flex flex-col items-start justify-start gap-5">
         <div className="flex flex-col items-start justify-start gap-5">
           {/* First Row */}
           <div className="inline-flex items-start justify-start gap-5">

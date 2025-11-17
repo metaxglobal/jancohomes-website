@@ -20,7 +20,7 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-      className="w-[361px] rounded-[22px] inline-flex flex-col items-start justify-start"
+      className="w-full max-w-[361px] rounded-[22px] inline-flex flex-col items-start justify-start"
       style={{
         outline: "1px #C2C2C2 solid",
       }}
@@ -53,7 +53,7 @@ function ProjectCard({
         {/* View More Link */}
         <Link
           href={`/projects/${id}`}
-          className="pt-2.5 pr-5 rounded-xl inline-flex items-center justify-center gap-2"
+          className="pt-[10px] pr-5 rounded-xl inline-flex items-center justify-center gap-2"
         >
           <div className="flex items-center justify-start gap-2">
             <div className="text-primary text-base font-medium leading-5">
@@ -93,7 +93,8 @@ export function Projects() {
   ];
 
   return (
-    <div className="w-full pt-[72px] pb-16 px-4 bg-background-3 inline-flex flex-col items-start justify-start gap-8">
+    <div className="w-full bg-background-3">
+      <div className="w-full max-w-[393px] mx-auto px-4 pt-[72px] pb-[64px] flex flex-col items-start justify-start gap-8">
       {/* Text Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
         {/* Heading */}
@@ -107,7 +108,7 @@ export function Projects() {
               Projects
             </span>
           </div>
-          <div className="w-[361px] text-secondary/75 text-sm font-normal leading-[14px]">
+          <div className="self-stretch text-secondary/75 text-sm font-normal leading-[14px]">
             Our signature projects reflect our commitment to realize your
             dreams. We have delivered successfully completed residential
             projects to thousands of happy customers throughout our more than 8
@@ -118,7 +119,7 @@ export function Projects() {
         {/* Explore Projects Button */}
         <Link
           href="/projects"
-          className="px-5 py-2.5 bg-secondary rounded-xl inline-flex items-center justify-center gap-2"
+          className="px-5 py-[10px] bg-secondary rounded-xl inline-flex items-center justify-center gap-2"
         >
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">
@@ -149,6 +150,7 @@ export function Projects() {
           />
         ))}
       </div>
+    </div>
     </div>
   );
 }

@@ -82,7 +82,7 @@ function BlogCard({ blog }: BlogCardProps) {
           {/* Read More Link */}
           <Link
             href={`/blogs/${blog.id}`}
-            className="pt-2.5 pr-5 rounded-xl inline-flex items-center justify-center gap-2"
+            className="pt-[10px] pr-5 rounded-xl inline-flex items-center justify-center gap-2"
           >
             <div className="flex items-center justify-start gap-2">
               <div className="text-primary text-base font-medium leading-5">
@@ -144,7 +144,8 @@ export function Blogs() {
   };
 
   return (
-    <div className="w-full pt-[72px] pb-16 px-4 bg-background-1 inline-flex flex-col items-center justify-center gap-3">
+    <div className="w-full bg-background-1">
+      <div className="w-full max-w-[393px] mx-auto px-4 pt-[72px] pb-[64px] flex flex-col items-center justify-center gap-12">
       {/* Header Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
         <div className="self-stretch inline-flex items-center justify-between">
@@ -161,7 +162,7 @@ export function Blogs() {
         {/* Explore Blogs Button */}
         <Link
           href="/blogs"
-          className="px-5 py-2.5 bg-secondary rounded-xl inline-flex items-center justify-center gap-2"
+          className="px-5 py-[10px] bg-secondary rounded-xl inline-flex items-center justify-center gap-2"
         >
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">
@@ -217,6 +218,7 @@ export function Blogs() {
           display: none;
         }
       `}</style>
+    </div>
     </div>
   );
 }

@@ -20,12 +20,12 @@ export function Hero() {
       />
 
       {/* Main Content */}
-      <div className="absolute left-4 top-36 w-[361px] inline-flex flex-col items-start justify-start gap-8">
+      <div className="relative w-full max-w-[393px] mx-auto px-4 pt-36 pb-16 flex flex-col items-start justify-start gap-8">
         {/* Top Section */}
         <div className="self-stretch flex flex-col items-center justify-start gap-6">
           {/* Badge */}
           <div
-            className="inline-flex items-center justify-start gap-2 px-5 py-2.5 rounded-xl"
+            className="inline-flex items-center justify-start gap-2 px-5 py-[10px] rounded-xl"
             style={{
               background: "rgba(255, 255, 255, 0.10)",
               outline: "1px rgba(255, 255, 255, 0.20) solid",
@@ -72,7 +72,7 @@ export function Hero() {
         </div>
 
         {/* CTA Button */}
-        <button className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary rounded-xl">
+        <button className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl">
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">
               View Our Projects

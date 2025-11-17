@@ -25,7 +25,7 @@ interface PropertyCardProps {
 function PropertyCard({ property }: PropertyCardProps) {
   return (
     <div
-      className="w-[361px] rounded-[22px] inline-flex flex-col items-start justify-start"
+      className="w-full max-w-[361px] rounded-[22px] inline-flex flex-col items-start justify-start"
       style={{
         boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
         outline: "1px #C2C2C2 solid",
@@ -169,7 +169,7 @@ function PropertyCard({ property }: PropertyCardProps) {
         {/* Contact Button */}
         <Link
           href={`/properties/${property.id}`}
-          className="self-stretch px-5 py-2.5 bg-primary rounded-xl inline-flex items-center justify-center gap-2"
+          className="self-stretch px-5 py-[10px] bg-primary rounded-xl inline-flex items-center justify-center gap-2"
         >
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">
@@ -219,7 +219,8 @@ export function RealEstate() {
   ];
 
   return (
-    <div className="w-full pt-[72px] pb-16 px-4 inline-flex flex-col items-start justify-start gap-8">
+    <div className="w-full bg-white">
+      <div className="w-full max-w-[393px] mx-auto px-4 pt-[72px] pb-[64px] flex flex-col items-start justify-start gap-8">
       {/* Header Section */}
       <div className="self-stretch flex flex-col items-center justify-start gap-3">
         <div className="self-stretch inline-flex items-center justify-center gap-2.5">
@@ -233,7 +234,7 @@ export function RealEstate() {
           </div>
         </div>
         <div className="self-stretch px-2.5 inline-flex items-center justify-center gap-2.5">
-          <div className="w-[361px] text-center text-secondary/75 text-sm font-normal leading-[14px]">
+          <div className="self-stretch text-center text-secondary/75 text-sm font-normal leading-[14px]">
             Discover exclusive premium properties developed and curated by Janco
             Home & Construction. Each residence represents our commitment to
             quality and excellence.
@@ -242,7 +243,7 @@ export function RealEstate() {
       </div>
 
       {/* Property Cards */}
-      <div className="w-[361px] flex flex-col items-center justify-start gap-5">
+      <div className="self-stretch flex flex-col items-center justify-start gap-5">
         <div className="self-stretch flex flex-col items-center justify-start gap-5">
           {properties.map((property) => (
             <PropertyCard key={property.id} property={property} />
@@ -270,7 +271,7 @@ export function RealEstate() {
         {/* View All Button */}
         <Link
           href="/properties"
-          className="px-5 py-2.5 bg-secondary rounded-xl inline-flex items-center justify-center gap-2"
+          className="px-5 py-[10px] bg-secondary rounded-xl inline-flex items-center justify-center gap-2"
         >
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">
@@ -287,6 +288,7 @@ export function RealEstate() {
           </div>
         </Link>
       </div>
+    </div>
     </div>
   );
 }

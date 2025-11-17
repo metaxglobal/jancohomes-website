@@ -163,7 +163,7 @@ export function MobileNav() {
             </nav>
 
             {/* CTA Button - Exact Figma Specs */}
-            <button className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-primary rounded-xl">
+            <button className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl">
               <span className="text-white text-base font-medium leading-5">
                 Book a free consultation
               </span>

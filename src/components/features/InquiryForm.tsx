@@ -133,16 +133,16 @@ export default function InquiryForm() {
   return (
     <section
       id="inquiry-form"
-      className="w-full overflow-hidden bg-secondary py-12"
+      className="w-full overflow-hidden bg-secondary"
     >
-      <div className="flex flex-col items-center gap-8 px-4">
+      <div className="w-full max-w-[393px] mx-auto flex flex-col items-center gap-8 px-4 py-[48px]">
         {/* Header */}
         <div className="flex flex-col items-center gap-3">
           <h2 className="text-center text-[36px] font-medium leading-[40px] text-white">
             Let&apos;s Build Something{" "}
             <span className="text-primary">Great</span> Together
           </h2>
-          <p className="w-[361px] text-center text-[14px] font-normal leading-[14px] text-white">
+          <p className="self-stretch text-center text-[14px] font-normal leading-[14px] text-white">
             Tell us about your next project — we&apos;ll help make it a reality
           </p>
         </div>

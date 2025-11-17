@@ -195,7 +195,7 @@ function PropertyCard({ property }: PropertyCardProps) {
         {/* Contact Button - Opens WhatsApp */}
         <button
           onClick={handleWhatsAppClick}
-          className="self-stretch px-5 py-2.5 bg-primary rounded-xl inline-flex items-center justify-center gap-2"
+          className="self-stretch px-5 py-[10px] bg-primary rounded-xl inline-flex items-center justify-center gap-2"
         >
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">
@@ -394,7 +394,7 @@ export default function PropertiesPage() {
             </div>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="h-10 px-5 py-2.5 bg-primary rounded-xl inline-flex items-center justify-center gap-2"
+              className="h-10 px-5 py-[10px] bg-primary rounded-xl inline-flex items-center justify-center gap-2"
             >
               <div className="flex items-center justify-start gap-2">
                 <div className="text-white text-base font-medium leading-5">

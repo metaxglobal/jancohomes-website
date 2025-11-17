@@ -27,7 +27,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative w-full overflow-hidden bg-[#0B0B0A] px-4 pb-12 pt-12">
+    <footer className="relative w-full overflow-hidden bg-[#0B0B0A]">
+      <div className="w-full max-w-[393px] mx-auto px-4 pb-12 pt-12">
       {/* Background Blur Effects */}
       <div
         className="pointer-events-none absolute left-4 top-12 h-[287.62px] w-[287.62px] rounded-full bg-primary opacity-[0.13] shadow-[240px_240px_240px]"
@@ -241,6 +242,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );
