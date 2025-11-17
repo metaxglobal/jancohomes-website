@@ -25,32 +25,32 @@ export default function Home() {
         </section>
 
         {/* About Section - Mobile */}
-        <section className="md:hidden w-full py-[72px] px-4">
+        <section className="md:hidden w-full">
           <About />
         </section>
 
         {/* Services Section - Mobile */}
-        <section className="md:hidden bg-white w-full py-[72px] px-4">
+        <section className="md:hidden bg-white w-full">
           <Services />
         </section>
 
         {/* Projects Section - Mobile */}
-        <section className="md:hidden bg-background-3 w-full py-[72px] px-4">
+        <section className="md:hidden bg-background-3 w-full">
           <Projects />
         </section>
 
         {/* Testimonials Section - Mobile */}
-        <section className="md:hidden bg-secondary w-full py-[72px] px-4">
+        <section className="md:hidden bg-secondary w-full">
           <Testimonials />
         </section>
 
         {/* Blogs Section - Mobile */}
-        <section className="md:hidden bg-background-1 w-full py-[72px] px-4">
+        <section className="md:hidden bg-background-1 w-full">
           <Blogs />
         </section>
 
         {/* Real Estate Section - Mobile */}
-        <section className="md:hidden bg-white w-full py-[72px] px-4">
+        <section className="md:hidden bg-white w-full">
           <RealEstate />
         </section>
 

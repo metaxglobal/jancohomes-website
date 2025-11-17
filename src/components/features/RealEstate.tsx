@@ -219,7 +219,8 @@ export function RealEstate() {
   ];
 
   return (
-    <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-8">
+    <div className="w-full py-[72px] px-4">
+      <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-8">
       {/* Header Section */}
       <div className="self-stretch flex flex-col items-center justify-start gap-3">
         <div className="self-stretch inline-flex items-center justify-center gap-2.5">
@@ -287,6 +288,7 @@ export function RealEstate() {
           </div>
         </Link>
       </div>
+    </div>
     </div>
   );
 }

@@ -53,7 +53,8 @@ function ServiceCard({ imagePath, title }: ServiceCardProps) {
 
 export function Services() {
   return (
-    <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-start gap-8">
+    <div className="w-full py-[72px] px-4">
+      <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-start gap-8">
       {/* Text Section */}
       <div className="self-stretch flex flex-col items-center justify-start gap-2">
         {/* Label */}
@@ -133,6 +134,7 @@ export function Services() {
           <ServiceCard imagePath="/services/Surveying.png" title="Surveying" />
         </div>
       </div>
+    </div>
     </div>
   );
 }

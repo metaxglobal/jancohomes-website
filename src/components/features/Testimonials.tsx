@@ -139,7 +139,8 @@ export function Testimonials() {
   };
 
   return (
-    <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-[10px] relative">
+    <div className="w-full py-[72px] px-4">
+      <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-[10px] relative">
       <div className="self-stretch flex flex-col items-center justify-center gap-6">
         {/* Text Section */}
         <div className="self-stretch flex flex-col items-center justify-start gap-2">
@@ -190,6 +191,7 @@ export function Testimonials() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

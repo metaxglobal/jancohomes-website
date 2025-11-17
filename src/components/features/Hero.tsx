@@ -20,7 +20,7 @@ export function Hero() {
       />
 
       {/* Main Content */}
-      <div className="relative w-full max-w-[393px] mx-auto pt-[144px] pb-[64px] flex flex-col items-start justify-start gap-8">
+      <div className="relative w-full max-w-[393px] mx-auto px-4 pt-[144px] pb-[64px] flex flex-col items-start justify-start gap-8">
         {/* Top Section */}
         <div className="self-stretch flex flex-col items-start justify-start gap-6">
           {/* Badge */}

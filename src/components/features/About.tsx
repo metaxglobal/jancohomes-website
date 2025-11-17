@@ -10,27 +10,27 @@ import Image from "next/image";
 
 export function About() {
   return (
-    <div className="w-full">
-      {/* Images Section */}
-      <div className="w-full max-w-[393px] mx-auto pb-6 inline-flex items-center justify-center gap-5">
-        <Image
-          src="/janco homes about img1.jpg"
-          alt="Janco Construction Project"
-          width={171}
-          height={141}
-          className="w-[171px] h-[141px] rounded-[22px]"
-        />
-        <Image
-          src="/jancon homes about img2.jpg"
-          alt="Janco Construction Interior"
-          width={170}
-          height={101}
-          className="w-[170px] h-[101px] rounded-[22px]"
-        />
-      </div>
+    <div className="w-full py-[72px] px-4">
+      <div className="w-full max-w-[393px] mx-auto flex flex-col gap-8">
+        {/* Images Section */}
+        <div className="self-stretch inline-flex items-center justify-center gap-5">
+          <Image
+            src="/janco homes about img1.jpg"
+            alt="Janco Construction Project"
+            width={171}
+            height={141}
+            className="w-[171px] h-[141px] rounded-[22px]"
+          />
+          <Image
+            src="/jancon homes about img2.jpg"
+            alt="Janco Construction Interior"
+            width={170}
+            height={101}
+            className="w-[170px] h-[101px] rounded-[22px]"
+          />
+        </div>
 
-      {/* Text Section */}
-      <div className="w-full max-w-[393px] mx-auto pb-8 flex flex-col items-start justify-center gap-6">
+        {/* Text Section */}
         <div className="self-stretch flex flex-col items-start justify-center gap-6">
           {/* Heading */}
           <div className="flex flex-col items-start justify-start gap-3">
@@ -90,10 +90,8 @@ export function About() {
             </div>
           </button>
         </div>
-      </div>
 
-      {/* Cards Section */}
-      <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-5">
+        {/* Cards Section */}
         <div className="self-stretch flex flex-col items-start justify-start gap-5">
           {/* First Row */}
           <div className="self-stretch inline-flex items-start justify-between gap-5">
