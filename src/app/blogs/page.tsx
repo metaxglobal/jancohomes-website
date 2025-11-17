@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { MobileNav } from "@/components/features/MobileNav";
-import FeaturedProjectCard from "@/components/features/FeaturedProjectCard";
-import Footer from "@/components/features/Footer";
+import BlogArticleCard from "@/components/features/BlogArticleCard";
 import ConsultationModal from "@/components/features/ConsultationModal";
+import Footer from "@/components/features/Footer";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Home01Icon,
@@ -13,76 +13,67 @@ import {
   ArrowDownRight01Icon,
 } from "@hugeicons/core-free-icons";
 
-// Projects data structure with unique IDs
-const projects = [
+// Blog articles data structure with unique IDs
+export const blogArticles = [
   {
-    id: "project-luxury-residence-colombo",
-    title: "Luxury Residence Colombo",
-    location: "Colombo 7, Sri Lanka",
-    area: "3,500 sq ft",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    images: [
-      "/projects/luxury-residence-colombo.jpg",
-      "https://placehold.co/361x250",
-      "https://placehold.co/361x250",
-    ],
+    id: "home-design-trends-2025",
+    title: "2025 Home Design Trends to Watch",
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: "October 15, 2024",
+    image: "/blogs/blog1.jpg",
+    author: {
+      name: "Sarah Mitchell",
+      role: "Design Director",
+      avatar: "https://placehold.co/34x40",
+    },
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
   },
   {
-    id: "project-modern-villa-kandy",
-    title: "Modern Villa Kandy",
-    location: "Kandy, Sri Lanka",
-    area: "2,800 SQFT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    images: [
-      "/projects/modern-villa-kandy.jpg",
-      "https://placehold.co/361x250",
-      "https://placehold.co/361x250",
-    ],
+    id: "sustainable-building-materials-guide",
+    title: "Sustainable Building Materials: A Guide",
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: "September 28, 2024",
+    image: "/blogs/blog2.jpg",
+    author: {
+      name: "Sarah Mitchell",
+      role: "Chief Architect",
+      avatar: "https://placehold.co/34x40",
+    },
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
   },
   {
-    id: "project-contemporary-house-mirigama",
-    title: "Contemporary House Mirigama",
-    location: "Mirigama, Sri Lanka",
-    area: "2,534 SQFT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    images: [
-      "/projects/contemporary-house-mirigama.jpg",
-      "https://placehold.co/361x250",
-      "https://placehold.co/361x250",
-    ],
+    id: "modern-construction-techniques",
+    title: "Modern Construction Techniques in Sri Lanka",
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: "September 10, 2024",
+    image: "/blogs/blog3.jpg",
+    author: {
+      name: "John Silva",
+      role: "Senior Engineer",
+      avatar: "https://placehold.co/34x40",
+    },
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`,
   },
   {
-    id: "project-luxury-estate-negombo",
-    title: "Luxury Estate Negombo",
-    location: "Negombo, Sri Lanka",
-    area: "4,100 SQFT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    images: [
-      "/projects/luxury-estate-negombo.jpg",
-      "https://placehold.co/361x250",
-      "https://placehold.co/361x250",
-    ],
-  },
-  {
-    id: "project-modern-apartment-complex",
-    title: "Modern Apartment Complex",
-    location: "Galle, Sri Lanka",
-    area: "12,500 SQFT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    images: [
-      "/projects/modern-apartment-complex.jpg",
-      "/projects/modern-apartment-complex-2.jpg",
-      "/projects/modern-apartment-complex-3.jpg",
-    ],
+    id: "interior-design-tips-2024",
+    title: "Interior Design Tips for Small Spaces",
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: "August 22, 2024",
+    image: "/blogs/blog4.jpg",
+    author: {
+      name: "Sarah Mitchell",
+      role: "Design Director",
+      avatar: "https://placehold.co/34x40",
+    },
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
   },
 ];
 
-export default function ProjectsPage() {
+export default function BlogsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -135,39 +126,28 @@ export default function ProjectsPage() {
                 strokeWidth={1.5}
               />
               <span className="text-[14px] font-normal leading-[14px] text-white">
-                Projects
+                Blog
               </span>
             </div>
 
             {/* Title and Description */}
             <div className="flex flex-col gap-3">
               <h1 className="w-[361px] text-[40px] font-medium leading-9 text-white">
-                Featured <span className="text-primary">Projects</span>
+                Construction & Design <span className="text-primary">Blog</span>
               </h1>
               <p className="w-[361px] text-[14px] font-medium leading-[14px] text-ash">
-                Explore our collection of premium residential and commercial
-                projects across Sri Lanka. Each project showcases our commitment
-                to excellence and innovation in construction.
+                Expert insights, industry trends, and practical advice from 20
+                years of building excellence in Sri Lanka.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Background Blur Effects for bottom section */}
-        <div
-          className="pointer-events-none absolute bottom-[100px] right-0 h-[200.09px] w-[200.09px] rounded-full bg-primary opacity-[0.07] shadow-[128px_128px_128px]"
-          style={{ filter: "blur(64px)" }}
-        />
-        <div
-          className="pointer-events-none absolute bottom-[663px] left-0 h-[200.09px] w-[200.09px] rounded-full bg-primary opacity-[0.07] shadow-[128px_128px_128px]"
-          style={{ filter: "blur(64px)" }}
-        />
-
-        {/* Projects Grid Section */}
-        <section className="relative z-10 flex flex-col items-start gap-5 px-4 pb-12 pt-12 md:hidden">
+        {/* Blog Articles Grid Section */}
+        <section className="relative z-10 flex flex-col items-center gap-5 px-4 pb-12 pt-12 md:hidden">
           <div className="flex flex-col items-center gap-5">
-            {projects.map((project) => (
-              <FeaturedProjectCard key={project.id} {...project} />
+            {blogArticles.map((article) => (
+              <BlogArticleCard key={article.id} {...article} />
             ))}
           </div>
         </section>

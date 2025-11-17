@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
+import { blogArticles } from "@/app/blogs/page";
 
 interface BlogPost {
   id: string;
@@ -107,52 +108,20 @@ export function Blogs() {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const blogs: BlogPost[] = [
-    {
-      id: "blog-1",
-      title: "2025 Home Design Trends to Watch",
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/blogs/blog1.jpg",
+  // Transform blogArticles to match the local BlogPost interface
+  const blogs: BlogPost[] = blogArticles.slice(0, 4).map((article) => {
+    const dateObj = new Date(article.date);
+    return {
+      id: article.id,
+      title: article.title,
+      excerpt: article.excerpt,
+      image: article.image,
       date: {
-        day: "15",
-        month: "Oct",
+        day: dateObj.getDate().toString(),
+        month: dateObj.toLocaleString("en-US", { month: "short" }),
       },
-    },
-    {
-      id: "blog-2",
-      title: "Sustainable Building Materials",
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/blogs/blog2.jpg",
-      date: {
-        day: "28",
-        month: "Sep",
-      },
-    },
-    {
-      id: "blog-3",
-      title: "Home Renovation Guide",
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/blogs/blog3.jpg",
-      date: {
-        day: "10",
-        month: "Sep",
-      },
-    },
-    {
-      id: "blog-4",
-      title: "Luxury Villa Construction Insights",
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "https://placehold.co/320x204",
-      date: {
-        day: "22",
-        month: "Aug",
-      },
-    },
-  ];
+    };
+  });
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index);

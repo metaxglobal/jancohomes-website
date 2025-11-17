@@ -11,6 +11,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -65,16 +66,18 @@ export function MobileNav() {
         </div>
 
         {/* Main Navigation Bar */}
-        <div className="w-full h-[68px] px-4 bg-secondary flex items-center justify-between overflow-hidden">
+        <div className="w-full h-[68px] px-4 bg-secondary border-b border-white-stroke flex items-center justify-between">
           {/* Logo */}
-          <Image
-            src="/janco-logo.svg"
-            alt="Janco Home & Construction"
-            width={49}
-            height={47}
-            priority
-            className="w-[49px] h-[47px]"
-          />
+          <Link href="/" aria-label="Home" className="inline-block">
+            <Image
+              src="/janco-logo.svg"
+              alt="Janco Home & Construction"
+              width={49}
+              height={47}
+              priority
+              className="w-[49px] h-[47px]"
+            />
+          </Link>
 
           {/* Menu Button */}
           <button
