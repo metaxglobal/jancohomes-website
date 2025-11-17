@@ -20,9 +20,9 @@ export function Hero() {
       />
 
       {/* Main Content */}
-      <div className="relative w-full max-w-[393px] mx-auto px-4 pt-[144px] pb-[64px] flex flex-col items-start justify-start gap-8">
+      <div className="absolute w-[361px] left-4 top-[144px] flex flex-col items-start justify-start gap-8">
         {/* Top Section */}
-        <div className="self-stretch flex flex-col items-start justify-start gap-6">
+        <div className="self-stretch flex flex-col items-center justify-start gap-6">
           {/* Badge */}
           <div
             className="inline-flex items-center justify-start gap-2 px-5 py-[10px] rounded-xl"
@@ -39,7 +39,7 @@ export function Hero() {
           </div>
 
           {/* Hero Image and Text */}
-          <div className="self-stretch inline-flex flex-col items-start justify-start gap-3">
+          <div className="self-stretch flex flex-col items-center justify-start gap-3">
             {/* Hero Image */}
             <Image
               src="/mobile hero img.png"

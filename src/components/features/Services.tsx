@@ -56,7 +56,7 @@ export function Services() {
     <div className="w-full py-[72px] px-4">
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-start gap-8">
       {/* Text Section */}
-      <div className="self-stretch flex flex-col items-center justify-start gap-2">
+      <div className="self-stretch px-4 flex flex-col items-center justify-start gap-2">
         {/* Label */}
         <div className="self-stretch text-center text-primary text-base font-normal leading-5">
           OUR SERVICES
@@ -75,7 +75,7 @@ export function Services() {
           </div>
 
           {/* Description */}
-          <div className="self-stretch text-center text-secondary/75 text-sm font-normal leading-[14px]">
+          <div className="self-stretch text-center text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
             With our proven track record of excellence, we are committed to
             creating strategic and innovative designing and construction
             solutions for our clients that match their unique lifestyles.
