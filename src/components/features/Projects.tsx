@@ -93,8 +93,7 @@ export function Projects() {
   ];
 
   return (
-    <div className="w-full bg-background-3">
-      <div className="w-full max-w-[393px] mx-auto px-4 pt-[72px] pb-[64px] flex flex-col items-start justify-start gap-8">
+    <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-8">
       {/* Text Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
         {/* Heading */}
@@ -150,7 +149,6 @@ export function Projects() {
           />
         ))}
       </div>
-    </div>
     </div>
   );
 }

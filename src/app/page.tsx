@@ -18,44 +18,44 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-white w-full">
         {/* Hero Section - Mobile */}
-        <section className="md:hidden pt-[112px]">
+        <section className="md:hidden bg-secondary w-full">
           <Hero />
         </section>
 
         {/* About Section - Mobile */}
-        <section className="md:hidden">
+        <section className="md:hidden w-full py-[72px] px-4">
           <About />
         </section>
 
         {/* Services Section - Mobile */}
-        <section className="md:hidden">
+        <section className="md:hidden bg-white w-full py-[72px] px-4">
           <Services />
         </section>
 
         {/* Projects Section - Mobile */}
-        <section className="md:hidden">
+        <section className="md:hidden bg-background-3 w-full py-[72px] px-4">
           <Projects />
         </section>
 
         {/* Testimonials Section - Mobile */}
-        <section className="md:hidden">
+        <section className="md:hidden bg-secondary w-full py-[72px] px-4">
           <Testimonials />
         </section>
 
         {/* Blogs Section - Mobile */}
-        <section className="md:hidden">
+        <section className="md:hidden bg-background-1 w-full py-[72px] px-4">
           <Blogs />
         </section>
 
         {/* Real Estate Section - Mobile */}
-        <section className="md:hidden">
+        <section className="md:hidden bg-white w-full py-[72px] px-4">
           <RealEstate />
         </section>
 
         {/* Inquiry Form Section - Mobile */}
-        <section className="md:hidden">
+        <section className="md:hidden bg-secondary w-full">
           <InquiryForm />
         </section>
       </main>

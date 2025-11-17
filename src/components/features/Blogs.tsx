@@ -144,8 +144,7 @@ export function Blogs() {
   };
 
   return (
-    <div className="w-full bg-background-1">
-      <div className="w-full max-w-[393px] mx-auto px-4 pt-[72px] pb-[64px] flex flex-col items-center justify-center gap-12">
+    <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-center gap-12">
       {/* Header Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
         <div className="self-stretch inline-flex items-center justify-between">
@@ -218,7 +217,6 @@ export function Blogs() {
           display: none;
         }
       `}</style>
-    </div>
     </div>
   );
 }

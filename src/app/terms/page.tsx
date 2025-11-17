@@ -4,7 +4,14 @@ import { MobileNav } from "@/components/features/MobileNav";
 import Footer from "@/components/features/Footer";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  Home01Icon,ArrowRight01Icon,ArrowDownRight01Icon,InternetIcon,Mail01Icon,CallingIcon,ReloadIcon } from "@hugeicons/core-free-icons";
+  Home01Icon,
+  ArrowRight01Icon,
+  ArrowDownRight01Icon,
+  InternetIcon,
+  Mail01Icon,
+  CallingIcon,
+  ReloadIcon,
+} from "@hugeicons/core-free-icons";
 
 export default function TermsPage() {
   return (
@@ -45,10 +52,7 @@ export default function TermsPage() {
           <div className="absolute left-4 top-[144px] w-[361px] inline-flex flex-col items-start justify-start gap-8">
             {/* Breadcrumb */}
             <div className="self-stretch h-5 inline-flex items-center justify-start gap-2">
-              <Link
-                href="/"
-                className="flex items-center justify-start gap-1"
-              >
+              <Link href="/" className="flex items-center justify-start gap-1">
                 <div className="w-4 h-4 relative">
                   <HugeiconsIcon
                     icon={Home01Icon}
@@ -125,10 +129,10 @@ export default function TermsPage() {
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-3">
                 <div className="self-stretch text-secondary/75 text-sm font-normal leading-[14px]">
-                  Welcome to Janco Home & Construction (&quot;we,&quot; &quot;our,&quot; or
-                  &quot;us&quot;). By accessing or using our website
-                  (www.jancohomeconstruction.lk) and related services, you
-                  agree to comply with and be bound by these Terms and
+                  Welcome to Janco Home & Construction (&quot;we,&quot;
+                  &quot;our,&quot; or &quot;us&quot;). By accessing or using our
+                  website (www.jancohomeconstruction.lk) and related services,
+                  you agree to comply with and be bound by these Terms and
                   Conditions.
                 </div>
                 <div className="self-stretch text-secondary/75 text-sm font-normal leading-[14px]">
@@ -319,8 +323,8 @@ export default function TermsPage() {
                 <div className="self-stretch text-secondary/75 text-sm font-normal leading-[14px]">
                   We may update these Terms and Conditions from time to time.
                   The updated version will be posted on this page with a revised
-                  &quot;Effective Date.&quot; Continued use of our website after any
-                  updates constitutes acceptance of the revised Terms.
+                  &quot;Effective Date.&quot; Continued use of our website after
+                  any updates constitutes acceptance of the revised Terms.
                 </div>
               </div>
             </div>
@@ -341,7 +345,8 @@ export default function TermsPage() {
               <div
                 className="self-stretch p-5 rounded-[22px] outline outline-1 outline-ash flex flex-col items-start justify-center gap-6"
                 style={{
-                  background: "linear-gradient(180deg, #7CB342 0%, #689F38 100%)",
+                  background:
+                    "linear-gradient(180deg, #7CB342 0%, #689F38 100%)",
                 }}
               >
                 <div className="text-white text-2xl font-medium leading-6">

@@ -3,15 +3,13 @@ import Image from "next/image";
 interface ServiceCardProps {
   imagePath: string;
   title: string;
-  width: 171 | 170;
 }
 
-function ServiceCard({ imagePath, title, width }: ServiceCardProps) {
+function ServiceCard({ imagePath, title }: ServiceCardProps) {
   return (
     <div
-      className="relative overflow-hidden rounded-[22px]"
+      className="flex-1 relative overflow-hidden rounded-[22px]"
       style={{
-        width: `${width}px`,
         height: "210px",
         background: "rgba(255, 255, 255, 0)",
         boxShadow: "0px 2px 4px -2px rgba(0, 0, 0, 0.10)",
@@ -55,10 +53,9 @@ function ServiceCard({ imagePath, title, width }: ServiceCardProps) {
 
 export function Services() {
   return (
-    <div className="w-full bg-white">
-      <div className="w-full max-w-[393px] mx-auto px-4 pt-[72px] pb-[64px] flex flex-col items-center justify-start gap-8">
+    <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-start gap-8">
       {/* Text Section */}
-      <div className="self-stretch px-4 flex flex-col items-center justify-start gap-2">
+      <div className="self-stretch flex flex-col items-center justify-start gap-2">
         {/* Label */}
         <div className="self-stretch text-center text-primary text-base font-normal leading-5">
           OUR SERVICES
@@ -92,62 +89,50 @@ export function Services() {
       {/* Services Cards Grid */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
         {/* Row 1 */}
-        <div className="self-stretch inline-flex items-start justify-start gap-5">
+        <div className="self-stretch inline-flex items-start justify-between gap-5">
           <ServiceCard
             imagePath="/services/Architectural Designing.png"
             title="Architectural Designing"
-            width={171}
           />
           <ServiceCard
             imagePath="/services/Quantity Surveying.png"
             title="Quantity Surveying"
-            width={170}
           />
         </div>
 
         {/* Row 2 */}
-        <div className="self-stretch inline-flex items-start justify-start gap-5">
+        <div className="self-stretch inline-flex items-start justify-between gap-5">
           <ServiceCard
             imagePath="/services/Renovation.png"
             title="Renovation"
-            width={171}
           />
           <ServiceCard
             imagePath="/services/Land Development.png"
             title="Land Development"
-            width={170}
           />
         </div>
 
         {/* Row 3 */}
-        <div className="self-stretch inline-flex items-start justify-start gap-5">
+        <div className="self-stretch inline-flex items-start justify-between gap-5">
           <ServiceCard
             imagePath="/services/Structural Designing.png"
             title="Structural Designing"
-            width={171}
           />
           <ServiceCard
             imagePath="/services/Interior Designing.png"
             title="Interior Designing"
-            width={170}
           />
         </div>
 
         {/* Row 4 */}
-        <div className="self-stretch h-[210px] inline-flex items-start justify-start gap-5">
+        <div className="self-stretch h-[210px] inline-flex items-start justify-between gap-5">
           <ServiceCard
             imagePath="/services/Construction.png"
             title="Construction"
-            width={171}
           />
-          <ServiceCard
-            imagePath="/services/Surveying.png"
-            title="Surveying"
-            width={170}
-          />
+          <ServiceCard imagePath="/services/Surveying.png" title="Surveying" />
         </div>
       </div>
-    </div>
     </div>
   );
 }

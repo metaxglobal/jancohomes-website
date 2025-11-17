@@ -306,10 +306,7 @@ export default function PropertiesPage() {
           <div className="absolute left-4 top-[144px] w-[361px] inline-flex flex-col items-start justify-start gap-8">
             {/* Breadcrumb */}
             <div className="self-stretch h-5 inline-flex items-center justify-start gap-2">
-              <Link
-                href="/"
-                className="flex items-center justify-start gap-1"
-              >
+              <Link href="/" className="flex items-center justify-start gap-1">
                 <div className="w-4 h-4 relative">
                   <HugeiconsIcon
                     icon={Home01Icon}

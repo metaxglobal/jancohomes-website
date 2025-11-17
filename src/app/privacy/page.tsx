@@ -4,7 +4,14 @@ import { MobileNav } from "@/components/features/MobileNav";
 import Footer from "@/components/features/Footer";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  Home01Icon, ArrowRight01Icon, Calendar03Icon, CallingIcon, InternetIcon, Mail01Icon, ReloadIcon } from "@hugeicons/core-free-icons";
+  Home01Icon,
+  ArrowRight01Icon,
+  Calendar03Icon,
+  CallingIcon,
+  InternetIcon,
+  Mail01Icon,
+  ReloadIcon,
+} from "@hugeicons/core-free-icons";
 
 export default function PrivacyPage() {
   return (
@@ -45,10 +52,7 @@ export default function PrivacyPage() {
           <div className="absolute left-4 top-[144px] w-[361px] inline-flex flex-col items-start justify-start gap-8">
             {/* Breadcrumb */}
             <div className="self-stretch h-5 inline-flex items-center justify-start gap-2">
-              <Link
-                href="/"
-                className="flex items-center justify-start gap-1"
-              >
+              <Link href="/" className="flex items-center justify-start gap-1">
                 <div className="w-4 h-4 relative">
                   <HugeiconsIcon
                     icon={Home01Icon}
@@ -126,12 +130,13 @@ export default function PrivacyPage() {
               </div>
               <div className="self-stretch flex flex-col items-start justify-start gap-3">
                 <div className="self-stretch text-secondary/75 text-sm font-normal leading-[14px]">
-                  Welcome to Janco Home & Construction (&quot;we,&quot; &quot;our,&quot; or
-                  &quot;us&quot;). We value your privacy and are committed to protecting
-                  your personal information. This Privacy Policy explains how we
-                  collect, use, and safeguard the information you provide when
-                  you visit our website or contact us through online forms,
-                  WhatsApp, or other communication channels.
+                  Welcome to Janco Home & Construction (&quot;we,&quot;
+                  &quot;our,&quot; or &quot;us&quot;). We value your privacy and
+                  are committed to protecting your personal information. This
+                  Privacy Policy explains how we collect, use, and safeguard the
+                  information you provide when you visit our website or contact
+                  us through online forms, WhatsApp, or other communication
+                  channels.
                 </div>
                 <div className="self-stretch text-secondary/75 text-sm font-normal leading-[14px]">
                   By using our website or submitting your information, you agree

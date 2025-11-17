@@ -154,7 +154,7 @@ export function MobileNav() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="w-[107px] h-11 py-2.5 flex items-center justify-center text-white/90 text-sm font-normal uppercase leading-4"
+                  className="w-[107px] h-11 py-[10px] flex items-center justify-center text-white/90 text-sm font-normal uppercase leading-4"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

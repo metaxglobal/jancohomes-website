@@ -21,7 +21,7 @@ export default function BlogArticlePage({
   params: Promise<{ id: string }>;
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   // Unwrap params using React.use()
   const { id } = use(params);
 
