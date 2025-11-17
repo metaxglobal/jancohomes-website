@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/features/Testimonials";
 import { Blogs } from "@/components/features/Blogs";
 import { RealEstate } from "@/components/features/RealEstate";
 import InquiryForm from "@/components/features/InquiryForm";
+import Footer from "@/components/features/Footer";
 
 export default function Home() {
   return (
@@ -57,8 +58,15 @@ export default function Home() {
         <section className="md:hidden">
           <InquiryForm />
         </section>
+      </main>
 
-        {/* Desktop placeholder - will be built later */}
+      {/* Footer - Mobile */}
+      <footer className="md:hidden">
+        <Footer />
+      </footer>
+
+      {/* Desktop placeholder - will be built later */}
+      <main className="hidden md:block">
         <section className="hidden md:block">
           <div className="container mx-auto py-16 px-4">
             <h1 className="text-4xl font-bold text-secondary">
