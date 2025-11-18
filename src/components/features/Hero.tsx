@@ -1,10 +1,11 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
   return (
-    <div className="relative w-full min-h-screen bg-secondary overflow-hidden">
+    <div className="relative w-full min-h-screen bg-secondary overflow-hidden -mt-[112px] pt-[112px]">
       {/* Background Blur Effects */}
       <div
         className="absolute w-[222px] h-[222px] left-[161px] top-[332px] opacity-22 bg-primary rounded-full blur-[64px]"
@@ -41,14 +42,16 @@ export function Hero() {
           {/* Hero Image and Text */}
           <div className="self-stretch flex flex-col items-center justify-start gap-3">
             {/* Hero Image */}
-            <Image
-              src="/mobile hero img.png"
-              alt="Janco Construction Project"
-              width={299}
-              height={212}
-              className="w-[299px] h-[212px]"
-              priority
-            />
+            <div className="flex w-full items-center justify-center">
+              <Image
+                src="/mobile hero img.png"
+                alt="Janco Construction Project"
+                width={299}
+                height={212}
+                className="w-[299px] h-[212px]"
+                priority
+              />
+            </div>
 
             {/* Main Heading */}
             <div className="self-stretch">
@@ -57,7 +60,9 @@ export function Hero() {
               </span>
               <span className="text-primary text-[40px] font-medium leading-9">
                 Future of
-                <br />
+              </span>
+              <br />
+              <span className="text-primary text-[40px] font-medium leading-9">
                 Construction
               </span>
             </div>
@@ -72,7 +77,7 @@ export function Hero() {
         </div>
 
         {/* CTA Button */}
-        <button className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl">
+        <Link href="/projects" className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl">
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">
               View Our Projects
@@ -86,7 +91,7 @@ export function Hero() {
               />
             </div>
           </div>
-        </button>
+        </Link>
       </div>
     </div>
   );
