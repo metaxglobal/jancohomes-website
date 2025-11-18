@@ -103,12 +103,13 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               {/* Address */}
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center gap-[10px] rounded-[11px] bg-white/10 p-[10px] outline outline-1 outline-white/20 outline-offset-[-1px]">
+                {/* Increased container size and removed heavy padding so the icon can scale */}
+                <div className="flex h-8 w-8 items-center justify-center rounded-[11px] bg-white/10 outline outline-1 outline-white/20 outline-offset-[-1px]">
                   <HugeiconsIcon
                     icon={Location04Icon}
-                    size={16}
+                    size={18}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={2}
                   />
                 </div>
                 <a href="https://maps.app.goo.gl/X9zNe9UcxMWEhTsx9" target="_blank" rel="noopener noreferrer" className="flex h-8 w-[318px] flex-col justify-center text-[14px] font-normal leading-[14px] text-ash">
@@ -118,12 +119,12 @@ export default function Footer() {
 
               {/* Phone */}
               <div className="flex h-8 items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center gap-[10px] rounded-[11px] bg-white/10 p-[10px] outline outline-1 outline-white/20 outline-offset-[-1px]">
+                <div className="flex h-8 w-8 items-center justify-center gap-[10px] rounded-[11px] bg-white/10 outline outline-1 outline-white/20 outline-offset-[-1px]">
                   <HugeiconsIcon
                     icon={CallingIcon}
-                    size={16}
+                    size={18}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={2}
                   />
                 </div>
                 <a
@@ -136,12 +137,12 @@ export default function Footer() {
 
               {/* Email */}
               <div className="flex h-8 items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center gap-[10px] rounded-[11px] bg-white/10 p-[10px] outline outline-1 outline-white/20 outline-offset-[-1px]">
+                <div className="flex h-8 w-8 items-center justify-center gap-[10px] rounded-[11px] bg-white/10 outline outline-1 outline-white/20 outline-offset-[-1px]">
                   <HugeiconsIcon
                     icon={Mail01Icon}
-                    size={16}
+                    size={18}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={2}
                   />
                 </div>
                 <a
@@ -177,7 +178,7 @@ export default function Footer() {
                       icon={social.icon}
                       size={20}
                       color="#C2C2C2"
-                      strokeWidth={1.5}
+                      strokeWidth={2}
                     />
                   </a>
                 ))}

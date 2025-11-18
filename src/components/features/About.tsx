@@ -37,7 +37,7 @@ export function About() {
             <div className="w-[361px] flex flex-col items-start justify-start gap-2">
               {/* Label */}
               <div className="self-stretch flex items-center justify-center gap-2.5">
-                <div className="flex-1 text-primary text-base font-normal leading-5">
+                <div className="flex-1 text-primary text-base font-normal leading-5 tracking-tight">
                   ABOUT
                 </div>
               </div>
@@ -45,11 +45,11 @@ export function About() {
               {/* Title */}
               <div className="w-[361px] flex items-center justify-center gap-2.5">
                 <div className="flex-1">
-                  <span className="text-secondary text-[40px] font-medium leading-9">
+                  <span className="text-secondary text-[40px] font-medium leading-9 tracking-tight">
                     Why Choose
                     <br />
                   </span>
-                  <span className="text-primary text-[40px] font-medium leading-9">
+                  <span className="text-primary text-[40px] font-medium leading-9 tracking-tight">
                     Janco?
                   </span>
                 </div>
@@ -74,7 +74,7 @@ export function About() {
           </div>
 
           {/* CTA Button */}
-          <button className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-secondary rounded-xl">
+          <a className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-secondary rounded-xl" href="#services" role="button">
             <div className="flex items-center justify-start gap-2">
               <div className="text-white text-base font-medium leading-5">
                 Explore More
@@ -88,7 +88,7 @@ export function About() {
                 />
               </div>
             </div>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -120,7 +120,7 @@ export function About() {
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2.5">
-                  <div className="text-center text-secondary text-sm font-medium leading-[14px]">
+                  <div className="text-center text-secondary text-sm font-medium leading-[14px] tracking-tight">
                     Industry Experience
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export function About() {
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2.5">
-                  <div className="text-center text-secondary text-sm font-medium leading-[14px]">
+                  <div className="text-center text-secondary text-sm font-medium leading-[14px] tracking-tight">
                     100+ Projects
                   </div>
                 </div>
@@ -193,7 +193,7 @@ export function About() {
                   </div>
                 </div>
                 <div className="self-stretch flex items-center justify-center gap-2.5">
-                  <div className="w-[152px] text-center text-secondary text-sm font-medium leading-[14px]">
+                  <div className="w-[152px] text-center text-secondary text-sm font-medium leading-[14px] tracking-tight">
                     Qualified Professionals
                   </div>
                 </div>
@@ -228,7 +228,7 @@ export function About() {
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2.5">
-                  <div className="text-center text-secondary text-sm font-medium leading-[14px]">
+                  <div className="text-center text-secondary text-sm font-medium leading-[14px] tracking-tight">
                     Service
                   </div>
                 </div>

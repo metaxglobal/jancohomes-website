@@ -66,7 +66,7 @@ function BlogCard({ blog }: BlogCardProps) {
           <div className="self-stretch flex flex-col items-start justify-start gap-3">
             {/* Title */}
             <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-              <div className="w-[280px] text-secondary text-[22px] font-medium leading-6">
+              <div className="w-[280px] text-secondary text-[22px] font-medium leading-6 tracking-tight">
                 {blog.title}
               </div>
             </div>
@@ -93,7 +93,7 @@ function BlogCard({ blog }: BlogCardProps) {
                   icon={ArrowDownRight01Icon}
                   size={20}
                   color="#7CB342"
-                  strokeWidth={1.5}
+                  strokeWidth={2}
                 />
               </div>
             </div>
@@ -150,10 +150,10 @@ export function Blogs() {
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
         <div className="self-stretch inline-flex items-center justify-between">
           <div className="flex-1">
-            <span className="text-secondary text-[40px] font-medium leading-9">
+            <span className="text-secondary text-[40px] font-medium leading-9 tracking-[-2px]">
               Latest{" "}
             </span>
-            <span className="text-primary text-[40px] font-medium leading-9">
+            <span className="text-primary text-[40px] font-medium leading-9 tracking-[-2px]">
               Blogs
             </span>
           </div>
@@ -173,7 +173,7 @@ export function Blogs() {
                 icon={ArrowDownRight01Icon}
                 size={20}
                 color="white"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
             </div>
           </div>
@@ -198,7 +198,7 @@ export function Blogs() {
       </div>
 
       {/* Pagination Dots */}
-      <div className="w-[361px] h-2 inline-flex items-center justify-center gap-4">
+      <div className="w-[361px] h-2 inline-flex items-center justify-center gap-4 ">
         <div className="w-20 h-2 flex items-start justify-start gap-2">
           {blogs.map((_, index) => (
             <button

@@ -42,7 +42,7 @@ function ServiceCard({ imagePath, title }: ServiceCardProps) {
         }}
       >
         <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-          <div className="w-[155px] text-center text-white text-[22px] font-medium leading-6">
+          <div className="w-[155px] text-center text-white text-[22px] font-medium leading-6 tracking-tight">
             {title}
           </div>
         </div>
@@ -66,10 +66,10 @@ export function Services() {
         <div className="self-stretch flex flex-col items-center justify-start gap-3">
           {/* Title */}
           <div className="self-stretch text-center">
-            <span className="text-secondary text-[40px] font-medium leading-9">
+            <span className="text-secondary text-[40px] font-medium leading-9 tracking-tight">
               What We{" "}
             </span>
-            <span className="text-primary text-[40px] font-medium leading-9">
+            <span className="text-primary text-[40px] font-medium leading-9 tracking-tight">
               Do
             </span>
           </div>

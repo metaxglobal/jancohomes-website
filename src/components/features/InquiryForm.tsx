@@ -135,7 +135,7 @@ export default function InquiryForm() {
       <div className="w-full max-w-[393px] mx-auto px-4 flex flex-col items-center gap-8">
         {/* Header */}
         <div className="self-stretch flex flex-col items-center gap-3">
-          <h2 className="self-stretch text-center text-[36px] font-medium leading-[40px] text-white">
+          <h2 className="self-stretch text-center text-[36px] font-medium leading-[40px] tracking-[-2px] text-white">
             Let&apos;s Build Something{" "}
             <span className="text-primary">Great</span> Together
           </h2>
@@ -251,7 +251,7 @@ export default function InquiryForm() {
                 icon={ArrowDownRight01Icon}
                 size={20}
                 color="white"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
             </button>
 

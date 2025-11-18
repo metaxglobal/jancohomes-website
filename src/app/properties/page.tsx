@@ -12,52 +12,13 @@ import {
   ArrowRight01Icon,
   ArrowDownRight01Icon,
 } from "@hugeicons/core-free-icons";
-import type { Property } from "@/components/features/PropertyCard";
+import { getAllProperties } from "@/data/properties";
 
 export default function PropertiesPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Properties data with unique IDs and 3 images each
-  const properties: Property[] = [
-    {
-      id: "property-luxury-villa-colombo-7",
-      title: "Modern Luxury Villa",
-      location: "Colombo 7",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      price: "LKR 85M",
-      bedrooms: 4,
-      bathrooms: 3,
-      sqft: "3,500",
-      images: [
-        "https://placehold.co/361x296",
-        "https://placehold.co/361x296",
-        "https://placehold.co/361x296",
-      ],
-      whatsappNumber: "94777599299",
-      whatsappMessage:
-        "Hi, I'm interested in the Modern Luxury Villa in Colombo 7. Could you please provide more details?",
-    },
-    {
-      id: "property-sky-heights-kollupitiya",
-      title: "Sky Heights Residences",
-      location: "Kollupitiya",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      price: "LKR 85M",
-      bedrooms: 3,
-      bathrooms: 2,
-      sqft: "2,100",
-      images: [
-        "https://placehold.co/361x296",
-        "https://placehold.co/361x296",
-        "https://placehold.co/361x296",
-      ],
-      whatsappNumber: "94777599299",
-      whatsappMessage:
-        "Hi, I'm interested in the Sky Heights Residences in Kollupitiya. Could you please provide more details?",
-    },
-  ];
+  // Get properties from centralized data
+  const properties = getAllProperties();
 
   return (
     <>

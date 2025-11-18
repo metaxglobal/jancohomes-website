@@ -64,7 +64,7 @@ function ProjectCard({
                 icon={ArrowDownRight01Icon}
                 size={20}
                 color="#7CB342"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
             </div>
           </div>
@@ -93,18 +93,18 @@ export function Projects() {
   ];
 
   return (
-    <div className="w-full pt-[72px] pb-[64px] px-4">
+    <div className="w-full pt-[64px] pb-[64px] px-4">
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-8">
       {/* Text Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
         {/* Heading */}
         <div className="self-stretch flex flex-col items-center justify-center gap-3">
           <div className="self-stretch">
-            <span className="text-secondary text-[40px] font-medium leading-9">
+            <span className="text-secondary text-[40px] font-medium leading-9 tracking-tight">
               Latest
               <br />
             </span>
-            <span className="text-primary text-[40px] font-medium leading-9">
+            <span className="text-primary text-[40px] font-medium leading-9 tracking-tight ">
               Projects
             </span>
           </div>
@@ -130,7 +130,7 @@ export function Projects() {
                 icon={ArrowDownRight01Icon}
                 size={20}
                 color="white"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
             </div>
           </div>

@@ -5,10 +5,10 @@ import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   ArrowDownRight01Icon,
-  Location05Icon,
+  Location04Icon,
   BedIcon,
-  Toilet01Icon,
-  GridViewIcon,
+  Bathtub01Icon,
+  SchemeIcon,
 } from "@hugeicons/core-free-icons";
 
 export interface Property {
@@ -157,7 +157,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
             <div className="self-stretch flex flex-col items-start justify-start gap-2">
               {/* Title */}
               <div className="self-stretch inline-flex items-center justify-start gap-2.5">
-                <div className="text-secondary text-[22px] font-medium leading-6">
+                <div className="text-secondary text-[22px] font-medium leading-6 tracking-tight">
                   {property.title}
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
               <div className="inline-flex items-center justify-start gap-1">
                 <div className="w-4 h-4 relative">
                   <HugeiconsIcon
-                    icon={Location05Icon}
+                    icon={Location04Icon}
                     size={16}
                     color="#7CB342"
                     strokeWidth={1.2}
@@ -210,7 +210,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
               <div className="w-[29px] flex items-center justify-between">
                 <div className="w-4 h-4 relative">
                   <HugeiconsIcon
-                    icon={Toilet01Icon}
+                    icon={Bathtub01Icon}
                     size={16}
                     color="#7CB342"
                     strokeWidth={1}
@@ -226,7 +226,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
             <div className="flex items-center justify-start gap-1">
               <div className="w-4 h-4 relative">
                 <HugeiconsIcon
-                  icon={GridViewIcon}
+                  icon={SchemeIcon}
                   size={16}
                   color="#7CB342"
                   strokeWidth={1}
@@ -253,7 +253,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
                 icon={ArrowDownRight01Icon}
                 size={20}
                 color="white"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
             </div>
           </div>

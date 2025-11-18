@@ -112,7 +112,7 @@ export function Testimonials() {
         '"Janco transformed our vision into reality. Their attention to detail and commitment to quality is exceptional. The team was professional throughout the entire construction process, and they delivered our dream home on time and within budget."',
       name: "Pradeep Jayawardena",
       location: "Colombo 7",
-      image: "https://placehold.co/48x48",
+      image: "/client image.jpg",
       rating: 5,
     },
     {
@@ -121,7 +121,7 @@ export function Testimonials() {
         '"Working with Janco was an absolute pleasure. Their expertise in construction and project management ensured everything ran smoothly. We highly recommend them to anyone looking for quality construction services."',
       name: "Nimal Fernando",
       location: "Kandy",
-      image: "https://placehold.co/48x48",
+      image: "/client image.jpg",
       rating: 5,
     },
     {
@@ -130,7 +130,7 @@ export function Testimonials() {
         '"The professionalism and dedication of the Janco team exceeded our expectations. They delivered a beautiful home that perfectly matches our requirements. Thank you for making our dream come true!"',
       name: "Sunil Perera",
       location: "Galle",
-      image: "https://placehold.co/48x48",
+      image: "/client image.jpg",
       rating: 5,
     },
   ];
@@ -169,9 +169,9 @@ export function Testimonials() {
           {/* Heading */}
           <div className="self-stretch flex flex-col items-start justify-start gap-3">
             <div className="self-stretch text-center">
-              <span className="text-white text-[40px] font-medium leading-9">
+              <span className="text-white text-[40px] font-medium leading-9 tracking-[-3px]">
                 What Our </span>
-              <span className="text-primary text-[40px] font-medium leading-9">
+              <span className="text-primary text-[40px] font-medium leading-9 tracking-[-3px]">
                 Clients Say
               </span>
             </div>
