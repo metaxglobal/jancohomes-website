@@ -12,6 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import ConsultationModal from "./ConsultationModal";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -23,6 +24,7 @@ const navLinks = [
 
 export function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="relative">
@@ -66,7 +68,7 @@ export function MobileNav() {
         </div>
 
         {/* Main Navigation Bar */}
-        <div className="w-full h-[68px] px-4 bg-secondary border-b border-white-stroke flex items-center justify-between">
+        <div className="w-full h-[68px] px-4 bg-secondary border-b flex items-center justify-between">
           {/* Logo */}
           <Link href="/" aria-label="Home" className="inline-block">
             <Image
@@ -90,15 +92,15 @@ export function MobileNav() {
               <HugeiconsIcon
                 icon={MultiplicationSignIcon}
                 size={24}
-                color="#C2C2C2"
-                strokeWidth={1.5}
+                color="#ffffffff"
+                strokeWidth={3}
               />
             ) : (
               <HugeiconsIcon
                 icon={Menu03Icon}
                 size={24}
-                color="#C2C2C2"
-                strokeWidth={1.5}
+                color="#ffffffff"
+                strokeWidth={3}
               />
             )}
           </button>
@@ -163,7 +165,11 @@ export function MobileNav() {
             </nav>
 
             {/* CTA Button - Exact Figma Specs */}
-            <button className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl">
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl"
+            >
               <span className="text-white text-base font-medium leading-5">
                 Book a free consultation
               </span>
@@ -179,6 +185,9 @@ export function MobileNav() {
           </div>
         </div>
       </div>
+
+      {/* Consultation Modal */}
+      <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
