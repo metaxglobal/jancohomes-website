@@ -12,6 +12,10 @@ import {
   Home01Icon,
   ArrowRight01Icon,
   Calendar03Icon,
+  Facebook02Icon,
+  InstagramIcon,
+  Linkedin02Icon,
+  Mail01Icon,
 } from "@hugeicons/core-free-icons";
 import { blogArticles } from "../page";
 
@@ -210,127 +214,66 @@ export default function BlogArticlePage({
           {/* Social Share Buttons */}
           <div className="flex items-center justify-center gap-4">
             {/* Facebook */}
-            <button
+            <a
+              href="https://www.facebook.com/share/191WuVH49X/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] transition-opacity hover:opacity-80"
               aria-label="Share on Facebook"
             >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15 1.67H11.67C10.34 1.67 9.17 2.84 9.17 4.17V7.5H5.83V11.67H9.17V18.33H13.33V11.67H16.67L15 7.5H13.33V4.17C13.33 3.71 13.71 3.33 14.17 3.33H15V1.67Z"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+              <HugeiconsIcon
+                icon={Facebook02Icon}
+                size={20}
+                color="white"
+                strokeWidth={1.67}
+              />
+            </a>
 
-            {/* Twitter */}
-            <button
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/jancohome/#"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1DA1F2] transition-opacity hover:opacity-80"
-              aria-label="Share on Twitter"
+              aria-label="Share on Instagram"
             >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18.33 3.33C17.5 4.17 16.67 4.58 15.83 4.58C15 3.75 13.75 3.33 12.5 3.33C10 3.33 8.33 5 8.33 7.5V8.33C5.83 8.33 3.75 7.08 1.67 4.17C1.67 4.17 -0.83 10.83 6.67 13.33C5 14.58 3.33 15 1.67 15C9.17 18.33 18.33 15 18.33 7.5C18.33 7.08 18.33 6.67 17.92 5.83C18.33 5 18.33 4.17 18.33 3.33Z"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+              <HugeiconsIcon
+                icon={InstagramIcon}
+                size={20}
+                color="white"
+                strokeWidth={1.67}
+              />
+            </a>
 
             {/* LinkedIn */}
-            <button
+            <a
+              href="https://www.linkedin.com/company/janco-home-and-construction"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0A66C2] transition-opacity hover:opacity-80"
               aria-label="Share on LinkedIn"
             >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5 7.5H1.67V18.33H5V7.5Z"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M3.33 5C4.25 5 5 4.25 5 3.33C5 2.42 4.25 1.67 3.33 1.67C2.42 1.67 1.67 2.42 1.67 3.33C1.67 4.25 2.42 5 3.33 5Z"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M18.33 18.33V12.5C18.33 10.83 16.67 9.17 15 9.17C13.33 9.17 11.67 10.83 11.67 12.5V18.33"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M8.33 7.5V18.33"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+              <HugeiconsIcon
+                icon={Linkedin02Icon}
+                size={20}
+                color="white"
+                strokeWidth={1.67}
+              />
+            </a>
 
-            {/* Copy Link */}
-            <button
+            {/* Email */}
+            <a
+              href="mailto:info@janco.lk"
               className="flex h-12 w-12 items-center justify-center rounded-full bg-[#4A5565] transition-opacity hover:opacity-80"
-              aria-label="Copy link"
+              aria-label="Share via Email"
             >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.83 11.67L3.33 14.17C2.5 15 2.5 16.25 3.33 17.08C4.17 17.92 5.42 17.92 6.25 17.08L8.75 14.58"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M14.17 8.33L16.67 5.83C17.5 5 17.5 3.75 16.67 2.92C15.83 2.08 14.58 2.08 13.75 2.92L11.25 5.42"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M12.5 7.5L7.5 12.5"
-                  stroke="white"
-                  strokeWidth="1.67"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+              <HugeiconsIcon
+                icon={Mail01Icon}
+                size={20}
+                color="white"
+                strokeWidth={1.67}
+              />
+            </a>
           </div>
         </section>
       </main>

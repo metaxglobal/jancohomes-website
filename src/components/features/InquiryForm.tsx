@@ -131,27 +131,28 @@ export default function InquiryForm() {
   };
 
   return (
-    <section id="inquiry-form" className="w-full overflow-hidden bg-secondary py-[72px] px-4">
-      <div className="w-full max-w-[393px] mx-auto flex flex-col items-center gap-8">
+    <section id="inquiry-form" className="w-full overflow-hidden bg-secondary pt-12 pb-12">
+      <div className="w-full max-w-[393px] mx-auto px-4 flex flex-col items-center gap-8">
         {/* Header */}
-        <div className="flex flex-col items-center gap-3">
-          <h2 className="text-center text-[36px] font-medium leading-[40px] text-white">
+        <div className="self-stretch flex flex-col items-center gap-3">
+          <h2 className="self-stretch text-center text-[36px] font-medium leading-[40px] text-white">
             Let&apos;s Build Something{" "}
             <span className="text-primary">Great</span> Together
           </h2>
-          <p className="self-stretch text-center text-[14px] font-normal leading-[14px] text-white">
-            Tell us about your next project — we&apos;ll help make it a reality
-          </p>
+          <div className="self-stretch inline-flex items-center justify-center gap-2.5">
+            <p className="w-[361px] text-center text-[14px] leading-[14px] text-white" style={{ fontWeight: 400 }}>
+              Tell us about your next project — we&apos;ll help make it a reality
+            </p>
+          </div>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="w-full max-w-[393px]">
-          <div className="flex flex-col gap-6">
+        <form onSubmit={handleSubmit} className="self-stretch flex flex-col gap-6">
             {/* Name Field */}
-            <div className="flex flex-col gap-2">
+            <div className="self-stretch flex flex-col gap-2">
               <label
                 htmlFor="name"
-                className="text-[16px] font-medium leading-[20px] text-white"
+                className="self-stretch inline-flex items-center gap-2 text-[16px] font-medium leading-5 text-white"
               >
                 Name
               </label>
@@ -162,7 +163,7 @@ export default function InquiryForm() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className="h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[14px] leading-[14px] text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
+                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[14px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
               />
               {errors.name && (
                 <span className="text-[12px] text-red-400">{errors.name}</span>
@@ -170,10 +171,10 @@ export default function InquiryForm() {
             </div>
 
             {/* Phone Field */}
-            <div className="flex flex-col gap-2">
+            <div className="self-stretch flex flex-col gap-2">
               <label
                 htmlFor="phone"
-                className="text-[16px] font-medium leading-[20px] text-white"
+                className="self-stretch inline-flex items-center gap-2 text-[16px] font-medium leading-5 text-white"
               >
                 Phone
               </label>
@@ -184,7 +185,7 @@ export default function InquiryForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+94 XX XXX XXXX"
-                className="h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[14px] leading-[14px] text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
+                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[14px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
               />
               {errors.phone && (
                 <span className="text-[12px] text-red-400">{errors.phone}</span>
@@ -192,10 +193,10 @@ export default function InquiryForm() {
             </div>
 
             {/* Email Field */}
-            <div className="flex flex-col gap-2">
+            <div className="self-stretch flex flex-col gap-2">
               <label
                 htmlFor="email"
-                className="text-[16px] font-medium leading-[20px] text-white"
+                className="self-stretch inline-flex items-center gap-2 text-[16px] font-medium leading-5 text-white"
               >
                 Email
               </label>
@@ -206,7 +207,7 @@ export default function InquiryForm() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your.email@example.com"
-                className="h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[14px] leading-[14px] text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
+                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[14px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
               />
               {errors.email && (
                 <span className="text-[12px] text-red-400">{errors.email}</span>
@@ -214,10 +215,10 @@ export default function InquiryForm() {
             </div>
 
             {/* Message Field */}
-            <div className="flex flex-col gap-2">
+            <div className="self-stretch flex flex-col gap-2">
               <label
                 htmlFor="message"
-                className="text-[16px] font-medium leading-[20px] text-white"
+                className="self-stretch inline-flex items-center gap-2 text-[16px] font-medium leading-5 text-white"
               >
                 Message
               </label>
@@ -228,7 +229,7 @@ export default function InquiryForm() {
                 onChange={handleChange}
                 placeholder="Tell us about your project..."
                 rows={3}
-                className="h-16 resize-none rounded-[12px] bg-white/10 px-3 pb-2 pt-[13px] text-[14px] leading-[14px] text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
+                className="self-stretch h-16 resize-none rounded-[12px] bg-white/10 px-3 pb-2 pt-[13px] text-[14px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
               />
               {errors.message && (
                 <span className="text-[12px] text-red-400">
@@ -241,9 +242,9 @@ export default function InquiryForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex items-center justify-center gap-2 rounded-[12px] bg-primary px-5 py-[10px] transition-opacity hover:opacity-90 disabled:opacity-50"
+              className="self-stretch flex items-center justify-center gap-2 rounded-[12px] bg-primary px-5 py-[10px] transition-opacity hover:opacity-90 disabled:opacity-50"
             >
-              <span className="text-[16px] font-medium leading-[20px] text-white">
+              <span className="text-[16px] font-medium leading-5 text-white">
                 {isSubmitting ? "Submitting..." : "Enquire Now"}
               </span>
               <HugeiconsIcon
@@ -257,7 +258,7 @@ export default function InquiryForm() {
             {/* Status Messages */}
             {submitStatus === "success" && (
               <div className="rounded-lg bg-primary/20 p-3 text-center text-[14px] text-white">
-                Thank you! We&apos;ll get back to you soon.
+                Thank you! We&apos;ll contact you soon.
               </div>
             )}
             {submitStatus === "error" && (
@@ -265,7 +266,6 @@ export default function InquiryForm() {
                 Something went wrong. Please try again.
               </div>
             )}
-          </div>
         </form>
       </div>
     </section>

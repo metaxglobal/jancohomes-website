@@ -235,7 +235,7 @@ export default function ConsultationModal({
               value={formData.phone}
               onChange={handleChange}
               placeholder="+94 XX XXX XXXX"
-              className="h-9 rounded-md bg-white/10 px-3 py-1 text-[12px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
+              className="h-9 rounded-[12px] bg-white/10 px-3 py-1 text-[12px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
             />
             {errors.phone && (
               <span className="text-[12px] text-red-400">{errors.phone}</span>
@@ -265,7 +265,7 @@ export default function ConsultationModal({
           </div>
 
           {/* Message Field */}
-          <div className="flex h-[86px] flex-col gap-2">
+          <div className="flex h-[86px] flex-col gap-4">
             <label
               htmlFor="modal-message"
               className="h-[14px] text-[16px] font-medium leading-5 text-white"

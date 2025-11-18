@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { MobileNav } from "@/components/features/MobileNav";
+import PropertyCard from "@/components/features/PropertyCard";
 import ConsultationModal from "@/components/features/ConsultationModal";
 import Footer from "@/components/features/Footer";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -11,215 +11,13 @@ import {
   Home01Icon,
   ArrowRight01Icon,
   ArrowDownRight01Icon,
-  Location05Icon,
-  BedIcon,
-  Toilet01Icon,
-  GridViewIcon,
 } from "@hugeicons/core-free-icons";
-
-interface Property {
-  id: string;
-  title: string;
-  location: string;
-  description: string;
-  price: string;
-  bedrooms: number;
-  bathrooms: number;
-  sqft: string;
-  images: string[];
-  whatsappNumber: string;
-  whatsappMessage: string;
-}
-
-interface PropertyCardProps {
-  property: Property;
-}
-
-function PropertyCard({ property }: PropertyCardProps) {
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      property.whatsappMessage ||
-        `Hi, I'm interested in ${property.title} located in ${property.location}. Could you please provide more details?`
-    );
-    const whatsappUrl = `https://wa.me/${property.whatsappNumber}?text=${message}`;
-    window.open(whatsappUrl, "_blank");
-  };
-
-  return (
-    <div
-      className="w-[361px] rounded-[22px] inline-flex flex-col items-start justify-start"
-      style={{
-        boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
-        outline: "1px #C2C2C2 solid",
-      }}
-    >
-      {/* Property Image */}
-      <div className="self-stretch h-[296px] relative overflow-hidden rounded-t-[22px]">
-        <div className="w-[361px] h-[296px] absolute left-0 top-0">
-          <Image
-            src={property.images[0]}
-            alt={property.title}
-            width={361}
-            height={296}
-            className="w-[361px] h-[296px] absolute left-0 top-0 object-cover"
-          />
-          {/* Gradient Overlay */}
-          <div
-            className="w-[361px] h-[296px] absolute left-0 top-0"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 100%)",
-            }}
-          />
-
-          {/* Image Pagination Dots */}
-          <div className="h-[30px] absolute left-[153px] top-[266px] inline-flex items-center justify-start gap-2">
-            <div className="w-4 h-4 p-[3px] bg-white rounded-lg flex items-center justify-start gap-2.5">
-              <div
-                className="w-2.5 h-2.5 bg-white rounded-full border border-ash"
-                style={{
-                  boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.50)",
-                }}
-              />
-            </div>
-            <div className="w-3 h-3 p-[3px] bg-ash rounded-lg" />
-            <div className="w-3 h-3 p-[3px] bg-ash rounded-lg" />
-          </div>
-
-          {/* Price Badge */}
-          <div
-            className="w-[101px] h-[68px] absolute left-[244px] top-4 bg-white rounded-[11px] inline-flex flex-col items-center justify-center"
-            style={{
-              boxShadow: "0px 0px 3.5px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <div className="text-secondary text-sm font-normal leading-[14px]">
-              from
-            </div>
-            <div className="text-secondary text-base font-medium leading-5">
-              {property.price}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Property Details */}
-      <div className="self-stretch p-5 bg-white rounded-b-[22px] flex flex-col items-center justify-center gap-[18px]">
-        <div className="self-stretch flex flex-col items-start justify-start gap-6">
-          <div className="self-stretch flex flex-col items-start justify-start gap-3">
-            <div className="self-stretch flex flex-col items-start justify-start gap-2">
-              {/* Title */}
-              <div className="self-stretch inline-flex items-center justify-start gap-2.5">
-                <div className="text-secondary text-[22px] font-medium leading-6">
-                  {property.title}
-                </div>
-              </div>
-
-              {/* Location */}
-              <div className="inline-flex items-center justify-start gap-1">
-                <div className="w-4 h-4 relative">
-                  <HugeiconsIcon
-                    icon={Location05Icon}
-                    size={16}
-                    color="#7CB342"
-                    strokeWidth={1.2}
-                  />
-                </div>
-                <div className="text-secondary text-sm font-medium leading-[14px]">
-                  {property.location}
-                </div>
-              </div>
-            </div>
-
-            {/* Description */}
-            <div className="self-stretch inline-flex items-center justify-start gap-2.5">
-              <div className="w-[321px] text-secondary/75 text-sm font-normal leading-[14px]">
-                {property.description}
-              </div>
-            </div>
-          </div>
-
-          {/* Features (Bedrooms, Bathrooms, Sqft) */}
-          <div className="self-stretch h-8 border-b border-ash inline-flex items-center justify-start gap-4">
-            {/* Bedrooms */}
-            <div className="w-[29.05px] h-5 flex items-center justify-start gap-1">
-              <div className="w-[29px] flex items-center justify-between">
-                <div className="w-4 h-4 relative">
-                  <HugeiconsIcon
-                    icon={BedIcon}
-                    size={16}
-                    color="#7CB342"
-                    strokeWidth={1}
-                  />
-                </div>
-                <div className="text-secondary text-sm font-normal leading-[14px]">
-                  {property.bedrooms}
-                </div>
-              </div>
-            </div>
-
-            {/* Bathrooms */}
-            <div className="w-[29.05px] h-5 flex items-center justify-start gap-1">
-              <div className="w-[29px] flex items-center justify-between">
-                <div className="w-4 h-4 relative">
-                  <HugeiconsIcon
-                    icon={Toilet01Icon}
-                    size={16}
-                    color="#7CB342"
-                    strokeWidth={1}
-                  />
-                </div>
-                <div className="text-secondary text-sm font-normal leading-[14px]">
-                  {property.bathrooms}
-                </div>
-              </div>
-            </div>
-
-            {/* Square Feet */}
-            <div className="flex items-center justify-start gap-1">
-              <div className="w-4 h-4 relative">
-                <HugeiconsIcon
-                  icon={GridViewIcon}
-                  size={16}
-                  color="#7CB342"
-                  strokeWidth={1}
-                />
-              </div>
-              <div className="text-secondary text-sm font-normal leading-[14px]">
-                {property.sqft} sq ft
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Contact Button - Opens WhatsApp */}
-        <button
-          onClick={handleWhatsAppClick}
-          className="self-stretch px-5 py-[10px] bg-primary rounded-xl inline-flex items-center justify-center gap-2"
-        >
-          <div className="flex items-center justify-start gap-2">
-            <div className="text-white text-base font-medium leading-5">
-              Contact for more details
-            </div>
-            <div className="w-5 h-5 relative overflow-hidden">
-              <HugeiconsIcon
-                icon={ArrowDownRight01Icon}
-                size={20}
-                color="white"
-                strokeWidth={1.5}
-              />
-            </div>
-          </div>
-        </button>
-      </div>
-    </div>
-  );
-}
+import type { Property } from "@/components/features/PropertyCard";
 
 export default function PropertiesPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Properties data with unique IDs
+  // Properties data with unique IDs and 3 images each
   const properties: Property[] = [
     {
       id: "property-luxury-villa-colombo-7",
@@ -231,7 +29,11 @@ export default function PropertiesPage() {
       bedrooms: 4,
       bathrooms: 3,
       sqft: "3,500",
-      images: ["https://placehold.co/361x296"],
+      images: [
+        "https://placehold.co/361x296",
+        "https://placehold.co/361x296",
+        "https://placehold.co/361x296",
+      ],
       whatsappNumber: "94777599299",
       whatsappMessage:
         "Hi, I'm interested in the Modern Luxury Villa in Colombo 7. Could you please provide more details?",
@@ -246,25 +48,14 @@ export default function PropertiesPage() {
       bedrooms: 3,
       bathrooms: 2,
       sqft: "2,100",
-      images: ["https://placehold.co/361x296"],
+      images: [
+        "https://placehold.co/361x296",
+        "https://placehold.co/361x296",
+        "https://placehold.co/361x296",
+      ],
       whatsappNumber: "94777599299",
       whatsappMessage:
         "Hi, I'm interested in the Sky Heights Residences in Kollupitiya. Could you please provide more details?",
-    },
-    {
-      id: "property-ocean-view-mount-lavinia",
-      title: "Ocean View Apartments",
-      location: "Mount Lavinia",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      price: "LKR 65M",
-      bedrooms: 3,
-      bathrooms: 2,
-      sqft: "2,800",
-      images: ["https://placehold.co/361x296"],
-      whatsappNumber: "94777599299",
-      whatsappMessage:
-        "Hi, I'm interested in the Ocean View Apartments in Mount Lavinia. Could you please provide more details?",
     },
   ];
 

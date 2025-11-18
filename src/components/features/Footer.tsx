@@ -21,9 +21,9 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Facebook02Icon, href: "#", label: "Facebook" },
-    { icon: InstagramIcon, href: "#", label: "Instagram" },
-    { icon: Linkedin02Icon, href: "#", label: "LinkedIn" },
+    { icon: Facebook02Icon, href: "https://www.facebook.com/share/191WuVH49X/?mibextid=wwXIfr", label: "Facebook" },
+    { icon: InstagramIcon, href: "https://www.instagram.com/jancohome/#", label: "Instagram" },
+    { icon: Linkedin02Icon, href: "https://www.linkedin.com/company/janco-home-and-construction", label: "LinkedIn" },
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function Footer() {
 
         {/* Horizontal Gradient Line */}
         <div
-          className="pointer-events-none absolute left-0 top-12 h-[5.56px] w-full"
+          className="pointer-events-none absolute left-0 top-0 h-[5.56px] w-full"
           style={{
             background:
               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #7CB342 50%, rgba(0, 0, 0, 0) 100%)",
@@ -111,9 +111,9 @@ export default function Footer() {
                     strokeWidth={1}
                   />
                 </div>
-                <div className="flex h-8 w-[318px] flex-col justify-center text-[14px] font-normal leading-[14px] text-ash">
+                <a href="https://maps.app.goo.gl/X9zNe9UcxMWEhTsx9" target="_blank" rel="noopener noreferrer" className="flex h-8 w-[318px] flex-col justify-center text-[14px] font-normal leading-[14px] text-ash">
                   No: 458 1/1, High Level Rd, Pannipitiya, Sri Lanka
-                </div>
+                </a>
               </div>
 
               {/* Phone */}
