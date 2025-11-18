@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <div className="relative w-full min-h-screen bg-secondary overflow-hidden -mt-[112px] pt-[112px]">
+    <div className="relative w-full min-h-screen bg-secondary overflow-hidden">
       {/* Background Blur Effects */}
       <div
         className="absolute w-[222px] h-[222px] left-[161px] top-[332px] opacity-22 bg-primary rounded-full blur-[64px]"
@@ -14,7 +14,7 @@ export function Hero() {
         }}
       />
       <div
-        className="absolute w-[320px] h-[320px] left-[-72px] top-[-102px] opacity-[0.13] bg-primary rounded-full blur-[64px]"
+        className="absolute w-[320px] h-[320px] left-[-72px] top-[-60px] opacity-[0.13] bg-primary rounded-full blur-[64px]"
         style={{
           boxShadow: "128px 128px 128px",
         }}
@@ -55,14 +55,14 @@ export function Hero() {
 
             {/* Main Heading */}
             <div className="self-stretch">
-              <span className="text-white text-[40px] font-medium leading-9">
+              <span className="text-white text-[40px] font-medium leading-9 tracking-[-3px]">
                 Building the{" "}
               </span>
-              <span className="text-primary text-[40px] font-medium leading-9">
+              <span className="text-primary text-[40px] font-medium leading-9 tracking-[-3px]">
                 Future of
               </span>
               <br />
-              <span className="text-primary text-[40px] font-medium leading-9">
+              <span className="text-primary text-[40px] font-medium leading-9 tracking-[-3px]">
                 Construction
               </span>
             </div>
