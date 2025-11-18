@@ -52,7 +52,7 @@ function ProjectCard({
 
         {/* View More Link */}
         <Link
-          href={`/projects/${id}`}
+          href="/projects"
           className="pt-[10px] pr-5 rounded-xl inline-flex items-center justify-center gap-2"
         >
           <div className="flex items-center justify-start gap-2">
@@ -93,7 +93,7 @@ export function Projects() {
   ];
 
   return (
-    <div className="w-full py-[72px] px-4">
+    <div className="w-full pt-[72px] pb-[64px] px-4">
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-8">
       {/* Text Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
@@ -108,7 +108,7 @@ export function Projects() {
               Projects
             </span>
           </div>
-          <div className="self-stretch text-secondary/75 text-sm font-normal leading-[14px]">
+          <div className="w-[361px] text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
             Our signature projects reflect our commitment to realize your
             dreams. We have delivered successfully completed residential
             projects to thousands of happy customers throughout our more than 8

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 interface Testimonial {
@@ -103,6 +103,7 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
 export function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const testimonials: Testimonial[] = [
     {
@@ -138,12 +139,28 @@ export function Testimonials() {
     setActiveIndex(index);
   };
 
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const scrollLeft = scrollContainerRef.current.scrollLeft;
+      const containerWidth = scrollContainerRef.current.offsetWidth;
+      const newIndex = Math.round(scrollLeft / containerWidth);
+      setActiveIndex(newIndex);
+    }
+  };
+
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      container.scrollLeft = activeIndex * container.offsetWidth;
+    }
+  }, [activeIndex]);
+
   return (
     <div className="w-full py-[72px] px-4">
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-[10px] relative">
       <div className="self-stretch flex flex-col items-center justify-center gap-6">
         {/* Text Section */}
-        <div className="self-stretch flex flex-col items-center justify-start gap-2">
+        <div className="w-[393px] px-4 flex flex-col items-center justify-start gap-2">
           {/* Label */}
           <div className="self-stretch text-center text-primary text-base font-normal leading-5">
             TESTIMONIALS
@@ -153,15 +170,14 @@ export function Testimonials() {
           <div className="self-stretch flex flex-col items-start justify-start gap-3">
             <div className="self-stretch text-center">
               <span className="text-white text-[40px] font-medium leading-9">
-                What Our{" "}
-              </span>
+                What Our </span>
               <span className="text-primary text-[40px] font-medium leading-9">
                 Clients Say
               </span>
             </div>
 
             {/* Description */}
-            <div className="self-stretch text-center text-ash text-sm font-normal leading-[14px]">
+            <div className="self-stretch text-center text-ash text-sm leading-[14px]" style={{ fontWeight: 400 }}>
               Over 20 years of excellence in construction and real estate.
               Here&apos;s what our satisfied clients have to say about working
               with Janco.
@@ -171,8 +187,24 @@ export function Testimonials() {
 
         {/* Testimonials Slider */}
         <div className="self-stretch flex flex-col items-start justify-start gap-6">
-          {/* Active Testimonial Card */}
-          <TestimonialCard testimonial={testimonials[activeIndex]} />
+          {/* Swipeable Testimonial Cards */}
+          <div
+            ref={scrollContainerRef}
+            onScroll={handleScroll}
+            className="w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
+            <div className="inline-flex items-start justify-start gap-4">
+              {testimonials.map((testimonial, index) => (
+                <div key={testimonial.id} className="w-[361px] flex-shrink-0 snap-center" style={{ scrollSnapAlign: 'center' }}>
+                  <TestimonialCard testimonial={testimonial} />
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Pagination Dots */}
           <div className="self-stretch inline-flex items-center justify-center gap-4">
@@ -190,6 +222,12 @@ export function Testimonials() {
             </div>
           </div>
         </div>
+
+        <style jsx global>{`
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
       </div>
     </div>
     </div>

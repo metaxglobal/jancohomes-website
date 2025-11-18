@@ -24,7 +24,8 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     images: [
       "/projects/luxury-residence-colombo.jpg",
-      "https://placehold.co/361x250",
+      "/projects/project 1.jpg",
+      "/projects/project 2.jpg",
       "https://placehold.co/361x250",
     ],
   },
@@ -37,7 +38,8 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     images: [
       "/projects/modern-villa-kandy.jpg",
-      "https://placehold.co/361x250",
+      "/projects/project 1.jpg",
+      "/projects/project 2.jpg",
       "https://placehold.co/361x250",
     ],
   },
@@ -50,7 +52,8 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     images: [
       "/projects/contemporary-house-mirigama.jpg",
-      "https://placehold.co/361x250",
+      "/projects/project 1.jpg",
+      "/projects/project 2.jpg",
       "https://placehold.co/361x250",
     ],
   },
@@ -63,7 +66,8 @@ const projects = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     images: [
       "/projects/luxury-estate-negombo.jpg",
-      "https://placehold.co/361x250",
+      "/projects/project 1.jpg",
+      "/projects/project 2.jpg",
       "https://placehold.co/361x250",
     ],
   },
@@ -78,6 +82,7 @@ const projects = [
       "/projects/modern-apartment-complex.jpg",
       "/projects/modern-apartment-complex-2.jpg",
       "/projects/modern-apartment-complex-3.jpg",
+      "/projects/project 1.jpg",
     ],
   },
 ];

@@ -168,28 +168,32 @@ export default function ConsultationModal({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="mb-8 flex flex-col gap-2">
-          <div className="flex items-start justify-between">
-            <h2 className="flex h-10 items-center gap-2 text-[22px] font-medium leading-6 text-white">
-              Book a Free <span className="text-primary">Consultation</span>
-            </h2>
-            <button
-              onClick={onClose}
-              className="rounded-[11px] p-[10px] outline outline-1 outline-white/10 outline-offset-[-1px] transition-colors hover:bg-white/10"
-              aria-label="Close modal"
-            >
-              <HugeiconsIcon
-                icon={Cancel01Icon}
-                size={20}
-                color="white"
-                strokeWidth={1.5}
-              />
-            </button>
+        <div className="mb-8 flex flex-col gap-[10px]">
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <div className="flex h-10 items-center gap-2">
+                <h2 className="text-[22px] font-medium leading-6 text-white">
+                  Book a Free <span className="text-primary">Consultation</span>
+                </h2>
+              </div>
+              <button
+                onClick={onClose}
+                className="rounded-[11px] p-[10px] outline outline-1 outline-white/10 outline-offset-[-1px] transition-colors hover:bg-white/10"
+                aria-label="Close modal"
+              >
+                <HugeiconsIcon
+                  icon={Cancel01Icon}
+                  size={20}
+                  color="white"
+                  strokeWidth={1.5}
+                />
+              </button>
+            </div>
+            <p className="w-[244px] text-[14px] font-medium leading-[14px] text-[#99A1AF]">
+              Tell us about your needs and we&apos;ll schedule a free consultation
+              with one of our experts.
+            </p>
           </div>
-          <p className="w-[244px] text-[14px] font-medium leading-[14px] text-[#99A1AF]">
-            Tell us about your needs and we&apos;ll schedule a free consultation
-            with one of our experts.
-          </p>
         </div>
 
         {/* Form */}

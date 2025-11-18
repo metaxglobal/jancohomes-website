@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Location04Icon, GridViewIcon } from "@hugeicons/core-free-icons";
@@ -22,15 +22,46 @@ export default function FeaturedProjectCard({
   images,
 }: FeaturedProjectCardProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
 
   const handleDotClick = (index: number) => {
     setCurrentImageIndex(index);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      // Swipe left - next image
+      if (currentImageIndex < images.length - 1) {
+        setCurrentImageIndex(currentImageIndex + 1);
+      }
+    }
+
+    if (touchStartX.current - touchEndX.current < -50) {
+      // Swipe right - previous image
+      if (currentImageIndex > 0) {
+        setCurrentImageIndex(currentImageIndex - 1);
+      }
+    }
+  };
+
   return (
     <div className="w-[361px] flex-col rounded-[22px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)] outline outline-1 outline-ash outline-offset-[-1px]">
       {/* Image Section with Pagination */}
-      <div className="relative h-[250px] overflow-hidden rounded-t-[22px]">
+      <div 
+        className="relative h-[250px] overflow-hidden rounded-t-[22px] touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Image with gradient overlay */}
         <div className="relative h-full w-full">
           <Image
