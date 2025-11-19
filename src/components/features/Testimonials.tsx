@@ -173,7 +173,7 @@ export function Testimonials() {
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-[10px] relative z-10">
       <div className="w-full flex flex-col items-center justify-center gap-6">
         {/* Text Section */}
-        <div className="w-full px-4 flex flex-col items-center justify-start gap-2">
+        <div className="w-full px-2 flex flex-col items-center justify-start gap-2">
           {/* Label */}
           <div className="self-stretch text-center text-primary text-base font-normal leading-5 tracking-tight">
             TESTIMONIALS
