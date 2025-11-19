@@ -12,7 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import ConsultationModal from "./ConsultationModal";
+import ConsultationModal from "../ConsultationModal";
 
 const navLinks = [
   { label: "About", href: "#about" },

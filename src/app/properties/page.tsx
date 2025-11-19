@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { MobileNav } from "@/components/features/MobileNav";
+import { MobileNav } from "@/components/features/navigation";
 import PropertyCard from "@/components/features/PropertyCard";
 import ConsultationModal from "@/components/features/ConsultationModal";
 import Footer from "@/components/features/Footer";

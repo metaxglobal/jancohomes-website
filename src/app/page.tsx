@@ -1,5 +1,5 @@
-import { MobileNav } from "@/components/features/MobileNav";
-import { Hero } from "@/components/features/Hero";
+import { MobileNav, DesktopNav } from "@/components/features/navigation";
+import { HeroMobile, HeroDesktop } from "@/components/features/hero";
 import { About } from "@/components/features/About";
 import { Services } from "@/components/features/Services";
 import { Projects } from "@/components/features/Projects";
@@ -12,69 +12,79 @@ import Footer from "@/components/features/Footer";
 export default function Home() {
   return (
     <>
-      {/* Mobile Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 md:hidden">
+      {/* ========== NAVIGATION ========== */}
+      {/* Mobile Navigation (< 768px) */}
+      <header className="fixed top-0 left-0 right-0 z-50 lg:hidden">
         <MobileNav />
       </header>
 
-      {/* Main Content */}
+      {/* Desktop Navigation (>= 1024px) */}
+      <header className="hidden lg:block fixed top-0 left-0 right-0 z-50">
+        <DesktopNav />
+      </header>
+
+      {/* ========== MAIN CONTENT ========== */}
       <main className="min-h-screen bg-white w-full">
-        {/* Hero Section - Mobile */}
-        <section className="md:hidden bg-secondary w-full">
-          <Hero />
+        
+        {/* ===== HERO SECTION ===== */}
+        {/* Mobile Hero (< 1024px) */}
+        <section className="lg:hidden bg-secondary w-full">
+          <HeroMobile />
         </section>
 
-        {/* About Section - Mobile */}
-        <section className="md:hidden w-full">
+        {/* Desktop Hero (>= 1024px) */}
+        <section className="hidden lg:block bg-secondary w-full">
+          <HeroDesktop />
+        </section>
+
+        {/* ===== ABOUT SECTION ===== */}
+        {/* Will use responsive classes - same component for all screens */}
+        <section className="w-full">
           <About />
         </section>
 
-        {/* Services Section - Mobile */}
-        <section className="md:hidden bg-white w-full">
+        {/* ===== SERVICES SECTION ===== */}
+        {/* Will use responsive classes - same component for all screens */}
+        <section className="bg-white w-full">
           <Services />
         </section>
 
-        {/* Projects Section - Mobile */}
-        <section className="md:hidden bg-background-3 w-full">
+        {/* ===== PROJECTS SECTION ===== */}
+        {/* Will use responsive classes - same component for all screens */}
+        <section className="bg-background-3 w-full">
           <Projects />
         </section>
 
-        {/* Testimonials Section - Mobile */}
-        <section className="md:hidden bg-secondary w-full">
+        {/* ===== TESTIMONIALS SECTION ===== */}
+        {/* Will use responsive classes - same component for all screens */}
+        <section className="bg-secondary w-full">
           <Testimonials />
         </section>
 
-        {/* Blogs Section - Mobile */}
-        <section className="md:hidden bg-background-1 w-full">
+        {/* ===== BLOGS SECTION ===== */}
+        {/* Will use responsive classes - same component for all screens */}
+        <section className="bg-background-1 w-full">
           <Blogs />
         </section>
 
-        {/* Real Estate Section - Mobile */}
-        <section className="md:hidden bg-white w-full">
+        {/* ===== REAL ESTATE SECTION ===== */}
+        {/* Will use responsive classes - same component for all screens */}
+        <section className="bg-white w-full">
           <RealEstate />
         </section>
 
-        {/* Inquiry Form Section - Mobile */}
-        <section className="md:hidden bg-secondary w-full">
+        {/* ===== INQUIRY FORM SECTION ===== */}
+        {/* Will use responsive classes - same component for all screens */}
+        <section className="bg-secondary w-full">
           <InquiryForm />
         </section>
       </main>
 
-      {/* Footer - Mobile */}
-      <footer className="md:hidden">
+      {/* ========== FOOTER ========== */}
+      {/* Will use responsive classes - same component for all screens */}
+      <footer>
         <Footer />
       </footer>
-
-      {/* Desktop placeholder - will be built later */}
-      <main className="hidden md:block">
-        <section className="hidden md:block">
-          <div className="container mx-auto py-16 px-4">
-            <h1 className="text-4xl font-bold text-secondary">
-              Desktop version coming soon...
-            </h1>
-          </div>
-        </section>
-      </main>
     </>
   );
 }

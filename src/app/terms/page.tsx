@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MobileNav } from "@/components/features/MobileNav";
+import { MobileNav } from "@/components/features/navigation";
 import Footer from "@/components/features/Footer";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {

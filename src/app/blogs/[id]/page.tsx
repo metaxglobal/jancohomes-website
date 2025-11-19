@@ -4,7 +4,7 @@ import React, { useState, use } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { MobileNav } from "@/components/features/MobileNav";
+import { MobileNav } from "@/components/features/navigation";
 import ConsultationModal from "@/components/features/ConsultationModal";
 import Footer from "@/components/features/Footer";
 import { HugeiconsIcon } from "@hugeicons/react";

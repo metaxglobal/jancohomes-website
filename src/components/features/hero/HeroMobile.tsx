@@ -3,7 +3,7 @@ import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Hero() {
+export function HeroMobile() {
   return (
     <div className="relative w-full min-h-screen bg-secondary overflow-hidden">
       {/* Background Blur Effects */}
