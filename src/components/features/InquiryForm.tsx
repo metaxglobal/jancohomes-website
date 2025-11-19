@@ -163,7 +163,7 @@ export default function InquiryForm() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
+                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[14px] placeholder:text-ash/60 focus:outline-2 focus:outline-primary"
               />
               {errors.name && (
                 <span className="text-[12px] text-red-400">{errors.name}</span>
@@ -185,7 +185,7 @@ export default function InquiryForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+94 XX XXX XXXX"
-                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
+                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[14px] placeholder:text-ash/60 focus:outline-2 focus:outline-primary"
               />
               {errors.phone && (
                 <span className="text-[12px] text-red-400">{errors.phone}</span>
@@ -207,7 +207,7 @@ export default function InquiryForm() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your.email@example.com"
-                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
+                className="self-stretch h-10 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[14px] placeholder:text-ash/60 focus:outline-2 focus:outline-primary"
               />
               {errors.email && (
                 <span className="text-[12px] text-red-400">{errors.email}</span>
@@ -229,7 +229,7 @@ export default function InquiryForm() {
                 onChange={handleChange}
                 placeholder="Tell us about your project..."
                 rows={3}
-                className="self-stretch h-16 resize-none rounded-[12px] bg-white/10 px-3 pb-2 pt-[13px] text-[16px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-ash focus:outline-2 focus:outline-primary"
+                className="self-stretch h-16 resize-none rounded-[12px] bg-white/10 px-3 pb-2 pt-[13px] text-[16px] leading-[14px] text-ash outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[14px] placeholder:text-ash/60 focus:outline-2 focus:outline-primary"
               />
               {errors.message && (
                 <span className="text-[12px] text-red-400">
