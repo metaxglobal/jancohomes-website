@@ -4,14 +4,16 @@
  */
 
 // Container Classes
+// Desktop: 1440px viewport with 120px padding = 1200px content width
+// On larger screens: content stays 1200px, margins grow
 export const containerClasses = 
-  "w-full px-4 md:px-8 lg:px-12 xl:max-w-7xl xl:mx-auto";
+  "w-full px-4 md:px-8 lg:px-[120px] lg:max-w-[1440px] lg:mx-auto";
 
 export const containerNarrow = 
-  "w-full px-4 md:px-8 lg:max-w-5xl lg:mx-auto";
+  "w-full px-4 md:px-8 lg:px-[120px] lg:max-w-[1200px] lg:mx-auto";
 
 export const containerWide = 
-  "w-full px-4 md:px-8 lg:px-16 2xl:max-w-[1920px] 2xl:mx-auto";
+  "w-full px-4 md:px-8 lg:px-[120px] lg:max-w-[1440px] lg:mx-auto";
 
 // Section Spacing
 export const sectionSpacing = 

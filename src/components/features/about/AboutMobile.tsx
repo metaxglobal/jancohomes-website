@@ -8,7 +8,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import Image from "next/image";
 
-export function About() {
+export function AboutMobile() {
   return (
     <div className="w-full flex flex-col" id="about">
       {/* Images Section - Background #F7F7F7 */}

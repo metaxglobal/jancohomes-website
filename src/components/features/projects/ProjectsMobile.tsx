@@ -74,7 +74,7 @@ function ProjectCard({
   );
 }
 
-export function Projects() {
+export function ProjectsMobile() {
   const projects = [
     {
       id: "modern-villa-kandy",

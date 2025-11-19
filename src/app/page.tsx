@@ -1,8 +1,8 @@
 import { MobileNav, DesktopNav } from "@/components/features/navigation";
 import { HeroMobile, HeroDesktop } from "@/components/features/hero";
-import { About } from "@/components/features/About";
-import { Services } from "@/components/features/Services";
-import { Projects } from "@/components/features/Projects";
+import { AboutMobile, AboutDesktop } from "@/components/features/about";
+import { ServicesMobile, ServicesDesktop } from "@/components/features/services";
+import { ProjectsMobile, ProjectsDesktop } from "@/components/features/projects";
 import { Testimonials } from "@/components/features/Testimonials";
 import { Blogs } from "@/components/features/Blogs";
 import { RealEstate } from "@/components/features/RealEstate";
@@ -38,21 +38,36 @@ export default function Home() {
         </section>
 
         {/* ===== ABOUT SECTION ===== */}
-        {/* Will use responsive classes - same component for all screens */}
-        <section className="w-full">
-          <About />
+        {/* Mobile About (< 1024px) */}
+        <section className="lg:hidden w-full">
+          <AboutMobile />
+        </section>
+
+        {/* Desktop About (>= 1024px) */}
+        <section className="hidden lg:block w-full">
+          <AboutDesktop />
         </section>
 
         {/* ===== SERVICES SECTION ===== */}
-        {/* Will use responsive classes - same component for all screens */}
-        <section className="bg-white w-full">
-          <Services />
+        {/* Mobile Services (< 1024px) */}
+        <section className="lg:hidden bg-white w-full">
+          <ServicesMobile />
+        </section>
+
+        {/* Desktop Services (>= 1024px) */}
+        <section className="hidden lg:block bg-white w-full">
+          <ServicesDesktop />
         </section>
 
         {/* ===== PROJECTS SECTION ===== */}
-        {/* Will use responsive classes - same component for all screens */}
-        <section className="bg-background-3 w-full">
-          <Projects />
+        {/* Mobile Projects (< 1024px) */}
+        <section className="lg:hidden w-full">
+          <ProjectsMobile />
+        </section>
+
+        {/* Desktop Projects (>= 1024px) */}
+        <section className="hidden lg:block w-full">
+          <ProjectsDesktop />
         </section>
 
         {/* ===== TESTIMONIALS SECTION ===== */}

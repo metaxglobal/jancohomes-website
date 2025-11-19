@@ -99,20 +99,16 @@ const config: Config = {
           DEFAULT: "1rem", // 16px mobile
           sm: "1.5rem", // 24px tablet
           md: "2rem", // 32px laptop
-          lg: "2.5rem", // 40px desktop
-          xl: "3rem", // 48px large desktop
-          "2xl": "4rem", // 64px 2K
-          "3xl": "5rem", // 80px Full HD
-          "4xl": "6rem", // 96px 4K
+          lg: "7.5rem", // 120px desktop (matches Figma)
+          xl: "7.5rem", // 120px large desktop
+          "2xl": "7.5rem", // 120px 2K
         },
         screens: {
           sm: "640px",
           md: "768px",
           lg: "1024px",
-          xl: "1280px",
-          "2xl": "1536px",
-          "3xl": "1920px",
-          "4xl": "2560px",
+          xl: "1440px", // Max content width (matches Figma design)
+          "2xl": "1440px", // Keeps content at 1440px, increases margins
         },
       },
 

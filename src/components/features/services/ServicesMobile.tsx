@@ -51,7 +51,7 @@ function ServiceCard({ imagePath, title }: ServiceCardProps) {
   );
 }
 
-export function Services() {
+export function ServicesMobile() {
   return (
     <div className="w-full py-[72px] px-4" id="services">
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-start gap-8">
