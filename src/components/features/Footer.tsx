@@ -30,18 +30,19 @@ export default function Footer() {
     <footer className="relative w-full overflow-hidden bg-[#0B0B0A]">
       <div className="w-full max-w-[393px] mx-auto px-4 pt-[48px] pb-[48px]">
         {/* Background Blur Effects */}
+        {/* Background blur blobs - centered so they span full footer seamlessly */}
         <div
-          className="pointer-events-none absolute left-4 top-12 h-[287.62px] w-[287.62px] rounded-full bg-primary opacity-[0.13] shadow-[240px_240px_240px]"
+          className="pointer-events-none absolute left-1/2 top-[720px] -translate-x-1/2 h-[288px] w-[288px] rounded-full bg-primary opacity-[0.2] shadow-[240px_240px_240px] z-0"
           style={{ filter: "blur(120px)" }}
         />
         <div
-          className="pointer-events-none absolute left-4 top-[331.62px] h-[249.27px] w-[249.27px] rounded-full bg-primary opacity-[0.13] shadow-[240px_240px_240px]"
+          className="pointer-events-none absolute left-1/2 top-[200px] -translate-x-1/2 h-[250px] w-[250px] rounded-full bg-primary opacity-[0.2] shadow-[240px_240px_240px] z-0"
           style={{ filter: "blur(120px)" }}
         />
 
-        {/* Horizontal Gradient Line */}
+        {/* Horizontal Gradient Line (full-width) - sits behind content */}
         <div
-          className="pointer-events-none absolute left-0 top-0 h-[5.56px] w-full"
+          className="pointer-events-none absolute inset-x-0 top-0 h-[5.56px] z-0"
           style={{
             background:
               "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #7CB342 50%, rgba(0, 0, 0, 0) 100%)",
@@ -112,7 +113,7 @@ export default function Footer() {
                     strokeWidth={2}
                   />
                 </div>
-                <a href="https://maps.app.goo.gl/X9zNe9UcxMWEhTsx9" target="_blank" rel="noopener noreferrer" className="flex h-8 w-[318px] flex-col justify-center text-[14px] font-normal leading-[14px] text-ash">
+                <a href="https://maps.app.goo.gl/X9zNe9UcxMWEhTsx9" target="_blank" rel="noopener noreferrer" className="flex h-8 w-[318px] flex-col justify-center text-[14px] font-normal leading-[14px] tracking-tight text-ash">
                   No: 458 1/1, High Level Rd, Pannipitiya, Sri Lanka
                 </a>
               </div>

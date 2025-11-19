@@ -66,10 +66,10 @@ export function Services() {
         <div className="self-stretch flex flex-col items-center justify-start gap-3">
           {/* Title */}
           <div className="self-stretch text-center">
-            <span className="text-secondary text-[40px] font-medium leading-9 tracking-tight">
+            <span className="text-secondary text-[40px] font-medium leading-9 tracking-[-2px]">
               What We{" "}
             </span>
-            <span className="text-primary text-[40px] font-medium leading-9 tracking-tight">
+            <span className="text-primary text-[40px] font-medium leading-9 tracking-[-2px]">
               Do
             </span>
           </div>

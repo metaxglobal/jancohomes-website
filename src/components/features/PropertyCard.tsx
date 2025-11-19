@@ -169,7 +169,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
                     icon={Location04Icon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1.2}
+                    strokeWidth={1.5}
                   />
                 </div>
                 <div className="text-secondary text-sm font-medium leading-[14px]">
@@ -196,7 +196,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
                     icon={BedIcon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={1.5}
                   />
                 </div>
                 <div className="text-secondary text-sm leading-[14px]" style={{ fontWeight: 400 }}>
@@ -213,7 +213,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
                     icon={Bathtub01Icon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={1.5}
                   />
                 </div>
                 <div className="text-secondary text-sm leading-[14px]" style={{ fontWeight: 400 }}>
@@ -229,7 +229,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
                   icon={SchemeIcon}
                   size={16}
                   color="#7CB342"
-                  strokeWidth={1}
+                  strokeWidth={1.5}
                 />
               </div>
               <div className="text-secondary text-sm leading-[14px]" style={{ fontWeight: 400 }}>

@@ -100,11 +100,11 @@ export function Projects() {
         {/* Heading */}
         <div className="self-stretch flex flex-col items-center justify-center gap-3">
           <div className="self-stretch">
-            <span className="text-secondary text-[40px] font-medium leading-9 tracking-tight">
+            <span className="text-secondary text-[40px] font-medium leading-9 tracking-[-2px]">
               Latest
               <br />
             </span>
-            <span className="text-primary text-[40px] font-medium leading-9 tracking-tight ">
+            <span className="text-primary text-[40px] font-medium leading-9 tracking-[-2px]">
               Projects
             </span>
           </div>

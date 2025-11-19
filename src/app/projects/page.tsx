@@ -100,7 +100,7 @@ export default function ProjectsPage() {
       {/* Main Content */}
       <main className="relative min-h-screen overflow-hidden bg-white pt-[112px]">
         {/* Hero Section with Dark Background */}
-        <section className="relative h-[340px] w-full overflow-hidden bg-secondary md:hidden">
+        <section className="relative h-[240px] w-full overflow-hidden bg-secondary md:hidden">
           {/* Background Blur Effects */}
           <div
             className="pointer-events-none absolute left-[259px] top-[233px] h-[134px] w-[134px] rounded-full bg-primary opacity-30 shadow-[128px_128px_128px]"
@@ -116,7 +116,7 @@ export default function ProjectsPage() {
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 flex w-[361px] flex-col gap-8 px-4 pt-8">
+          <div className="relative z-10 flex w-[361px] flex-col gap-4 px-4 pt-8">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center gap-2">
               <Link
@@ -145,9 +145,10 @@ export default function ProjectsPage() {
             </div>
 
             {/* Title and Description */}
-            <div className="flex flex-col gap-3">
-              <h1 className="w-[361px] text-[40px] font-medium leading-9 text-white">
-                Featured <span className="text-primary">Projects</span>
+            <div className="flex flex-col gap-3 pt-4">
+              <h1 className="w-[361px] text-[40px] font-medium leading-9 tracking-[-2px] text-white">
+                <span className="">Featured </span>
+                <span className="text-primary">Projects</span>
               </h1>
               <p className="w-[361px] text-[14px] font-medium leading-[14px] text-ash">
                 Explore our collection of premium residential and commercial
@@ -191,7 +192,7 @@ export default function ProjectsPage() {
 
           <div className="relative z-10 flex h-[333px] flex-col items-center justify-center gap-12 px-4">
             <div className="flex flex-col items-center gap-3">
-              <h2 className="text-center text-[36px] font-medium leading-10 text-white">
+              <h2 className="text-center text-[36px] font-medium leading-10 tracking-[-2px] text-white">
                 Ready to Start <span className="text-primary">Your</span>{" "}
                 Project?
               </h2>
@@ -211,7 +212,7 @@ export default function ProjectsPage() {
                 icon={ArrowDownRight01Icon}
                 size={20}
                 color="white"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
             </button>
           </div>

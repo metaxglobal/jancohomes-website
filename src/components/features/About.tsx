@@ -45,11 +45,11 @@ export function About() {
               {/* Title */}
               <div className="w-[361px] flex items-center justify-center gap-2.5">
                 <div className="flex-1">
-                  <span className="text-secondary text-[40px] font-medium leading-9 tracking-tight">
+                  <span className="text-secondary text-[40px] font-medium leading-9 tracking-[-3px]">
                     Why Choose
                     <br />
                   </span>
-                  <span className="text-primary text-[40px] font-medium leading-9 tracking-tight">
+                  <span className="text-primary text-[40px] font-medium leading-9 tracking-[-3px]">
                     Janco?
                   </span>
                 </div>

@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Location04Icon, GridViewIcon } from "@hugeicons/core-free-icons";
+import { Location04Icon, SchemeIcon } from "@hugeicons/core-free-icons";
 
 interface FeaturedProjectCardProps {
   id: string;
@@ -106,7 +106,7 @@ export default function FeaturedProjectCard({
           <div className="flex flex-col gap-4">
             {/* Title and Meta Info */}
             <div className="flex flex-col gap-3">
-              <h3 className="text-[22px] font-medium leading-6 text-secondary">
+              <h3 className="text-[22px] font-medium leading-6 tracking-tight text-secondary">
                 {title}
               </h3>
               <div className="flex items-start gap-6">
@@ -116,7 +116,7 @@ export default function FeaturedProjectCard({
                     icon={Location04Icon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1.2}
+                    strokeWidth={1.5}
                   />
                   <span className="text-[14px] font-medium leading-[14px] text-secondary">
                     {location}
@@ -126,10 +126,10 @@ export default function FeaturedProjectCard({
                 {/* Area */}
                 <div className="flex items-center gap-1">
                   <HugeiconsIcon
-                    icon={GridViewIcon}
+                    icon={SchemeIcon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1.2}
+                    strokeWidth={1.5}
                   />
                   <span className="text-[14px] font-medium leading-[14px] text-secondary">
                     {area}
