@@ -19,7 +19,7 @@ interface TestimonialCardProps {
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <div
-      className="w-full p-5 rounded-[22px] inline-flex flex-col items-start justify-center gap-[10px]"
+      className="w-full min-h-[260px] p-5 rounded-[22px] inline-flex flex-col items-start justify-center gap-[10px]"
       style={{
         background: "rgba(255, 255, 255, 0.10)",
         outline: "1px rgba(255, 255, 255, 0.20) solid",
@@ -137,32 +137,45 @@ export function Testimonials() {
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index);
+    if (scrollContainerRef.current) {
+      const scrollAmount = index * (361 + 16); // card width + gap
+      scrollContainerRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    }
   };
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
       const scrollLeft = scrollContainerRef.current.scrollLeft;
-      const containerWidth = scrollContainerRef.current.offsetWidth;
-      const newIndex = Math.round(scrollLeft / containerWidth);
+      const cardWidth = 361 + 16; // card width + gap
+      const newIndex = Math.round(scrollLeft / cardWidth);
       setActiveIndex(newIndex);
     }
   };
 
-  useEffect(() => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      container.scrollLeft = activeIndex * container.offsetWidth;
-    }
-  }, [activeIndex]);
+
 
   return (
-    <div className="w-full py-[72px] px-4">
-      <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-[10px] relative">
+    <div className="w-full py-[72px] px-4 relative">
+        {/* Background blur element 1 */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2 top-8 w-80 h-80 opacity-10 rounded-full bg-primary pointer-events-none"
+          style={{ filter: "blur(64px)" }}
+        />
+        {/* Background blur element 2 */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2 top-96 w-80 h-80 opacity-10 rounded-full bg-primary pointer-events-none"
+          style={{ filter: "blur(64px)" }}
+        />
+
+      <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-[10px] relative z-10">
       <div className="self-stretch flex flex-col items-center justify-center gap-6">
         {/* Text Section */}
         <div className="w-[393px] px-4 flex flex-col items-center justify-start gap-2">
           {/* Label */}
-          <div className="self-stretch text-center text-primary text-base font-normal leading-5">
+          <div className="self-stretch text-center text-primary text-base font-normal leading-5 tracking-tight">
             TESTIMONIALS
           </div>
 
@@ -199,7 +212,7 @@ export function Testimonials() {
           >
             <div className="inline-flex items-start justify-start gap-4">
               {testimonials.map((testimonial, index) => (
-                <div key={testimonial.id} className="w-[361px] flex-shrink-0 snap-center" style={{ scrollSnapAlign: 'center' }}>
+                <div key={testimonial.id} className="w-[361px] flex-shrink-0 snap-center" style={{ scrollSnapAlign: 'center', scrollSnapStop: 'always' }}>
                   <TestimonialCard testimonial={testimonial} />
                 </div>
               ))}
@@ -237,25 +250,14 @@ export function Testimonials() {
 export function TestimonialsBackground() {
   return (
     <>
-      {/* Background Blur Effects */}
+      {/* Centered background blobs (same as in Testimonials) */}
       <div
-        className="w-[164.49px] h-[164.49px] absolute"
-        style={{
-          opacity: 0.18,
-          background: "#7CB342",
-          boxShadow: "128px 128px 128px",
-          filter: "blur(64px)",
-        }}
+        className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-8 h-[164.49px] w-[164.49px] rounded-full bg-primary"
+        style={{ opacity: 0.18, boxShadow: "128px 128px 128px", filter: "blur(64px)", zIndex: 0 }}
       />
       <div
-        className="w-[164.49px] h-[164.49px] absolute"
-        style={{
-          opacity: 0.11,
-          background: "#7CB342",
-          boxShadow: "128px 128px 128px",
-          borderRadius: "9999px",
-          filter: "blur(64px)",
-        }}
+        className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-28 h-[164.49px] w-[164.49px] rounded-full bg-primary"
+        style={{ opacity: 0.11, boxShadow: "128px 128px 128px", filter: "blur(64px)", zIndex: 0 }}
       />
     </>
   );

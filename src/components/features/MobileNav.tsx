@@ -68,7 +68,7 @@ export function MobileNav() {
         </div>
 
         {/* Main Navigation Bar */}
-        <div className="w-full h-[68px] px-4 bg-secondary border-b flex items-center justify-between">
+        <div className="w-full h-[68px] px-4 bg-secondary flex items-center justify-between" style={{ boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)' }}>
           {/* Logo */}
           <Link href="/" aria-label="Home" className="inline-block">
             <Image

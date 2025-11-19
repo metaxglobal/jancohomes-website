@@ -25,7 +25,7 @@ export const blogArticles = [
     author: {
       name: "Sarah Mitchell",
       role: "Design Director",
-      avatar: "https://placehold.co/34x40",
+      avatar: "/client image.jpg",
     },
     content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
   },
@@ -39,7 +39,7 @@ export const blogArticles = [
     author: {
       name: "Sarah Mitchell",
       role: "Chief Architect",
-      avatar: "https://placehold.co/34x40",
+      avatar: "/client image.jpg",
     },
     content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
   },
@@ -53,7 +53,7 @@ export const blogArticles = [
     author: {
       name: "John Silva",
       role: "Senior Engineer",
-      avatar: "https://placehold.co/34x40",
+      avatar: "/client image.jpg",
     },
     content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`,
   },
@@ -63,11 +63,11 @@ export const blogArticles = [
     excerpt:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "August 22, 2024",
-    image: "/blogs/blog4.jpg",
+    image: "/blogs/blog1.jpg",
     author: {
       name: "Sarah Mitchell",
       role: "Design Director",
-      avatar: "https://placehold.co/34x40",
+      avatar: "/client image.jpg",
     },
     content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
   },
@@ -86,7 +86,7 @@ export default function BlogsPage() {
       {/* Main Content */}
       <main className="relative min-h-screen overflow-hidden bg-white pt-[112px]">
         {/* Hero Section with Dark Background */}
-        <section className="relative h-[340px] w-full overflow-hidden bg-secondary md:hidden">
+        <section className="relative h-[240px] w-full overflow-hidden bg-secondary md:hidden">
           {/* Background Blur Effects */}
           <div
             className="pointer-events-none absolute left-[259px] top-[233px] h-[134px] w-[134px] rounded-full bg-primary opacity-30 shadow-[128px_128px_128px]"
@@ -132,7 +132,7 @@ export default function BlogsPage() {
 
             {/* Title and Description */}
             <div className="flex flex-col gap-3">
-              <h1 className="w-[361px] text-[40px] font-medium leading-9 text-white">
+              <h1 className="w-[361px] text-[40px] font-medium leading-9 tracking-[-2px] text-white">
                 Construction & Design <span className="text-primary">Blog</span>
               </h1>
               <p className="w-[361px] text-[14px] font-medium leading-[14px] text-ash">
@@ -166,11 +166,11 @@ export default function BlogsPage() {
 
           <div className="relative z-10 flex h-[333px] flex-col items-center justify-center gap-12 px-4">
             <div className="flex flex-col items-center gap-3">
-              <h2 className="text-center text-[36px] font-medium leading-10 text-white">
+              <h2 className="text-center text-[36px] font-medium leading-10 tracking-[-2px] text-white">
                 Ready to Start <span className="text-primary">Your</span>{" "}
                 Project?
               </h2>
-              <p className="w-[361px] text-center text-[16px] font-medium leading-5 text-ash">
+              <p className="w-[361px] text-center text-[16px] font-medium leading-5 tracking-tight text-ash">
                 Let&apos;s bring your vision to life with our expert
                 construction and design services.
               </p>
@@ -186,7 +186,7 @@ export default function BlogsPage() {
                 icon={ArrowDownRight01Icon}
                 size={20}
                 color="white"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
             </button>
           </div>

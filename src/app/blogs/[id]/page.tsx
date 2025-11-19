@@ -39,8 +39,8 @@ export default function BlogArticlePage({
 
   // Truncate title for breadcrumb
   const truncatedTitle =
-    article.title.length > 25
-      ? `${article.title.substring(0, 25)}...`
+    article.title.length > 16
+      ? `${article.title.substring(0, 16)}...`
       : article.title;
 
   return (
@@ -53,7 +53,7 @@ export default function BlogArticlePage({
       {/* Main Content */}
       <main className="relative min-h-screen overflow-hidden bg-white pt-[112px]">
         {/* Hero Section with Dark Background */}
-        <section className="relative h-[228px] w-full overflow-hidden bg-secondary md:hidden">
+        <section className="relative h-[88px] w-full overflow-hidden bg-secondary md:hidden">
           {/* Background Blur Effects */}
           <div
             className="pointer-events-none absolute left-[259px] top-[233px] h-[134px] w-[134px] rounded-full bg-primary opacity-30 shadow-[128px_128px_128px]"
@@ -89,7 +89,7 @@ export default function BlogArticlePage({
                 icon={ArrowRight01Icon}
                 size={16}
                 color="#C2C2C2"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
               <Link
                 href="/blogs"
@@ -103,7 +103,7 @@ export default function BlogArticlePage({
                 icon={ArrowRight01Icon}
                 size={16}
                 color="white"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
               <span className="text-[14px] font-normal leading-[14px] text-white">
                 {truncatedTitle}
@@ -130,7 +130,7 @@ export default function BlogArticlePage({
               }}
             >
               {/* Title */}
-              <h1 className="w-[321px] text-[40px] font-medium leading-9 text-white">
+              <h1 className="w-[321px] text-[40px] font-medium leading-9 tracking-[-2px] text-white">
                 {article.title}
               </h1>
 
@@ -163,7 +163,7 @@ export default function BlogArticlePage({
                     icon={Calendar03Icon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={2}
                   />
                   <span className="text-[14px] font-normal leading-[14px] text-white">
                     {article.date}

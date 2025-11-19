@@ -196,7 +196,7 @@ export default function ProjectsPage() {
                 Ready to Start <span className="text-primary">Your</span>{" "}
                 Project?
               </h2>
-              <p className="w-[361px] text-center text-[16px] font-medium leading-5 text-ash">
+              <p className="w-[361px] text-center text-[16px] font-medium leading-5 tracking-tight text-ash">
                 Let&apos;s bring your vision to life with our expert
                 construction and design services.
               </p>

@@ -213,7 +213,7 @@ export default function ConsultationModal({
               value={formData.name}
               onChange={handleChange}
               placeholder="Your name"
-              className="h-9 rounded-[12px] bg-white/10 px-3 py-1 text-[12px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
+              className="h-9 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
             />
             {errors.name && (
               <span className="text-[12px] text-red-400">{errors.name}</span>
@@ -235,7 +235,7 @@ export default function ConsultationModal({
               value={formData.phone}
               onChange={handleChange}
               placeholder="+94 XX XXX XXXX"
-              className="h-9 rounded-[12px] bg-white/10 px-3 py-1 text-[12px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
+              className="h-9 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
             />
             {errors.phone && (
               <span className="text-[12px] text-red-400">{errors.phone}</span>
@@ -257,7 +257,7 @@ export default function ConsultationModal({
               value={formData.email}
               onChange={handleChange}
               placeholder="your.email@example.com"
-              className="h-9 rounded-[12px] bg-white/10 px-3 py-1 text-[12px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
+              className="h-9 rounded-[12px] bg-white/10 px-3 py-1 text-[16px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
             />
             {errors.email && (
               <span className="text-[12px] text-red-400">{errors.email}</span>
@@ -279,7 +279,7 @@ export default function ConsultationModal({
               onChange={handleChange}
               placeholder="Tell us about your project requirements, timeline, and budget..."
               rows={3}
-              className="h-16 resize-none rounded-[12px] bg-white/10 px-3 pb-2 pt-[10px] text-[12px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
+              className="h-16 resize-none rounded-[12px] bg-white/10 px-3 pb-2 pt-[10px] text-[16px] leading-4 text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-2 focus:outline-primary"
             />
             {errors.message && (
               <span className="text-[12px] text-red-400">{errors.message}</span>

@@ -44,7 +44,7 @@ export function RealEstate() {
         <div className="self-stretch py-4 border-t border-b border-ash flex flex-col items-start justify-start gap-6">
           <div className="self-stretch flex flex-col items-start justify-start gap-3">
             <div className="inline-flex items-center justify-center gap-2.5">
-              <div className="text-secondary text-[22px] font-medium leading-6">
+              <div className="text-secondary text-[22px] font-medium leading-6 tracking-tight">
                 Explore Our Complete Portfolio
               </div>
             </div>

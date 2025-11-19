@@ -30,7 +30,7 @@ export default function PropertiesPage() {
       {/* Main Content */}
       <main className="relative min-h-screen overflow-hidden bg-white pt-[112px]">
         {/* Hero Section with Dark Background */}
-        <section className="relative h-[340px] w-full overflow-hidden bg-secondary md:hidden">
+        <section className="relative h-[240px] w-full overflow-hidden bg-secondary md:hidden">
           {/* Background Blur Effects */}
           <div
             className="absolute left-[259px] top-[233px] h-[134px] w-[134px] rounded-full bg-primary opacity-30"
@@ -55,56 +55,44 @@ export default function PropertiesPage() {
           />
 
           {/* Hero Content */}
-          <div className="absolute left-4 top-[144px] w-[361px] inline-flex flex-col items-start justify-start gap-8">
+          <div className="relative z-10 flex w-[361px] flex-col gap-4 px-4 pt-12">
             {/* Breadcrumb */}
-            <div className="self-stretch h-5 inline-flex items-center justify-start gap-2">
-              <Link href="/" className="flex items-center justify-start gap-1">
-                <div className="w-4 h-4 relative">
-                  <HugeiconsIcon
-                    icon={Home01Icon}
-                    size={16}
-                    color="#C2C2C2"
-                    strokeWidth={1}
-                  />
-                </div>
-                <div className="text-ash text-sm font-normal leading-[14px]">
-                  Home
-                </div>
-              </Link>
-              <div className="w-4 h-4 relative overflow-hidden">
+            <div className="flex h-5 items-center gap-2">
+              <Link
+                href="/"
+                className="flex items-center gap-1 transition-opacity hover:opacity-80"
+              >
                 <HugeiconsIcon
-                  icon={ArrowRight01Icon}
+                  icon={Home01Icon}
                   size={16}
-                  color="white"
-                  strokeWidth={1.5}
+                  color="#C2C2C2"
+                  strokeWidth={1}
                 />
-              </div>
-              <div className="flex items-center justify-start gap-1">
-                <div className="text-white text-sm font-normal leading-[14px]">
-                  Real Estate
-                </div>
-              </div>
+                <span className="text-[14px] font-normal leading-[14px] text-ash">
+                  Home
+                </span>
+              </Link>
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                size={16}
+                color="white"
+                strokeWidth={1.5}
+              />
+              <span className="text-[14px] font-normal leading-[14px] text-white">
+                Real Estate
+              </span>
             </div>
 
             {/* Title and Description */}
-            <div className="self-stretch flex flex-col items-start justify-start gap-3">
-              <div className="inline-flex items-center justify-center gap-2.5">
-                <div className="w-[361px]">
-                  <span className="text-white text-[40px] font-medium leading-9">
-                    Janco{" "}
-                  </span>
-                  <span className="text-primary text-[40px] font-medium leading-9">
-                    Real Estate
-                  </span>
-                </div>
-              </div>
-              <div className="inline-flex items-center justify-center gap-2.5">
-                <div className="w-[361px] text-ash text-sm font-medium leading-[14px]">
-                  Discover exclusive premium properties developed and curated by
-                  Janco Home & Construction. Each residence represents our
-                  commitment to quality and excellence.
-                </div>
-              </div>
+            <div className="flex flex-col gap-3 pt-4">
+              <h1 className="w-[361px] text-[40px] font-medium leading-9 tracking-[-2px]">
+                <span className="text-white">Janco </span>
+                <span className="text-primary">Real Estate</span>
+              </h1>
+              <p className="w-[361px] text-[14px] font-medium leading-[14px] text-ash">
+                Janco Home & Construction. Each residence represents our
+                commitment to quality and excellence.
+              </p>
             </div>
           </div>
         </section>
@@ -118,65 +106,45 @@ export default function PropertiesPage() {
           </div>
         </section>
 
-        {/* CTA Section - Talk to our Expert */}
-        <section className="w-full bg-secondary flex flex-col items-start justify-center gap-2.5">
-          <div className="self-stretch px-4 flex flex-col items-center justify-center gap-12 py-[84px]">
-            <div className="self-stretch flex flex-col items-center justify-start gap-3">
-              <div className="self-stretch text-center">
-                <span className="text-white text-4xl font-medium leading-10">
-                  Ready to Start{" "}
-                </span>
-                <span className="text-primary text-4xl font-medium leading-10">
-                  Your
-                </span>
-                <span className="text-white text-4xl font-medium leading-10">
-                  {" "}
-                  Project?
-                </span>
-              </div>
-              <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-                <div className="w-[361px] text-center text-ash text-base font-medium leading-5">
-                  Let&apos;s bring your vision to life with our expert
-                  construction and design services.
-                </div>
-              </div>
-            </div>
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="h-10 px-5 py-[10px] bg-primary rounded-xl inline-flex items-center justify-center gap-2"
-            >
-              <div className="flex items-center justify-start gap-2">
-                <div className="text-white text-base font-medium leading-5">
-                  Talk to our Expert
-                </div>
-                <div className="w-5 h-5 relative overflow-hidden">
-                  <HugeiconsIcon
-                    icon={ArrowDownRight01Icon}
-                    size={20}
-                    color="white"
-                    strokeWidth={1.5}
+        {/* CTA Section */}
+                <section className="relative w-full bg-secondary md:hidden">
+                  {/* Background Blur Effects */}
+                  <div
+                    className="pointer-events-none absolute bottom-0 left-0 h-[156.89px] w-[156.89px] rounded-full bg-primary opacity-10 shadow-[128px_128px_128px]"
+                    style={{ filter: "blur(64px)" }}
                   />
-                </div>
-              </div>
-            </button>
-          </div>
-
-          {/* Background Blur Effects */}
-          <div
-            className="w-[156.89px] h-[156.89px] rounded-full bg-primary opacity-10"
-            style={{
-              boxShadow: "128px 128px 128px",
-              filter: "blur(64px)",
-            }}
-          />
-          <div
-            className="w-[156.89px] h-[156.89px] rounded-full bg-primary opacity-[0.09]"
-            style={{
-              boxShadow: "128px 128px 128px",
-              filter: "blur(64px)",
-            }}
-          />
-        </section>
+                  <div
+                    className="pointer-events-none absolute bottom-[-156.89px] left-0 h-[156.89px] w-[156.89px] rounded-full bg-primary opacity-[0.09] shadow-[128px_128px_128px]"
+                    style={{ filter: "blur(64px)" }}
+                  />
+        
+                  <div className="relative z-10 flex h-[333px] flex-col items-center justify-center gap-12 px-4">
+                    <div className="flex flex-col items-center gap-3">
+                      <h2 className="text-center text-[36px] font-medium leading-10 tracking-[-2px] text-white">
+                        Ready to Start <span className="text-primary">Your</span>{" "}
+                        Project?
+                      </h2>
+                      <p className="w-[361px] text-center text-[16px] font-medium leading-5 tracking-tight text-ash">
+                        Let&apos;s bring your vision to life with our expert
+                        construction and design services.
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setIsModalOpen(true)}
+                      className="flex h-10 items-center gap-2 rounded-[12px] bg-primary px-5 py-[10px] transition-opacity hover:opacity-90"
+                    >
+                      <span className="text-[16px] font-medium leading-5 text-white">
+                        Talk to our Expert
+                      </span>
+                      <HugeiconsIcon
+                        icon={ArrowDownRight01Icon}
+                        size={20}
+                        color="white"
+                        strokeWidth={2}
+                      />
+                    </button>
+                  </div>
+                </section>
 
         {/* Footer */}
         <Footer />

@@ -48,7 +48,7 @@ export default function BlogArticleCard({
                     icon={Calendar03Icon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={2}
                   />
                   <span className="text-[14px] font-normal leading-[14px] text-secondary/75">
                     {date}
@@ -58,7 +58,7 @@ export default function BlogArticleCard({
 
               {/* Title */}
               <div className="flex items-center justify-start">
-                <h3 className="w-[321px] text-[22px] font-medium leading-6 text-secondary">
+                <h3 className="w-[321px] text-[22px] font-medium leading-6 tracking-[-1px] text-secondary">
                   {title}
                 </h3>
               </div>
@@ -107,7 +107,7 @@ export default function BlogArticleCard({
                 icon={ArrowDownRight01Icon}
                 size={20}
                 color="#7CB342"
-                strokeWidth={1.5}
+                strokeWidth={2}
               />
             </Link>
           </div>
