@@ -184,7 +184,7 @@ export function Blogs() {
       <div
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="w-[361px] h-[463px] overflow-x-auto overflow-y-hidden inline-flex items-center justify-start gap-5 snap-x snap-mandatory scrollbar-hide"
+        className="w-full max-w-[361px] h-[463px] overflow-x-auto overflow-y-hidden inline-flex items-center justify-start gap-5 snap-x snap-mandatory scrollbar-hide"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",

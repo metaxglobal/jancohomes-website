@@ -21,9 +21,8 @@ export function Hero() {
       />
 
       {/* Main Content */}
-      <div className="absolute w-[361px] left-4 top-[144px] flex flex-col items-start justify-start gap-8">
-        {/* Top Section */}
-        <div className="self-stretch flex flex-col items-center justify-start gap-6">
+      <div className="absolute inset-x-0 left-0 right-0 top-[144px] px-4 flex flex-col items-start justify-start gap-8">
+        <div className="w-full max-w-[361px] mx-auto flex flex-col items-center justify-start gap-6">
           {/* Badge */}
           <div
             className="inline-flex items-center justify-start gap-2 px-5 py-[10px] rounded-xl"
@@ -40,7 +39,7 @@ export function Hero() {
           </div>
 
           {/* Hero Image and Text */}
-          <div className="self-stretch flex flex-col items-center justify-start gap-3">
+          <div className="w-full flex flex-col items-center justify-start gap-3">
             {/* Hero Image */}
             <div className="flex w-full items-center justify-center">
               <Image

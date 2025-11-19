@@ -56,7 +56,7 @@ export function Services() {
     <div className="w-full py-[72px] px-4" id="services">
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-start gap-8">
       {/* Text Section */}
-      <div className="self-stretch px-4 flex flex-col items-center justify-start gap-2">
+      <div className="w-full flex flex-col items-center justify-start gap-2">
         {/* Label */}
         <div className="self-stretch text-center text-primary text-base font-normal leading-5">
           OUR SERVICES

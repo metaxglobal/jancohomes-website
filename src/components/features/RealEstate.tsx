@@ -23,7 +23,7 @@ export function RealEstate() {
             </div>
           </div>
           <div className="self-stretch px-2.5 inline-flex items-center justify-center gap-2.5">
-            <div className="w-[361px] text-center text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
+            <div className="w-full max-w-[361px] text-center text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
               Discover exclusive premium properties developed and curated by Janco
               Home & Construction. Each residence represents our commitment to
               quality and excellence.
@@ -32,7 +32,7 @@ export function RealEstate() {
         </div>
 
         {/* Property Cards */}
-        <div className="w-[361px] flex flex-col items-center justify-start gap-5">
+        <div className="w-full max-w-[361px] flex flex-col items-center justify-start gap-5">
           <div className="self-stretch flex flex-col items-center justify-start gap-5">
             {properties.map((property) => (
               <PropertyCard key={property.id} property={property} />
@@ -49,7 +49,7 @@ export function RealEstate() {
               </div>
             </div>
             <div className="self-stretch inline-flex items-center justify-start gap-2.5">
-              <div className="w-[361px] text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
+              <div className="w-full max-w-[361px] text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
                 Browse through our extensive collection of premium properties.
                 From luxury villas to modern apartments, find your dream home with
                 Janco Real Estate.

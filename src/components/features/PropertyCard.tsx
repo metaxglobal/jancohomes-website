@@ -91,17 +91,16 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="w-[361px] h-[296px] absolute left-0 top-0">
+        <div className="w-full h-[296px] relative">
           <Image
             src={property.images[currentImageIndex]}
             alt={property.title}
-            width={361}
-            height={296}
-            className="w-[361px] h-[296px] absolute left-0 top-0 object-cover"
+            fill
+            className="object-cover"
           />
           {/* Gradient Overlay */}
           <div
-            className="w-[361px] h-[296px] absolute left-0 top-0"
+            className="w-full h-[296px] absolute left-0 top-0 pointer-events-none"
             style={{
               background:
                 "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 100%)",

@@ -108,7 +108,7 @@ export function Projects() {
               Projects
             </span>
           </div>
-          <div className="w-[361px] text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
+          <div className="w-full max-w-[361px] text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
             Our signature projects reflect our commitment to realize your
             dreams. We have delivered successfully completed residential
             projects to thousands of happy customers throughout our more than 8
