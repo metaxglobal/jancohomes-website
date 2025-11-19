@@ -32,11 +32,11 @@ export default function Footer() {
         {/* Background Blur Effects */}
         {/* Background blur blobs - centered so they span full footer seamlessly */}
         <div
-          className="pointer-events-none absolute left-1/2 top-[720px] -translate-x-1/2 h-[288px] w-[288px] rounded-full bg-primary opacity-30 z-0"
+          className="pointer-events-none absolute left-1/2 top-[720px] -translate-x-1/2 h-[288px] w-[288px] rounded-full bg-primary opacity-20 z-0"
           style={{ filter: "blur(120px)" }}
         />
         <div
-          className="pointer-events-none absolute left-1/2 top-[200px] -translate-x-1/2 h-[250px] w-[250px] rounded-full bg-primary opacity-30 z-0"
+          className="pointer-events-none absolute left-1/2 top-[200px] -translate-x-1/2 h-[250px] w-[250px] rounded-full bg-primary opacity-20 z-0"
           style={{ filter: "blur(120px)" }}
         />
 
