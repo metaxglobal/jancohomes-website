@@ -3,11 +3,11 @@ import { HeroMobile, HeroDesktop } from "@/components/features/hero";
 import { AboutMobile, AboutDesktop } from "@/components/features/about";
 import { ServicesMobile, ServicesDesktop } from "@/components/features/services";
 import { ProjectsMobile, ProjectsDesktop } from "@/components/features/projects";
-import { Testimonials } from "@/components/features/Testimonials";
-import { Blogs } from "@/components/features/Blogs";
-import { RealEstate } from "@/components/features/RealEstate";
-import InquiryForm from "@/components/features/InquiryForm";
-import Footer from "@/components/features/Footer";
+import { TestimonialsMobile, TestimonialsDesktop } from "@/components/features/testimonials";
+import { BlogsMobile, BlogsDesktop } from "@/components/features/blogs";
+import { RealEstateMobile, RealEstateDesktop } from "@/components/features/real-estate";
+import { InquiryFormMobile, InquiryFormDesktop } from "@/components/features/inquiry-form";
+import { FooterMobile, FooterDesktop } from "@/components/features/footer";
 
 export default function Home() {
   return (
@@ -71,34 +71,59 @@ export default function Home() {
         </section>
 
         {/* ===== TESTIMONIALS SECTION ===== */}
-        {/* Will use responsive classes - same component for all screens */}
-        <section className="bg-secondary w-full">
-          <Testimonials />
+        {/* Mobile Testimonials (< 1024px) */}
+        <section className="lg:hidden bg-secondary w-full">
+          <TestimonialsMobile />
+        </section>
+
+        {/* Desktop Testimonials (>= 1024px) */}
+        <section className="hidden lg:block bg-secondary w-full">
+          <TestimonialsDesktop />
         </section>
 
         {/* ===== BLOGS SECTION ===== */}
-        {/* Will use responsive classes - same component for all screens */}
-        <section className="bg-background-1 w-full">
-          <Blogs />
+        {/* Mobile Blogs (< 1024px) */}
+        <section className="lg:hidden w-full">
+          <BlogsMobile />
+        </section>
+
+        {/* Desktop Blogs (>= 1024px) */}
+        <section className="hidden lg:block w-full">
+          <BlogsDesktop />
         </section>
 
         {/* ===== REAL ESTATE SECTION ===== */}
-        {/* Will use responsive classes - same component for all screens */}
-        <section className="bg-white w-full">
-          <RealEstate />
+        {/* Mobile Real Estate (< 1024px) */}
+        <section className="lg:hidden w-full">
+          <RealEstateMobile />
+        </section>
+
+        {/* Desktop Real Estate (>= 1024px) */}
+        <section className="hidden lg:block w-full">
+          <RealEstateDesktop />
         </section>
 
         {/* ===== INQUIRY FORM SECTION ===== */}
-        {/* Will use responsive classes - same component for all screens */}
-        <section className="bg-secondary w-full">
-          <InquiryForm />
+        {/* Mobile Inquiry Form (< 1024px) */}
+        <section className="lg:hidden bg-secondary w-full">
+          <InquiryFormMobile />
+        </section>
+
+        {/* Desktop Inquiry Form (>= 1024px) */}
+        <section className="hidden lg:block bg-secondary w-full">
+          <InquiryFormDesktop />
         </section>
       </main>
 
       {/* ========== FOOTER ========== */}
-      {/* Will use responsive classes - same component for all screens */}
-      <footer>
-        <Footer />
+      {/* Mobile Footer (< 1024px) */}
+      <footer className="lg:hidden">
+        <FooterMobile />
+      </footer>
+
+      {/* Desktop Footer (>= 1024px) */}
+      <footer className="hidden lg:block">
+        <FooterDesktop />
       </footer>
     </>
   );

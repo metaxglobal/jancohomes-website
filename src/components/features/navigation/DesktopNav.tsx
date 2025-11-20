@@ -83,13 +83,13 @@ export function DesktopNav() {
             {/* Navigation Links */}
             <div className="flex items-center gap-3">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className="w-[107px] h-11 px-2.5 py-2.5 flex items-center justify-center text-white text-sm font-normal uppercase leading-4 hover:text-primary transition-colors"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </div>
 

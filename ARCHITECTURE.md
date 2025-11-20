@@ -7,45 +7,74 @@ jancohomes-website/
 ├── src/                        # ALL source code lives here
 │   ├── app/                    # Next.js App Router (ONLY location)
 │   │   ├── layout.tsx          # Root layout
-│   │   ├── page.tsx            # Homepage
-│   │   ├── articles/           # Blog listing page (to be created)
-│   │   └── real-estate/        # Real estate page (to be created)
+│   │   ├── page.tsx            # Homepage (uses features/ sections)
+│   │   ├── blogs/              # Blog pages
+│   │   │   ├── page.tsx        # Blog listing (uses pages/blogs)
+│   │   │   └── [id]/           # Individual blog post
+│   │   ├── projects/           # Projects pages
+│   │   │   └── page.tsx        # Projects listing (uses pages/projects)
+│   │   ├── properties/         # Properties pages
+│   │   │   └── page.tsx        # Properties listing
+│   │   ├── terms/              # Terms & Privacy
+│   │   │   └── page.tsx
+│   │   └── privacy/
+│   │       └── page.tsx
 │   │
 │   ├── components/
 │   │   ├── ui/                 # Atoms: Reusable UI components
-│   │   │   ├── Button.tsx
-│   │   │   ├── Input.tsx
-│   │   │   ├── Icon.tsx
-│   │   │   └── ...
+│   │   │   └── Button.tsx
 │   │   │
-│   │   └── features/           # Organisms: Page sections
-│   │       ├── Header.tsx
-│   │       ├── HeroSection.tsx
-│   │       ├── AboutUsSection.tsx
-│   │       ├── ServicesSection.tsx
-│   │       ├── ProjectsShowcase.tsx
-│   │       ├── ArticlesSection.tsx
-│   │       ├── LeadCaptureSection.tsx
-│   │       └── Footer.tsx
+│   │   ├── features/           # Home Page Sections (Mobile + Desktop variants)
+│   │   │   ├── navigation/
+│   │   │   │   ├── MobileNav.tsx
+│   │   │   │   ├── DesktopNav.tsx
+│   │   │   │   └── index.ts    # Barrel export
+│   │   │   ├── hero/
+│   │   │   │   ├── HeroMobile.tsx
+│   │   │   │   ├── HeroDesktop.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── about/
+│   │   │   ├── services/
+│   │   │   ├── projects/       # Home page projects section
+│   │   │   ├── testimonials/
+│   │   │   ├── blogs/          # Home page blogs section
+│   │   │   ├── real-estate/    # Home page real estate section
+│   │   │   ├── inquiry-form/
+│   │   │   ├── footer/
+│   │   │   ├── ConsultationModal.tsx
+│   │   │   ├── BlogArticleCard.tsx
+│   │   │   ├── FeaturedProjectCard.tsx  # For home page
+│   │   │   ├── ProjectCard.tsx          # For projects page
+│   │   │   └── PropertyCard.tsx
+│   │   │
+│   │   └── pages/              # Full Page Components (Mobile + Desktop variants)
+│   │       └── projects/
+│   │           ├── ProjectsPageMobile.tsx
+│   │           ├── ProjectsPageDesktop.tsx
+│   │           └── index.ts    # Barrel export
+│   │       (Future: blogs/, properties/, terms/, privacy/)
+│   │
+│   ├── data/                   # Data files
+│   │   └── properties.ts
 │   │
 │   ├── lib/                    # Utility functions
-│   │   └── utils.ts            # cn() className merger
+│   │   ├── utils.ts            # cn() className merger
+│   │   └── design-tokens.ts
 │   │
 │   └── styles/                 # Global styles
 │       └── globals.css         # Tailwind imports & global CSS
 │
-├── public/                     # Static assets (images, favicon, etc.)
-│   └── favicon.ico
+├── public/                     # Static assets
+│   ├── blogs/
+│   ├── projects/
+│   └── real states/
 │
 ├── Configuration Files
-├── .husky/                     # Git hooks
-├── .lintstagedrc.json          # Lint-staged config
-├── .prettierrc                 # Prettier config
-├── eslint.config.mjs           # ESLint config
-├── next.config.ts              # Next.js config
-├── tailwind.config.js          # Design tokens (to be created)
-├── tsconfig.json               # TypeScript config
-└── package.json                # Dependencies & scripts
+├── eslint.config.mjs
+├── next.config.ts
+├── tailwind.config.ts
+├── tsconfig.json
+└── package.json
 ```
 
 ## 🚨 Critical Rules
@@ -57,7 +86,44 @@ jancohomes-website/
 - ✅ All utilities live in `/src/lib/`
 - ✅ All styles live in `/src/styles/`
 
-### 2. Next.js 16 Conventions
+### 2. Component Organization Pattern
+
+**Features (`/components/features/`)** - Home Page Sections:
+- Contains sections displayed on the home page
+- Each section has Mobile and Desktop variants
+- Structure: `features/{section}/{SectionMobile.tsx, SectionDesktop.tsx, index.ts}`
+- Examples: hero/, about/, services/, navigation/, footer/
+
+**Pages (`/components/pages/`)** - Full Page Components:
+- Contains complete page components for dedicated routes
+- Each page has Mobile and Desktop variants
+- Structure: `pages/{page}/{PageMobile.tsx, PageDesktop.tsx, index.ts}`
+- Examples: projects/, blogs/, properties/, terms/, privacy/
+
+**Pattern:**
+```tsx
+// components/pages/projects/index.ts
+export { ProjectsPageMobile } from "./ProjectsPageMobile";
+export { ProjectsPageDesktop } from "./ProjectsPageDesktop";
+
+// app/projects/page.tsx
+import { ProjectsPageMobile, ProjectsPageDesktop } from "@/components/pages/projects";
+
+export default function ProjectsPage() {
+  return (
+    <>
+      <div className="lg:hidden">
+        <ProjectsPageMobile />
+      </div>
+      <div className="hidden lg:block">
+        <ProjectsPageDesktop />
+      </div>
+    </>
+  );
+}
+```
+
+### 3. Next.js 16 Conventions
 
 Next.js automatically detects the `/src` directory and uses `/src/app/` as the App Router.
 
@@ -65,12 +131,13 @@ Next.js automatically detects the `/src` directory and uses `/src/app/` as the A
 
 ```
 src/app/page.tsx              → / (Homepage)
-src/app/articles/page.tsx     → /articles
-src/app/real-estate/page.tsx  → /real-estate
+src/app/projects/page.tsx     → /projects
+src/app/blogs/page.tsx        → /blogs
+src/app/properties/page.tsx   → /properties
 src/app/layout.tsx            → Root layout for all pages
 ```
 
-### 3. Import Aliases
+### 4. Import Aliases
 
 All imports use the `@/*` alias pointing to `/src/*`:
 
@@ -78,13 +145,14 @@ All imports use the `@/*` alias pointing to `/src/*`:
 // ✅ Correct
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
-import { HeroSection } from "@/components/features/HeroSection";
+import { HeroMobile, HeroDesktop } from "@/components/features/hero";
+import { ProjectsPageMobile } from "@/components/pages/projects";
 
 // ❌ Wrong
 import { cn } from "../../../lib/utils";
 ```
 
-### 4. Component Organization
+### 5. Component Organization
 
 **Atoms (`/components/ui/`):**
 
@@ -93,11 +161,19 @@ import { cn } from "../../../lib/utils";
 - Use `variant` prop pattern
 - Examples: Button, Input, Card, Badge
 
-**Organisms (`/components/features/`):**
+**Features (`/components/features/`):**
 
-- Complex, composed of multiple atoms
-- Represent full page sections
-- Examples: Header, Footer, HeroSection
+- Home page sections only
+- Mobile and Desktop variants
+- Each folder has index.ts for barrel export
+- Examples: Header, Footer, HeroSection, AboutSection
+
+**Pages (`/components/pages/`):**
+
+- Full page components for dedicated routes
+- Mobile and Desktop variants
+- Each folder has index.ts for barrel export
+- Examples: ProjectsPage, BlogsPage, PropertiesPage
 
 **Pages (`/app/`):**
 

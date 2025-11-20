@@ -1,3 +1,5 @@
+// Desktop Blogs Component
+
 "use client";
 
 import { useState, useRef } from "react";
@@ -18,14 +20,14 @@ interface BlogPost {
   };
 }
 
-interface BlogCardProps {
+interface BlogCardDesktopProps {
   blog: BlogPost;
 }
 
-function BlogCard({ blog }: BlogCardProps) {
+function BlogCardDesktop({ blog }: BlogCardDesktopProps) {
   return (
     <div
-      className="w-[320px] overflow-hidden rounded-[22px] inline-flex flex-col items-start justify-start flex-shrink-0"
+      className="w-[320px] overflow-hidden rounded-[22px] flex flex-col items-start justify-start flex-shrink-0"
       style={{
         boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
         outline: "1px #C2C2C2 solid",
@@ -38,7 +40,7 @@ function BlogCard({ blog }: BlogCardProps) {
           alt={blog.title}
           width={320}
           height={204}
-          className="w-[320px] h-[204px] relative object-cover"
+          className="w-[320px] h-[204px] object-cover"
         />
 
         {/* Date Badge */}
@@ -49,11 +51,11 @@ function BlogCard({ blog }: BlogCardProps) {
           }}
         >
           <div className="text-center">
-            <span className="text-white text-[22px] font-normal leading-6">
+            <span className="text-white text-2xl font-normal leading-6">
               {blog.date.day}
               <br />
             </span>
-            <span className="text-white text-base font-normal leading-5">
+            <span className="text-white text-xl font-normal leading-5">
               {blog.date.month}
             </span>
           </div>
@@ -65,24 +67,28 @@ function BlogCard({ blog }: BlogCardProps) {
         <div className="self-stretch flex flex-col items-start justify-start gap-6">
           <div className="self-stretch flex flex-col items-start justify-start gap-3">
             {/* Title */}
-            <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-              <div className="w-[280px] text-secondary text-[22px] font-medium leading-6 tracking-tight">
+            <div className="self-stretch flex items-center justify-center gap-2.5">
+              <div className="w-[280px] text-secondary text-2xl font-medium leading-6">
                 {blog.title}
               </div>
             </div>
 
             {/* Excerpt */}
-            <div className="self-stretch inline-flex items-center justify-center gap-2.5">
+            <div className="self-stretch flex items-center justify-center gap-2.5">
               <div className="w-[279px] text-secondary/75 text-sm font-normal leading-[14px]">
                 {blog.excerpt}
               </div>
             </div>
           </div>
 
-          {/* Read More Link */}
+          {/* Read More Button */}
           <Link
             href={`/blogs/${blog.id}`}
-            className="pt-[10px] pr-5 rounded-xl inline-flex items-center justify-center gap-2"
+            className="h-12 px-5 py-2.5 rounded-xl inline-flex items-center justify-center gap-2"
+            style={{
+              outline: "1px #C2C2C2 solid",
+              outlineOffset: "-1px",
+            }}
           >
             <div className="flex items-center justify-start gap-2">
               <div className="text-primary text-base font-medium leading-5">
@@ -104,8 +110,7 @@ function BlogCard({ blog }: BlogCardProps) {
   );
 }
 
-export function Blogs() {
-  const [activeIndex, setActiveIndex] = useState(0);
+export function BlogsDesktop() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Transform blogArticles to match the local BlogPost interface
@@ -117,52 +122,30 @@ export function Blogs() {
       excerpt: article.excerpt,
       image: article.image,
       date: {
-        day: dateObj.getDate().toString(),
+        day: dateObj.getDate().toString().padStart(2, '0'),
         month: dateObj.toLocaleString("en-US", { month: "short" }),
       },
     };
   });
 
-  const handleDotClick = (index: number) => {
-    setActiveIndex(index);
-    if (scrollContainerRef.current) {
-      const scrollAmount = index * (320 + 20); // card width + gap
-      scrollContainerRef.current.scrollTo({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const handleScroll = () => {
-    if (scrollContainerRef.current) {
-      const scrollLeft = scrollContainerRef.current.scrollLeft;
-      const cardWidth = 320 + 20; // card width + gap
-      const newIndex = Math.round(scrollLeft / cardWidth);
-      setActiveIndex(newIndex);
-    }
-  };
-
   return (
-    <div className="w-full py-[72px] px-4">
-      <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-center gap-12">
+    <div className="hidden lg:flex w-full pt-24 pb-16 px-[120px] bg-background-1 flex-col items-center justify-center gap-6">
       {/* Header Section */}
-      <div className="self-stretch flex flex-col items-start justify-start gap-6">
-        <div className="self-stretch inline-flex items-center justify-between">
-          <div className="flex-1">
-            <span className="text-secondary text-[40px] font-medium leading-9 tracking-[-2px]">
-              Latest{" "}
-            </span>
-            <span className="text-primary text-[40px] font-medium leading-9 tracking-[-2px]">
-              Blogs
-            </span>
-          </div>
+      <div className="self-stretch flex items-center justify-between">
+        {/* Title */}
+        <div>
+          <span className="text-secondary text-[72px] font-medium leading-[64px]">
+            Latest{" "}
+          </span>
+          <span className="text-primary text-[72px] font-medium leading-[64px]">
+            Blogs
+          </span>
         </div>
 
         {/* Explore Blogs Button */}
         <Link
           href="/blogs"
-          className="px-5 py-[10px] bg-secondary rounded-xl inline-flex items-center justify-center gap-2"
+          className="h-12 px-5 py-2.5 bg-secondary rounded-xl flex items-center justify-center gap-2"
         >
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">
@@ -180,36 +163,27 @@ export function Blogs() {
         </Link>
       </div>
 
-      {/* Blog Cards Slider */}
+      {/* Blog Cards - Horizontal Scroll */}
       <div
         ref={scrollContainerRef}
-        onScroll={handleScroll}
-        className="w-full max-w-[361px] h-[463px] overflow-x-auto overflow-y-hidden inline-flex items-center justify-start gap-5 snap-x snap-mandatory scrollbar-hide"
+        className="w-[1200px] h-[483px] overflow-x-auto overflow-y-hidden flex items-center justify-start gap-6 scrollbar-hide"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
         }}
       >
         {blogs.map((blog) => (
-          <div key={blog.id} className="snap-start">
-            <BlogCard blog={blog} />
-          </div>
+          <BlogCardDesktop key={blog.id} blog={blog} />
         ))}
       </div>
 
       {/* Pagination Dots */}
-      <div className="w-[361px] h-2 inline-flex items-center justify-center gap-4 ">
+      <div className="w-[1201px] h-12 flex items-center justify-center gap-4">
         <div className="w-20 h-2 flex items-start justify-start gap-2">
-          {blogs.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`h-2 rounded-full transition-all ${
-                index === activeIndex ? "flex-1 bg-primary" : "w-2 bg-ash"
-              }`}
-              aria-label={`Go to blog ${index + 1}`}
-            />
-          ))}
+          <div className="flex-1 h-2 bg-primary rounded-full" />
+          <div className="w-2 h-2 bg-ash rounded-full" />
+          <div className="w-2 h-2 bg-ash rounded-full" />
+          <div className="w-2 h-2 bg-ash rounded-full" />
         </div>
       </div>
 
@@ -218,7 +192,6 @@ export function Blogs() {
           display: none;
         }
       `}</style>
-    </div>
     </div>
   );
 }

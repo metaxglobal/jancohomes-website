@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
-import PropertyCard from "./PropertyCard";
+import PropertyCard from "../PropertyCard";
 import { getAllProperties } from "@/data/properties";
 
-export function RealEstate() {
+export function RealEstateMobile() {
   const properties = getAllProperties();
 
   return (

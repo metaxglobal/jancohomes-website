@@ -101,7 +101,7 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
   );
 }
 
-export function Testimonials() {
+export function TestimonialsMobile() {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
