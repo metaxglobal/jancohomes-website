@@ -45,13 +45,22 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
                 </div>
               </div>
 
-              {/* Star Rating */}
-              <div className="self-stretch h-4 flex items-start gap-1">
-                {[...Array(testimonial.rating)].map((_, index) => (
-                  <div key={index} className="w-4 h-4 relative">
-                    <div className="w-[13.33px] h-[13.33px] absolute left-[1.33px] top-[1.33px] bg-[#7CB342]" />
-                  </div>
-                ))}
+              {/* Star Rating - render 5 stars using public/star.svg; gray out unfilled stars via CSS filter */}
+              <div className="self-stretch h-4 flex items-center gap-1">
+                {[0, 1, 2, 3, 4].map((i) => {
+                  const filled = i < testimonial.rating;
+                  return (
+                    <div key={i} className="w-4 h-4 relative">
+                      <Image
+                        src="/star.svg"
+                        alt={filled ? "Star" : "Star (empty)"}
+                        width={16}
+                        height={16}
+                        className={`w-full h-full ${filled ? "" : "filter grayscale brightness-75"}`}
+                      />
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -132,18 +141,18 @@ export function TestimonialsDesktop() {
       <div className="self-stretch h-[642px] px-[120px] flex flex-col justify-center items-center gap-12 relative z-10">
         {/* Header */}
         <div className="self-stretch px-[120px] flex flex-col items-center gap-2.5">
-          <div className="self-stretch text-center text-[#7CB342] text-xl font-normal leading-5">
+          <div className="self-stretch text-center text-[#7CB342] text-xl font-normal leading-5 tracking-[-0.05rem]">
             TESTIMONIALS
           </div>
           <div className="self-stretch text-center">
-            <span className="text-white text-[72px] font-medium leading-[64px]">
+            <span className="text-white text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
               What Our{" "}
             </span>
-            <span className="text-[#7CB342] text-[72px] font-medium leading-[64px]">
+            <span className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
               Clients Say
             </span>
           </div>
-          <p className="self-stretch text-center text-[#C2C2C2] text-base font-medium leading-5">
+          <p className="self-stretch text-center text-[#C2C2C2] text-base font-medium leading-5 tracking-[-0.04rem]">
             Over 20 years of excellence in construction and real estate. Here&apos;s what our satisfied clients have to say about working with Janco.
           </p>
         </div>

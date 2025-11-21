@@ -8,6 +8,7 @@ import { BlogsMobile, BlogsDesktop } from "@/components/features/blogs";
 import { RealEstateMobile, RealEstateDesktop } from "@/components/features/real-estate";
 import { InquiryFormMobile, InquiryFormDesktop } from "@/components/features/inquiry-form";
 import { FooterMobile, FooterDesktop } from "@/components/features/footer";
+import ScrollToHandler from "@/components/ScrollToHandler";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
 
       {/* ========== MAIN CONTENT ========== */}
       <main className="min-h-screen bg-white w-full">
+        <ScrollToHandler />
         
         {/* ===== HERO SECTION ===== */}
         <div className="md:hidden">

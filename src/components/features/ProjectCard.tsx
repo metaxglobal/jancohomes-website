@@ -79,7 +79,7 @@ export default function ProjectCard({
             <div className="self-stretch flex flex-col items-start justify-start gap-3">
               {/* Title */}
               <div className="self-stretch flex items-center justify-start gap-2.5">
-                <div className="text-secondary text-2xl font-medium leading-6">
+                <div className="text-secondary text-2xl font-medium leading-6 tracking-[-0.04rem]">
                   {title}
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function ProjectCard({
 
             {/* Description */}
             <div className="self-stretch flex items-center justify-center gap-2.5">
-              <div className="flex-1 text-secondary/75 text-sm font-normal leading-[14px]">
+              <div className="flex-1 text-secondary/75 text-sm font-normal leading-[14px] tracking-tight">
                 {description}
               </div>
             </div>

@@ -21,15 +21,15 @@ export function AboutDesktop() {
           {/* Content Container - Constrained to 1440px layout */}
           <div className="flex items-center gap-5 pl-[120px]">
             <Image
-              src="/janco homes about img1.jpg"
-              alt="Janco Construction"
+              src="/about img1.jpg"
+              alt="Janco homes and Constructions"
               width={284}
               height={496}
               className="w-[284px] h-[496px] rounded-[22px] object-cover"
             />
             <Image
-              src="/jancon homes about img2.jpg"
-              alt="Janco Interior"
+              src="/about img2.jpg"
+              alt="janco homes and Constructions"
               width={270}
               height={361}
               className="w-[270px] h-[361px] rounded-[22px] object-cover"
@@ -46,16 +46,16 @@ export function AboutDesktop() {
                 <div className="w-[398px] flex flex-col gap-3">
                   {/* Label */}
                   <div className="self-stretch flex items-center justify-start">
-                    <span className="flex-1 text-[#7CB342] text-xl font-normal leading-5">ABOUT</span>
+                    <span className="flex-1 text-[#7CB342] text-xl font-normal leading-5 tracking-[-0.05rem]">ABOUT</span>
                   </div>
                   
                   {/* Heading */}
                   <div className="self-stretch flex items-center justify-start">
                     <div className="flex-1">
-                      <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px]">
+                      <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
                         Why Choose<br/>
                       </span>
-                      <span className="text-[#7CB342] text-[72px] font-medium leading-[64px]">
+                      <span className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
                         Janco?
                       </span>
                     </div>
@@ -64,7 +64,7 @@ export function AboutDesktop() {
 
                 {/* Description */}
                 <div className="flex items-center justify-start">
-                  <p className="w-[497px] text-[rgba(26,26,26,0.75)] text-base font-medium leading-5">
+                  <p className="w-[497px] text-[rgba(26,26,26,0.75)] text-base font-medium leading-5 tracking-[-0.04rem]">
                     With 20 years of industry experience, Janco Home & Construction has established itself as a premier construction and real estate company in Sri Lanka. We blend design innovation, engineering excellence, and craftsmanship to create structures that stand the test of time.
                     <br /><br />
                     Our commitment to quality and attention to detail, combined with our team of qualified professionals, has made us one of Sri Lanka&apos;s most trusted construction partners.
@@ -85,7 +85,7 @@ export function AboutDesktop() {
                     icon={ArrowDownRight01Icon}
                     size={20}
                     color="white"
-                    strokeWidth={1.5}
+                    strokeWidth={2}
                   />
                 </div>
               </Link>

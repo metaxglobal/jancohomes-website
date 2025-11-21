@@ -44,7 +44,7 @@ export function ProjectsPageDesktop({
       </header>
 
       {/* Main Content */}
-      <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
+      <main className="relative min-h-screen overflow-hidden bg-white pt-[0px]">
         {/* Hero Section */}
         <section className="relative h-[454px] w-full overflow-hidden bg-[#1A1A1A]">
           {/* Background Blur Effects */}
@@ -102,17 +102,17 @@ export function ProjectsPageDesktop({
             <div className="flex flex-col items-start justify-start gap-6">
               <div className="flex items-center justify-center gap-2.5">
                 <div className="text-center">
-                  <span className="text-[72px] font-medium leading-[64px] text-white">
+                  <span className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-white">
                     Featured{" "}
                   </span>
-                  <span className="text-[72px] font-medium leading-[64px] text-primary">
+                  <span className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-primary">
                     Projects
                   </span>
                 </div>
               </div>
               <div className="flex flex-col items-start justify-start gap-[13px]">
                 <div className="flex items-center justify-center gap-2.5">
-                  <div className="w-[760px] text-base font-medium leading-5 text-ash">
+                  <div className="w-[760px] text-base font-medium leading-5 tracking-tight text-ash">
                     Explore our collection of premium residential and commercial
                     projects across Sri Lanka. Each project showcases our
                     commitment to excellence and innovation in construction.
@@ -191,13 +191,13 @@ export function ProjectsPageDesktop({
           <div className="self-stretch h-[376px] px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
             <div className="flex flex-col items-center justify-start gap-3 self-stretch">
               <div className="self-stretch text-center">
-                <span className="text-[56px] font-medium leading-10 text-white">
+                <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-white">
                   Ready to Start{" "}
                 </span>
-                <span className="text-[56px] font-medium leading-10 text-primary">
+                <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-primary">
                   Your
                 </span>
-                <span className="text-[56px] font-medium leading-10 text-white">
+                <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-white">
                   {" "}
                   Project?
                 </span>
@@ -222,7 +222,7 @@ export function ProjectsPageDesktop({
                     icon={ArrowDownRight01Icon}
                     size={20}
                     color="white"
-                    strokeWidth={1.5}
+                    strokeWidth={2}
                   />
                 </div>
               </div>

@@ -26,13 +26,13 @@ export function InquiryFormDesktop() {
           {/* Header */}
           <div className="flex flex-col items-center gap-3">
             <h2 className="text-center">
-              <span className="text-white text-[56px] font-medium leading-10">
+              <span className="text-white text-[56px] font-medium leading-10 tracking-[-0.2rem]">
                 Let&apos;s Build Something{" "}
               </span>
-              <span className="text-primary text-[56px] font-medium leading-10">
+              <span className="text-primary text-[56px] font-medium leading-10 tracking-[-0.2rem]">
                 Great
               </span>
-              <span className="text-white text-[56px] font-medium leading-10">
+              <span className="text-white text-[56px] font-medium leading-10 tracking-[-0.2rem]">
                 {" "}Together
               </span>
             </h2>

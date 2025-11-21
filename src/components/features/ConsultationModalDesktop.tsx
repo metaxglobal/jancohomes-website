@@ -147,10 +147,10 @@ export default function ConsultationModalDesktop({
               <div className="inline-flex items-start justify-between self-stretch">
                 <div className="flex items-center justify-start gap-2">
                   <div className="text-center">
-                    <span className="text-[36px] font-medium leading-10 text-white">
+                    <span className="text-[36px] font-medium leading-10 tracking-[-0.1rem] text-white">
                       Book a Free{" "}
                     </span>
-                    <span className="text-[36px] font-medium leading-10 text-[#7CB342]">
+                    <span className="text-[36px] font-medium leading-10 tracking-[-0.1rem] text-[#7CB342]">
                       Consultation
                     </span>
                   </div>

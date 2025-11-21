@@ -17,7 +17,7 @@ export const PROPERTIES: Property[] = [
     price: "LKR 85M",
     bedrooms: 4,
     bathrooms: 3,
-    sqft: "3,500",
+    sqft: "3,500 sqft",
     images: [
       "/real states/1.jpg",
       "/real states/2.jpg",
@@ -36,9 +36,9 @@ export const PROPERTIES: Property[] = [
     price: "LKR 55M",
     bedrooms: 3,
     bathrooms: 2,
-    sqft: "2,100",
+    sqft: "2,100 sqft",
     images: [
-      "/real states/1.jpg",
+      "/projects/modern-apartment-complex.jpg",
       "/real states/2.jpg",
       "/real states/3.jpg",
     ],
@@ -55,11 +55,11 @@ export const PROPERTIES: Property[] = [
     price: "LKR 120M",
     bedrooms: 5,
     bathrooms: 4,
-    sqft: "4,200",
+    sqft: "4,200 sqft",
     images: [
-      "/real states/1.jpg",
-      "/real states/2.jpg",
-      "/real states/3.jpg",
+      "/projects/luxury-estate-negombo.jpg",
+      "/projects/luxury-estate-mirigama.jpg",
+      "/projects/luxury-estate-mirigama.jpg",
     ],
     whatsappNumber: "94777599299",
     whatsappMessage:
@@ -74,7 +74,7 @@ export const PROPERTIES: Property[] = [
     price: "LKR 85M",
     bedrooms: 4,
     bathrooms: 3,
-    sqft: "3,500",
+    sqft: "3,500 sqft",
     images: [
       "/real states/1.jpg",
       "/real states/2.jpg",
@@ -93,7 +93,7 @@ export const PROPERTIES: Property[] = [
     price: "LKR 55M",
     bedrooms: 3,
     bathrooms: 2,
-    sqft: "2,100",
+    sqft: "2,100 sqft",
     images: [
       "/real states/1.jpg",
       "/real states/2.jpg",
@@ -112,7 +112,7 @@ export const PROPERTIES: Property[] = [
     price: "LKR 120M",
     bedrooms: 5,
     bathrooms: 4,
-    sqft: "4,200",
+    sqft: "4,200 sqft",
     images: [
       "/real states/1.jpg",
       "/real states/2.jpg",

@@ -57,7 +57,7 @@ export function BlogCardDesktop({
                     icon={Calendar03Icon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={5}
+                    strokeWidth={1.5}
                   />
                   <div className="text-[14px] font-normal leading-[14px] text-secondary/75">
                     {date}
@@ -67,7 +67,7 @@ export function BlogCardDesktop({
 
               {/* Title */}
               <div className="inline-flex items-center justify-start gap-2.5 self-stretch">
-                <div className="w-[321px] text-[24px] font-medium leading-6 text-secondary">
+                <div className="w-[321px] text-[24px] font-medium leading-6 tracking-[-0.04rem] text-secondary">
                   {title}
                 </div>
               </div>
@@ -75,7 +75,7 @@ export function BlogCardDesktop({
 
             {/* Excerpt */}
             <div className="inline-flex items-center justify-start gap-2.5 self-stretch">
-              <div className="w-[321px] text-[14px] font-normal leading-[14px] text-secondary/75">
+              <div className="w-[321px] text-[14px] font-normal leading-[14px] tracking-tight text-secondary/75">
                 {excerpt}
               </div>
             </div>
@@ -115,7 +115,7 @@ export function BlogCardDesktop({
                   icon={ArrowDownRight01Icon}
                   size={20}
                   color="#7CB342"
-                  strokeWidth={1.5}
+                  strokeWidth={2}
                 />
               </div>
             </Link>

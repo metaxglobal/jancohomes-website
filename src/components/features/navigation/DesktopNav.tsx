@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDownRight01Icon, CallingIcon, Mail01Icon } from "@hugeicons/core-free-icons";
@@ -13,6 +13,7 @@ import ConsultationModalDesktop from "@/components/features/ConsultationModalDes
 export function DesktopNav() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     // Check if it's a hash link (section link)
@@ -27,8 +28,17 @@ export function DesktopNav() {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
-      // If we're on another page, let the Link component handle navigation
-      // and the browser will scroll to the hash
+      else {
+        // We're on a different page — store the target and navigate to home.
+        // A client-side handler on the home page will read the key and scroll.
+        e.preventDefault();
+        try {
+          sessionStorage.setItem("janco_scrollTo", sectionId);
+        } catch (err) {
+          // ignore storage errors
+        }
+        router.push("/");
+      }
     }
   };
 

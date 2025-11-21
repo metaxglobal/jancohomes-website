@@ -139,10 +139,10 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
               boxShadow: "0px 0px 3.5px rgba(0, 0, 0, 0.25)",
             }}
           >
-            <div className="text-secondary text-sm font-normal leading-[14px]">
+            <div className="text-secondary text-sm font-normal leading-[14px] tracking-tight">
               from
             </div>
-            <div className="text-secondary text-base font-medium leading-5">
+            <div className="text-secondary text-base font-medium leading-5 tracking-tight">
               {property.price}
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
             <div className="self-stretch flex flex-col items-start justify-start gap-2">
               {/* Title */}
               <div className="self-stretch inline-flex items-center justify-start gap-2.5">
-                <div className="text-secondary text-[22px] font-medium leading-6 tracking-tight">
+                <div className="text-secondary text-[22px] font-medium leading-6 tracking-[-0.04rem]">
                   {property.title}
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
                     strokeWidth={1.5}
                   />
                 </div>
-                <div className="text-secondary text-sm font-medium leading-[14px]">
+                <div className="text-secondary text-sm font-medium leading-[14px] tracking-[-0.04rem]">
                   {property.location}
                 </div>
               </div>

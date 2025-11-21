@@ -33,7 +33,7 @@ function ServiceCard({ imagePath, title, height }: ServiceCardProps) {
       />
 
       {/* Title - Bottom Aligned */}
-      <div className="absolute inset-0 flex items-end justify-center pb-8 px-4">
+      <div className="absolute inset-0 px-10 flex items-end justify-center pb-12 px-4">
         <span className="text-white text-2xl font-medium leading-6 text-center">
           {title}
         </span>
@@ -49,22 +49,22 @@ export function ServicesDesktop() {
         {/* Header Section */}
         <div className="w-full flex flex-col items-center gap-2.5 mb-12">
           {/* Label */}
-          <div className="self-stretch text-center text-[#7CB342] text-xl font-normal leading-5">
+          <div className="self-stretch text-center text-[#7CB342] text-xl font-normal leading-5 tracking-[-0.05rem]">
             OUR SERVICES
           </div>
 
           {/* Title */}
           <div className="self-stretch text-center">
-            <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px]">
+            <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
               What We{" "}
             </span>
-            <span className="text-[#7CB342] text-[72px] font-medium leading-[64px]">
+            <span className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
               Do
             </span>
           </div>
 
           {/* Description */}
-          <p className="self-stretch text-center text-[rgba(26,26,26,0.75)] text-base font-medium leading-5">
+          <p className="self-stretch text-center text-[rgba(26,26,26,0.75)] text-base font-medium leading-5 tracking-[-0.04rem]">
             With our proven track record of excellence, we are committed to
             creating strategic and innovative designing and construction
             solutions for our clients that match their unique lifestyles. As Sri

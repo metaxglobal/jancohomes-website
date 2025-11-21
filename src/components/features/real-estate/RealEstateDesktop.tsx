@@ -18,16 +18,16 @@ export function RealEstateDesktop() {
         <div className="self-stretch flex flex-col items-center gap-2.5 mb-12">
           <div className="p-2.5 flex items-center justify-center gap-2.5">
             <div className="text-center">
-              <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px]">
+              <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
                 Janco{" "}
               </span>
-              <span className="text-[#7CB342] text-[72px] font-medium leading-[64px]">
+              <span className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
                 Real Estate
               </span>
             </div>
           </div>
           <div className="self-stretch p-2.5 flex items-center justify-center gap-2.5">
-            <p className="w-[800px] text-center text-[rgba(26,26,26,0.75)] text-base font-medium leading-5">
+            <p className="w-[800px] text-center text-[rgba(26,26,26,0.75)] text-base font-medium leading-5 tracking-[-0.04rem]">
               Discover exclusive premium properties developed and curated by Janco Home & Construction. Each residence represents our commitment to quality and excellence.
             </p>
           </div>
@@ -43,14 +43,14 @@ export function RealEstateDesktop() {
         {/* Call to Action Section */}
         <div className="self-stretch h-[115px] border-t border-b border-[#C2C2C2] flex items-center justify-between">
           <div className="w-[576px] h-[84px] flex flex-col gap-3">
-            <div className="flex items-center justify-center gap-2.5">
-              <h3 className="text-[#1A1A1A] text-2xl font-medium leading-6">
-                Explore Our Complete Portfolio
+            <div className="flex items-start justify-start gap-2.5">
+              <h3 className="text-[#1A1A1A] text-2xl font-medium leading-6 tracking-[-0.04rem] text-left">
+          Explore Our Complete Portfolio
               </h3>
             </div>
-            <div className="flex items-center justify-center gap-2.5">
-              <p className="w-[576px] text-[rgba(26,26,26,0.75)] text-base font-medium leading-5">
-                Browse through our extensive collection of premium properties. From luxury villas to modern apartments, find your dream home with Janco Real Estate.
+            <div className="flex items-start justify-start gap-2.5">
+              <p className="w-[576px] text-[rgba(26,26,26,0.75)] text-base font-medium leading-5 tracking-[-0.04rem] text-left">
+          Browse through our extensive collection of premium properties. From luxury villas to modern apartments, find your dream home with Janco Real Estate.
               </p>
             </div>
           </div>
@@ -60,15 +60,15 @@ export function RealEstateDesktop() {
           >
             <div className="flex items-center gap-2">
               <span className="text-white text-base font-medium leading-5">
-                View All Properties
+          View All Properties
               </span>
               <div className="w-5 h-5 relative overflow-hidden">
-                <HugeiconsIcon
-                  icon={ArrowDownRight01Icon}
-                  size={20}
-                  color="white"
-                  strokeWidth={1.5}
-                />
+          <HugeiconsIcon
+            icon={ArrowDownRight01Icon}
+            size={20}
+            color="white"
+            strokeWidth={1.5}
+          />
               </div>
             </div>
           </Link>

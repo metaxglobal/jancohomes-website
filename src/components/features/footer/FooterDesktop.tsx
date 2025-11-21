@@ -14,32 +14,41 @@ import {
 
 export function FooterDesktop() {
   return (
-    <footer className="w-full bg-[#0B0B0A] px-[120px] pt-[60px] pb-[60px] relative overflow-hidden">
+    <footer className="w-full bg-[#0B0B0A] pt-[60px] pb-[60px] relative overflow-hidden">
       {/* Background Effects */}
       <div 
         className="w-[1201px] h-[473px] opacity-[0.03] absolute top-0 left-0"
         style={{ background: 'linear-gradient(90deg, #7CB342 0%, rgba(0, 0, 0, 0) 0%), linear-gradient(180deg, #7CB342 0%, rgba(0, 0, 0, 0) 0%)' }}
       />
       <div 
-        className="w-[358.91px] h-[358.91px] opacity-[0.13] bg-[#7CB342] rounded-full absolute"
+        className="w-[358.91px] h-[358.91px] opacity-[0.2] bg-[#7CB342] rounded-full absolute"
         style={{ boxShadow: "240px 240px 240px", filter: "blur(120px)" }}
       />
       <div 
-        className="w-[311.05px] h-[311.05px] opacity-[0.13] bg-[#7CB342] rounded-full absolute"
+        className="w-[311.05px] h-[311.05px] opacity-[0.2] bg-[#7CB342] rounded-full absolute left-3/4 top-3/4 transform -translate-y-1/2"
         style={{ boxShadow: "240px 240px 240px", filter: "blur(120px)" }}
       />
-      <div 
-        className="w-[1440px] h-[1.80px] absolute"
-        style={{ background: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #7CB342 50%, rgba(0, 0, 0, 0) 100%)' }}
-      />
+      {/* Background Effects (kept at footer-level) */}
 
-      <div className="w-full flex flex-col gap-[68px] relative z-10">
+      {/* Top thin green gradient container placed at footer root so `top-0` aligns with the
+          real top of the footer (not shifted by inner padding). This centers the gradient
+          to the site's content width so it visually divides the page and footer consistently. */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] px-[120px] z-0 pointer-events-none">
+        <div
+          className="w-full h-[2px]"
+          style={{
+            background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, #7CB342 50%, rgba(0,0,0,0) 100%)',
+          }}
+        />
+      </div>
+
+      <div className="w-full max-w-[1440px] mx-auto px-[120px] flex flex-col gap-[68px] relative z-10">
           {/* Main Footer Content */}
-          <div className="w-[1200px] flex items-start justify-between">
+          <div className="w-full max-w-[1200px] flex items-start justify-between">
             {/* Company Info */}
             <div className="w-[307px] flex flex-col gap-6">
               <Image
-                src="/logo.png"
+                src="/janco-logo.svg"
                 alt="Janco Logo"
                 width={56}
                 height={55}
@@ -94,11 +103,11 @@ export function FooterDesktop() {
               <div className="flex flex-col gap-4">
                 {/* Address */}
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 p-2.5 bg-white/10 border border-white/20 rounded-[11px] flex items-center justify-center">
+                  <div className="w-8 h-8 bg-white/10 border border-white/20 rounded-[11px] flex items-center justify-center">
                     <HugeiconsIcon
                       icon={Location04Icon}
-                      size={20}
-                      color="#C2C2C2"
+                      size={16}
+                      color="#7CB342"
                       strokeWidth={2}
                     />
                   </div>
@@ -109,11 +118,11 @@ export function FooterDesktop() {
 
                 {/* Phone */}
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 p-2.5 bg-white/10 border border-white/20 rounded-[11px] flex items-center justify-center">
+                  <div className="w-8 h-8 bg-white/10 border border-white/20 rounded-[11px] flex items-center justify-center">
                     <HugeiconsIcon
                       icon={CallingIcon}
-                      size={20}
-                      color="#C2C2C2"
+                      size={16}
+                      color="#7CB342"
                       strokeWidth={2}
                     />
                   </div>
@@ -124,11 +133,11 @@ export function FooterDesktop() {
 
                 {/* Email */}
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 p-2.5 bg-white/10 border border-white/20 rounded-[11px] flex items-center justify-center">
+                  <div className="w-8 h-8 bg-white/10 border border-white/20 rounded-[11px] flex items-center justify-center">
                     <HugeiconsIcon
                       icon={Mail01Icon}
-                      size={20}
-                      color="#C2C2C2"
+                      size={16}
+                      color="#7CB342"
                       strokeWidth={2}
                     />
                   </div>
@@ -222,13 +231,20 @@ export function FooterDesktop() {
                 <span className="text-white text-xs font-normal leading-4">
                   Design & Develop by
                 </span>
-                <Image
-                  src="/metax-logo.png"
-                  alt="MetaX Global"
-                  width={86}
-                  height={12}
-                  className="w-[86px] h-3"
-                />
+                <a
+                  href="https://www.nexgenlab.global"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Image
+                    src="/nexgen logo.png"
+                    alt="nexgen labs"
+                    width={86}
+                    height={12}
+                    className="w-[86px] h-3"
+                  />
+                </a>
               </div>
             </div>
           </div>

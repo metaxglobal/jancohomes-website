@@ -49,7 +49,7 @@ export function BlogsPageDesktop({
       </header>
 
       {/* Main Content */}
-      <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
+      <main className="relative min-h-screen overflow-hidden bg-white pt-[0px]">
         {/* Hero Section */}
         <section className="relative h-[454px] w-full overflow-hidden bg-[#1A1A1A]">
           {/* Background Blur Effects */}
@@ -107,17 +107,17 @@ export function BlogsPageDesktop({
             <div className="flex flex-col items-start justify-start gap-6">
               <div className="flex items-center justify-center gap-2.5">
                 <div className="text-center">
-                  <span className="text-[72px] font-medium leading-[64px] text-white">
+                  <span className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-white">
                     Construction & Design{" "}
                   </span>
-                  <span className="text-[72px] font-medium leading-[64px] text-[#7CB342]">
+                  <span className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-[#7CB342]">
                     Blog
                   </span>
                 </div>
               </div>
               <div className="flex flex-col items-start justify-start gap-[13px]">
                 <div className="flex items-center justify-center gap-2.5">
-                  <div className="w-[760px] text-[16px] font-medium leading-5 text-ash">
+                  <div className="w-[760px] text-[16px] font-medium leading-5 tracking-tight text-ash">
                     Expert insights, industry trends, and practical advice from
                     20 years of building excellence in Sri Lanka.
                   </div>
@@ -178,19 +178,19 @@ export function BlogsPageDesktop({
           <div className="relative z-10 flex h-[376px] flex-col items-center justify-center gap-12 self-stretch px-[120px]">
             <div className="flex flex-col items-center justify-start gap-3 self-stretch">
               <div className="self-stretch text-center">
-                <span className="text-[56px] font-medium leading-10 text-white">
+                <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-white">
                   Ready to Start{" "}
                 </span>
-                <span className="text-[56px] font-medium leading-10 text-[#7CB342]">
+                <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem]  text-[#7CB342]">
                   Your
                 </span>
-                <span className="text-[56px] font-medium leading-10 text-white">
+                <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-white">
                   {" "}
                   Project?
                 </span>
               </div>
               <div className="flex items-center justify-center gap-2.5">
-                <div className="text-center text-[16px] font-medium leading-5 text-ash">
+                <div className="text-center text-[16px] font-medium leading-5 tracking-tight text-ash">
                   Let&apos;s bring your vision to life with our expert
                   construction and design services.
                 </div>
@@ -209,7 +209,7 @@ export function BlogsPageDesktop({
                     icon={ArrowDownRight01Icon}
                     size={20}
                     color="white"
-                    strokeWidth={1.5}
+                    strokeWidth={2}
                   />
                 </div>
               </div>
