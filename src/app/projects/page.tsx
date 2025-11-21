@@ -132,10 +132,7 @@ export default function ProjectsPage() {
 
       {/* Desktop View */}
       <div className="hidden lg:block">
-        <ProjectsPageDesktop
-          projects={projects}
-          onOpenModal={() => setIsModalOpen(true)}
-        />
+        <ProjectsPageDesktop projects={projects} />
       </div>
 
       {/* Consultation Modal */}

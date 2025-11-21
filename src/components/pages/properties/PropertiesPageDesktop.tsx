@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { DesktopNav } from "@/components/features/navigation";
 import { FooterDesktop } from "@/components/features/footer";
-import ConsultationModal from "@/components/features/ConsultationModal";
+import ConsultationModalDesktop from "@/components/features/ConsultationModalDesktop";
 import PropertyCard from "@/components/features/PropertyCard";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -38,19 +38,19 @@ export function PropertiesPageDesktop({
       {/* Main Content */}
       <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
         {/* Hero Section */}
-        <section className="relative h-[454px] w-full overflow-hidden bg-secondary">
+        <section className="relative h-[454px] w-full overflow-hidden bg-[#1A1A1A]">
           {/* Background Blur Effects */}
           <div
-            className="pointer-events-none absolute left-[738.75px] top-[80px] h-[384px] w-[384px] rounded-full bg-primary opacity-10 shadow-[128px_128px_128px]"
+            className="pointer-events-none absolute left-[738.75px] top-[80px] h-[384px] w-[384px] rounded-full bg-[#7CB342] opacity-10 shadow-[128px_128px_128px]"
             style={{ filter: "blur(64px)" }}
           />
           <div
-            className="pointer-events-none absolute left-[78px] top-[304px] h-[320px] w-[320px] rounded-full bg-primary opacity-25 shadow-[128px_128px_128px]"
+            className="pointer-events-none absolute left-[78px] top-[304px] h-[320px] w-[320px] rounded-full bg-[#7CB342] opacity-25 shadow-[128px_128px_128px]"
             style={{ filter: "blur(64px)" }}
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-[1200px] flex-col gap-12 px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-12 px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center gap-2">
               <Link
@@ -82,7 +82,7 @@ export function PropertiesPageDesktop({
             <div className="flex flex-col gap-6">
               <h1 className="text-[72px] font-medium leading-[64px]">
                 <span className="text-white">Janco </span>
-                <span className="text-primary">Real Estate</span>
+                <span className="text-[#7CB342]">Real Estate</span>
               </h1>
               <p className="w-[760px] text-[16px] font-medium leading-5 text-ash">
                 Discover exclusive premium properties developed and curated by
@@ -122,14 +122,14 @@ export function PropertiesPageDesktop({
         </section>
 
         {/* CTA Section */}
-        <section className="relative w-full bg-secondary">
+        <section className="relative w-full bg-[#1A1A1A] overflow-hidden">
           {/* Background Blur Effects */}
           <div
-            className="pointer-events-none absolute bottom-0 h-[319.13px] w-[319.13px] rounded-full bg-primary opacity-10 shadow-[128px_128px_128px]"
+            className="pointer-events-none absolute bottom-0 left-0 h-[319.13px] w-[319.13px] rounded-full bg-[#7CB342] opacity-10 shadow-[128px_128px_128px]"
             style={{ filter: "blur(64px)" }}
           />
           <div
-            className="pointer-events-none absolute bottom-[-319.13px] h-[319.13px] w-[319.13px] rounded-full bg-primary opacity-[0.09] shadow-[128px_128px_128px]"
+            className="pointer-events-none absolute bottom-0 right-0 h-[319.13px] w-[319.13px] rounded-full bg-[#7CB342] opacity-[0.09] shadow-[128px_128px_128px]"
             style={{ filter: "blur(64px)" }}
           />
 
@@ -137,7 +137,7 @@ export function PropertiesPageDesktop({
             <div className="flex flex-col items-center gap-3">
               <h2 className="text-center text-[56px] font-medium leading-10">
                 <span className="text-white">Ready to Start </span>
-                <span className="text-primary">Your</span>
+                <span className="text-[#7CB342]">Your</span>
                 <span className="text-white"> Project?</span>
               </h2>
               <p className="text-center text-[16px] font-medium leading-5 text-ash">
@@ -147,7 +147,7 @@ export function PropertiesPageDesktop({
             </div>
             <button
               onClick={() => setIsConsultationModalOpen(true)}
-              className="flex h-12 items-center gap-2 rounded-[12px] bg-primary px-5 py-[10px] transition-opacity hover:opacity-90"
+              className="flex h-12 items-center gap-2 rounded-[12px] bg-[#7CB342] px-5 py-[10px] transition-opacity hover:opacity-90"
             >
               <span className="text-[16px] font-medium leading-5 text-white">
                 Talk to our Expert
@@ -169,7 +169,7 @@ export function PropertiesPageDesktop({
       </footer>
 
       {/* Consultation Modal */}
-      <ConsultationModal
+      <ConsultationModalDesktop
         isOpen={isConsultationModalOpen}
         onClose={() => setIsConsultationModalOpen(false)}
       />

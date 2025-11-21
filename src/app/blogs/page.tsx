@@ -79,10 +79,7 @@ export default function BlogsPage() {
 
       {/* Desktop View */}
       <div className="hidden lg:block">
-        <BlogsPageDesktop
-          articles={blogArticles}
-          onOpenModal={() => setIsModalOpen(true)}
-        />
+        <BlogsPageDesktop articles={blogArticles} />
       </div>
 
       {/* Consultation Modal */}

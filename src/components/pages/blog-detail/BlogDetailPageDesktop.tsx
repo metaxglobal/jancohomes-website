@@ -52,17 +52,17 @@ export function BlogDetailPageDesktop({
       {/* Main Content */}
       <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
         {/* Hero Section with Breadcrumb */}
-        <section className="relative h-[278px] w-full overflow-hidden bg-secondary">
+        <section className="relative h-[278px] w-full overflow-hidden bg-[#1A1A1A]">
           {/* Background Blur Effects */}
           <div
-            className="absolute left-[738.75px] top-[80px] h-[384px] w-[384px] rounded-full bg-primary opacity-10"
+            className="absolute left-[738.75px] top-[80px] h-[384px] w-[384px] rounded-full bg-[#7CB342] opacity-10"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
             }}
           />
           <div
-            className="absolute left-[-14px] top-[202px] h-[217px] w-[217px] rounded-full bg-primary opacity-25"
+            className="absolute left-[-14px] top-[202px] h-[217px] w-[217px] rounded-full bg-[#7CB342] opacity-25"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
@@ -70,7 +70,7 @@ export function BlogDetailPageDesktop({
           />
 
           {/* Breadcrumb Navigation */}
-          <div className="absolute left-[120px] top-[202px] inline-flex w-[1200px] flex-col items-start justify-start gap-12">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-[120px] pt-[202px]">
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
                 href="/"
@@ -122,9 +122,10 @@ export function BlogDetailPageDesktop({
         </section>
 
         {/* Article Content Section */}
-        <section className="inline-flex w-full flex-col items-start justify-start gap-8 px-[120px] pb-24 pt-8">
-          {/* Hero Image with Overlay */}
-          <div className="relative h-[450px] self-stretch overflow-hidden rounded-[22px] outline outline-1 outline-ash outline-offset-[-1px]">
+        <section className="w-full flex justify-center">
+          <div className="max-w-[1440px] w-full px-[120px] pt-8 pb-24 flex flex-col items-start gap-8">
+            {/* Hero Image with Overlay */}
+            <div className="relative h-[450px] self-stretch overflow-hidden rounded-[22px] outline outline-1 outline-ash outline-offset-[-1px]">
             <Image
               src={article.image}
               alt={article.title}
@@ -184,13 +185,13 @@ export function BlogDetailPageDesktop({
             </div>
           </div>
 
-          {/* Article Content and Social Share */}
-          <div className="flex flex-col items-end justify-start gap-14 self-stretch">
-            <div className="relative inline-flex items-start justify-start gap-[73px] self-stretch">
+            {/* Article Content and Social Share */}
+            <div className="flex flex-col items-end justify-start gap-14 self-stretch">
+              <div className="relative inline-flex items-start justify-start gap-[73px] self-stretch">
               {/* Article Body */}
               <div className="inline-flex w-[1098px] flex-col items-start justify-start gap-[46px]">
                 {/* Quote Block */}
-                <div className="inline-flex w-[1017px] items-center justify-start gap-2.5 border-l-[3px] border-primary bg-[#F7F7F7] p-5">
+                <div className="inline-flex w-[1017px] items-center justify-start gap-2.5 border-l-[3px] border-[#7CB342] bg-[#F7F7F7] p-5">
                   <div className="w-[997px] text-[16px] font-medium leading-5 text-secondary/75">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -331,6 +332,7 @@ export function BlogDetailPageDesktop({
               </div>
             </div>
           </div>
+        </div>
         </section>
       </main>
 

@@ -14,12 +14,12 @@ export default function Home() {
     <>
       {/* ========== NAVIGATION ========== */}
       {/* Mobile Navigation (< 768px) */}
-      <header className="fixed top-0 left-0 right-0 z-50 lg:hidden">
+      <header className="fixed top-0 left-0 right-0 z-50 md:hidden">
         <MobileNav />
       </header>
 
-      {/* Desktop Navigation (>= 1024px) */}
-      <header className="hidden lg:block fixed top-0 left-0 right-0 z-50">
+      {/* Desktop Navigation (>= 768px) */}
+      <header className="hidden md:block fixed top-0 left-0 right-0 z-50">
         <DesktopNav />
       </header>
 
@@ -27,104 +27,77 @@ export default function Home() {
       <main className="min-h-screen bg-white w-full">
         
         {/* ===== HERO SECTION ===== */}
-        {/* Mobile Hero (< 1024px) */}
-        <section className="lg:hidden bg-secondary w-full">
+        <div className="md:hidden">
           <HeroMobile />
-        </section>
-
-        {/* Desktop Hero (>= 1024px) */}
-        <section className="hidden lg:block bg-secondary w-full">
+        </div>
+        <div className="hidden md:block">
           <HeroDesktop />
-        </section>
+        </div>
 
         {/* ===== ABOUT SECTION ===== */}
-        {/* Mobile About (< 1024px) */}
-        <section className="lg:hidden w-full">
+        <div className="md:hidden">
           <AboutMobile />
-        </section>
-
-        {/* Desktop About (>= 1024px) */}
-        <section className="hidden lg:block w-full">
+        </div>
+        <div className="hidden md:block">
           <AboutDesktop />
-        </section>
+        </div>
 
         {/* ===== SERVICES SECTION ===== */}
-        {/* Mobile Services (< 1024px) */}
-        <section className="lg:hidden bg-white w-full">
+        <div className="md:hidden">
           <ServicesMobile />
-        </section>
-
-        {/* Desktop Services (>= 1024px) */}
-        <section className="hidden lg:block bg-white w-full">
+        </div>
+        <div className="hidden md:block">
           <ServicesDesktop />
-        </section>
+        </div>
 
         {/* ===== PROJECTS SECTION ===== */}
-        {/* Mobile Projects (< 1024px) */}
-        <section className="lg:hidden w-full">
+        <div className="md:hidden">
           <ProjectsMobile />
-        </section>
-
-        {/* Desktop Projects (>= 1024px) */}
-        <section className="hidden lg:block w-full">
+        </div>
+        <div className="hidden md:block">
           <ProjectsDesktop />
-        </section>
+        </div>
 
         {/* ===== TESTIMONIALS SECTION ===== */}
-        {/* Mobile Testimonials (< 1024px) */}
-        <section className="lg:hidden bg-secondary w-full">
+        <div className="md:hidden">
           <TestimonialsMobile />
-        </section>
-
-        {/* Desktop Testimonials (>= 1024px) */}
-        <section className="hidden lg:block bg-secondary w-full">
+        </div>
+        <div className="hidden md:block">
           <TestimonialsDesktop />
-        </section>
+        </div>
 
         {/* ===== BLOGS SECTION ===== */}
-        {/* Mobile Blogs (< 1024px) */}
-        <section className="lg:hidden w-full">
+        <div className="md:hidden">
           <BlogsMobile />
-        </section>
-
-        {/* Desktop Blogs (>= 1024px) */}
-        <section className="hidden lg:block w-full">
+        </div>
+        <div className="hidden md:block">
           <BlogsDesktop />
-        </section>
+        </div>
 
         {/* ===== REAL ESTATE SECTION ===== */}
-        {/* Mobile Real Estate (< 1024px) */}
-        <section className="lg:hidden w-full">
+        <div className="md:hidden">
           <RealEstateMobile />
-        </section>
-
-        {/* Desktop Real Estate (>= 1024px) */}
-        <section className="hidden lg:block w-full">
+        </div>
+        <div className="hidden md:block">
           <RealEstateDesktop />
-        </section>
+        </div>
 
         {/* ===== INQUIRY FORM SECTION ===== */}
-        {/* Mobile Inquiry Form (< 1024px) */}
-        <section className="lg:hidden bg-secondary w-full">
+        <div className="md:hidden">
           <InquiryFormMobile />
-        </section>
-
-        {/* Desktop Inquiry Form (>= 1024px) */}
-        <section className="hidden lg:block bg-secondary w-full">
+        </div>
+        <div className="hidden md:block">
           <InquiryFormDesktop />
-        </section>
+        </div>
       </main>
 
       {/* ========== FOOTER ========== */}
-      {/* Mobile Footer (< 1024px) */}
-      <footer className="lg:hidden">
+      <div className="md:hidden">
         <FooterMobile />
-      </footer>
-
-      {/* Desktop Footer (>= 1024px) */}
-      <footer className="hidden lg:block">
+      </div>
+      <div className="hidden md:block">
         <FooterDesktop />
-      </footer>
+      </div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-// Desktop Testimonials Component
+// Desktop Testimonials Component - Refined
 
 "use client";
 
@@ -14,88 +14,79 @@ interface Testimonial {
   rating: number;
 }
 
-interface TestimonialCardDesktopProps {
+interface TestimonialCardProps {
   testimonial: Testimonial;
 }
 
-function TestimonialCardDesktop({ testimonial }: TestimonialCardDesktopProps) {
+function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <div
-      className="w-[387px] p-5 rounded-[22px] flex flex-col items-start justify-center gap-2.5"
+      className="w-[387px] p-5 rounded-[22px] flex flex-col justify-center items-start gap-2.5"
       style={{
         background: "rgba(255, 255, 255, 0.10)",
         outline: "1px rgba(255, 255, 255, 0.20) solid",
         outlineOffset: "-1px",
       }}
     >
-      <div className="self-stretch flex flex-col items-start justify-start gap-3">
-        <div className="self-stretch flex flex-col items-start justify-start gap-3">
-          <div className="self-stretch flex flex-col items-start justify-start gap-2.5">
-            <div className="self-stretch flex flex-col items-start justify-start gap-3">
+      <div className="self-stretch flex flex-col gap-3">
+        <div className="self-stretch flex flex-col gap-3">
+          <div className="self-stretch flex flex-col gap-2.5">
+            <div className="self-stretch flex flex-col gap-3">
               {/* Quote Icon */}
-              <div className="self-stretch h-10 pr-[293.99px] flex flex-col items-start justify-start">
+              <div className="self-stretch h-10 pr-[293.99px] flex flex-col">
                 <div className="w-12 h-10 relative overflow-hidden">
                   <Image
                     src="/quote.svg"
                     alt="Quote"
                     width={48}
                     height={40}
-                    className="w-full h-full"
+                    className="w-12 h-10"
                   />
                 </div>
               </div>
 
               {/* Star Rating */}
-              <div className="self-stretch h-4 inline-flex items-start justify-start gap-1">
+              <div className="self-stretch h-4 flex items-start gap-1">
                 {[...Array(testimonial.rating)].map((_, index) => (
                   <div key={index} className="w-4 h-4 relative">
-                    <Image
-                      src="/star.svg"
-                      alt="Star"
-                      width={16}
-                      height={16}
-                      className="w-full h-full"
-                    />
+                    <div className="w-[13.33px] h-[13.33px] absolute left-[1.33px] top-[1.33px] bg-[#7CB342]" />
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Testimonial Quote */}
-          <div className="self-stretch min-h-[120px] inline-flex items-center justify-start gap-2.5">
-            <div className="flex-1 text-white text-base font-medium leading-5">
+          {/* Quote */}
+          <div className="self-stretch min-h-[120px] flex justify-center items-start gap-2.5">
+            <p className="flex-1 text-white text-base font-medium leading-5">
               {testimonial.quote}
-            </div>
+            </p>
           </div>
         </div>
 
         {/* Client Info */}
         <div
-          className="self-stretch py-2 inline-flex items-center justify-start gap-4"
+          className="self-stretch py-2 flex items-center gap-4"
           style={{
             borderTop: "1px rgba(255, 254.99, 254.98, 0.10) solid",
           }}
         >
-          {/* Client Image */}
-          <div className="w-12 h-12 overflow-hidden rounded-full inline-flex flex-col items-start justify-start">
+          <div className="w-12 h-12 rounded-full overflow-hidden flex flex-col">
             <Image
               src={testimonial.image}
               alt={testimonial.name}
               width={48}
               height={48}
-              className="self-stretch h-12 relative object-cover"
+              className="self-stretch h-12"
             />
           </div>
-
-          {/* Client Details */}
-          <div className="flex-1 inline-flex flex-col items-start justify-start">
-            <div className="text-white text-base font-medium leading-5">
+          <div className="flex-1 flex flex-col">
+            <span className="text-white text-base font-medium leading-5">
               {testimonial.name}
-            </div>
-            <div className="text-ash text-sm font-normal leading-[14px]">
+            </span>
+            <span className="text-[#C2C2C2] text-sm font-normal leading-[14px]">
               {testimonial.location}
-            </div>
+            </span>
           </div>
         </div>
       </div>
@@ -104,7 +95,7 @@ function TestimonialCardDesktop({ testimonial }: TestimonialCardDesktopProps) {
 }
 
 export function TestimonialsDesktop() {
-  const [activePage] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const testimonials: Testimonial[] = [
     {
@@ -137,74 +128,55 @@ export function TestimonialsDesktop() {
   ];
 
   return (
-    <div className="hidden lg:flex w-full pt-24 pb-16 bg-secondary flex-col items-start justify-start gap-2.5 relative overflow-hidden">
-      {/* Background blur elements */}
-      <div
-        className="absolute w-[392.42px] h-[392.42px] opacity-[0.07] bg-primary rounded-full pointer-events-none"
-        style={{ 
-          boxShadow: "128px 128px 128px",
-          filter: "blur(64px)",
-          left: "50%",
-          top: "10%",
-          transform: "translateX(-50%)"
-        }}
-      />
-      <div
-        className="absolute w-[392.42px] h-[392.42px] opacity-[0.07] bg-primary rounded-full pointer-events-none"
-        style={{ 
-          boxShadow: "128px 128px 128px",
-          filter: "blur(64px)",
-          left: "50%",
-          bottom: "10%",
-          transform: "translateX(-50%)"
-        }}
-      />
-
-      <div className="self-stretch h-[642px] px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
-        {/* Header Section */}
-        <div className="self-stretch px-[120px] flex flex-col items-center justify-start gap-2.5">
-          {/* Label */}
-          <div className="self-stretch text-center text-primary text-xl font-normal leading-5">
+    <section className="w-full bg-[#1A1A1A] pt-24 pb-16 flex flex-col items-start gap-2.5 relative overflow-hidden" id="testimonials">
+      <div className="self-stretch h-[642px] px-[120px] flex flex-col justify-center items-center gap-12 relative z-10">
+        {/* Header */}
+        <div className="self-stretch px-[120px] flex flex-col items-center gap-2.5">
+          <div className="self-stretch text-center text-[#7CB342] text-xl font-normal leading-5">
             TESTIMONIALS
           </div>
-
-          {/* Title */}
           <div className="self-stretch text-center">
             <span className="text-white text-[72px] font-medium leading-[64px]">
               What Our{" "}
             </span>
-            <span className="text-primary text-[72px] font-medium leading-[64px]">
+            <span className="text-[#7CB342] text-[72px] font-medium leading-[64px]">
               Clients Say
             </span>
           </div>
-
-          {/* Description */}
-          <div className="self-stretch text-center text-ash text-base font-medium leading-5">
-            Over 20 years of excellence in construction and real estate. Here&apos;s
-            what our satisfied clients have to say about working with Janco.
-          </div>
+          <p className="self-stretch text-center text-[#C2C2C2] text-base font-medium leading-5">
+            Over 20 years of excellence in construction and real estate. Here&apos;s what our satisfied clients have to say about working with Janco.
+          </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="w-[1201px] flex flex-col items-start justify-start gap-8">
-          {/* Cards Row */}
-          <div className="self-stretch flex items-center justify-start gap-5">
+        {/* Testimonial Cards */}
+        <div className="w-[1201px] flex flex-col gap-8">
+          <div className="self-stretch flex items-center gap-5">
             {testimonials.map((testimonial) => (
-              <TestimonialCardDesktop key={testimonial.id} testimonial={testimonial} />
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}
           </div>
 
           {/* Pagination Dots */}
           <div className="self-stretch h-12 flex items-center justify-center gap-4">
-            <div className="w-20 h-2 flex items-start justify-start gap-2">
-              <div className="flex-1 h-2 bg-primary rounded-full" />
-              <div className="w-2 h-2 bg-ash rounded-full" />
-              <div className="w-2 h-2 bg-ash rounded-full" />
-              <div className="w-2 h-2 bg-ash rounded-full" />
+            <div className="w-20 h-2 flex items-start gap-2">
+              <div className="flex-1 h-2 bg-[#7CB342] rounded-full" />
+              <div className="w-2 h-2 bg-[#C2C2C2] rounded-full" />
+              <div className="w-2 h-2 bg-[#C2C2C2] rounded-full" />
+              <div className="w-2 h-2 bg-[#C2C2C2] rounded-full" />
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Background Blur Effects */}
+      <div 
+        className="w-[392.42px] h-[392.42px] opacity-[0.07] bg-[#7CB342] rounded-full absolute bottom-0 left-[120px]"
+        style={{ boxShadow: "128px 128px 128px", filter: "blur(64px)" }} 
+      />
+      <div 
+        className="w-[392.42px] h-[392.42px] opacity-[0.07] bg-[#7CB342] rounded-full absolute bottom-0 right-[120px]"
+        style={{ boxShadow: "128px 128px 128px", filter: "blur(64px)" }} 
+      />
+    </section>
   );
 }

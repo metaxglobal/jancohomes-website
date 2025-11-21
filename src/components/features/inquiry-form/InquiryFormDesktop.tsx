@@ -1,4 +1,4 @@
-// Desktop Inquiry Form Component
+// Desktop Inquiry Form Component - Figma Spec
 
 "use client";
 
@@ -16,194 +16,120 @@ export function InquiryFormDesktop() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create WhatsApp message
-    const whatsappMessage = `
-*New Inquiry from Website*
-
-*Name:* ${formData.name}
-*Phone:* ${formData.phone}
-*Email:* ${formData.email}
-*Message:* ${formData.message}
-    `.trim();
-
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappUrl = `https://wa.me/94777599299?text=${encodedMessage}`;
-    
-    window.open(whatsappUrl, "_blank");
-    
-    // Reset form
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
-    });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    // Handle form submission
+    console.log("Form submitted:", formData);
   };
 
   return (
-    <div className="hidden lg:flex w-full px-[120px] py-20 flex-col items-center justify-center gap-12">
-      {/* Header */}
-      <div className="self-stretch flex flex-col items-center justify-start gap-3">
-        <div className="self-stretch text-center">
-          <span className="text-white text-[56px] font-medium leading-10">
-            Let's Build Something{" "}
-          </span>
-          <span className="text-primary text-[56px] font-medium leading-10">
-            Great
-          </span>
-          <span className="text-white text-[56px] font-medium leading-10">
-            {" "}
-            Together
-          </span>
-        </div>
-        <div className="flex items-center justify-center gap-2.5">
-          <div className="text-center text-white text-base font-medium leading-5">
-            Tell us about your next project — we'll help make it a reality
+    <section className="w-full bg-[#1A1A1A] flex flex-col items-start gap-2.5 relative overflow-hidden">
+      <div className="self-stretch h-[642px] px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
+          {/* Header */}
+          <div className="flex flex-col items-center gap-3">
+            <h2 className="text-center">
+              <span className="text-white text-[56px] font-medium leading-10">
+                Let&apos;s Build Something{" "}
+              </span>
+              <span className="text-primary text-[56px] font-medium leading-10">
+                Great
+              </span>
+              <span className="text-white text-[56px] font-medium leading-10">
+                {" "}Together
+              </span>
+            </h2>
+            <p className="text-center text-white text-base font-medium leading-5">
+              Tell us about your next project — we&apos;ll help make it a reality
+            </p>
           </div>
-        </div>
-      </div>
 
-      {/* Form */}
-      <form
-        onSubmit={handleSubmit}
-        className="w-[672px] flex flex-col items-start justify-start gap-6"
-      >
-        {/* Name & Phone Row */}
-        <div className="w-[672px] flex items-center justify-between">
-          {/* Name Field */}
-          <div className="w-[324px] flex flex-col items-start justify-start gap-2">
-            <div className="self-stretch flex items-center justify-start gap-2">
-              <label
-                htmlFor="name"
-                className="text-white text-base font-medium leading-5"
-              >
-                Name
-              </label>
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="w-[672px] flex flex-col gap-6">
+            {/* Name & Phone Row */}
+            <div className="w-[672px] flex items-center justify-between">
+              {/* Name Field */}
+              <div className="w-[324px] flex flex-col gap-2">
+                <label className="text-white text-base font-medium leading-5">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="h-12 px-3 py-1 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-ash text-sm font-normal leading-[14px] focus:outline-none focus:border-primary"
+                />
+              </div>
+
+              {/* Phone Field */}
+              <div className="w-[324px] flex flex-col gap-2">
+                <label className="text-white text-base font-medium leading-5">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  placeholder="+94 XX XXX XXXX"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="h-12 px-3 py-1 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-ash text-sm font-normal leading-[14px] focus:outline-none focus:border-primary"
+                />
+              </div>
             </div>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Your name"
-              required
-              className="self-stretch h-12 px-3 py-1 bg-white/10 rounded-xl flex items-center justify-start text-ash text-sm font-normal leading-[14px] placeholder:text-ash focus:outline-none focus:ring-1 focus:ring-white/20"
-              style={{
-                outline: "1px rgba(255, 255, 255, 0.20) solid",
-                outlineOffset: "-1px",
-              }}
-            />
-          </div>
 
-          {/* Phone Field */}
-          <div className="w-[324px] flex flex-col items-start justify-start gap-2">
-            <div className="self-stretch flex items-center justify-start gap-2">
-              <label
-                htmlFor="phone"
-                className="text-white text-base font-medium leading-5"
-              >
-                Phone
+            {/* Email Field */}
+            <div className="flex flex-col gap-2">
+              <label className="text-white text-base font-medium leading-5">
+                Email
               </label>
+              <input
+                type="email"
+                placeholder="your.email@example.com"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="h-12 px-3 py-1 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-ash text-sm font-normal leading-[14px] focus:outline-none focus:border-primary"
+              />
             </div>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="+94 XX XXX XXXX"
-              required
-              className="self-stretch h-12 px-3 py-1 bg-white/10 rounded-xl flex items-center justify-start text-ash text-sm font-normal leading-[14px] placeholder:text-ash focus:outline-none focus:ring-1 focus:ring-white/20"
-              style={{
-                outline: "1px rgba(255, 255, 255, 0.20) solid",
-                outlineOffset: "-1px",
-              }}
-            />
-          </div>
-        </div>
 
-        {/* Email Field */}
-        <div className="self-stretch flex flex-col items-start justify-start gap-2">
-          <div className="self-stretch flex items-center justify-start gap-2">
-            <label
-              htmlFor="email"
-              className="text-white text-base font-medium leading-5"
+            {/* Message Field */}
+            <div className="flex flex-col gap-2">
+              <label className="text-white text-base font-medium leading-5">
+                Message
+              </label>
+              <textarea
+                placeholder="Tell us about your project..."
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="h-16 pt-[17px] pb-2 px-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-ash text-sm font-normal leading-[14px] focus:outline-none focus:border-primary resize-none"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-[672px] h-12 bg-primary rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors"
             >
-              Email
-            </label>
-          </div>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="your.email@example.com"
-            required
-            className="self-stretch h-12 px-3 py-1 bg-white/10 rounded-xl flex items-center justify-start text-ash text-sm font-normal leading-[14px] placeholder:text-ash focus:outline-none focus:ring-1 focus:ring-white/20"
-            style={{
-              outline: "1px rgba(255, 255, 255, 0.20) solid",
-              outlineOffset: "-1px",
-            }}
-          />
+              <span className="text-white text-base font-medium leading-5">
+                Enquire Now
+              </span>
+              <div className="w-5 h-5">
+                <HugeiconsIcon
+                  icon={ArrowDownRight01Icon}
+                  size={20}
+                  color="white"
+                  strokeWidth={1.5}
+                />
+              </div>
+            </button>
+          </form>
         </div>
-
-        {/* Message Field */}
-        <div className="self-stretch flex flex-col items-start justify-start gap-2">
-          <div className="self-stretch flex items-center justify-start gap-2">
-            <label
-              htmlFor="message"
-              className="text-white text-base font-medium leading-5"
-            >
-              Message
-            </label>
-          </div>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Tell us about your project..."
-            required
-            rows={3}
-            className="self-stretch h-16 px-3 pt-[17px] pb-2 bg-white/10 rounded-xl flex items-start justify-start text-ash text-sm font-normal leading-[14px] placeholder:text-ash focus:outline-none focus:ring-1 focus:ring-white/20 resize-none"
-            style={{
-              outline: "1px rgba(255, 255, 255, 0.20) solid",
-              outlineOffset: "-1px",
-            }}
-          />
-        </div>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-[672px] h-12 bg-primary rounded-xl flex items-center justify-center gap-2"
-        >
-          <div className="text-white text-base font-medium leading-5">
-            Enquire Now
-          </div>
-          <div className="w-5 h-5 relative overflow-hidden">
-            <HugeiconsIcon
-              icon={ArrowDownRight01Icon}
-              size={20}
-              color="white"
-              strokeWidth={1.5}
-            />
-          </div>
-        </button>
-      </form>
-    </div>
+      
+      {/* Background Blur Effects */}
+      <div 
+        className="w-[351.10px] h-[351.10px] opacity-[0.07] bg-[#7CB342] rounded-full absolute bottom-0 left-0"
+        style={{ boxShadow: "128px 128px 128px", filter: "blur(64px)" }}
+      />
+      <div 
+        className="w-[351.10px] h-[351.10px] opacity-[0.07] bg-[#7CB342] rounded-full absolute bottom-0 right-0"
+        style={{ boxShadow: "128px 128px 128px", filter: "blur(64px)" }}
+      />
+    </section>
   );
 }

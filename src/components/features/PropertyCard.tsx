@@ -78,7 +78,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
 
   return (
     <div
-      className="w-full max-w-[361px] rounded-[22px] inline-flex flex-col items-start justify-start"
+      className="w-[387px] rounded-[22px] inline-flex flex-col items-start justify-start"
       style={{
         boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
         outline: "1px #C2C2C2 solid",

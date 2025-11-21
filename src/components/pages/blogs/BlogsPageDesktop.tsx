@@ -5,11 +5,12 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { DesktopNav } from "@/components/features/navigation";
 import { BlogCardDesktop } from "@/components/features/BlogCardDesktop";
 import { FooterDesktop } from "@/components/features/footer";
+import ConsultationModalDesktop from "@/components/features/ConsultationModalDesktop";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Home01Icon,
@@ -33,13 +34,13 @@ interface BlogArticle {
 
 interface BlogsPageDesktopProps {
   articles: BlogArticle[];
-  onOpenModal: () => void;
 }
 
 export function BlogsPageDesktop({
   articles,
-  onOpenModal,
 }: BlogsPageDesktopProps) {
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+
   return (
     <>
       {/* Desktop Navigation */}
@@ -50,17 +51,17 @@ export function BlogsPageDesktop({
       {/* Main Content */}
       <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
         {/* Hero Section */}
-        <section className="relative h-[454px] w-full overflow-hidden bg-secondary">
+        <section className="relative h-[454px] w-full overflow-hidden bg-[#1A1A1A]">
           {/* Background Blur Effects */}
           <div
-            className="absolute left-[738.75px] top-[80px] h-[384px] w-[384px] rounded-full bg-primary opacity-10"
+            className="absolute left-[738.75px] top-[80px] h-[384px] w-[384px] rounded-full bg-[#7CB342] opacity-10"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
             }}
           />
           <div
-            className="absolute left-[78px] top-[304px] h-[320px] w-[320px] rounded-full bg-primary opacity-25"
+            className="absolute left-[78px] top-[304px] h-[320px] w-[320px] rounded-full bg-[#7CB342] opacity-25"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
@@ -68,7 +69,7 @@ export function BlogsPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="absolute left-[120px] top-[202px] inline-flex w-[1200px] flex-col items-start justify-start gap-12">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
@@ -109,7 +110,7 @@ export function BlogsPageDesktop({
                   <span className="text-[72px] font-medium leading-[64px] text-white">
                     Construction & Design{" "}
                   </span>
-                  <span className="text-[72px] font-medium leading-[64px] text-primary">
+                  <span className="text-[72px] font-medium leading-[64px] text-[#7CB342]">
                     Blog
                   </span>
                 </div>
@@ -127,45 +128,47 @@ export function BlogsPageDesktop({
         </section>
 
         {/* Blog Articles Grid */}
-        <section className="inline-flex w-full flex-col items-center justify-start gap-5 px-[120px] pb-24 pt-16">
-          {/* Row 1 - 3 cards */}
-          <div className="inline-flex items-center justify-start gap-5 self-stretch">
-            {articles.slice(0, 3).map((article) => (
-              <BlogCardDesktop key={article.id} {...article} />
-            ))}
-          </div>
-
-          {/* Row 2 - 3 cards */}
-          {articles.length > 3 && (
+        <section className="w-full flex justify-center">
+          <div className="max-w-[1440px] w-full px-[120px] pt-16 pb-24 flex flex-col items-start gap-5">
+            {/* Row 1 - 3 cards */}
             <div className="inline-flex items-center justify-start gap-5 self-stretch">
-              {articles.slice(3, 6).map((article) => (
+              {articles.slice(0, 3).map((article) => (
                 <BlogCardDesktop key={article.id} {...article} />
               ))}
             </div>
-          )}
 
-          {/* Row 3 - remaining cards */}
-          {articles.length > 6 && (
-            <div className="flex items-center justify-start gap-5">
-              {articles.slice(6).map((article) => (
-                <BlogCardDesktop key={article.id} {...article} />
-              ))}
-            </div>
-          )}
+            {/* Row 2 - 3 cards */}
+            {articles.length > 3 && (
+              <div className="inline-flex items-center justify-start gap-5 self-stretch">
+                {articles.slice(3, 6).map((article) => (
+                  <BlogCardDesktop key={article.id} {...article} />
+                ))}
+              </div>
+            )}
+
+            {/* Row 3 - remaining cards */}
+            {articles.length > 6 && (
+              <div className="flex items-center justify-start gap-5">
+                {articles.slice(6).map((article) => (
+                  <BlogCardDesktop key={article.id} {...article} />
+                ))}
+              </div>
+            )}
+          </div>
         </section>
 
         {/* CTA Section */}
-        <section className="relative w-full bg-secondary">
+        <section className="relative w-full bg-[#1A1A1A] overflow-hidden">
           {/* Background Blur Effects */}
           <div
-            className="absolute h-[319.13px] w-[319.13px] rounded-full bg-primary opacity-10"
+            className="absolute bottom-0 left-0 h-[319.13px] w-[319.13px] rounded-full bg-[#7CB342] opacity-10"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
             }}
           />
           <div
-            className="absolute h-[319.13px] w-[319.13px] rounded-full bg-primary opacity-[0.09]"
+            className="absolute bottom-0 right-0 h-[319.13px] w-[319.13px] rounded-full bg-[#7CB342] opacity-[0.09]"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
@@ -178,7 +181,7 @@ export function BlogsPageDesktop({
                 <span className="text-[56px] font-medium leading-10 text-white">
                   Ready to Start{" "}
                 </span>
-                <span className="text-[56px] font-medium leading-10 text-primary">
+                <span className="text-[56px] font-medium leading-10 text-[#7CB342]">
                   Your
                 </span>
                 <span className="text-[56px] font-medium leading-10 text-white">
@@ -194,8 +197,8 @@ export function BlogsPageDesktop({
               </div>
             </div>
             <button
-              onClick={onOpenModal}
-              className="flex h-12 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 transition-opacity hover:opacity-90"
+              onClick={() => setIsConsultationModalOpen(true)}
+              className="flex h-12 items-center justify-center gap-2 rounded-xl bg-[#7CB342] px-5 py-2.5 transition-opacity hover:opacity-90"
             >
               <div className="flex items-center justify-start gap-2">
                 <div className="text-[16px] font-medium leading-5 text-white">
@@ -219,6 +222,12 @@ export function BlogsPageDesktop({
       <footer>
         <FooterDesktop />
       </footer>
+
+      {/* Consultation Modal */}
+      <ConsultationModalDesktop
+        isOpen={isConsultationModalOpen}
+        onClose={() => setIsConsultationModalOpen(false)}
+      />
     </>
   );
 }

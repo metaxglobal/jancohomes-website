@@ -5,11 +5,12 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { DesktopNav } from "@/components/features/navigation";
 import ProjectCard from "@/components/features/ProjectCard";
 import { FooterDesktop } from "@/components/features/footer";
+import ConsultationModalDesktop from "@/components/features/ConsultationModalDesktop";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Home01Icon,
@@ -28,13 +29,13 @@ interface Project {
 
 interface ProjectsPageDesktopProps {
   projects: Project[];
-  onOpenModal: () => void;
 }
 
 export function ProjectsPageDesktop({
   projects,
-  onOpenModal,
 }: ProjectsPageDesktopProps) {
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+
   return (
     <>
       {/* Desktop Navigation */}
@@ -45,17 +46,17 @@ export function ProjectsPageDesktop({
       {/* Main Content */}
       <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
         {/* Hero Section */}
-        <section className="relative h-[454px] w-full overflow-hidden bg-secondary">
+        <section className="relative h-[454px] w-full overflow-hidden bg-[#1A1A1A]">
           {/* Background Blur Effects */}
           <div
-            className="absolute left-[738.75px] top-[80px] h-[384px] w-[384px] rounded-full bg-primary opacity-10"
+            className="absolute left-[738.75px] top-[80px] h-[384px] w-[384px] rounded-full bg-[#7CB342] opacity-10"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
             }}
           />
           <div
-            className="absolute left-[78px] top-[304px] h-[320px] w-[320px] rounded-full bg-primary opacity-25"
+            className="absolute left-[78px] top-[304px] h-[320px] w-[320px] rounded-full bg-[#7CB342] opacity-25"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
@@ -63,7 +64,7 @@ export function ProjectsPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="absolute left-[120px] top-[202px] flex w-[1200px] flex-col items-start justify-start gap-12">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
@@ -122,50 +123,24 @@ export function ProjectsPageDesktop({
           </div>
         </section>
 
-        {/* Background Blur Effects */}
-        <div
-          className="pointer-events-none absolute bottom-[800px] right-[100px] h-[268px] w-[268px] rounded-full bg-primary opacity-[0.05] shadow-[128px_128px_128px]"
-          style={{ filter: "blur(64px)" }}
-        />
-        <div
-          className="pointer-events-none absolute bottom-[300px] left-[100px] h-[268px] w-[268px] rounded-full bg-primary opacity-[0.05] shadow-[128px_128px_128px]"
-          style={{ filter: "blur(64px)" }}
-        />
-
         {/* Projects Grid */}
-        <section className="flex w-full flex-col items-start justify-start gap-5 px-[120px] py-16">
-          {/* Row 1 - 3 cards */}
-          <div className="flex items-center justify-start gap-5 self-stretch">
-            {projects.slice(0, 3).map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                location={project.location}
-                sqft={project.area}
-                description={project.description}
-                images={project.images}
-              />
-            ))}
-          </div>
-
-          {/* Row 2 - 3 cards */}
-          <div className="flex items-center justify-start gap-5 self-stretch">
-            {projects.slice(3, 6).map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                location={project.location}
-                sqft={project.area}
-                description={project.description}
-                images={project.images}
-              />
-            ))}
-          </div>
-
-          {/* Row 3 - remaining cards */}
-          {projects.length > 6 && (
-            <div className="flex items-center justify-start gap-5">
-              {projects.slice(6).map((project) => (
+        <section className="w-full flex justify-center">
+          <div className="max-w-[1440px] w-full px-[120px] pt-16 pb-16 flex flex-col items-start gap-5">
+            {/* Row 1 - 3 cards */}
+            <div className="flex items-center justify-start gap-5 self-stretch">
+              {projects.slice(0, 3).map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  location={project.location}
+                  sqft={project.area}
+                  description={project.description}
+                  images={project.images}
+                />
+              ))}
+            </div>            {/* Row 2 - 3 cards */}
+            <div className="flex items-center justify-start gap-5 self-stretch">
+              {projects.slice(3, 6).map((project) => (
                 <ProjectCard
                   key={project.id}
                   title={project.title}
@@ -176,28 +151,44 @@ export function ProjectsPageDesktop({
                 />
               ))}
             </div>
-          )}
+
+            {/* Row 3 - remaining cards */}
+            {projects.length > 6 && (
+              <div className="flex items-center justify-start gap-5">
+                {projects.slice(6).map((project) => (
+                  <ProjectCard
+                    key={project.id}
+                    title={project.title}
+                    location={project.location}
+                    sqft={project.area}
+                    description={project.description}
+                    images={project.images}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
         </section>
 
         {/* CTA Section */}
-        <section className="relative w-full bg-secondary">
+        <section className="relative w-full bg-[#1A1A1A] flex flex-col items-start gap-2.5 overflow-hidden">
           {/* Background Blur Effects */}
           <div
-            className="absolute h-[319.13px] w-[319.13px] rounded-full bg-primary opacity-10"
+            className="w-[319.13px] h-[319.13px] rounded-full bg-[#7CB342] opacity-10 absolute bottom-0 left-0"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
             }}
           />
           <div
-            className="absolute h-[319.13px] w-[319.13px] rounded-full bg-primary opacity-[0.09]"
+            className="w-[319.13px] h-[319.13px] rounded-full bg-[#7CB342] opacity-[0.09] absolute bottom-0 right-0"
             style={{
               boxShadow: "128px 128px 128px",
               filter: "blur(64px)",
             }}
           />
 
-          <div className="relative z-10 flex h-[376px] flex-col items-center justify-center gap-12 self-stretch px-[120px]">
+          <div className="self-stretch h-[376px] px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
             <div className="flex flex-col items-center justify-start gap-3 self-stretch">
               <div className="self-stretch text-center">
                 <span className="text-[56px] font-medium leading-10 text-white">
@@ -219,14 +210,14 @@ export function ProjectsPageDesktop({
               </div>
             </div>
             <button
-              onClick={onOpenModal}
-              className="flex h-12 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 transition-opacity hover:opacity-90"
+              onClick={() => setIsConsultationModalOpen(true)}
+              className="h-12 px-5 py-2.5 bg-[#7CB342] rounded-xl flex items-center justify-center gap-2"
             >
-              <div className="flex items-center justify-start gap-2">
-                <div className="text-base font-medium leading-5 text-white">
+              <div className="flex items-center gap-2">
+                <span className="text-white text-base font-medium leading-5">
                   Talk to our Expert
-                </div>
-                <div className="relative h-5 w-5 overflow-hidden">
+                </span>
+                <div className="w-5 h-5 relative overflow-hidden">
                   <HugeiconsIcon
                     icon={ArrowDownRight01Icon}
                     size={20}
@@ -244,6 +235,12 @@ export function ProjectsPageDesktop({
       <footer>
         <FooterDesktop />
       </footer>
+
+      {/* Consultation Modal */}
+      <ConsultationModalDesktop
+        isOpen={isConsultationModalOpen}
+        onClose={() => setIsConsultationModalOpen(false)}
+      />
     </>
   );
 }

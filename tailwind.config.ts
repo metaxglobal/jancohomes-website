@@ -77,14 +77,25 @@ const config: Config = {
         // Using 4px base unit (0.25rem) - Standard spacing scale
         // 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96
         // Tailwind default spacing already follows this pattern
-        // Add custom values as needed during development
+        
+        // Custom grid-specific spacing
+        '120': '7.5rem', // 120px - Desktop margins
+        '1200': '75rem', // 1200px - Content width
+        '1440': '90rem', // 1440px - Desktop width
+        '361': '22.5625rem', // 361px - Mobile content width
+        '387': '24.1875rem', // 387px - 4-column width (third)
+        '480': '30rem', // 480px - 5-column width
+        '590': '36.875rem', // 590px - 6-column width (half)
+        '672': '42rem', // 672px - 7-column width (forms)
+        '793': '49.5625rem', // 793px - 8-column width (two-thirds)
+        '285': '17.8125rem', // 285px - 3-column width (quarter/service cards)
       },
 
       // Mobile-first breakpoints (min-width)
       screens: {
         xs: "375px", // Small mobile (iPhone SE)
         sm: "640px", // Mobile landscape / Large phones
-        md: "768px", // Tablets
+        md: "768px", // Tablets - MOBILE/DESKTOP BREAKPOINT
         lg: "1024px", // Laptops / Small desktops
         xl: "1280px", // Desktops
         "2xl": "1536px", // Large desktops / 2K
@@ -110,6 +121,14 @@ const config: Config = {
           xl: "1440px", // Max content width (matches Figma design)
           "2xl": "1440px", // Keeps content at 1440px, increases margins
         },
+      },
+
+      // Grid column configuration
+      gridTemplateColumns: {
+        // Desktop 12-column grid
+        '12': 'repeat(12, minmax(0, 1fr))',
+        // Mobile 4-column grid
+        '4': 'repeat(4, minmax(0, 1fr))',
       },
 
       // Border radius scale (will expand as needed)

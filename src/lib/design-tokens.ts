@@ -4,6 +4,11 @@
  * All tokens are defined in tailwind.config.ts
  */
 
+import { GRID_CONSTANTS, GRID_CLASSES, LAYOUT_WIDTHS, SECTION_SPACING, RESPONSIVE_TEXT } from './grid-system';
+
+// Re-export grid system for easy access
+export { GRID_CONSTANTS, GRID_CLASSES, LAYOUT_WIDTHS, SECTION_SPACING, RESPONSIVE_TEXT };
+
 export const COLORS = {
   // Primary
   primary: "bg-primary text-primary border-primary",

@@ -57,7 +57,7 @@ export function BlogCardDesktop({
                     icon={Calendar03Icon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={5}
                   />
                   <div className="text-[14px] font-normal leading-[14px] text-secondary/75">
                     {date}
@@ -108,7 +108,7 @@ export function BlogCardDesktop({
               className="flex items-center justify-center gap-2 rounded-[12px] px-5 py-2.5 outline outline-1 outline-ash transition-opacity hover:opacity-80"
             >
               <div className="flex items-center justify-start gap-2">
-                <div className="text-[16px] font-medium leading-5 text-primary">
+                <div className="text-[16px] font-medium leading-5 text-[#7CB342]">
                   Read More
                 </div>
                 <HugeiconsIcon
