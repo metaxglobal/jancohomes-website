@@ -14,14 +14,14 @@ export function AboutMobile() {
       {/* Images Section - Background #F7F7F7 */}
       <div className="self-stretch px-4 py-6 bg-background-3 flex items-center justify-center gap-5">
         <Image
-          src="/janco homes about img1.jpg"
+          src="/about img1.jpg"
           alt="Janco Construction Project"
           width={171}
           height={141}
           className="w-[171px] h-[141px] rounded-[22px]"
         />
         <Image
-          src="/jancon homes about img2.jpg"
+          src="/about img2.jpg"
           alt="Janco Construction Interior"
           width={170}
           height={101}
