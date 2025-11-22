@@ -16,26 +16,34 @@ export function DesktopNav() {
   const router = useRouter();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // Check if it's a hash link (section link)
-    if (href.startsWith("/#")) {
-      const sectionId = href.substring(2); // Remove "/#"
+    console.log("🔵 Desktop Nav Click:", { href, pathname });
+    
+    if (href.startsWith("#") || href.startsWith("/#")) {
+      e.preventDefault(); // Prevent default FIRST
+      const sectionId = href.replace(/^\/?#/, "");
+      console.log("🟢 Section ID:", sectionId);
       
-      // If we're on the homepage
       if (pathname === "/") {
-        e.preventDefault();
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        console.log("🟡 On homepage, looking for element:", sectionId);
+        // Find all elements with this ID and filter for the visible one
+        const elements = document.querySelectorAll(`[id="${sectionId}"]`);
+        const visibleElement = Array.from(elements).find((el) => {
+          const htmlEl = el as HTMLElement;
+          return htmlEl.offsetParent !== null; // offsetParent is null if element or ancestor has display:none
+        });
+        console.log("🟠 Element found:", visibleElement);
+        if (visibleElement) {
+          console.log("🔴 Scrolling to element");
+          visibleElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          console.log("❌ Element NOT found!");
         }
-      }
-      else {
-        // We're on a different page — store the target and navigate to home.
-        // A client-side handler on the home page will read the key and scroll.
-        e.preventDefault();
+      } else {
+        console.log("🟣 Not on homepage, storing in sessionStorage and navigating");
         try {
           sessionStorage.setItem("janco_scrollTo", sectionId);
         } catch (err) {
-          // ignore storage errors
+          console.error("Session storage error:", err);
         }
         router.push("/");
       }
@@ -43,8 +51,8 @@ export function DesktopNav() {
   };
 
   const navLinks = [
-    { label: "About", href: "/#about" },
-    { label: "Services", href: "/#services" },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
     { label: "Projects", href: "/projects" },
     { label: "Blogs", href: "/blogs" },
     { label: "Properties", href: "/properties" },
@@ -103,18 +111,34 @@ export function DesktopNav() {
           <div className="flex items-center gap-12">
             {/* Nav Links */}
             <div className="flex items-center gap-3">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="group w-[107px] h-11 py-2.5 flex items-center justify-center transition-colors"
-                >
-                  <span className="text-white text-sm font-normal uppercase leading-4 group-hover:text-[#7CB342] transition-colors">
-                    {link.label}
-                  </span>
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                // For hash links, use /#about format when on different pages
+                const isHashLink = link.href.startsWith("#");
+                const displayHref = isHashLink && pathname !== "/" ? `/${link.href}` : link.href;
+                
+                return isHashLink ? (
+                  <a
+                    key={link.label}
+                    href={displayHref}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="group w-[107px] h-11 py-2.5 flex items-center justify-center transition-colors cursor-pointer"
+                  >
+                    <span className="text-white text-sm font-normal uppercase leading-4 group-hover:text-[#7CB342] transition-colors">
+                      {link.label}
+                    </span>
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="group w-[107px] h-11 py-2.5 flex items-center justify-center transition-colors"
+                  >
+                    <span className="text-white text-sm font-normal uppercase leading-4 group-hover:text-[#7CB342] transition-colors">
+                      {link.label}
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
 
             {/* CTA Button */}

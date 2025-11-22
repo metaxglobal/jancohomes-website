@@ -245,7 +245,7 @@ export default function ConsultationModalDesktop({
 
           {/* Message Field */}
           <div className="flex h-[86px] flex-col items-start justify-start gap-2 self-stretch">
-            <div className="inline-flex h-[14px] items-center justify-start gap-2 self-stretch">
+            <div className="inline-flex h-[14px] pb-[6px] items-center justify-start gap-2 self-stretch">
               <div className="text-[16px] font-medium leading-5 text-white">
                 Message
               </div>
@@ -256,7 +256,7 @@ export default function ConsultationModalDesktop({
               onChange={handleChange}
               placeholder="Tell us about your project requirements, timeline, and budget..."
               rows={3}
-              className="inline-flex h-16 items-start justify-start self-stretch overflow-hidden rounded-xl bg-white/10 px-3 pb-2 pt-[17px] text-[14px] font-normal leading-[14px] text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-[#7CB342]"
+              className="inline-flex h-16 items-start justify-start self-stretch overflow-hidden rounded-xl bg-white/10 px-3 pb-2 pt-[25px] text-[14px] font-normal leading-[14px] text-white outline outline-1 outline-white/20 outline-offset-[-1px] placeholder:text-[#99A1AF] focus:outline-[#7CB342]"
             />
             {errors.message && (
               <p className="text-xs text-red-400">{errors.message}</p>

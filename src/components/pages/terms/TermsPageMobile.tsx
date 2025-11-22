@@ -24,7 +24,7 @@ export default function TermsPageMobile() {
       </header>
 
       {/* Main Content */}
-      <main className="relative min-h-screen overflow-hidden bg-white pt-[112px]">
+      <main className="relative min-h-screen overflow-hidden bg-white pt-[0px]">
         {/* Hero Section */}
         <section className="relative h-[340px] w-full overflow-hidden bg-secondary">
           {/* Background Blur Effects */}
@@ -55,11 +55,11 @@ export default function TermsPageMobile() {
 
             {/* Title and Description */}
             <div className="flex flex-col gap-3">
-              <h1 className="text-[40px] font-medium leading-9">
+              <h1 className="text-[40px] font-medium leading-9 tracking-[-0.1rem]">
                 <span className="text-white">Terms & </span>
                 <span className="text-primary">Conditions</span>
               </h1>
-              <p className="w-[361px] text-sm font-medium leading-[14px] text-ash">
+              <p className="w-[361px] text-sm font-medium leading-[14px] tracking-tight text-ash">
                 Please read these terms and conditions carefully before using our website and services.
               </p>
               <div className="flex w-[270px] items-center gap-2">

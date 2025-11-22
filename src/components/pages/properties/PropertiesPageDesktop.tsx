@@ -10,14 +10,14 @@ import Link from "next/link";
 import { DesktopNav } from "@/components/features/navigation";
 import { FooterDesktop } from "@/components/features/footer";
 import ConsultationModalDesktop from "@/components/features/ConsultationModalDesktop";
-import PropertyCard from "@/components/features/PropertyCard";
+import PropertyCardDesktop from "@/components/features/PropertyCardDesktop";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Home01Icon,
   ArrowRight01Icon,
   ArrowDownRight01Icon,
 } from "@hugeicons/core-free-icons";
-import type { Property } from "@/components/features/PropertyCard";
+import type { Property } from "@/components/features/PropertyCardDesktop";
 
 interface PropertiesPageDesktopProps {
   properties: Property[];
@@ -98,7 +98,7 @@ export function PropertiesPageDesktop({
           {/* First Row */}
           <div className="flex items-center justify-start gap-5">
             {properties.slice(0, 3).map((property) => (
-              <PropertyCard key={property.id} property={property} />
+              <PropertyCardDesktop key={property.id} property={property} />
             ))}
           </div>
 
@@ -106,7 +106,7 @@ export function PropertiesPageDesktop({
           {properties.length > 3 && (
             <div className="flex items-center justify-start gap-5">
               {properties.slice(3, 6).map((property) => (
-                <PropertyCard key={property.id} property={property} />
+                <PropertyCardDesktop key={property.id} property={property} />
               ))}
             </div>
           )}
@@ -115,7 +115,7 @@ export function PropertiesPageDesktop({
           {properties.length > 6 && (
             <div className="flex items-center justify-start gap-5">
               {properties.slice(6, 9).map((property) => (
-                <PropertyCard key={property.id} property={property} />
+                <PropertyCardDesktop key={property.id} property={property} />
               ))}
             </div>
           )}

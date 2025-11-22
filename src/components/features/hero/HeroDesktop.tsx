@@ -95,7 +95,8 @@ export function HeroDesktop() {
                 alt="Construction Project"
                 width={700}
                 height={516}
-                className="w-[700px] h-[516px] rounded-xl"
+                className="w-[700px] rounded-xl"
+                style={{ height: "auto" }}
                 priority
               />
             </div>

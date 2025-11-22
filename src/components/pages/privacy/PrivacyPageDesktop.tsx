@@ -23,7 +23,7 @@ export default function PrivacyPageDesktop() {
       </header>
 
       {/* Main Content */}
-      <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
+      <main className="relative min-h-screen overflow-hidden bg-white pt-[0px]">
         {/* Hero Section */}
         <section className="relative h-[454px] w-full overflow-hidden bg-secondary">
           {/* Background Blur Effects */}
@@ -37,7 +37,7 @@ export default function PrivacyPageDesktop() {
           />
 
           {/* Hero Content */}
-          <div className="absolute left-[120px] top-[202px] flex w-[1200px] flex-col items-start gap-12">
+          <div className="absolute left-[120px] top-[200px] flex w-[1200px] flex-col items-start gap-12">
             {/* Breadcrumb */}
             <div className="inline-flex h-5 items-center gap-2">
               <Link href="/" className="flex items-center gap-1">
@@ -50,12 +50,12 @@ export default function PrivacyPageDesktop() {
 
             {/* Title and Description */}
             <div className="flex flex-col gap-6">
-              <h1 className="text-[72px] font-medium leading-[64px]">
+              <h1 className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
                 <span className="text-white">Privacy </span>
                 <span className="text-primary">Policy</span>
               </h1>
               <div className="flex flex-col gap-[13px]">
-                <p className="w-[760px] text-base font-medium leading-5 text-ash">
+                <p className="w-[760px] text-base font-medium leading-5 tracking-tight text-ash">
                   Your privacy is important to us. This policy explains how Janco Home & Construction collects, uses, and protects your personal information.
                 </p>
                 <div className="flex w-[270px] items-center gap-2">

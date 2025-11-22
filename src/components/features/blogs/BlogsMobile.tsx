@@ -144,7 +144,7 @@ export function BlogsMobile() {
   };
 
   return (
-    <div className="w-full py-[72px] px-4">
+    <div className="w-full py-[72px] px-4 bg-[#E8E5DC]">
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-center justify-center gap-12">
       {/* Header Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">

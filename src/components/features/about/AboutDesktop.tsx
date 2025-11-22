@@ -1,5 +1,7 @@
 // Desktop About Component - Figma Spec
 
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -12,8 +14,16 @@ import {
 } from "@hugeicons/core-free-icons";
 
 export function AboutDesktop() {
+  const handleExploreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const servicesElement = document.getElementById("services");
+    if (servicesElement) {
+      servicesElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <section className="w-full pb-5 flex flex-col items-center gap-8" id="about">
+    <section className="w-full pb-5 flex flex-col items-center gap-8">
       {/* Split Background Section - Full Width Backgrounds */}
       <div className="w-full min-h-[600px] flex">
         {/* Left Side - Images with #F7F7F7 Background - Full Width */}
@@ -75,6 +85,7 @@ export function AboutDesktop() {
               {/* CTA Button */}
               <Link
                 href="#services"
+                onClick={handleExploreClick}
                 className="h-12 px-5 py-2.5 bg-[#1A1A1A] rounded-xl flex items-center gap-2 hover:bg-[#1A1A1A]/90 transition-colors w-fit"
               >
                 <span className="text-white text-base font-medium leading-5">

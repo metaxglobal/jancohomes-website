@@ -158,7 +158,7 @@ export function TestimonialsMobile() {
 
 
   return (
-    <div className="w-full py-[72px] px-4 relative">
+    <div className="w-full bg-[#1A1A1A] py-[72px] px-4 relative">
         {/* Background blur element 1 */}
         <div
           className="absolute left-1/2 -translate-x-1/2 top-8 w-80 h-80 opacity-10 rounded-full bg-primary pointer-events-none"

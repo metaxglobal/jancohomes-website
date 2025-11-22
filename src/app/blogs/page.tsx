@@ -62,6 +62,20 @@ export const blogArticles = [
     },
     content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
   },
+  {
+    id: "landscape-architecture-ideas",
+    title: "Landscape Architecture Ideas for Modern Homes",
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    date: "August 5, 2024",
+    image: "/blogs/blog2.jpg",
+    author: {
+      name: "John Silva",
+      role: "Landscape Architect",
+      avatar: "/client image.jpg",
+    },
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+  }
 ];
 
 export default function BlogsPage() {

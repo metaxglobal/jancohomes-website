@@ -1,9 +1,9 @@
-// Desktop Real Estate Component - Using PropertyCard
+// Desktop Real Estate Component - Using PropertyCardDesktop
 
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
-import PropertyCard from "../PropertyCard";
+import PropertyCardDesktop from "../PropertyCardDesktop";
 import { getAllProperties } from "@/data/properties";
 
 export function RealEstateDesktop() {
@@ -36,7 +36,7 @@ export function RealEstateDesktop() {
         {/* Property Cards - Single Row */}
         <div className="self-stretch flex items-center gap-5 mb-12">
           {featuredProperties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
+            <PropertyCardDesktop key={property.id} property={property} />
           ))}
         </div>
 

@@ -23,7 +23,11 @@ export default function ProjectCard({
   description,
   images,
 }: ProjectCardProps) {
-  const [currentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleDotClick = (index: number) => {
+    setCurrentImageIndex(index);
+  };
 
   return (
     <div
@@ -52,11 +56,12 @@ export default function ProjectCard({
           {images.slice(0, 3).map((_, index) => (
             <button
               key={index}
+              onClick={() => handleDotClick(index)}
               className={`${
                 index === currentImageIndex
                   ? "w-4 h-4 p-[3px] bg-white"
                   : "w-3 h-3 p-[3px] bg-ash"
-              } rounded-lg flex items-center justify-center`}
+              } rounded-lg flex items-center justify-center cursor-pointer transition-all hover:scale-110`}
               aria-label={`View image ${index + 1}`}
             >
               {index === currentImageIndex && (

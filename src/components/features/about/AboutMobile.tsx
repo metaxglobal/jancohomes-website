@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export function AboutMobile() {
   return (
-    <div className="w-full flex flex-col" id="about">
+    <div className="w-full flex flex-col">
       {/* Images Section - Background #F7F7F7 */}
       <div className="self-stretch px-4 py-6 bg-background-3 flex items-center justify-center gap-5">
         <Image

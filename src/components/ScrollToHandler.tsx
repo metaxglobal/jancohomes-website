@@ -7,10 +7,16 @@ export default function ScrollToHandler() {
     const target = sessionStorage.getItem("janco_scrollTo");
     if (target) {
       sessionStorage.removeItem("janco_scrollTo");
-      // allow a tick for navigation to settle
       setTimeout(() => {
-        const el = document.getElementById(target);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Find all elements with this ID and filter for the visible one
+        const elements = document.querySelectorAll(`[id="${target}"]`);
+        const visibleElement = Array.from(elements).find((el) => {
+          const htmlEl = el as HTMLElement;
+          return htmlEl.offsetParent !== null; // offsetParent is null if element or ancestor has display:none
+        });
+        if (visibleElement) {
+          visibleElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       }, 50);
     }
   }, []);

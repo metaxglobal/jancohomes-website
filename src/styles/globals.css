@@ -48,6 +48,15 @@ html {
   scroll-behavior: smooth;
   /* Prevent horizontal overflow on all devices */
   overflow-x: hidden;
+  /* Account for fixed header when scrolling to anchor links - Desktop has 146px header (49px + 97px) */
+  scroll-padding-top: 146px;
+}
+
+/* Mobile has different header height */
+@media screen and (max-width: 768px) {
+  html {
+    scroll-padding-top: 79px; /* Mobile header: 44px + 68px = 112px, but adjust as needed */
+  }
 }
 
 body {

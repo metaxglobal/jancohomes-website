@@ -24,7 +24,7 @@ export default function TermsPageDesktop() {
       </header>
 
       {/* Main Content */}
-      <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
+      <main className="relative min-h-screen overflow-hidden bg-white pt-[0px]">
         {/* Hero Section */}
         <section className="relative h-[454px] w-full overflow-hidden bg-secondary">
           {/* Background Blur Effects */}
@@ -51,12 +51,12 @@ export default function TermsPageDesktop() {
 
             {/* Title and Description */}
             <div className="flex flex-col gap-6">
-              <h1 className="text-[72px] font-medium leading-[64px]">
+              <h1 className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
                 <span className="text-white">Terms & </span>
                 <span className="text-primary">Conditions</span>
               </h1>
               <div className="flex flex-col gap-[13px]">
-                <p className="w-[760px] text-base font-medium leading-5 text-ash">
+                <p className="w-[760px] text-base font-medium leading-5 tracking-tight text-ash">
                   Please read these terms and conditions carefully before using our website and services.
                 </p>
                 <div className="flex w-[270px] items-center gap-2">

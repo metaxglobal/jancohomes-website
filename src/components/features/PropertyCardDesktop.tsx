@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -25,42 +25,16 @@ export interface Property {
   whatsappMessage?: string;
 }
 
-interface PropertyCardProps {
+interface PropertyCardDesktopProps {
   property: Property;
   onContactClick?: () => void;
 }
 
-export default function PropertyCard({ property, onContactClick }: PropertyCardProps) {
+export default function PropertyCardDesktop({ property, onContactClick }: PropertyCardDesktopProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const touchStartX = useRef<number>(0);
-  const touchEndX = useRef<number>(0);
 
   const handleDotClick = (index: number) => {
     setCurrentImageIndex(index);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStartX.current - touchEndX.current > 50) {
-      // Swipe left - next image
-      if (currentImageIndex < property.images.length - 1) {
-        setCurrentImageIndex(currentImageIndex + 1);
-      }
-    }
-
-    if (touchStartX.current - touchEndX.current < -50) {
-      // Swipe right - previous image
-      if (currentImageIndex > 0) {
-        setCurrentImageIndex(currentImageIndex - 1);
-      }
-    }
   };
 
   const handleContactClick = () => {
@@ -78,25 +52,21 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
 
   return (
     <div
-      className="w-full max-w-[361px] rounded-[22px] inline-flex flex-col items-start justify-start"
+      className="w-[387px] rounded-[22px] inline-flex flex-col items-start justify-start"
       style={{
         boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
         outline: "1px #C2C2C2 solid",
       }}
     >
-      {/* Property Image with Swipe */}
-      <div
-        className="self-stretch h-[296px] relative overflow-hidden rounded-t-[22px] touch-pan-y"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
+      {/* Property Image with Clickable Dots */}
+      <div className="self-stretch h-[296px] relative overflow-hidden rounded-t-[22px]">
         <div className="w-full h-[296px] relative">
           <Image
             src={property.images[currentImageIndex]}
             alt={property.title}
-            fill
-            className="object-cover"
+            width={387}
+            height={296}
+            className="w-[387px] h-[296px] object-cover"
           />
           {/* Gradient Overlay */}
           <div
@@ -108,7 +78,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
           />
 
           {/* Image Pagination Dots */}
-          <div className="h-[30px] absolute left-[153px] top-[266px] inline-flex items-center justify-start gap-2">
+          <div className="h-[30px] absolute left-[166px] top-[266px] inline-flex items-center justify-start gap-2">
             {property.images.map((_, index) => (
               <button
                 key={index}
@@ -117,7 +87,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
                   index === currentImageIndex
                     ? "w-4 h-4 p-[3px] bg-white"
                     : "w-3 h-3 p-[3px] bg-ash"
-                } rounded-lg flex items-center justify-center`}
+                } rounded-lg flex items-center justify-center cursor-pointer transition-all hover:scale-110`}
                 aria-label={`View image ${index + 1}`}
               >
                 {index === currentImageIndex && (
@@ -134,7 +104,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
 
           {/* Price Badge */}
           <div
-            className="w-[101px] h-[68px] absolute left-[244px] top-4 bg-white rounded-[11px] inline-flex flex-col items-center justify-center"
+            className="w-[101px] h-[68px] absolute left-[270px] top-4 bg-white rounded-[11px] inline-flex flex-col items-center justify-center"
             style={{
               boxShadow: "0px 0px 3.5px rgba(0, 0, 0, 0.25)",
             }}
@@ -179,7 +149,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
 
             {/* Description */}
             <div className="self-stretch inline-flex items-center justify-start gap-2.5">
-              <div className="w-[321px] text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
+              <div className="w-[347px] text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
                 {property.description}
               </div>
             </div>
@@ -241,7 +211,7 @@ export default function PropertyCard({ property, onContactClick }: PropertyCardP
         {/* Contact Button */}
         <button
           onClick={handleContactClick}
-          className="self-stretch px-5 py-[10px] bg-primary rounded-xl inline-flex items-center justify-center gap-2"
+          className="self-stretch px-5 py-[10px] bg-primary rounded-xl inline-flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors"
         >
           <div className="flex items-center justify-start gap-2">
             <div className="text-white text-base font-medium leading-5">

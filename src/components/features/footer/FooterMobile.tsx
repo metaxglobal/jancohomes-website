@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Location04Icon,
@@ -12,9 +15,33 @@ import {
 } from "@hugeicons/core-free-icons";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/#") || href.startsWith("#")) {
+      const sectionId = href.replace(/^\/?(#)/, "");
+      if (pathname === "/") {
+        e.preventDefault();
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        e.preventDefault();
+        try {
+          sessionStorage.setItem("janco_scrollTo", sectionId);
+        } catch (err) {
+          // ignore
+        }
+        router.push("/");
+      }
+    }
+  };
+
   const quickLinks = [
-    { label: "About Us", href: "#about" },
-    { label: "Services", href: "#services" },
+    { label: "About Us", href: "/#about" },
+    { label: "Services", href: "/#services" },
     { label: "Projects", href: "/projects" },
     { label: "Blogs", href: "/blogs" },
     { label: "Properties", href: "/properties" },
@@ -85,6 +112,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
+                  onClick={(e) => link.href.startsWith("/#") || link.href.startsWith("#") ? handleNavClick(e, link.href) : undefined}
                   className="text-[14px] font-normal leading-[14px] text-ash transition-colors hover:text-primary"
                 >
                   {link.label}

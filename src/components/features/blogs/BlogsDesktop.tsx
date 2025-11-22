@@ -17,7 +17,7 @@ interface BlogCardProps {
   image: string;
 }
 
-function BlogCard({ id, title, excerpt, date, image }: BlogCardProps) {
+function  BlogCard({ id, title, excerpt, date, image }: BlogCardProps) {
   // Parse date to get day and month
   const dateObj = new Date(date);
   const day = dateObj.getDate();
@@ -59,7 +59,7 @@ function BlogCard({ id, title, excerpt, date, image }: BlogCardProps) {
         <div className="self-stretch flex flex-col justify-start items-start gap-6">
           <div className="self-stretch flex flex-col justify-start items-start gap-3">
             <div className="self-stretch flex justify-center items-center gap-2.5">
-              <h3 className="w-[280px] text-[#1A1A1A] text-[24px] font-medium leading-6 line-clamp-2 min-h-[48px]">
+              <h3 className="w-[280px] text-[#1A1A1A] text-[24px] font-medium leading-6 tracking-[-0.04rem] line-clamp-2 min-h-[48px]">
                 {title}
               </h3>
             </div>
@@ -97,27 +97,45 @@ function BlogCard({ id, title, excerpt, date, image }: BlogCardProps) {
 export function BlogsDesktop() {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const isManualScrollRef = useRef(false); // Track manual scroll to prevent glitch
 
-  // Get first 4 blog posts
+  // Get first 4 blog posts - show only 2 pagination dots
   const featuredBlogs = blogArticles.slice(0, 4);
+  const paginationDots = [0, 1]; // Only show 2 dots
 
-  const handleDotClick = (index: number) => {
-    setActiveIndex(index);
+  const handleDotClick = (dotIndex: number) => {
+    setActiveIndex(dotIndex); // Update active state immediately
+    isManualScrollRef.current = true; // Mark as manual scroll
+    
     if (scrollContainerRef.current) {
-      const scrollAmount = index * (320 + 24); // card width + gap
+      // Dot 0 = show first 2 cards (scroll to 0)
+      // Dot 1 = show last 2 cards (scroll to card 2)
+      const cardWidth = 320 + 24; // card width + gap
+      const scrollAmount = dotIndex === 0 ? 0 : cardWidth * 2;
       scrollContainerRef.current.scrollTo({
         left: scrollAmount,
         behavior: "smooth",
       });
+      
+      // Reset manual scroll flag after animation completes
+      setTimeout(() => {
+        isManualScrollRef.current = false;
+      }, 500);
     }
   };
 
   const handleScroll = () => {
+    // Don't update activeIndex during manual scroll to prevent glitch
+    if (isManualScrollRef.current) return;
+    
     if (scrollContainerRef.current) {
       const scrollLeft = scrollContainerRef.current.scrollLeft;
       const cardWidth = 320 + 24; // card width + gap
-      const newIndex = Math.round(scrollLeft / cardWidth);
-      setActiveIndex(newIndex);
+      const cardIndex = Math.round(scrollLeft / cardWidth);
+      // Map card position to dot index (0 or 1)
+      // First 2 cards = dot 0, last 2 cards = dot 1
+      const dotIndex = cardIndex >= 2 ? 1 : 0;
+      setActiveIndex(dotIndex);
     }
   };
 
@@ -175,17 +193,17 @@ export function BlogsDesktop() {
           ))}
         </div>
 
-        {/* Pagination Dots */}
+        {/* Pagination Dots - Only 2 dots */}
         <div className="w-[1200px] h-12 flex justify-center items-center gap-4 mt-6">
           <div className="w-20 h-2 flex items-start gap-2">
-            {featuredBlogs.map((_, index) => (
+            {paginationDots.map((dotIndex) => (
               <button
-                key={index}
-                onClick={() => handleDotClick(index)}
+                key={dotIndex}
+                onClick={() => handleDotClick(dotIndex)}
                 className={`h-2 rounded-full transition-all ${
-                  index === activeIndex ? "flex-1 bg-[#7CB342]" : "w-2 bg-[#C2C2C2]"
+                  activeIndex === dotIndex ? "flex-1 bg-[#7CB342]" : "w-2 bg-[#C2C2C2]"
                 }`}
-                aria-label={`Go to blog ${index + 1}`}
+                aria-label={`Go to page ${dotIndex + 1}`}
               />
             ))}
           </div>

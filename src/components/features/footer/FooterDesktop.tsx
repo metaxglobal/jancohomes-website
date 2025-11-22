@@ -1,7 +1,10 @@
 // Desktop Footer Component - Using Hugeicons
 
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Location04Icon,
@@ -13,6 +16,35 @@ import {
 } from "@hugeicons/core-free-icons";
 
 export function FooterDesktop() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#") || href.startsWith("/#")) {
+      const sectionId = href.replace(/^\/?#/, "");
+      if (pathname === "/") {
+        e.preventDefault();
+        // Find all elements with this ID and filter for the visible one
+        const elements = document.querySelectorAll(`[id="${sectionId}"]`);
+        const visibleElement = Array.from(elements).find((el) => {
+          const htmlEl = el as HTMLElement;
+          return htmlEl.offsetParent !== null; // offsetParent is null if element or ancestor has display:none
+        });
+        if (visibleElement) {
+          visibleElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        e.preventDefault();
+        try {
+          sessionStorage.setItem("janco_scrollTo", sectionId);
+        } catch (err) {
+          // ignore
+        }
+        router.push("/");
+      }
+    }
+  };
+
   return (
     <footer className="w-full bg-[#0B0B0A] pt-[60px] pb-[60px] relative overflow-hidden">
       {/* Background Effects */}
@@ -74,19 +106,27 @@ export function FooterDesktop() {
                 <div className="w-12 h-0.5 bg-primary" />
               </div>
               <div className="flex flex-col gap-4">
-                <Link href="#about" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
+                <a 
+                  href={pathname !== "/" ? "/#about" : "#about"} 
+                  onClick={(e) => handleNavClick(e, "#about")} 
+                  className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors cursor-pointer"
+                >
                   About Us
-                </Link>
-                <Link href="#services" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
+                </a>
+                <a 
+                  href={pathname !== "/" ? "/#services" : "#services"} 
+                  onClick={(e) => handleNavClick(e, "#services")} 
+                  className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors cursor-pointer"
+                >
                   Services
-                </Link>
-                <Link href="#projects" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
+                </a>
+                <Link href="/projects" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
                   Projects
                 </Link>
-                <Link href="#blogs" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
+                <Link href="/blogs" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
                   Blogs
                 </Link>
-                <Link href="#properties" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
+                <Link href="/properties" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
                   Properties
                 </Link>
               </div>
@@ -111,9 +151,9 @@ export function FooterDesktop() {
                       strokeWidth={2}
                     />
                   </div>
-                  <p className="w-[177px] text-ash text-sm font-normal leading-[14px]">
+                  <a href="https://maps.app.goo.gl/X9zNe9UcxMWEhTsx9" target="_blank" rel="noopener noreferrer" className="w-[177px] text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
                     No: 458 1/1, High Level Rd, Pannipitiya, Sri Lanka
-                  </p>
+                  </a>
                 </div>
 
                 {/* Phone */}

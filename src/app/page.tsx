@@ -37,18 +37,18 @@ export default function Home() {
         </div>
 
         {/* ===== ABOUT SECTION ===== */}
-        <div className="md:hidden">
+        <div className="md:hidden" id="about">
           <AboutMobile />
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block" id="about">
           <AboutDesktop />
         </div>
 
         {/* ===== SERVICES SECTION ===== */}
-        <div className="md:hidden">
+        <div className="md:hidden" id="services">
           <ServicesMobile />
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block" id="services">
           <ServicesDesktop />
         </div>
 

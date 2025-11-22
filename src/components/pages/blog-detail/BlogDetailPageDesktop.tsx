@@ -50,7 +50,7 @@ export function BlogDetailPageDesktop({
       </header>
 
       {/* Main Content */}
-      <main className="relative min-h-screen overflow-hidden bg-white pt-[146px]">
+      <main className="relative min-h-screen overflow-hidden bg-white pt-[0px]">
         {/* Hero Section with Breadcrumb */}
         <section className="relative h-[278px] w-full overflow-hidden bg-[#1A1A1A]">
           {/* Background Blur Effects */}
@@ -141,7 +141,7 @@ export function BlogDetailPageDesktop({
             >
               {/* Title */}
               <div className="inline-flex items-center justify-start gap-2.5">
-                <h1 className="text-[72px] font-medium leading-[64px] text-white">
+                <h1 className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-white">
                   {article.title}
                 </h1>
               </div>
@@ -175,7 +175,7 @@ export function BlogDetailPageDesktop({
                     icon={Calendar03Icon}
                     size={16}
                     color="#7CB342"
-                    strokeWidth={1}
+                    strokeWidth={1.5}
                   />
                   <div className="text-[14px] font-normal leading-[14px] text-white">
                     {article.date}

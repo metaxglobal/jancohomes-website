@@ -93,7 +93,7 @@ export function ProjectsMobile() {
   ];
 
   return (
-    <div className="w-full pt-[64px] pb-[64px] px-4">
+    <div className="w-full bg-[#F7F7F7] pt-[64px] pb-[64px] px-4">
       <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-8">
       {/* Text Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
