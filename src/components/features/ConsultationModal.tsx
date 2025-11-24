@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Cancel01Icon, ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
+import { Cancel01Icon, ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -111,39 +111,34 @@ export default function ConsultationModal({
     setSubmitStatus("idle");
 
     try {
-      const SCRIPT_URL = process.env.NEXT_PUBLIC_FORM_SCRIPT_URL || "";
-
-      if (!SCRIPT_URL) {
-        console.warn("Form script URL not configured");
-        console.log("Consultation form data:", formData);
-        setSubmitStatus("success");
-        setFormData({ name: "", phone: "", email: "", message: "" });
-        setTimeout(() => {
-          onClose();
-        }, 2000);
-        return;
-      }
-
-      await fetch(SCRIPT_URL, {
+      const response = await fetch("/api/submit-inquiry", {
         method: "POST",
-        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...formData,
-          type: "consultation",
-          timestamp: new Date().toISOString(),
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message,
+          source: "consultation-modal",
         }),
       });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Submission failed");
+      }
 
       setSubmitStatus("success");
       setFormData({ name: "", phone: "", email: "", message: "" });
 
+      // Keep modal open longer to show success message
       setTimeout(() => {
         onClose();
         setSubmitStatus("idle");
-      }, 2000);
+      }, 3000);
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
@@ -296,7 +291,7 @@ export default function ConsultationModal({
               {isSubmitting ? "Submitting..." : "Enquire Now"}
             </span>
             <HugeiconsIcon
-              icon={ArrowDownRight01Icon}
+              icon={ArrowRight02Icon}
               size={20}
               color="white"
               strokeWidth={1.5}
@@ -305,8 +300,8 @@ export default function ConsultationModal({
 
           {/* Status Messages */}
           {submitStatus === "success" && (
-            <div className="rounded-lg bg-primary/20 p-3 text-center text-[12px] text-white">
-              Thank you! We&apos;ll contact you soon.
+            <div className="rounded-lg bg-primary/20 border border-primary p-3 text-center text-[14px] text-white">
+              ✓ Thank you! Our expert will contact you soon.
             </div>
           )}
           {submitStatus === "error" && (

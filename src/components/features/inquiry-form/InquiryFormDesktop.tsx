@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
+import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
 export function InquiryFormDesktop() {
   const [formData, setFormData] = useState({
@@ -13,11 +13,53 @@ export function InquiryFormDesktop() {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch("/api/submit-inquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message,
+          source: "inquiry-form-desktop",
+          type: "inquiry",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Submission failed");
+      }
+
+      setSubmitStatus("success");
+      setFormData({ name: "", phone: "", email: "", message: "" });
+
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 5000);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -104,20 +146,37 @@ export function InquiryFormDesktop() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-[672px] h-12 bg-primary rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors"
+              disabled={isSubmitting}
+              className="w-[672px] h-12 bg-primary rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span className="text-white text-base font-medium leading-5">
-                Enquire Now
+                {isSubmitting ? "Submitting..." : "Enquire Now"}
               </span>
               <div className="w-5 h-5">
                 <HugeiconsIcon
-                  icon={ArrowDownRight01Icon}
+                  icon={ArrowRight02Icon}
                   size={20}
                   color="white"
                   strokeWidth={1.5}
                 />
               </div>
             </button>
+
+            {/* Status Messages */}
+            {submitStatus === "success" && (
+              <div className="w-[672px] px-4 py-3 bg-primary/20 border border-primary rounded-xl">
+                <p className="text-white text-sm text-center">
+                  ✓ Thank you! Our expert will contact you soon.
+                </p>
+              </div>
+            )}
+            {submitStatus === "error" && (
+              <div className="w-[672px] px-4 py-3 bg-red-500/20 border border-red-500 rounded-xl">
+                <p className="text-white text-sm text-center">
+                  Something went wrong. Please try again.
+                </p>
+              </div>
+            )}
           </form>
         </div>
       

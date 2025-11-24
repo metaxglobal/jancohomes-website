@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
+import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
 interface FormData {
   name: string;
@@ -81,21 +81,8 @@ export default function InquiryForm() {
     setSubmitStatus("idle");
 
     try {
-      // TODO: Replace with your actual Google Apps Script Web App URL
-      const SCRIPT_URL = process.env.NEXT_PUBLIC_FORM_SCRIPT_URL || "";
-
-      if (!SCRIPT_URL) {
-        console.warn("Form script URL not configured");
-        // For now, just log the data
-        console.log("Form data:", formData);
-        setSubmitStatus("success");
-        setFormData({ name: "", phone: "", email: "", message: "" });
-        return;
-      }
-
-      const response = await fetch(SCRIPT_URL, {
+      const response = await fetch("/api/submit-inquiry", {
         method: "POST",
-        mode: "no-cors", // Required for Google Apps Script
         headers: {
           "Content-Type": "application/json",
         },
@@ -104,12 +91,17 @@ export default function InquiryForm() {
           phone: formData.phone,
           email: formData.email,
           message: formData.message,
-          timestamp: new Date().toISOString(),
+          source: "inquiry-form-mobile",
+          type: "inquiry",
         }),
       });
 
-      // Note: With no-cors mode, we can't read the response
-      // Assume success if no error is thrown
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Submission failed");
+      }
+
       setSubmitStatus("success");
       setFormData({ name: "", phone: "", email: "", message: "" });
 
@@ -248,7 +240,7 @@ export default function InquiryForm() {
                 {isSubmitting ? "Submitting..." : "Enquire Now"}
               </span>
               <HugeiconsIcon
-                icon={ArrowDownRight01Icon}
+                icon={ArrowRight02Icon}
                 size={20}
                 color="white"
                 strokeWidth={2}
@@ -257,8 +249,8 @@ export default function InquiryForm() {
 
             {/* Status Messages */}
             {submitStatus === "success" && (
-              <div className="rounded-lg bg-primary/20 p-3 text-center text-[14px] text-white">
-                Thank you! We&apos;ll contact you soon.
+              <div className="rounded-lg bg-primary/20 border border-primary p-3 text-center text-[14px] text-white">
+                ✓ Thank you! Our expert will contact you soon.
               </div>
             )}
             {submitStatus === "error" && (

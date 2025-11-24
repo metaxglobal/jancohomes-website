@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowDownRight01Icon, CallingIcon } from "@hugeicons/core-free-icons";
+import { ArrowRight02Icon, CallingIcon } from "@hugeicons/core-free-icons";
 
 export function HeroDesktop() {
   return (
@@ -76,7 +76,7 @@ export function HeroDesktop() {
               </span>
               <div className="w-5 h-5 relative overflow-hidden">
                 <HugeiconsIcon
-                  icon={ArrowDownRight01Icon}
+                  icon={ArrowRight02Icon}
                   size={20}
                   color="white"
                   strokeWidth={1.5}

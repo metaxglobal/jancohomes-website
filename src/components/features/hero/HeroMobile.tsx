@@ -1,5 +1,5 @@
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
+import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -43,7 +43,7 @@ export function HeroMobile() {
             {/* Hero Image */}
             <div className="flex w-full items-center justify-center">
               <Image
-                src="/mobile hero img.png"
+                src="/hero img.png"
                 alt="Janco Construction Project"
                 width={299}
                 height={212}
@@ -83,7 +83,7 @@ export function HeroMobile() {
             </div>
             <div className="w-5 h-5 relative overflow-hidden">
               <HugeiconsIcon
-                icon={ArrowDownRight01Icon}
+                icon={ArrowRight02Icon}
                 size={20}
                 color="white"
                 strokeWidth={1.5}

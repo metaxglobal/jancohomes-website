@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Cancel01Icon, ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
+import { Cancel01Icon, ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
 interface ConsultationModalDesktopProps {
   isOpen: boolean;
@@ -109,21 +109,41 @@ export default function ConsultationModalDesktop({
     setSubmitStatus("idle");
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const response = await fetch("/api/submit-inquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message,
+          source: "consultation-modal-desktop",
+        }),
+      });
 
-      // Reset form and show success
-      setFormData({ name: "", phone: "", email: "", message: "" });
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Submission failed");
+      }
+
       setSubmitStatus("success");
+      setFormData({ name: "", phone: "", email: "", message: "" });
 
-      // Close modal after short delay
+      // Keep modal open longer to show success message
       setTimeout(() => {
         onClose();
         setSubmitStatus("idle");
-      }, 2000);
+      }, 3000);
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Form submission error:", error);
       setSubmitStatus("error");
+
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 5000);
     } finally {
       setIsSubmitting(false);
     }
@@ -270,15 +290,11 @@ export default function ConsultationModalDesktop({
             className="inline-flex h-10 items-center justify-center gap-2 self-stretch rounded-xl bg-[#7CB342] transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             <div className="text-[16px] font-medium leading-5 text-white">
-              {isSubmitting
-                ? "Submitting..."
-                : submitStatus === "success"
-                  ? "Sent Successfully!"
-                  : "Enquire Now"}
+              {isSubmitting ? "Submitting..." : "Enquire Now"}
             </div>
-            {!isSubmitting && submitStatus !== "success" && (
+            {!isSubmitting && (
               <HugeiconsIcon
-                icon={ArrowDownRight01Icon}
+                icon={ArrowRight02Icon}
                 size={20}
                 color="white"
                 strokeWidth={1.5}
@@ -286,10 +302,16 @@ export default function ConsultationModalDesktop({
             )}
           </button>
 
+          {/* Status Messages */}
+          {submitStatus === "success" && (
+            <div className="self-stretch rounded-lg bg-primary/20 border border-primary p-3 text-center text-[14px] text-white">
+              ✓ Thank you! Our expert will contact you soon.
+            </div>
+          )}
           {submitStatus === "error" && (
-            <p className="text-center text-sm text-red-400">
+            <div className="self-stretch rounded-lg bg-red-500/20 border border-red-500 p-3 text-center text-[14px] text-white">
               Something went wrong. Please try again.
-            </p>
+            </div>
           )}
         </form>
       </div>

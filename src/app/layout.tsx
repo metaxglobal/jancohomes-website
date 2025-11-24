@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
+import WhatsAppWidget from "@/components/ui/WhatsAppWidget";
 
 export const metadata: Metadata = {
   title: "Janco Home & Construction | Quality Home Building Services",
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-x-hidden" data-scroll-behavior="smooth">
-      <body className="antialiased overflow-x-hidden">{children}</body>
+      <body className="antialiased overflow-x-hidden">
+        {children}
+        <WhatsAppWidget />
+      </body>
     </html>
   );
 }
