@@ -42,7 +42,7 @@ export default function TermsPageMobile() {
           />
 
           {/* Hero Content */}
-          <div className="absolute left-4 top-36 flex w-[361px] flex-col items-start gap-8">
+          <div className="absolute left-4 top-36 flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex-col items-start gap-8">
             {/* Breadcrumb */}
             <div className="inline-flex h-5 items-center gap-2">
               <Link href="/" className="flex items-center gap-1">
@@ -59,7 +59,7 @@ export default function TermsPageMobile() {
                 <span className="text-white">Terms & </span>
                 <span className="text-primary">Conditions</span>
               </h1>
-              <p className="w-[361px] text-sm font-medium leading-[14px] tracking-tight text-ash">
+              <p className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] text-sm font-medium leading-[14px] tracking-tight text-ash">
                 Please read these terms and conditions carefully before using our website and services.
               </p>
               <div className="flex w-[270px] items-center gap-2">
@@ -72,7 +72,7 @@ export default function TermsPageMobile() {
 
         {/* Terms Content */}
         <section className="flex justify-center px-4 py-12">
-          <div className="flex w-[361px] flex-col gap-10">
+          <div className="flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] mx-auto flex-col gap-10">
             {/* Introduction */}
             <div className="flex flex-col gap-3">
               <h2 className="text-2xl font-medium leading-6 text-secondary">Introduction</h2>

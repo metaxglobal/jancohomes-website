@@ -10,8 +10,8 @@ This document outlines the comprehensive responsive design system implemented ac
 screens: {
   xs: "375px",   // Small mobile (iPhone SE)
   sm: "640px",   // Mobile landscape / Large phones
-  md: "768px",   // Tablets - MOBILE/DESKTOP BREAKPOINT
-  lg: "1024px",  // Laptops / Small desktops
+  md: "768px",   // Tablets (768-1023px)
+  lg: "1024px",  // Laptops / Small desktops - MOBILE/DESKTOP BREAKPOINT
   xl: "1280px",  // Desktops
   "2xl": "1536px", // Large desktops / 2K
   "3xl": "1920px", // Full HD / 2K monitors
@@ -19,9 +19,24 @@ screens: {
 }
 ```
 
-### Primary Breakpoint: `md: 768px`
-- **Below 768px**: Mobile components render
-- **768px and above**: Desktop components render
+### Primary Breakpoint: `lg: 1024px`
+- **Below 1024px (< 1024px)**: Mobile components render (includes phones AND tablets/iPads)
+- **1024px and above (>= 1024px)**: Desktop components render (laptops and larger screens)
+
+### Why 1024px Instead of 768px?
+
+**Industry Best Practice:** Most professional websites use 1024px as the mobile/desktop breakpoint because:
+
+1. **Tablets behave like mobile devices** - iPads (768px-1024px) are touch devices and work better with mobile layouts
+2. **Mobile components scale well** - Mobile layouts designed for 375px-414px scale beautifully up to 1024px
+3. **Desktop layouts need space** - Desktop components with complex grids need at least 1024px to look good
+4. **One codebase, no tablet-specific components** - Mobile components handle both phones and tablets, desktop handles laptops+
+
+**Real-world examples:**
+- Apple.com switches at ~1024px
+- Airbnb uses 1024px breakpoint
+- Stripe switches at 1024px
+- Most Material Design implementations use 960px-1024px
 
 ## Responsive Padding System
 
@@ -36,10 +51,10 @@ px-6 md:px-12 lg:px-20 xl:px-[120px]
 ```
 
 **Padding Breakdown:**
-- **Mobile (< 768px)**: `24px` (px-6)
-- **Tablet (768-1023px)**: `48px` (px-12)
-- **Laptop (1024-1279px)**: `80px` (px-20)
-- **Desktop (1280px+)**: `120px` (px-[120px])
+- **Small Mobile (< 768px)**: `24px` (px-6)
+- **Tablet (768-1023px)**: `48px` (md:px-12)  
+- **Laptop (1024-1279px)**: `80px` (lg:px-20)
+- **Desktop (1280px+)**: `120px` (xl:px-[120px])
 
 ## Fixed Components
 
@@ -114,14 +129,15 @@ This matches the implementation in:
 ## Testing Checklist
 
 ### Device/Screen Size Testing
-- [ ] Mobile (375px - iPhone SE)
-- [ ] Mobile (414px - iPhone Plus)
-- [ ] Tablet (768px - iPad)
-- [ ] Tablet (1024px - iPad Pro)
-- [ ] Laptop (1280px - MacBook)
-- [ ] Desktop (1440px - Standard)
-- [ ] Large Desktop (1920px - Full HD)
-- [ ] 4K (2560px+)
+- [ ] Mobile (375px - iPhone SE) ✅
+- [ ] Mobile (414px - iPhone Plus) ✅
+- [ ] Tablet (768px - iPad) ✅ **Now uses mobile layout**
+- [ ] Tablet (820px - iPad Air) ✅ **Now uses mobile layout**
+- [ ] Tablet (1024px - iPad Pro) ✅ **Now uses mobile layout**
+- [ ] Laptop (1280px - MacBook) ✅
+- [ ] Desktop (1440px - Standard) ✅
+- [ ] Large Desktop (1920px - Full HD) ✅
+- [ ] 4K (2560px+) ✅
 
 ### Component Testing
 - [ ] Navigation alignment at all breakpoints
@@ -180,6 +196,52 @@ Using Flexbox and CSS Grid for adaptive layouts.
 - Optimized asset delivery
 
 ## Deployment Notes
+
+### Tablet/iPad Strategy
+
+**Question: Do we need separate tablet components?**  
+**Answer: NO** - This is a common misconception. Here's why:
+
+**Professional Approach (What We Implemented):**
+1. ✅ **Mobile components handle phones AND tablets** (< 1024px)
+2. ✅ **Desktop components handle laptops and larger** (>= 1024px)
+3. ✅ **No separate tablet components needed**
+
+**Why This Works:**
+- Mobile layouts designed for 375px scale beautifully to 1024px
+- Tablets (768-1024px) are touch devices - mobile UX patterns work better
+- Single column layouts on mobile become 2-column on tablets automatically
+- Less code to maintain, faster development, fewer bugs
+
+**How Professionals Handle Tablets:**
+
+1. **Responsive Grid Systems** (What we use):
+   - Mobile: 1 column
+   - Tablet: 2 columns (automatically via flexbox/grid)
+   - Desktop: 3-4 columns
+
+2. **Fluid Padding** (What we implemented):
+   ```tsx
+   px-6 md:px-12 lg:px-20 xl:px-[120px]
+   ```
+   Tablets get 48px padding, creating perfect spacing.
+
+3. **Component Scaling**:
+   - Text sizes scale with viewport
+   - Images use responsive sizing
+   - Cards adapt to available width
+
+**Real-World Examples:**
+- **Apple.com**: No separate iPad layout, uses mobile up to 1024px
+- **Airbnb**: Tablets use mobile components with adjusted spacing
+- **Stripe**: Single breakpoint at 1024px
+- **Shopify**: Mobile components scale to tablets
+
+**What We DON'T Do (Anti-patterns):**
+- ❌ Create TabletNav, TabletHero, TabletAbout components (unnecessary)
+- ❌ Add multiple breakpoints (375px, 640px, 768px, 900px, 1024px, etc.) - too complex
+- ❌ Use device detection (unreliable)
+- ❌ Create separate CSS files per device
 
 ### Before Production
 1. Test all breakpoints in browser DevTools

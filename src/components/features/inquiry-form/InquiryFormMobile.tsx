@@ -132,7 +132,7 @@ export default function InquiryForm() {
             <span className="text-primary">Great</span> Together
           </h2>
           <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-            <p className="w-full max-w-[361px] text-center text-[14px] leading-[14px] text-white" style={{ fontWeight: 400 }}>
+            <p className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] text-center text-[14px] leading-[14px] text-white" style={{ fontWeight: 400 }}>
               Tell us about your next project — we&apos;ll help make it a reality
             </p>
           </div>

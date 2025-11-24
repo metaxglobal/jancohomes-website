@@ -22,7 +22,7 @@ export function HeroMobile() {
 
       {/* Main Content */}
       <div className="absolute inset-x-0 left-0 right-0 top-[144px] px-4 flex flex-col items-start justify-start gap-8">
-        <div className="w-full max-w-[361px] mx-auto flex flex-col items-center justify-start gap-6">
+        <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] mx-auto flex flex-col items-center justify-start gap-6">
           {/* Badge */}
           <div
             className="inline-flex items-center justify-start gap-2 px-5 py-[10px] rounded-xl"

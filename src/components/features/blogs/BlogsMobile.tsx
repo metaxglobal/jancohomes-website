@@ -184,7 +184,7 @@ export function BlogsMobile() {
       <div
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="w-full max-w-[361px] h-[463px] overflow-x-auto overflow-y-hidden inline-flex items-center justify-start gap-5 snap-x snap-mandatory scrollbar-hide"
+        className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] h-[463px] overflow-x-auto overflow-y-hidden inline-flex items-center justify-start gap-5 snap-x snap-mandatory scrollbar-hide"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -198,7 +198,7 @@ export function BlogsMobile() {
       </div>
 
       {/* Pagination Dots */}
-      <div className="w-[361px] h-2 inline-flex items-center justify-center gap-4 ">
+      <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] h-2 inline-flex items-center justify-center gap-4 ">
         <div className="w-20 h-2 flex items-start justify-start gap-2">
           {blogs.map((_, index) => (
             <button

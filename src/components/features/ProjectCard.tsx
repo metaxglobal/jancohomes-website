@@ -31,7 +31,7 @@ export default function ProjectCard({
 
   return (
     <div
-      className="w-[387px] rounded-[22px] flex flex-col items-end justify-start"
+      className="w-full max-w-[361px] sm:max-w-[387px] rounded-[22px] flex flex-col items-end justify-start"
       style={{
         boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
         outline: "1px #C2C2C2 solid",
@@ -44,7 +44,7 @@ export default function ProjectCard({
           alt={title}
           width={387}
           height={250}
-          className="w-[387px] h-[250px] object-cover absolute left-0 top-0"
+          className="w-full h-[250px] object-cover absolute left-0 top-0"
           style={{
             background:
               "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.35) 100%)",
@@ -52,7 +52,7 @@ export default function ProjectCard({
         />
 
         {/* Image Pagination Dots */}
-        <div className="h-[30px] absolute left-[166px] top-[220px] flex items-center justify-start gap-2">
+        <div className="h-[30px] absolute left-1/2 -translate-x-1/2 top-[220px] flex items-center justify-start gap-2">
           {images.slice(0, 3).map((_, index) => (
             <button
               key={index}

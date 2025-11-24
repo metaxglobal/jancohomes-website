@@ -55,7 +55,7 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full overflow-hidden bg-[#0B0B0A]">
-      <div className="w-full max-w-[393px] mx-auto px-4 pt-[48px] pb-[48px]">
+      <div className="w-full max-w-[393px] sm:max-w-[640px] md:max-w-[720px] mx-auto px-4 pt-[48px] pb-[48px]">
         {/* Background Blur Effects */}
         {/* Background blur blobs - centered so they span full footer seamlessly */}
         <div
@@ -77,7 +77,7 @@ export default function Footer() {
         />
 
         {/* Main Content */}
-        <div className="relative z-10 flex w-full max-w-[362px] flex-col gap-12">
+        <div className="relative z-10 flex w-full max-w-[362px] sm:max-w-[640px] md:max-w-[720px] flex-col gap-12">
           {/* Brand Section */}
           <div className="flex flex-col gap-3">
             <Image

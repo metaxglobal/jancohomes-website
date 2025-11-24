@@ -74,7 +74,7 @@ export function BlogDetailPageMobile({
           />
 
           {/* Breadcrumb Navigation */}
-          <div className="relative z-10 flex w-[361px] flex-col gap-8 px-4 pt-8">
+          <div className="relative z-10 flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] mx-auto flex-col gap-8 px-4 pt-8">
             <div className="flex h-5 items-center gap-2">
               <Link
                 href="/"
@@ -181,7 +181,7 @@ export function BlogDetailPageMobile({
           {/* Article Body */}
           <div className="flex flex-col items-start justify-center gap-14">
             <div className="flex items-start justify-start gap-[73px]">
-              <div className="flex w-[361px] flex-col gap-10">
+              <div className="flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex-col gap-10">
                 {/* Quote Block */}
                 <div className="flex items-center justify-start gap-[10px] border-l-[3px] border-primary bg-[#F7F7F7] p-5">
                   <p className="w-[321px] text-[14px] font-medium leading-[14px] text-secondary/75">

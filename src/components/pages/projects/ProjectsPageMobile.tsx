@@ -61,7 +61,7 @@ export function ProjectsPageMobile({
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 flex w-[361px] flex-col gap-4 px-4 pt-8">
+          <div className="relative z-10 flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] mx-auto flex-col gap-4 px-4 pt-8">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center gap-2">
               <Link
@@ -91,11 +91,11 @@ export function ProjectsPageMobile({
 
             {/* Title and Description */}
             <div className="flex flex-col gap-3 pt-4">
-              <h1 className="w-[361px] text-[40px] font-medium leading-9 tracking-[-2px] text-white">
+              <h1 className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] text-[40px] font-medium leading-9 tracking-[-2px] text-white">
                 <span className="">Featured </span>
                 <span className="text-primary">Projects</span>
               </h1>
-              <p className="w-[361px] text-[14px] font-medium leading-[14px] text-ash">
+              <p className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] text-[14px] font-medium leading-[14px] text-ash">
                 Explore our collection of premium residential and commercial
                 projects across Sri Lanka. Each project showcases our commitment
                 to excellence and innovation in construction.
@@ -115,8 +115,8 @@ export function ProjectsPageMobile({
         />
 
         {/* Projects Grid */}
-        <section className="relative z-10 flex flex-col items-start gap-5 px-4 pb-12 pt-12">
-          <div className="flex flex-col items-center gap-5">
+        <section className="relative z-10 flex flex-col items-center gap-5 px-4 pb-12 pt-12">
+          <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex flex-col items-center gap-5">
             {projects.map((project) => (
               <FeaturedProjectCard key={project.id} {...project} />
             ))}
@@ -141,7 +141,7 @@ export function ProjectsPageMobile({
                 Ready to Start <span className="text-primary">Your</span>{" "}
                 Project?
               </h2>
-              <p className="w-[361px] text-center text-[16px] font-medium leading-5 tracking-tight text-ash">
+              <p className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] text-center text-[16px] font-medium leading-5 tracking-tight text-ash">
                 Let&apos;s bring your vision to life with our expert
                 construction and design services.
               </p>
