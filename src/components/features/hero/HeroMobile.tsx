@@ -57,7 +57,7 @@ export function HeroMobile() {
               <span className="text-white text-[40px] font-medium leading-9 tracking-[-3px]">
                 Building the{" "}
               </span>
-              <span className="text-primary text-[40px] font-medium leading-9 tracking-[-3px]">
+              <span className="text-primary text-[40px] font-medium leading-9 tracking-[-3px] whitespace-nowrap">
                 Future of
               </span>
               <br />

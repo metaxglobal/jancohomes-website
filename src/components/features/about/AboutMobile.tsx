@@ -14,7 +14,8 @@ export function AboutMobile() {
   return (
     <div className="w-full flex flex-col">
       {/* Images Section - Background #F7F7F7 */}
-      <div className="self-stretch px-4 py-6 bg-background-3 flex items-center justify-center gap-5">
+      <div className="w-full py-6 bg-background-3">
+        <div className="w-full max-w-[393px] mx-auto px-4 flex items-center justify-center gap-5">
         <Image
           src="/about img1.jpg"
           alt="Janco Construction Project"
@@ -29,11 +30,12 @@ export function AboutMobile() {
           height={101}
           className="w-[170px] h-[101px] rounded-[22px]"
         />
+        </div>
       </div>
 
       {/* Text Section - Background #E8E5DC */}
-      <div className="self-stretch px-4 py-8 bg-background-1 flex flex-col items-center justify-center gap-6">
-        <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex flex-col items-start justify-center gap-6">
+      <div className="w-full py-8 bg-background-1">
+        <div className="w-full max-w-[393px] mx-auto px-4 flex flex-col items-start justify-center gap-6">
           {/* Heading */}
           <div className="flex flex-col items-start justify-start gap-3">
             <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex flex-col items-start justify-start gap-2">
@@ -108,8 +110,8 @@ export function AboutMobile() {
       </div>
 
       {/* Cards Section - White background with 16px padding */}
-      <div className="self-stretch p-4 flex flex-col items-center justify-start gap-5">
-        <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex flex-col items-start justify-start gap-5">
+      <div className="w-full pt-4 bg-white">
+        <div className="w-full max-w-[393px] mx-auto px-4 flex flex-col items-start justify-start gap-5">
           {/* First Row */}
           <div className="flex items-start justify-start gap-5">
             {/* Card 1 - 20 Years */}
