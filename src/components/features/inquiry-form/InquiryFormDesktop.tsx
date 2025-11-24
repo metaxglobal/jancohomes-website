@@ -112,7 +112,7 @@ export function InquiryFormDesktop() {
 
   return (
     <section className="w-full bg-[#1A1A1A] flex flex-col items-start gap-2.5 relative overflow-hidden">
-      <div className="self-stretch h-[642px] px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
+      <div className="self-stretch h-[642px] px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
           {/* Header */}
           <div className="flex flex-col items-center gap-3">
             <h2 className="text-center">

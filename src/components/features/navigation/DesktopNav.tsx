@@ -62,7 +62,7 @@ export function DesktopNav() {
     <nav className="w-full" style={{ boxShadow: '0px 4px 6px -4px rgba(0, 0, 0, 0.10)' }}>
       {/* Top Bar - Contact Info - Full width background */}
       <div className="w-full bg-[#1A1A1A] border-b border-white/20">
-        <div className="w-full max-w-[1440px] mx-auto h-[49px] pb-px px-[120px]">
+        <div className="w-full max-w-[1440px] mx-auto h-[49px] pb-px px-6 md:px-12 lg:px-20 xl:px-[120px]">
           <div className="h-12 flex items-center justify-end gap-6">
             {/* Phone */}
             <div className="flex items-center gap-2">
@@ -95,7 +95,7 @@ export function DesktopNav() {
 
       {/* Main Navigation Bar - Full width background */}
       <div className="w-full bg-[#1A1A1A]">
-        <div className="w-full max-w-[1440px] mx-auto h-[97px] px-[120px] flex items-center justify-between">
+        <div className="w-full max-w-[1440px] mx-auto h-[97px] px-6 md:px-12 lg:px-20 xl:px-[120px] flex items-center justify-between">
           {/* Logo */}
           <Link href="/">
             <Image

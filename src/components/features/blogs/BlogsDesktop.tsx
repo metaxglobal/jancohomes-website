@@ -141,7 +141,7 @@ export function BlogsDesktop() {
 
   return (
     <section className="w-full bg-[#E8E5DC] pt-24 pb-16 flex flex-col justify-center items-center gap-6" id="blogs">
-      <div className="w-full max-w-[1440px] mx-auto px-[120px]">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px]">
         {/* Header */}
         <div className="self-stretch flex justify-between items-center mb-6">
           <div>

@@ -70,7 +70,7 @@ export function BlogDetailPageDesktop({
           />
 
           {/* Breadcrumb Navigation */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
                 href="/"
@@ -123,7 +123,7 @@ export function BlogDetailPageDesktop({
 
         {/* Article Content Section */}
         <section className="w-full flex justify-center">
-          <div className="max-w-[1440px] w-full px-[120px] pt-8 pb-24 flex flex-col items-start gap-8">
+          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-20 xl:px-[120px] pt-8 pb-24 flex flex-col items-start gap-8">
             {/* Hero Image with Overlay */}
             <div className="relative h-[450px] self-stretch overflow-hidden rounded-[22px] outline outline-1 outline-ash outline-offset-[-1px]">
             <Image

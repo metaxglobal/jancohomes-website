@@ -29,7 +29,7 @@ export function AboutDesktop() {
         {/* Left Side - Images with #F7F7F7 Background - Full Width */}
         <div className="w-1/2 min-h-[600px] bg-[#F7F7F7] flex items-center justify-end pr-5">
           {/* Content Container - Constrained to 1440px layout */}
-          <div className="flex items-center gap-5 pl-[120px]">
+          <div className="flex items-center gap-5 pl-6 md:pl-12 lg:pl-20 xl:pl-[120px]">
             <Image
               src="/about img1.jpg"
               alt="Janco homes and Constructions"
@@ -50,7 +50,7 @@ export function AboutDesktop() {
         {/* Right Side - Content with #E8E5DC Background - Full Width */}
         <div className="w-1/2 min-h-[600px] bg-[#E8E5DC] flex items-center justify-start pl-5">
           {/* Content Container - Constrained to 1440px layout */}
-          <div className="py-8 pl-[83px] pr-8 flex flex-col items-start justify-center gap-6 max-w-[605px]">
+          <div className="py-8 pl-6 md:pl-12 lg:pl-16 xl:pl-[83px] pr-8 flex flex-col items-start justify-center gap-6 max-w-[605px]">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-6">
                 <div className="w-[398px] flex flex-col gap-3">

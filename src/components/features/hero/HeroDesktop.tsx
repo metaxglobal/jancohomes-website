@@ -30,8 +30,8 @@ export function HeroDesktop() {
         aria-hidden="true"
       />
 
-      {/* Main Content Container - Centered at 1440px with 120px padding */}
-      <div className="relative w-full max-w-[1440px] mx-auto px-[120px] min-h-[860px]">
+      {/* Main Content Container - Centered at 1440px with responsive padding */}
+      <div className="relative w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px] min-h-[860px]">
         
         {/* Content Grid - Left and Right */}
         <div className="relative flex items-center justify-between pt-[154px] pb-[190px]">

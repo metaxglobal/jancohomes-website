@@ -69,7 +69,7 @@ export function BlogsPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
@@ -129,7 +129,7 @@ export function BlogsPageDesktop({
 
         {/* Blog Articles Grid */}
         <section className="w-full flex justify-center">
-          <div className="max-w-[1440px] w-full px-[120px] pt-16 pb-24 flex flex-col items-start gap-5">
+          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-20 xl:px-[120px] pt-16 pb-24 flex flex-col items-start gap-5">
             {/* Row 1 - 3 cards */}
             <div className="inline-flex items-center justify-start gap-5 self-stretch">
               {articles.slice(0, 3).map((article) => (
@@ -175,7 +175,7 @@ export function BlogsPageDesktop({
             }}
           />
 
-          <div className="relative z-10 flex h-[376px] flex-col items-center justify-center gap-12 self-stretch px-[120px]">
+          <div className="relative z-10 flex h-[376px] flex-col items-center justify-center gap-12 self-stretch px-6 md:px-12 lg:px-20 xl:px-[120px]">
             <div className="flex flex-col items-center justify-start gap-3 self-stretch">
               <div className="self-stretch text-center">
                 <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-white">

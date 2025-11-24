@@ -64,7 +64,7 @@ export function ProjectsPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
@@ -125,7 +125,7 @@ export function ProjectsPageDesktop({
 
         {/* Projects Grid */}
         <section className="w-full flex justify-center">
-          <div className="max-w-[1440px] w-full px-[120px] pt-16 pb-16 flex flex-col items-start gap-5">
+          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-20 xl:px-[120px] pt-16 pb-16 flex flex-col items-start gap-5">
             {/* Row 1 - 3 cards */}
             <div className="flex items-center justify-start gap-5 self-stretch">
               {projects.slice(0, 3).map((project) => (
@@ -188,7 +188,7 @@ export function ProjectsPageDesktop({
             }}
           />
 
-          <div className="self-stretch h-[376px] px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
+          <div className="self-stretch h-[376px] px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
             <div className="flex flex-col items-center justify-start gap-3 self-stretch">
               <div className="self-stretch text-center">
                 <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-white">

@@ -47,7 +47,7 @@ export function ProjectsDesktop() {
 
   return (
     <section className="w-full bg-[#F7F7F7] py-24" id="projects">
-      <div className="w-full max-w-[1440px] mx-auto px-[120px]">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px]">
         {/* Header Section */}
         <div className="flex items-center justify-between mb-12">
           {/* Title */}

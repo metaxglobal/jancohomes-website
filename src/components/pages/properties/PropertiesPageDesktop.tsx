@@ -50,7 +50,7 @@ export function PropertiesPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-12 px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center gap-2">
               <Link
@@ -94,7 +94,7 @@ export function PropertiesPageDesktop({
         </section>
 
         {/* Properties Grid Section */}
-        <section className="mx-auto flex w-full max-w-[1440px] flex-col gap-5 px-[120px] pb-24 pt-16">
+        <section className="mx-auto flex w-full max-w-[1440px] flex-col gap-5 px-6 md:px-12 lg:px-20 xl:px-[120px] pb-24 pt-16">
           {/* First Row */}
           <div className="flex items-center justify-start gap-5">
             {properties.slice(0, 3).map((property) => (
@@ -133,7 +133,7 @@ export function PropertiesPageDesktop({
             style={{ filter: "blur(64px)" }}
           />
 
-          <div className="relative z-10 mx-auto flex h-[376px] w-full max-w-[1440px] flex-col items-center justify-center gap-12 px-[120px]">
+          <div className="relative z-10 mx-auto flex h-[376px] w-full max-w-[1440px] flex-col items-center justify-center gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px]">
             <div className="flex flex-col items-center gap-3">
               <h2 className="text-center text-[56px] font-medium leading-10 tracking-[-0.2rem]">
                 <span className="text-white">Ready to Start </span>

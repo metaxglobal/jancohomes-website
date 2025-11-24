@@ -65,7 +65,7 @@ export function FooterDesktop() {
       {/* Top thin green gradient container placed at footer root so `top-0` aligns with the
           real top of the footer (not shifted by inner padding). This centers the gradient
           to the site's content width so it visually divides the page and footer consistently. */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] px-[120px] z-0 pointer-events-none">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] px-6 md:px-12 lg:px-20 xl:px-[120px] z-0 pointer-events-none">
         <div
           className="w-full h-[2px]"
           style={{
@@ -74,7 +74,7 @@ export function FooterDesktop() {
         />
       </div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-[120px] flex flex-col gap-[68px] relative z-10">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col gap-[68px] relative z-10">
           {/* Main Footer Content */}
           <div className="w-full max-w-[1200px] flex items-start justify-between">
             {/* Company Info */}

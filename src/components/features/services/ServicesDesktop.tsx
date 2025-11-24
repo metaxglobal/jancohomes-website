@@ -45,7 +45,7 @@ function ServiceCard({ imagePath, title, height }: ServiceCardProps) {
 export function ServicesDesktop() {
   return (
     <section className="w-full bg-white pt-24 pb-16">
-      <div className="w-full max-w-[1440px] mx-auto px-[120px]">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px]">
         {/* Header Section */}
         <div className="w-full flex flex-col items-center gap-2.5 mb-12">
           {/* Label */}

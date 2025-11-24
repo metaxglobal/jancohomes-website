@@ -78,12 +78,15 @@ export function AboutMobile() {
           {/* CTA Button */}
           <button 
             onClick={() => {
-              setTimeout(() => {
-                const servicesSection = document.getElementById('services');
-                if (servicesSection) {
-                  servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              }, 100);
+              // Find all elements with id="services" and scroll to the visible one
+              const elements = document.querySelectorAll('[id="services"]');
+              const visibleElement = Array.from(elements).find((el) => {
+                const htmlEl = el as HTMLElement;
+                return htmlEl.offsetParent !== null; // offsetParent is null if element or ancestor has display:none
+              });
+              if (visibleElement) {
+                visibleElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
             }}
             className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-secondary rounded-xl"
           >

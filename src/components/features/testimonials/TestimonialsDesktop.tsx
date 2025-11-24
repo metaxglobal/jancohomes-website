@@ -138,9 +138,9 @@ export function TestimonialsDesktop() {
 
   return (
     <section className="w-full bg-[#1A1A1A] pt-24 pb-16 flex flex-col items-start gap-2.5 relative overflow-hidden" id="testimonials">
-      <div className="self-stretch h-[642px] px-[120px] flex flex-col justify-center items-center gap-12 relative z-10">
+      <div className="self-stretch h-[642px] px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col justify-center items-center gap-12 relative z-10">
         {/* Header */}
-        <div className="self-stretch px-[120px] flex flex-col items-center gap-2.5">
+        <div className="self-stretch px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col items-center gap-2.5">
           <div className="self-stretch text-center text-[#7CB342] text-xl font-normal leading-5 tracking-[-0.05rem]">
             TESTIMONIALS
           </div>
