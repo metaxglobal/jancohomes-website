@@ -14,26 +14,8 @@ export default function WhatsAppWidget({
 }: WhatsAppWidgetProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleClick = async () => {
-    // Log the WhatsApp click to Google Sheets
-    try {
-      await fetch("/api/submit-inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: "whatsapp-click",
-          source: "whatsapp-widget",
-          message: "User clicked WhatsApp widget",
-          pageUrl: window.location.href,
-        }),
-      }).catch(() => {
-        // Silently fail - don't block the WhatsApp redirect
-      });
-    } catch (error) {
-      // Ignore logging errors
-    }
-
-    // Redirect to WhatsApp
+  const handleClick = () => {
+    // Redirect to WhatsApp directly - no logging needed
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };

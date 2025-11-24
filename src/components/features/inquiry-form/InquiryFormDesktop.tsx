@@ -6,6 +6,13 @@ import { useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
+interface FormErrors {
+  name?: string;
+  phone?: string;
+  email?: string;
+  message?: string;
+}
+
 export function InquiryFormDesktop() {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,11 +20,52 @@ export function InquiryFormDesktop() {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[+]?[\d\s-()]+$/.test(formData.phone)) {
+      newErrors.phone = "Please enter a valid phone number";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
     
     setIsSubmitting(true);
     setSubmitStatus("idle");
@@ -94,11 +142,15 @@ export function InquiryFormDesktop() {
                 </label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your name"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={handleChange}
                   className="h-12 px-3 py-1 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-ash text-sm font-normal leading-[14px] focus:outline-none focus:border-primary"
                 />
+                {errors.name && (
+                  <span className="text-[12px] text-red-400">{errors.name}</span>
+                )}
               </div>
 
               {/* Phone Field */}
@@ -108,11 +160,15 @@ export function InquiryFormDesktop() {
                 </label>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="+94 XX XXX XXXX"
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={handleChange}
                   className="h-12 px-3 py-1 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-ash text-sm font-normal leading-[14px] focus:outline-none focus:border-primary"
                 />
+                {errors.phone && (
+                  <span className="text-[12px] text-red-400">{errors.phone}</span>
+                )}
               </div>
             </div>
 
@@ -123,11 +179,15 @@ export function InquiryFormDesktop() {
               </label>
               <input
                 type="email"
+                name="email"
                 placeholder="your.email@example.com"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={handleChange}
                 className="h-12 px-3 py-1 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-ash text-sm font-normal leading-[14px] focus:outline-none focus:border-primary"
               />
+              {errors.email && (
+                <span className="text-[12px] text-red-400">{errors.email}</span>
+              )}
             </div>
 
             {/* Message Field */}
@@ -136,11 +196,15 @@ export function InquiryFormDesktop() {
                 Message
               </label>
               <textarea
+                name="message"
                 placeholder="Tell us about your project..."
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                onChange={handleChange}
                 className="h-16 pt-[17px] pb-2 px-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-ash text-sm font-normal leading-[14px] focus:outline-none focus:border-primary resize-none"
               />
+              {errors.message && (
+                <span className="text-[12px] text-red-400">{errors.message}</span>
+              )}
             </div>
 
             {/* Submit Button */}

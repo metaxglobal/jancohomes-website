@@ -38,7 +38,7 @@ export default function TermsPageDesktop() {
           />
 
           {/* Hero Content */}
-          <div className="absolute left-[120px] top-[202px] flex w-[1200px] flex-col items-start gap-12">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start gap-12 px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="inline-flex h-5 items-center gap-2">
               <Link href="/" className="flex items-center gap-1">
@@ -70,7 +70,7 @@ export default function TermsPageDesktop() {
 
         {/* Terms Content */}
         <section className="flex justify-center px-[120px] py-24">
-          <div className="flex w-[794px] flex-col gap-10">
+          <div className="flex w-full max-w-[1200px] flex-col gap-10">
             {/* Introduction */}
             <div className="flex flex-col gap-3">
               <h2 className="text-4xl font-medium leading-10 text-secondary">Introduction</h2>

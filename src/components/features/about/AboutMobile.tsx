@@ -1,3 +1,5 @@
+"use client";
+
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Clock01Icon,
@@ -74,7 +76,17 @@ export function AboutMobile() {
           </div>
 
           {/* CTA Button */}
-          <a className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-secondary rounded-xl" href="#services" role="button">
+          <button 
+            onClick={() => {
+              setTimeout(() => {
+                const servicesSection = document.getElementById('services');
+                if (servicesSection) {
+                  servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }, 100);
+            }}
+            className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-secondary rounded-xl"
+          >
             <div className="flex items-center justify-start gap-2">
               <div className="text-white text-base font-medium leading-5">
                 Explore More
@@ -88,7 +100,7 @@ export function AboutMobile() {
                 />
               </div>
             </div>
-          </a>
+          </button>
         </div>
       </div>
 
