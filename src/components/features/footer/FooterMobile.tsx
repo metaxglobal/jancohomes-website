@@ -23,9 +23,14 @@ export default function Footer() {
       const sectionId = href.replace(/^\/?(#)/, "");
       if (pathname === "/") {
         e.preventDefault();
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Find all elements with this ID and filter for the visible one
+        const elements = document.querySelectorAll(`[id="${sectionId}"]`);
+        const visibleElement = Array.from(elements).find((el) => {
+          const htmlEl = el as HTMLElement;
+          return htmlEl.offsetParent !== null; // offsetParent is null if element or ancestor has display:none
+        });
+        if (visibleElement) {
+          visibleElement.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       } else {
         e.preventDefault();
@@ -55,7 +60,7 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full overflow-hidden bg-[#0B0B0A]">
-      <div className="w-full max-w-[393px] sm:max-w-[640px] md:max-w-[720px] mx-auto px-4 pt-[48px] pb-[48px]">
+      <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto px-4 pt-[48px] pb-[48px]">
         {/* Background Blur Effects */}
         {/* Background blur blobs - centered so they span full footer seamlessly */}
         <div
@@ -77,7 +82,7 @@ export default function Footer() {
         />
 
         {/* Main Content */}
-        <div className="relative z-10 flex w-full max-w-[362px] sm:max-w-[640px] md:max-w-[720px] flex-col gap-12">
+        <div className="relative z-10 flex w-full flex-col gap-12">
           {/* Brand Section */}
           <div className="flex flex-col gap-3">
             <Image

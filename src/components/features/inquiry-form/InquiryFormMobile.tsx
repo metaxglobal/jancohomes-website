@@ -124,7 +124,7 @@ export default function InquiryForm() {
 
   return (
     <section id="inquiry-form" className="w-full overflow-hidden bg-secondary pt-12 pb-12">
-      <div className="w-full max-w-[393px] mx-auto px-4 flex flex-col items-center gap-8">
+      <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto px-4 flex flex-col items-center gap-8">
         {/* Header */}
         <div className="self-stretch flex flex-col items-center gap-3">
           <h2 className="self-stretch text-center text-[36px] font-medium leading-[40px] tracking-[-2px] text-white">

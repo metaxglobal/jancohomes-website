@@ -20,7 +20,7 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-      className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] rounded-[22px] inline-flex flex-col items-start justify-start"
+      className="w-full rounded-[22px] inline-flex flex-col items-start justify-start"
       style={{
         outline: "1px #C2C2C2 solid",
       }}
@@ -29,9 +29,9 @@ function ProjectCard({
       <Image
         src={imagePath}
         alt={title}
-        width={361}
+        width={400}
         height={210}
-        className="self-stretch h-[210px] relative rounded-t-[22px] object-cover"
+        className="w-full h-[210px] relative rounded-t-[22px] object-cover"
       />
 
       {/* Card Content */}
@@ -94,7 +94,7 @@ export function ProjectsMobile() {
 
   return (
     <div className="w-full bg-[#F7F7F7] pt-[64px] pb-[64px] px-4">
-      <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-8">
+      <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto flex flex-col items-start justify-start gap-8">
       {/* Text Section */}
       <div className="self-stretch flex flex-col items-start justify-start gap-6">
         {/* Heading */}

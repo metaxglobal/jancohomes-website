@@ -170,7 +170,7 @@ export function TestimonialsMobile() {
           style={{ filter: "blur(64px)" }}
         />
 
-      <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-[10px] relative z-10">
+      <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto flex flex-col items-start justify-start gap-[10px] relative z-10">
       <div className="w-full flex flex-col items-center justify-center gap-6">
         {/* Text Section */}
         <div className="w-full px-2 flex flex-col items-center justify-start gap-2">
@@ -212,7 +212,7 @@ export function TestimonialsMobile() {
           >
             <div className="inline-flex items-start justify-start gap-4">
               {testimonials.map((testimonial, index) => (
-                <div key={testimonial.id} className="w-[calc(100vw-2rem)] max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex-shrink-0 snap-center" style={{ scrollSnapAlign: 'center', scrollSnapStop: 'always' }}>
+                <div key={testimonial.id} className="w-[calc(100vw-2rem)] max-w-[361px] sm:max-w-[500px] md:max-w-[600px] flex-shrink-0 snap-center" style={{ scrollSnapAlign: 'center', scrollSnapStop: 'always' }}>
                   <TestimonialCard testimonial={testimonial} />
                 </div>
               ))}

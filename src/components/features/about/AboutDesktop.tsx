@@ -16,9 +16,14 @@ import {
 export function AboutDesktop() {
   const handleExploreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const servicesElement = document.getElementById("services");
-    if (servicesElement) {
-      servicesElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    // Find all elements with id="services" and scroll to the visible one
+    const elements = document.querySelectorAll('[id="services"]');
+    const visibleElement = Array.from(elements).find((el) => {
+      const htmlEl = el as HTMLElement;
+      return htmlEl.offsetParent !== null; // offsetParent is null if element or ancestor has display:none
+    });
+    if (visibleElement) {
+      visibleElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 

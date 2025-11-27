@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function HeroMobile() {
   return (
-    <div className="relative w-full min-h-screen bg-secondary overflow-hidden">
+    <div className="relative w-full bg-secondary overflow-hidden pb-8 md:pb-12">
       {/* Background Blur Effects */}
       <div
         className="absolute w-[222px] h-[222px] left-[161px] top-[332px] opacity-22 bg-primary rounded-full blur-[64px]"
@@ -21,8 +21,8 @@ export function HeroMobile() {
       />
 
       {/* Main Content */}
-      <div className="absolute inset-x-0 left-0 right-0 top-[144px] px-4 flex flex-col items-start justify-start gap-8">
-        <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] mx-auto flex flex-col items-center justify-start gap-6">
+      <div className="relative pt-[144px] px-4">
+        <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto flex flex-col items-center justify-start gap-6">
           {/* Badge */}
           <div
             className="inline-flex items-center justify-start gap-2 px-5 py-[10px] rounded-xl"
@@ -73,24 +73,24 @@ export function HeroMobile() {
               solutions.
             </div>
           </div>
-        </div>
 
-        {/* CTA Button */}
-        <Link href="/projects" className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl">
-          <div className="flex items-center justify-start gap-2">
-            <div className="text-white text-base font-medium leading-5">
-              View Our Projects
+          {/* CTA Button - Now inside the centered container */}
+          <Link href="/projects" className="self-start inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl">
+            <div className="flex items-center justify-start gap-2">
+              <div className="text-white text-base font-medium leading-5">
+                View Our Projects
+              </div>
+              <div className="w-5 h-5 relative overflow-hidden">
+                <HugeiconsIcon
+                  icon={ArrowRight02Icon}
+                  size={20}
+                  color="white"
+                  strokeWidth={1.5}
+                />
+              </div>
             </div>
-            <div className="w-5 h-5 relative overflow-hidden">
-              <HugeiconsIcon
-                icon={ArrowRight02Icon}
-                size={20}
-                color="white"
-                strokeWidth={1.5}
-              />
-            </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </div>
   );

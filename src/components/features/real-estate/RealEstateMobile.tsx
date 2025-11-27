@@ -9,7 +9,7 @@ export function RealEstateMobile() {
 
   return (
     <div className="w-full pt-[72px] pb-[64px] px-4">
-      <div className="w-full max-w-[393px] mx-auto flex flex-col items-start justify-start gap-8">
+      <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto flex flex-col items-start justify-start gap-8">
         {/* Header Section */}
         <div className="self-stretch flex flex-col items-center justify-start gap-3">
           <div className="self-stretch inline-flex items-center justify-center gap-2.5">

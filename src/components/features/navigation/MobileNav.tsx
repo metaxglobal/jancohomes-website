@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   ArrowDownRight01Icon,
@@ -25,6 +26,37 @@ const navLinks = [
 export function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#") || href.startsWith("/#")) {
+      e.preventDefault();
+      setIsMenuOpen(false);
+      const sectionId = href.replace(/^\/?#/, "");
+      
+      if (pathname === "/") {
+        // Find all elements with this ID and filter for the visible one
+        const elements = document.querySelectorAll(`[id="${sectionId}"]`);
+        const visibleElement = Array.from(elements).find((el) => {
+          const htmlEl = el as HTMLElement;
+          return htmlEl.offsetParent !== null;
+        });
+        if (visibleElement) {
+          visibleElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        try {
+          sessionStorage.setItem("janco_scrollTo", sectionId);
+        } catch (err) {
+          // ignore
+        }
+        router.push("/");
+      }
+    } else {
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <div className="relative">
@@ -157,7 +189,7 @@ export function MobileNav() {
                   key={link.label}
                   href={link.href}
                   className="w-[107px] h-11 py-[10px] flex items-center justify-center text-white/90 text-sm font-normal uppercase leading-4"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.label}
                 </a>
