@@ -7,13 +7,13 @@ import { ArrowRight02Icon, CallingIcon } from "@hugeicons/core-free-icons";
 
 export function HeroDesktop() {
   return (
-    <section className="relative w-full bg-[#1A1A1A] overflow-hidden">
-      {/* Background Blur Effects - Full Width */}
+    <section className="relative w-full min-h-screen bg-[#1A1A1A] overflow-hidden flex flex-col">
+      {/* Background Blur Effects - Full Width, positioned relative to viewport */}
       <div 
         className="absolute w-[384px] h-[384px] opacity-[0.22] bg-[#7CB342] rounded-full pointer-events-none"
         style={{ 
           left: '51%', 
-          top: '80px',
+          top: '15%',
           boxShadow: '128px 128px 128px',
           filter: 'blur(64px)'
         }}
@@ -23,7 +23,7 @@ export function HeroDesktop() {
         className="absolute w-[320px] h-[320px] opacity-[0.38] bg-[#7CB342] rounded-full pointer-events-none"
         style={{ 
           left: '26%', 
-          top: '504px',
+          top: '60%',
           boxShadow: '128px 128px 128px',
           filter: 'blur(64px)'
         }}
@@ -31,10 +31,13 @@ export function HeroDesktop() {
       />
 
       {/* Main Content Container - Centered at 1440px with responsive padding */}
-      <div className="relative w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px] min-h-[860px]">
+      <div className="relative w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px] flex-1 flex flex-col pt-[160px] pb-[100px]">
+        
+        {/* Spacer to push content down and center it */}
+        <div className="flex-1 min-h-0"></div>
         
         {/* Content Grid - Left and Right */}
-        <div className="relative flex items-center justify-between pt-[154px] pb-[190px]">
+        <div className="relative w-full flex items-center justify-between">
           
           {/* Left Content Section */}
           <div className="w-[512px] flex flex-col gap-8">
@@ -88,23 +91,28 @@ export function HeroDesktop() {
           {/* Right Content Section - Image with Overlays */}
           <div className="relative flex items-center justify-end">
 
-            {/* Hero Image (nudged down slightly) */}
-            <div className="relative mt-12 left-8">
+            {/* Hero Image - Responsive sizing for different screens */}
+            <div className="relative">
               <Image
                 src="/hero img.png"
                 alt="Construction Project"
                 width={700}
                 height={516}
-                className="w-[700px] rounded-xl"
+                className="w-[500px] lg:w-[550px] xl:w-[650px] 2xl:w-[700px] rounded-xl"
                 style={{ height: "auto" }}
                 priority
               />
             </div>
           </div>
         </div>
+        
+        {/* Bottom spacer to center content */}
+        <div className="flex-1 min-h-0"></div>
+      </div>
 
-        {/* Scroll Indicator - Centered */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+      {/* Scroll Indicator - Fixed at bottom */}
+      <div className="relative w-full pb-8">
+        <div className="flex flex-col items-center gap-3">
           <div className="w-[74px] flex flex-col items-center gap-0.5">
             <div className="self-stretch p-2.5 flex items-center justify-center">
               <span className="text-[#7CB342] text-sm font-normal uppercase leading-4">
