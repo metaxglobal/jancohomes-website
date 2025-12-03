@@ -110,10 +110,10 @@ export function AboutMobile() {
       </div>
 
       {/* Cards Section - White background with 16px padding */}
-      <div className="w-full pt-4 bg-white">
-        <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto px-4 flex flex-col items-start justify-start gap-5">
+      <div className="w-full pt-4 pb-4 bg-white">
+        <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto px-4 flex flex-col items-center justify-start gap-5">
           {/* First Row */}
-          <div className="self-stretch flex items-start justify-start gap-5">
+          <div className="w-full flex items-start justify-center gap-5">
             {/* Card 1 - 20 Years */}
             <div
               className="flex-1 min-h-[138px] p-3 bg-white rounded-[22px] flex flex-col items-center justify-start gap-1"
@@ -186,7 +186,7 @@ export function AboutMobile() {
           </div>
 
           {/* Second Row */}
-          <div className="self-stretch flex items-start justify-start gap-5">
+          <div className="w-full flex items-start justify-center gap-5">
             {/* Card 3 - Qualified Professionals */}
             <div
               className="flex-1 min-h-[138px] p-3 bg-white rounded-[22px] flex flex-col items-center justify-start gap-1"
