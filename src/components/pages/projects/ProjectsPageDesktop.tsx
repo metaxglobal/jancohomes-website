@@ -22,7 +22,7 @@ interface Project {
   id: string;
   title: string;
   location: string;
-  area: string;
+  price: string;
   description: string;
   images: string[];
 }
@@ -133,7 +133,7 @@ export function ProjectsPageDesktop({
                   key={project.id}
                   title={project.title}
                   location={project.location}
-                  sqft={project.area}
+                  price={project.price}
                   description={project.description}
                   images={project.images}
                 />
@@ -145,7 +145,7 @@ export function ProjectsPageDesktop({
                   key={project.id}
                   title={project.title}
                   location={project.location}
-                  sqft={project.area}
+                  price={project.price}
                   description={project.description}
                   images={project.images}
                 />
@@ -160,7 +160,7 @@ export function ProjectsPageDesktop({
                     key={project.id}
                     title={project.title}
                     location={project.location}
-                    sqft={project.area}
+                    price={project.price}
                     description={project.description}
                     images={project.images}
                   />

@@ -8,39 +8,33 @@ import { ArrowDownRight01Icon } from "@hugeicons/core-free-icons";
 export function ProjectsDesktop() {
   const projects = [
     {
-      id: "modern-villa-kandy",
-      title: "Modern Villa - Kandy",
-      location: "Kandy",
-      area: "SQFT - 2800",
+      id: "Luxury Home in Dehiwala",
+      title: "Luxury Home",
+      location: "Dehiwala",
+      price: "RS.27.7M",
       description: "A stunning modern villa featuring contemporary architecture and premium finishes in the heart of Kandy.",
       images: [
-        "/projects/modern-villa-kandy.jpg",
-        "/projects/modern-villa-kandy-2.jpg",
-        "/projects/modern-villa-kandy-3.jpg",
+        "/projects/lhd2.jpg",
+      ]
+    },
+    {
+      id: "Modern NGO Office Building ",
+      title: "Modern NGO Office Building ",
+      location: "Beruwala",
+      price: "RS.49.2M",
+      description: "A professionally designed 4,772 sq.ft commercial facility showcasing our expertise in institutional construction.",
+      images: [
+        "/projects/ngo1.jpg",
       ],
     },
     {
-      id: "house-mirigama",
-      title: "House Project - Mirigama",
-      location: "Mirigama",
-      area: "SQFT - 2534",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      id: "Quality Family Residence",
+      title: "Quality Family Residence",
+      location: "Homagama",
+      price: "RS.23M",
+      description: "A beautifully crafted 2,612 sq.ft family home delivering exceptional value and quality.",
       images: [
-        "/projects/contemporary-house-mirigama.jpg",
-        "/projects/house-mirigama-2.jpg",
-        "/projects/house-mirigama-3.jpg",
-      ],
-    },
-    {
-      id: "luxury-colombo",
-      title: "Luxury Residence - Colombo",
-      location: "Colombo 7",
-      area: "SQFT - 3200",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      images: [
-        "/projects/luxury-residence-colombo.jpg",
-        "/projects/luxury-colombo-2.jpg",
-        "/projects/luxury-colombo-3.jpg",
+        "/projects/frh.jpg",
       ],
     },
   ];
@@ -105,7 +99,7 @@ export function ProjectsDesktop() {
                       {projects[0].title}
                     </h3>
                     <p className="self-stretch text-[#C2C2C2] text-[16px] font-medium leading-5">
-                      {projects[0].location} | {projects[0].area}
+                      {projects[0].location} | {projects[0].price}
                     </p>
                   </div>
                 </div>
@@ -145,7 +139,7 @@ export function ProjectsDesktop() {
                       {projects[1].title}
                     </h3>
                     <p className="self-stretch text-[#C2C2C2] text-[16px] font-medium leading-5">
-                      {projects[1].location} | {projects[1].area}
+                      {projects[1].location} | {projects[1].price}
                     </p>
                   </div>
                   <p className="self-stretch text-[#C2C2C2] text-[16px] font-medium leading-5">
@@ -189,7 +183,7 @@ export function ProjectsDesktop() {
                     {projects[2].title}
                   </h3>
                   <p className="self-stretch text-[#C2C2C2] text-[16px] font-medium leading-5">
-                    {projects[2].location} | {projects[2].area}
+                    {projects[2].location} | {projects[2].price}
                   </p>
                 </div>
                 <p className="self-stretch text-[#C2C2C2] text-[16px] font-medium leading-5">

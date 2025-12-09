@@ -33,7 +33,7 @@ function ServiceCard({ imagePath, title, height }: ServiceCardProps) {
       />
 
       {/* Title - Bottom Aligned */}
-      <div className="absolute inset-0 px-10 flex items-end justify-center pb-12 px-4">
+      <div className="absolute inset-0 px-6 flex items-end justify-center pb-12 px-4">
         <span className="text-white text-2xl font-medium leading-6 text-center">
           {title}
         </span>
@@ -50,7 +50,7 @@ export function ServicesDesktop() {
         <div className="w-full flex flex-col items-center gap-2.5 mb-12">
           {/* Label */}
           <div className="self-stretch text-center text-[#7CB342] text-xl font-normal leading-5 tracking-[-0.05rem]">
-            OUR SERVICES
+            COMPREHENSIVE SERVICES
           </div>
 
           {/* Title */}
@@ -65,11 +65,8 @@ export function ServicesDesktop() {
 
           {/* Description */}
           <p className="self-stretch text-center text-[rgba(26,26,26,0.75)] text-base font-medium leading-5 tracking-[-0.04rem]">
-            With our proven track record of excellence, we are committed to
-            creating strategic and innovative designing and construction
-            solutions for our clients that match their unique lifestyles. As Sri
-            Lanka&apos;s number 1 choice for the construction service provider,
-            our services are executed to exceed the expectations of the clients.
+            Janco Home & Construction offers end-to-end building solutions that eliminate the stress of coordinating multiple contractors.
+            From initial concept to final key handover, we manage every aspect of your construction project with seamless integration and professional oversight.
           </p>
         </div>
 
@@ -78,27 +75,26 @@ export function ServicesDesktop() {
           {/* Column 1 - Width 285px */}
           <div className="w-[285px] flex flex-col gap-6">
             <ServiceCard
-              imagePath="/services/Architectural Designing.png"
-              title="Architectural Designing"
+              imagePath="/services/house constructions-min.jpg"
+              title="Residential House Construction"
               height={320}
             />
             <ServiceCard
-              imagePath="/services/Structural Designing.png"
-              title="Structural Designing"
+                imagePath="/services/commercial construction.jpg"
+                title="Commercial Building Construction"
               height={360}
             />
           </div>
-
           {/* Column 2 - Width 285px */}
           <div className="w-[285px] flex flex-col gap-6">
             <ServiceCard
-              imagePath="/services/Quantity Surveying.png"
-              title="Quantity Surveying"
+              imagePath="/services/architec design.jpg"
+              title="Architectural Design "
               height={380}
             />
             <ServiceCard
-              imagePath="/services/Interior Designing.png"
-              title="Interior Designing"
+              imagePath="/services/interior design.jpg"
+              title="Interior Design "
               height={380}
             />
           </div>
@@ -106,13 +102,13 @@ export function ServicesDesktop() {
           {/* Column 3 - Width 285px */}
           <div className="w-[285px] flex flex-col gap-6">
             <ServiceCard
-              imagePath="/services/Renovation.png"
-              title="Renovation"
+              imagePath="/services/renovation.jpg"
+              title="Renovation & Extension "
               height={370}
             />
             <ServiceCard
-              imagePath="/services/Construction.png"
-              title="Construction"
+              imagePath="/services/commercial renovation.jpg"
+              title="Commercial Renovations"
               height={340}
             />
           </div>
@@ -120,13 +116,13 @@ export function ServicesDesktop() {
           {/* Column 4 - Width 282px */}
           <div className="w-[282px] flex flex-col gap-6">
             <ServiceCard
-              imagePath="/services/Land Development.png"
-              title="Land Development"
+              imagePath="/services/pm.jpg"
+              title="Project management"
               height={390}
             />
             <ServiceCard
-              imagePath="/services/Surveying.png"
-              title="Surveying"
+              imagePath="/services/approvals.jpg"
+              title="Approvals & Documentation"
               height={300}
             />
           </div>

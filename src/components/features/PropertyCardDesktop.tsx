@@ -155,57 +155,57 @@ export default function PropertyCardDesktop({ property, onContactClick }: Proper
             </div>
           </div>
 
-          {/* Features (Bedrooms, Bathrooms, Sqft) */}
-          <div className="self-stretch h-8 border-b border-ash inline-flex items-center justify-start gap-4">
+            {/* Features (Bedrooms, Bathrooms, Sqft) */}
+            {/* <div className="self-stretch h-8 border-b border-ash inline-flex items-center justify-start gap-4">
             {/* Bedrooms */}
-            <div className="w-[29.05px] h-5 flex items-center justify-start gap-1">
+            {/* <div className="w-[29.05px] h-5 flex items-center justify-start gap-1">
               <div className="w-[29px] flex items-center justify-between">
-                <div className="w-4 h-4 relative">
-                  <HugeiconsIcon
-                    icon={BedIcon}
-                    size={16}
-                    color="#7CB342"
-                    strokeWidth={1.5}
-                  />
-                </div>
-                <div className="text-secondary text-sm leading-[14px]" style={{ fontWeight: 400 }}>
-                  {property.bedrooms}
-                </div>
+              <div className="w-4 h-4 relative">
+                <HugeiconsIcon
+                icon={BedIcon}
+                size={16}
+                color="#7CB342"
+                strokeWidth={1.5}
+                />
+              </div>
+              <div className="text-secondary text-sm leading-[14px]" style={{ fontWeight: 400 }}>
+                {property.bedrooms}
+              </div>
               </div>
             </div>
 
             {/* Bathrooms */}
-            <div className="w-[29.05px] h-5 flex items-center justify-start gap-1">
+            {/* <div className="w-[29.05px] h-5 flex items-center justify-start gap-1">
               <div className="w-[29px] flex items-center justify-between">
-                <div className="w-4 h-4 relative">
-                  <HugeiconsIcon
-                    icon={Bathtub01Icon}
-                    size={16}
-                    color="#7CB342"
-                    strokeWidth={1.5}
-                  />
-                </div>
-                <div className="text-secondary text-sm leading-[14px]" style={{ fontWeight: 400 }}>
-                  {property.bathrooms}
-                </div>
+              <div className="w-4 h-4 relative">
+                <HugeiconsIcon
+                icon={Bathtub01Icon}
+                size={16}
+                color="#7CB342"
+                strokeWidth={1.5}
+                />
+              </div>
+              <div className="text-secondary text-sm leading-[14px]" style={{ fontWeight: 400 }}>
+                {property.bathrooms}
+              </div>
               </div>
             </div>
 
             {/* Square Feet */}
-            <div className="flex items-center justify-start gap-1">
+            {/* <div className="flex items-center justify-start gap-1">
               <div className="w-4 h-4 relative">
-                <HugeiconsIcon
-                  icon={SchemeIcon}
-                  size={16}
-                  color="#7CB342"
-                  strokeWidth={1.5}
-                />
+              <HugeiconsIcon
+                icon={SchemeIcon}
+                size={16}
+                color="#7CB342"
+                strokeWidth={1.5}
+              />
               </div>
               <div className="text-secondary text-sm leading-[14px]" style={{ fontWeight: 400 }}>
-                {property.sqft}
+              {property.sqft}
               </div>
             </div>
-          </div>
+            </div> */}
         </div>
 
         {/* Contact Button */}

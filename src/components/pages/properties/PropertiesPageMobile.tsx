@@ -89,8 +89,8 @@ export function PropertiesPageMobile({
                 <span className="text-primary">Real Estate</span>
               </h1>
               <p className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] text-[14px] font-medium leading-[14px] text-ash">
-                Janco Home & Construction. Each residence represents our
-                commitment to quality and excellence.
+                At Janco Real Estate, we specialize in acquiring prime land locations across Sri Lanka and transforming them into fully developed residential land plots ready for immediate construction. 
+                We provide surveyed, subdivided land plots with complete infrastructure—electricity connections, water supply, proper road access, and clear legal documentation.
               </p>
             </div>
           </div>

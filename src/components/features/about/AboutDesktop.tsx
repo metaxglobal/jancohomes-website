@@ -80,9 +80,11 @@ export function AboutDesktop() {
                 {/* Description */}
                 <div className="flex items-center justify-start">
                   <p className="w-[497px] text-[rgba(26,26,26,0.75)] text-base font-medium leading-5 tracking-[-0.04rem]">
-                    With 20 years of industry experience, Janco Home & Construction has established itself as a premier construction and real estate company in Sri Lanka. We blend design innovation, engineering excellence, and craftsmanship to create structures that stand the test of time.
+                    Premier House Builders in Sri Lanka - Your Dream Home Deserves the Best
                     <br /><br />
-                    Our commitment to quality and attention to detail, combined with our team of qualified professionals, has made us one of Sri Lanka&apos;s most trusted construction partners.
+                    At Janco Homes & Construction, we don't just build houses—we create homes where memories are made. 
+                    As one of Sri Lanka's most reliable construction companies, we bring meticulous attention to detail, unwavering commitment to quality, and a client-first approach to every residential and commercial building project. 
+                    From luxury villa construction in Colombo to family homes across the island, our expertise as ICTAD-registered contractors ensures your construction journey is seamless, transparent, and exceptional.
                   </p>
                 </div>
               </div>
@@ -127,13 +129,13 @@ export function AboutDesktop() {
           </div>
           <div className="w-[202px] flex flex-col items-center gap-2">
             <span className="text-center text-[rgba(26,26,26,0.75)] text-xs font-normal leading-4">
-              20 Years of
+              20+ Years
             </span>
             <span className="text-center text-[#1A1A1A] text-base font-medium leading-5">
               Industry Experience
             </span>
             <span className="w-[202px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
-              Two decades of construction excellence
+              Two decades of building quality homes across Sri Lanka.
             </span>
           </div>
         </div>
@@ -153,13 +155,13 @@ export function AboutDesktop() {
           </div>
           <div className="self-stretch flex flex-col items-center gap-2">
             <span className="text-center text-[rgba(26,26,26,0.75)] text-xs font-normal leading-4">
-              Completion of
+              Portfolio of 
             </span>
             <span className="text-center text-[#1A1A1A] text-base font-medium leading-5">
-              100+ Projects
+              100+ Happy Clients
             </span>
             <span className="w-[203px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
-              Successfully delivered projects
+              DDiverse building portfolio of Success Stories Across Sri Lanka
             </span>
           </div>
         </div>
@@ -179,13 +181,13 @@ export function AboutDesktop() {
           </div>
           <div className="self-stretch flex flex-col items-center gap-2">
             <span className="text-center text-[rgba(26,26,26,0.75)] text-xs font-normal leading-4">
-              Using Only
+              Expert Team
             </span>
             <span className="text-center text-[#1A1A1A] text-base font-medium leading-5">
-              Qualified Professionals
+              Licensed Professionals
             </span>
             <span className="w-[188px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
-              Expert team members
+              ICTAD-registered contractors and experienced civil engineers
             </span>
           </div>
         </div>
@@ -205,13 +207,13 @@ export function AboutDesktop() {
           </div>
           <div className="self-stretch flex flex-col items-center gap-2">
             <span className="text-center text-[rgba(26,26,26,0.75)] text-xs font-normal leading-4">
-              Trusted
+              Comprehensive Services
             </span>
             <span className="text-center text-[#1A1A1A] text-base font-medium leading-5">
-              Service
+              Full turn-key solutions 
             </span>
             <span className="w-[188px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
-              Reliable and dependable
+              Design, construction, approvals & project management
             </span>
           </div>
         </div>

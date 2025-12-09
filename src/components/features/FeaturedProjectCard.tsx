@@ -3,13 +3,13 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Location04Icon, SchemeIcon } from "@hugeicons/core-free-icons";
+import { Location04Icon, Dollar01Icon } from "@hugeicons/core-free-icons";
 
 interface FeaturedProjectCardProps {
   id: string;
   title: string;
   location: string;
-  area: string;
+  price: string;
   description: string;
   images: string[];
 }
@@ -17,7 +17,7 @@ interface FeaturedProjectCardProps {
 export default function FeaturedProjectCard({
   title,
   location,
-  area,
+  price,
   description,
   images,
 }: FeaturedProjectCardProps) {
@@ -123,16 +123,16 @@ export default function FeaturedProjectCard({
                   </span>
                 </div>
 
-                {/* Area */}
+                {/* Price */}
                 <div className="flex items-center gap-1">
                   <HugeiconsIcon
-                    icon={SchemeIcon}
+                    icon={Dollar01Icon}
                     size={16}
                     color="#7CB342"
                     strokeWidth={1.5}
                   />
                   <span className="text-[14px] font-medium leading-[14px] text-secondary">
-                    {area}
+                    {price}
                   </span>
                 </div>
               </div>

@@ -8,7 +8,7 @@ interface ProjectCardProps {
   imagePath: string;
   title: string;
   location: string;
-  sqft: string;
+  price: string;
 }
 
 function ProjectCard({
@@ -16,7 +16,7 @@ function ProjectCard({
   imagePath,
   title,
   location,
-  sqft,
+  price,
 }: ProjectCardProps) {
   return (
     <div
@@ -43,9 +43,9 @@ function ProjectCard({
             <div className="self-stretch text-white text-[22px] font-medium leading-6">
               {title}
             </div>
-            {/* Location & SQFT */}
+            {/* Location & Price */}
             <div className="self-stretch text-ash text-sm font-medium leading-[14px]">
-              {location} | SQFT - {sqft}
+              {location} | {price}
             </div>
           </div>
         </div>
@@ -77,18 +77,25 @@ function ProjectCard({
 export function ProjectsMobile() {
   const projects = [
     {
-      id: "modern-villa-kandy",
-      imagePath: "/projects/project 1.jpg",
-      title: "Modern Villa - Kandy",
-      location: "Kandy",
-      sqft: "2800",
+      id: "luxury-home-dehiwala",
+      imagePath: "/projects/lhd2.jpg",
+      title: "Luxury Home",
+      location: "Dehiwala",
+      price: "RS.27.7M",
     },
     {
-      id: "house-project-mirigama",
-      imagePath: "/projects/project 2.jpg",
-      title: "House Project - Mirigama",
-      location: "Mirigama",
-      sqft: "2800",
+      id: "modern-ngo-office",
+      imagePath: "/projects/ngo1.jpg",
+      title: "Modern NGO Office Building",
+      location: "Beruwala",
+      price: "RS.49.2M",
+    },
+    {
+      id: "quality-family-residence",
+      imagePath: "/projects/frh.jpg",
+      title: "Quality Family Residence",
+      location: "Homagama",
+      price: "RS.23M",
     },
   ];
 
@@ -146,7 +153,7 @@ export function ProjectsMobile() {
             imagePath={project.imagePath}
             title={project.title}
             location={project.location}
-            sqft={project.sqft}
+            price={project.price}
           />
         ))}
       </div>

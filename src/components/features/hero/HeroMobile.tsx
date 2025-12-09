@@ -54,23 +54,21 @@ export function HeroMobile() {
 
             {/* Main Heading */}
             <div className="self-stretch">
-              <span className="text-white text-[40px] font-medium leading-9 tracking-[-3px]">
-                Building the{" "}
+              <span className="text-white text-[32px] sm:text-[40px] font-medium leading-[34px] sm:leading-9 tracking-[-2px]">
+                Leading House{" "}
               </span>
-              <span className="text-primary text-[40px] font-medium leading-9 tracking-[-3px] whitespace-nowrap">
-                Future of
+              <span className="text-primary text-[32px] sm:text-[40px] font-medium leading-[34px] sm:leading-9 tracking-[-2px]">
+                Construction Company
               </span>
               <br />
-              <span className="text-primary text-[40px] font-medium leading-9 tracking-[-3px]">
-                Construction
+              <span className="text-primary text-[32px] sm:text-[40px] font-medium leading-[34px] sm:leading-9 tracking-[-2px]">
+                in Sri Lanka
               </span>
             </div>
 
             {/* Description */}
             <div className="self-stretch text-ash text-sm font-medium leading-[14px]">
-              With 20 years of excellence, we transform architectural visions
-              into reality through precision engineering and innovative design
-              solutions.
+              Build your dream home with Janco Homes – 20+ years of trusted experience in residential construction and turn-key solutions across Sri Lanka
             </div>
           </div>
 

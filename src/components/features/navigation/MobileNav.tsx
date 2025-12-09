@@ -203,7 +203,7 @@ export function MobileNav() {
               className="inline-flex items-center justify-center gap-2 px-5 py-[10px] bg-primary rounded-xl"
             >
               <span className="text-white text-base font-medium leading-5">
-                Book a free consultation
+                Book your free consultation
               </span>
               <div className="w-5 h-5 relative overflow-hidden">
                 <HugeiconsIcon

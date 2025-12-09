@@ -21,7 +21,7 @@ interface Project {
   id: string;
   title: string;
   location: string;
-  area: string;
+  price: string;
   description: string;
   images: string[];
 }

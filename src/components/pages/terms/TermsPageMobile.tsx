@@ -64,7 +64,7 @@ export default function TermsPageMobile() {
               </p>
               <div className="flex w-[270px] items-center gap-2">
                 <HugeiconsIcon icon={ReloadIcon} size={20} color="#7CB342" strokeWidth={1.5} />
-                <span className="text-sm leading-[14px] text-ash">Effective Date: November 11, 2025</span>
+                <span className="text-sm leading-[14px] text-ash">Last Updated: December 2025</span>
               </div>
             </div>
           </div>
@@ -73,137 +73,134 @@ export default function TermsPageMobile() {
         {/* Terms Content */}
         <section className="flex justify-center px-4 py-12">
           <div className="flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] mx-auto flex-col gap-10">
-            {/* Introduction */}
+            {/* About This Website */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Introduction</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">About This Website</h2>
               <div className="flex flex-col gap-3">
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  Welcome to Janco Home & Construction ("we," "our," or "us"). By accessing or using our website (www.jancohomeconstruction.lk) and related services, you agree to comply with and be bound by these Terms and Conditions.
-                </p>
-                <p className="text-sm leading-[14px] text-secondary/75">
-                  If you do not agree, please do not use our website or services.
+                  This website is owned and operated by Janco Home & Construction. By using this website, you agree to comply with these Terms and Conditions. If you disagree with any part of these terms, please refrain from using our website.
                 </p>
               </div>
             </div>
 
-            {/* Scope of Service */}
+            {/* Acceptance of Terms */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Scope of Service</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Acceptance of Terms</h2>
               <p className="text-sm leading-[14px] text-secondary/75">
-                Janco Home & Construction provides information about our construction, renovation, and real estate services through this website. All details, images, and descriptions are for general informational purposes only and are subject to change without prior notice.
+                By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. We may update these terms at any time without prior notice.
               </p>
             </div>
 
-            {/* User Responsibilities */}
+            {/* Privacy Policy */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">User Responsibilities</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Privacy Policy</h2>
               <div className="flex flex-col gap-3">
-                <p className="text-sm leading-[14px] text-secondary/75">By using our website, you agree to:</p>
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  Provide accurate and truthful information when submitting an inquiry form or contacting us.<br />
-                  Use the website only for lawful purposes and in accordance with applicable laws of Sri Lanka.<br />
-                  Not attempt to disrupt, damage, or gain unauthorized access to our website or data.
+                  Your use of this website is also governed by our Privacy Policy. Please review our Privacy Policy to understand our practices.
                 </p>
               </div>
             </div>
 
-            {/* Intellectual Property Rights */}
+            {/* Construction and Related Services */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Intellectual Property Rights</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Construction and Related Services</h2>
               <p className="text-sm leading-[14px] text-secondary/75">
-                All content on this website—including text, images, designs, logos, and graphics—is the exclusive property of Janco Home & Construction or its respective licensors. You may not copy, modify, distribute, or reproduce any part of the site without prior written permission.
+                Janco Home & Construction offers a variety of construction-related services. Any service agreements, quotations, or contracts are subject to separate terms and conditions specific to the service being provided.
               </p>
             </div>
 
-            {/* Project Information & Estimates */}
+            {/* Use of Website Content */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Project Information & Estimates</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Use of Website Content</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of Janco Home & Construction or its content suppliers and is protected by international copyright laws. Unauthorized use may violate copyright, trademark, and other laws.
+                </p>
+              </div>
+            </div>
+
+            {/* Copyright and Intellectual Property */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Copyright and Intellectual Property</h2>
               <p className="text-sm leading-[14px] text-secondary/75">
-                Any cost estimates, project details, or proposals shared through this website or via email are indicative and subject to revision after site evaluation and discussion. Final project costs, timelines, and specifications will be confirmed through a formal contract or written agreement.
+                Unless otherwise stated, Janco Home & Construction and/or its licensors own the intellectual property rights for all material on this website. All intellectual property rights are reserved. You may view and/or print pages from the website for your own personal use subject to restrictions set in these terms and conditions.
               </p>
             </div>
 
-            {/* Third-Party Links */}
+            {/* Disclaimers */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Third-Party Links</h2>
-              <p className="text-sm leading-[14px] text-secondary/75">
-                Our website may include links to external websites for your convenience (e.g., social media, partner pages). We are not responsible for the content, accuracy, or privacy practices of third-party websites.
-              </p>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Disclaimers</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  The information on this website is provided on an "as-is" basis. Janco Home & Construction makes no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability of the information, products, services, or related graphics contained on the website for any purpose.
+                </p>
+              </div>
             </div>
 
             {/* Limitation of Liability */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Limitation of Liability</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Limitation of Liability</h2>
               <div className="flex flex-col gap-3">
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  While we strive to keep all information accurate and up to date, Janco Home & Construction is not liable for:
-                </p>
-                <p className="text-sm leading-[14px] text-secondary/75">
-                  Any direct, indirect, or incidental damages arising from the use of our website.<br />
-                  Technical issues, interruptions, or temporary unavailability of the website.<br />
-                  Any reliance placed on information or materials on this site.
+                  In no event will Janco Home & Construction be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.
                 </p>
               </div>
             </div>
 
-            {/* Privacy & Data Protection */}
+            {/* Indemnification */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Privacy & Data Protection</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Indemnification</h2>
+              <p className="text-sm leading-[14px] text-secondary/75">
+                You agree to indemnify and hold harmless Janco Home & Construction and its affiliates, officers, directors, employees, and agents from any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your use of the website, your violation of these Terms and Conditions, or your violation of any rights of another.
+              </p>
+            </div>
+
+            {/* Dispute Resolution */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Dispute Resolution</h2>
               <div className="flex flex-col gap-3">
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your personal data. By using our website, you consent to the collection and use of information as described in that policy.
+                  Any disputes arising out of or relating to these Terms and Conditions or the use of the website shall be resolved through good faith negotiations. If a resolution cannot be reached, the dispute shall be subject to the exclusive jurisdiction of the courts of Sri Lanka.
                 </p>
-                <Link href="/privacy" className="inline-flex items-center gap-2 rounded-xl pr-5">
-                  <span className="text-base font-medium leading-5 text-primary">View our Privacy Policy</span>
-                  <HugeiconsIcon icon={ArrowDownRight01Icon} size={20} color="#7CB342" strokeWidth={1.5} />
-                </Link>
               </div>
             </div>
 
-            {/* Communication */}
+            {/* Governing Law */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Communication</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Governing Law</h2>
               <p className="text-sm leading-[14px] text-secondary/75">
-                Our website may contain links to external sites. We are not responsible for the privacy practices or content of those third-party websites.
+                These Terms and Conditions are governed by and construed in accordance with the laws of Sri Lanka. You irrevocably submit to the exclusive jurisdiction of the courts in that location.
               </p>
             </div>
 
-            {/* Governing Law & Jurisdiction */}
+            {/* Termination */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Governing Law & Jurisdiction</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Termination</h2>
               <p className="text-sm leading-[14px] text-secondary/75">
-                We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.
-              </p>
-            </div>
-
-            {/* Changes to These Terms */}
-            <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Changes to These Terms</h2>
-              <p className="text-sm leading-[14px] text-secondary/75">
-                We may update these Terms and Conditions from time to time. The updated version will be posted on this page with a revised "Effective Date." Continued use of our website after any updates constitutes acceptance of the revised Terms.
+                We may terminate or suspend access to our website immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms and Conditions.
               </p>
             </div>
 
             {/* Contact Us */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-2xl font-medium leading-6 text-secondary">Contact Us</h2>
+              <h2 className="text-2xl font-medium leading-6 tracking-tight text-secondary">Contact Us</h2>
               <p className="text-sm leading-[14px] text-secondary/75">
-                If you have any questions or concerns about this Privacy Policy, please contact us at:
+                If you have any questions about these Terms and Conditions, please contact us:
               </p>
               <div className="flex flex-col gap-6 rounded-[22px] border border-ash bg-gradient-to-b from-primary to-[#689F38] p-5">
-                <h3 className="text-2xl font-medium leading-6 text-white">Janco Home & Construction</h3>
+                <h3 className="text-2xl font-medium leading-6 text-white">Janco Home & Construction pvt Ltd</h3>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-3">
                     <HugeiconsIcon icon={CallingIcon} size={24} color="white" strokeWidth={1.5} />
-                    <span className="text-base font-medium leading-5 text-white">+94 11 234 5678</span>
+                    <span className="text-base font-medium leading-5 text-white">0112 090 090</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <HugeiconsIcon icon={Mail01Icon} size={24} color="white" strokeWidth={1.5} />
-                    <span className="text-base font-medium leading-5 text-white">info@jancohomeconstruction.lk</span>
+                    <span className="text-base font-medium leading-5 text-white">jancohomearch@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <HugeiconsIcon icon={InternetIcon} size={24} color="white" strokeWidth={1.5} />
-                    <span className="text-base font-medium leading-5 text-white">www.jancohomeconstruction.lk</span>
+                    <span className="text-base font-medium leading-5 text-white">www.jancohomes.com</span>
                   </div>
                 </div>
               </div>

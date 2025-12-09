@@ -50,7 +50,7 @@ export function PropertiesPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[180px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center gap-2">
               <Link
@@ -84,10 +84,10 @@ export function PropertiesPageDesktop({
                 <span className="text-white">Janco </span>
                 <span className="text-[#7CB342]">Real Estate</span>
               </h1>
-              <p className="w-[760px] text-[16px] font-medium leading-5 tracking-tight text-ash">
-                Discover exclusive premium properties developed and curated by
-                Janco Home & Construction. Each residence represents our
-                commitment to quality and excellence.
+              <p className="w-[960px] text-[16px] font-medium leading-5 tracking-tight text-ash">
+                At Janco Real Estate, we specialize in acquiring prime land locations across Sri Lanka and transforming them into fully developed residential land plots ready for immediate construction. 
+                Unlike raw land sales, we provide surveyed, subdivided land plots with complete infrastructure—electricity connections, water supply, proper road access, 
+                and clear legal documentation—making your home building journey effortless and secure.
               </p>
             </div>
           </div>

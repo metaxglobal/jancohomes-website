@@ -118,8 +118,8 @@ export function TestimonialsMobile() {
     {
       id: "testimonial-2",
       quote:
-        '"Working with Janco was an absolute pleasure. Their expertise in construction and project management ensured everything ran smoothly. We highly recommend them to anyone looking for quality construction services."',
-      name: "Nimal Fernando",
+        '"Working with Janco was a fantastic experience. Their 20 years of expertise truly shows in every aspect of their work. From initial design to final handover, everything was handled with utmost professionalism. Highly recommended!"',
+      name: "Sanduni Perera",
       location: "Kandy",
       image: "/client image.jpg",
       rating: 5,
@@ -127,8 +127,8 @@ export function TestimonialsMobile() {
     {
       id: "testimonial-3",
       quote:
-        '"The professionalism and dedication of the Janco team exceeded our expectations. They delivered a beautiful home that perfectly matches our requirements. Thank you for making our dream come true!"',
-      name: "Sunil Perera",
+        '"I have worked with Janco on multiple projects, and they never disappoint. Their innovative approach to construction and real estate solutions has helped us deliver exceptional properties. A truly reliable partner."',
+      name: "Rohan Fernando",
       location: "Galle",
       image: "/client image.jpg",
       rating: 5,

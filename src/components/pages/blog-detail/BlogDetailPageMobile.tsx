@@ -32,7 +32,18 @@ interface BlogArticle {
     role: string;
     avatar: string;
   };
-  content: string;
+  content: string | {
+    intro?: string;
+    sections?: Array<{
+      title: string;
+      content: string;
+      subsections?: Array<{
+        title: string;
+        content: string;
+      }>;
+    }>;
+    conclusion?: string;
+  };
 }
 
 interface BlogDetailPageMobileProps {
@@ -135,7 +146,7 @@ export function BlogDetailPageMobile({
               }}
             >
               {/* Title */}
-              <h1 className="w-[321px] text-[40px] font-medium leading-9 tracking-[-2px] text-white">
+              <h1 className="w-[321px] text-[24px] font-medium leading-9 tracking-[-2px] text-white">
                 {article.title}
               </h1>
 
@@ -182,35 +193,75 @@ export function BlogDetailPageMobile({
           <div className="flex flex-col items-start justify-center gap-14">
             <div className="flex items-start justify-start gap-[73px]">
               <div className="flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex-col gap-10">
-                {/* Quote Block */}
-                <div className="flex items-center justify-start gap-[10px] border-l-[3px] border-primary bg-[#F7F7F7] p-5">
-                  <p className="w-[321px] text-[14px] font-medium leading-[14px] text-secondary/75">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
+                {/* Render Introduction Quote if structured content */}
+                {typeof article.content === 'object' && article.content.intro && (
+                  <div className="flex items-center justify-start gap-[10px] border-l-[3px] border-primary bg-[#F7F7F7] p-5">
+                    <p className="w-full text-[14px] font-medium leading-5 text-secondary/75 whitespace-pre-line">
+                      {article.content.intro}
+                    </p>
+                  </div>
+                )}
 
                 {/* Content Section */}
                 <div className="flex flex-col gap-6">
-                  <div className="flex flex-col gap-6">
-                    <h2 className="text-[24px] font-medium leading-6 text-secondary">
-                      Lorem ipsum dolor sit amet
-                    </h2>
-                    <p className="text-[14px] font-normal leading-[14px] text-secondary">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div>
+                  {typeof article.content === 'object' && article.content.sections ? (
+                    <>
+                      {article.content.sections.map((section, sectionIndex) => (
+                        <div key={sectionIndex} className="flex flex-col gap-6">
+                          {/* Section Title */}
+                          <h2 className="text-[24px] font-medium leading-6 tracking-tight text-secondary">
+                            {section.title}
+                          </h2>
+                          
+                          {/* Section Content */}
+                          <div className="text-[14px] font-normal leading-5 text-secondary whitespace-pre-line">
+                            {section.content}
+                          </div>
+
+                          {/* Subsections */}
+                          {section.subsections && section.subsections.map((subsection, subIndex) => (
+                            <div key={subIndex} className="flex flex-col gap-4 pl-4">
+                              <h3 className="text-[18px] font-medium leading-5 tracking-tight text-secondary">
+                                {subsection.title}
+                              </h3>
+                              <div className="text-[14px] font-normal leading-5 text-secondary whitespace-pre-line">
+                                {subsection.content}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+
+                      {/* Conclusion */}
+                      {article.content.conclusion && (
+                        <div className="flex flex-col gap-4">
+                          <div className="text-[14px] font-normal leading-5 text-secondary whitespace-pre-line">
+                            {article.content.conclusion}
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    /* Fallback for simple string content */
+                    <>
+                      <div className="flex items-center justify-start gap-[10px] border-l-[3px] border-primary bg-[#F7F7F7] p-5">
+                        <p className="w-full text-[14px] font-medium leading-[14px] text-secondary/75">
+                          {typeof article.content === 'string' ? article.content : ''}
+                        </p>
+                      </div>
+
+                      <div className="flex flex-col gap-6">
+                        <h2 className="text-[24px] font-medium leading-6 tracking-tight text-secondary">
+                          Lorem ipsum dolor sit amet
+                        </h2>
+                        <p className="text-[14px] font-normal leading-[14px] text-secondary">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                          sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua.
+                        </p>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

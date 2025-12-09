@@ -9,119 +9,47 @@ import type { Property } from "@/components/features/PropertyCard";
  */
 export const PROPERTIES: Property[] = [
   {
-    id: "property-luxury-villa-colombo-7",
-    title: "Modern Luxury Villa",
-    location: "Colombo 7",
+    id: "Janco Emeral Estates",
+    title: "Janco Emeral Estates",
+    location: "Polwatta, Pannipitiya",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: "LKR 85M",
+      "Exclusive residential land plots for sale in the sought-after Polawatta area, Pannipitiya. Fully developed with electricity, water, and wide road access. Close to town, schools, hospitals, and major transport routes—perfect for your dream home in a growing community.",
+    price: "2.3M PP",
     bedrooms: 4,
     bathrooms: 3,
     sqft: "3,500 sqft",
     images: [
-      "/real states/1.jpg",
-      "/real states/2.jpg",
-      "/real states/3.jpg",
+      "/real states/property1.png",
+      "/real states/property1.png",
+      "/real states/property1.png",
     ],
     whatsappNumber: "94777599299",
     whatsappMessage:
-      "Hi, I'm interested in the Modern Luxury Villa in Colombo 7. Could you please provide more details?",
+      "Hi, I'm interested in the Janco Emeral Estates, Polwatta, Pannipitiya. Could you please provide more details?",
   },
   {
-    id: "property-sky-heights-kollupitiya",
-    title: "Sky Heights Residences",
-    location: "Kollupitiya",
+    id: "Janco Serenity Acres",
+    title: "Janco Serenity Acres",
+    location: "Malabe, Sri Lanka",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: "LKR 55M",
+      "Exclusive residential land plots in the sought-after Polawatta area, Pannipitiya. Fully developed with electricity, water, and wide road access. Close to town, schools, hospitals, and major transport routes—ideal for building your dream home in a growing community.",
+    price: "Per Perch",
     bedrooms: 3,
     bathrooms: 2,
     sqft: "2,100 sqft",
     images: [
-      "/projects/modern-apartment-complex.jpg",
-      "/real states/2.jpg",
-      "/real states/3.jpg",
+      "/real states/property2.png",
+      "/real states/property2.png",
+      "/real states/property2.png",
     ],
     whatsappNumber: "94777599299",
     whatsappMessage:
-      "Hi, I'm interested in the Sky Heights Residences in Kollupitiya. Could you please provide more details?",
+      "Hi, I'm interested in the Serenity Acres, Malabe, Sri Lanka. Could you please provide more details?",
   },
-  {
-    id: "property-coastal-paradise-mount-lavinia",
-    title: "Coastal Paradise Villa",
-    location: "Mount Lavinia",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: "LKR 120M",
-    bedrooms: 5,
-    bathrooms: 4,
-    sqft: "4,200 sqft",
-    images: [
-      "/projects/luxury-estate-negombo.jpg",
-      "/projects/luxury-estate-mirigama.jpg",
-      "/projects/luxury-estate-mirigama.jpg",
-    ],
-    whatsappNumber: "94777599299",
-    whatsappMessage:
-      "Hi, I'm interested in the Coastal Paradise Villa in Mount Lavinia. Could you please provide more details?",
-  },
-  {
-    id: "property-modern-luxury-colombo-3",
-    title: "Modern Luxury Villa",
-    location: "Colombo 3",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: "LKR 85M",
-    bedrooms: 4,
-    bathrooms: 3,
-    sqft: "3,500 sqft",
-    images: [
-      "/real states/1.jpg",
-      "/real states/2.jpg",
-      "/real states/3.jpg",
-    ],
-    whatsappNumber: "94777599299",
-    whatsappMessage:
-      "Hi, I'm interested in the Modern Luxury Villa in Colombo 3. Could you please provide more details?",
-  },
-  {
-    id: "property-urban-townhouse-colombo-7",
-    title: "Urban Townhouse",
-    location: "Colombo 7",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: "LKR 55M",
-    bedrooms: 3,
-    bathrooms: 2,
-    sqft: "2,100 sqft",
-    images: [
-      "/real states/1.jpg",
-      "/real states/2.jpg",
-      "/real states/3.jpg",
-    ],
-    whatsappNumber: "94777599299",
-    whatsappMessage:
-      "Hi, I'm interested in the Urban Townhouse in Colombo 7. Could you please provide more details?",
-  },
-  {
-    id: "property-garden-estate-nugegoda",
-    title: "Garden Estate Residence",
-    location: "Nugegoda",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: "LKR 120M",
-    bedrooms: 5,
-    bathrooms: 4,
-    sqft: "4,200 sqft",
-    images: [
-      "/real states/1.jpg",
-      "/real states/2.jpg",
-      "/real states/3.jpg",
-    ],
-    whatsappNumber: "94777599299",
-    whatsappMessage:
-      "Hi, I'm interested in the Garden Estate Residence in Nugegoda. Could you please provide more details?",
-  },
+  
+  
+  
+  
 ];
 
 /**

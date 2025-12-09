@@ -55,12 +55,12 @@ export default function PrivacyPageDesktop() {
                 <span className="text-primary">Policy</span>
               </h1>
               <div className="flex flex-col gap-[13px]">
-                <p className="w-[760px] text-base font-medium leading-5 tracking-tight text-ash">
+                <p className="w-[860px] text-base font-medium leading-5 tracking-tight text-ash">
                   Your privacy is important to us. This policy explains how Janco Home & Construction collects, uses, and protects your personal information.
                 </p>
                 <div className="flex w-[270px] items-center gap-2">
                   <HugeiconsIcon icon={ReloadIcon} size={20} color="#7CB342" strokeWidth={1.5} />
-                  <span className="text-sm leading-[14px] text-ash">Last Updated: November 10, 2025</span>
+                  <span className="text-sm leading-[14px] text-ash">Last Updated: December 2025</span>
                 </div>
               </div>
             </div>
@@ -72,151 +72,299 @@ export default function PrivacyPageDesktop() {
           <div className="flex w-full max-w-[1200px] flex-col gap-10">
             {/* Introduction */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Introduction</h2>
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Introduction</h2>
               <div className="flex flex-col gap-3">
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  Welcome to Janco Home & Construction ("we," "our," or "us"). We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard the information you provide when you visit our website or contact us through online forms, WhatsApp, or other communication channels.
+                  Janco Homes and Construction Pvt Ltd ("Janco Homes," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our website (www.jancohome.lk) or use our construction and real estate services.
                 </p>
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  By using our website or submitting your information, you agree to the terms of this Privacy Policy.
+                  This Privacy Policy complies with the Personal Data Protection Act No. 9 of 2022 (PDPA) of Sri Lanka.
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  By using our website or services, you consent to the collection and use of your information as described in this Privacy Policy.
                 </p>
               </div>
             </div>
 
             {/* Information We Collect */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Information We Collect</h2>
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Information We Collect</h2>
               <div className="flex flex-col gap-3">
-                <p className="text-sm leading-[14px] text-secondary/75">We may collect the following types of information:</p>
-                <div className="text-sm leading-[14px] text-secondary">
-                  <p className="mb-3 text-base font-medium leading-5">Personal Information</p>
-                  <p className="text-secondary">
-                    Name<br />
-                    Phone number<br />
-                    Email address<br />
-                    Any additional information you provide through contact or inquiry forms
-                  </p>
-                </div>
-                <div className="text-sm leading-[14px] text-secondary">
-                  <p className="mb-3 text-base font-medium leading-5">Non-Personal Information</p>
-                  <p className="text-secondary">
-                    Browser type, device information, and operating system<br />
-                    IP address and general location<br />
-                    Website usage data collected through cookies and analytics tools (such as Google Analytics 4)
-                  </p>
-                </div>
+                <p className="text-sm leading-[14px] font-medium text-secondary">Personal Information You Provide:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">When you use our services, we may collect:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • Contact Information: Name, email address, phone numbers, WhatsApp number, residential address<br />
+                  • Identification Information: National Identity Card (NIC) number, passport number (when required)<br />
+                  • Financial Information: Bank account details for payments, income information for loan facilitation<br />
+                  • Property Information: Land ownership details, construction requirements, project preferences, budget range<br />
+                  • Documentation: Copies of NIC, land deeds, bank statements (when required for land purchases or financing)
+                </p>
+                <p className="text-sm leading-[14px] font-medium text-secondary">Information Automatically Collected:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">When you visit our website, we automatically collect:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • IP address, browser type, device type, operating system<br />
+                  • Pages visited, time spent on pages, navigation patterns<br />
+                  • General geographic location based on IP address<br />
+                  • Information collected through cookies
+                </p>
               </div>
             </div>
 
             {/* How We Use Your Information */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">How We Use Your Information</h2>
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">How We Use Your Information</h2>
               <div className="flex flex-col gap-3">
-                <p className="text-sm leading-[14px] text-secondary/75">We use the information collected to:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">We use your personal information to:</p>
+                <p className="text-sm leading-[14px] font-medium text-secondary">For Construction Services:</p>
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  Respond to your inquiries and provide requested services<br />
-                  Schedule consultations or follow up on project requests<br />
-                  Improve our website, services, and customer experience<br />
-                  Analyze web traffic and marketing performance<br />
-                  Send updates, promotions, or news (only if you opt-in)
+                  • Provide construction quotations and consultations<br />
+                  • Execute construction contracts and deliver building services<br />
+                  • Design architectural plans tailored to your requirements<br />
+                  • Communicate project updates and timelines<br />
+                  • Process payments and maintain financial records<br />
+                  • Obtain necessary building approvals and clearances<br />
+                  • Provide after-sales support and warranty services
+                </p>
+                <p className="text-sm leading-[14px] font-medium text-secondary">For Real Estate Services:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • Process land plot purchase inquiries and reservations<br />
+                  • Prepare and execute land sale agreements<br />
+                  • Facilitate legal documentation and deed transfers<br />
+                  • Arrange payment plans and bank loan facilitation
+                </p>
+                <p className="text-sm leading-[14px] font-medium text-secondary">For Customer Service:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • Respond to your inquiries and requests<br />
+                  • Schedule site visits and consultations<br />
+                  • Address complaints and resolve disputes
+                </p>
+                <p className="text-sm leading-[14px] font-medium text-secondary">For Marketing (with your consent):</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • Send newsletters and updates about new projects<br />
+                  • Inform you about promotional offers<br />
+                  • Request feedback and testimonials
                 </p>
               </div>
             </div>
 
-            {/* Cookies & Tracking */}
+            {/* Information Sharing */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Cookies & Tracking</h2>
-              <p className="text-sm leading-[14px] text-secondary/75">
-                Our website may use cookies and similar technologies to enhance user experience and analyze site performance. You can control cookie preferences through your browser settings.
-              </p>
-            </div>
-
-            {/* Data Sharing & Disclosure */}
-            <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Data Sharing & Disclosure</h2>
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Information Sharing</h2>
               <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">We may share your personal information with:</p>
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  We do not sell or rent your personal data. We may share information only with:
+                  • Service Providers: Architects, engineers, construction subcontractors, surveyors, legal advisors, and notary services (only information necessary for their work)<br />
+                  • Government Authorities: Urban Development Authority (UDA), local municipal councils, Department of Registration, Survey Department, and other authorities as required by law for building approvals and legal compliance<br />
+                  • Financial Institutions: Banks and financial companies when facilitating construction or land loans (with your consent)<br />
+                  • Legal Requirements: Law enforcement agencies if required by court order or regulatory investigations
                 </p>
+                <p className="text-sm leading-[14px] font-medium text-secondary">What We DON'T Do:</p>
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  Service providers who help operate our website (e.g., hosting, analytics, marketing platforms)<br />
-                  Legal authorities if required by law or to protect our legal rights
-                </p>
-                <p className="text-sm leading-[14px] text-secondary/75">
-                  All third-party partners comply with applicable data protection laws.
+                  We will NEVER:<br />
+                  • Sell your personal information to third parties<br />
+                  • Share your information with unrelated marketing companies<br />
+                  • Disclose your information to competitors<br />
+                  • Use your information for purposes not disclosed in this policy
                 </p>
               </div>
             </div>
 
             {/* Data Security */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Data Security</h2>
-              <p className="text-sm leading-[14px] text-secondary/75">
-                We implement reasonable technical and organizational measures to protect your information from unauthorized access, misuse, or disclosure. However, no internet transmission is 100% secure, so we cannot guarantee absolute protection.
-              </p>
-            </div>
-
-            {/* Your Rights */}
-            <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Your Rights</h2>
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Data Security</h2>
               <div className="flex flex-col gap-3">
-                <p className="text-sm leading-[14px] text-secondary/75">You have the right to:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">We implement appropriate security measures to protect your personal information:</p>
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  Request access, correction, or deletion of your personal data<br />
-                  Withdraw consent for marketing communications<br />
-                  Ask questions about how your data is handled
+                  • Secure office premises with access controls<br />
+                  • Password-protected computer systems<br />
+                  • Encrypted data transmission (SSL certificates on website)<br />
+                  • Secure backup systems for data recovery<br />
+                  • Staff training on data protection and confidentiality<br />
+                  • Limited access to personal information on need-to-know basis
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  In the event of a data breach, affected individuals will be notified without undue delay.
                 </p>
               </div>
             </div>
 
             {/* Data Retention */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Data Retention</h2>
-              <p className="text-sm leading-[14px] text-secondary/75">
-                We retain your information only as long as necessary for the purposes outlined above or as required by law.
-              </p>
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Data Retention</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">We retain your personal information as required by law:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • Construction project records: Minimum 7 years after project completion<br />
+                  • Land sale agreements: Permanently for legal records<br />
+                  • Financial records: As required by tax and accounting regulations<br />
+                  • Marketing communications: Until you unsubscribe
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  After retention periods expire, personal data is securely deleted or anonymized.
+                </p>
+              </div>
             </div>
 
-            {/* Links to Other Websites */}
+            {/* Your Privacy Rights */}
             <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Links to Other Websites</h2>
-              <p className="text-sm leading-[14px] text-secondary/75">
-                Our website may contain links to external sites. We are not responsible for the privacy practices or content of those third-party websites.
-              </p>
-            </div>
-
-            {/* Updates to This Policy */}
-            <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Updates to This Policy</h2>
-              <p className="text-sm leading-[14px] text-secondary/75">
-                We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.
-              </p>
-            </div>
-
-            {/* Contact Us */}
-            <div className="flex flex-col gap-3">
-              <h2 className="text-4xl font-medium leading-10 text-secondary">Contact Us</h2>
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Your Privacy Rights</h2>
               <div className="flex flex-col gap-3">
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  If you have any questions or concerns about this Privacy Policy, please contact us at:
+                  Under Sri Lanka's Personal Data Protection Act (PDPA), you have the right to:
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • Access: Request a copy of your personal information<br />
+                  • Correction: Request correction of inaccurate information<br />
+                  • Deletion: Request deletion of your personal information (subject to legal requirements)<br />
+                  • Objection: Object to processing of your information for marketing purposes<br />
+                  • Portability: Request your data in a structured format<br />
+                  • Withdraw Consent: Withdraw consent at any time (does not affect previous processing)
+                </p>
+                <p className="text-sm leading-[14px] font-medium text-secondary">How to Exercise Your Rights:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  Contact us at:<br />
+                  • Email: jancohomearch@gmail.com<br />
+                  • Phone: 0112 090 090<br />
+                  • Address: 458/1/1, High Level Road, Pannipitiya, Sri Lanka
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  We will respond to your request within 30 days.
+                </p>
+              </div>
+            </div>
+
+            {/* Cookies */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Cookies</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">We use cookies to improve your website experience:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • Essential Cookies: Required for website functionality<br />
+                  • Analytics Cookies: Help us understand visitor behavior (Google Analytics)<br />
+                  • Functional Cookies: Remember your preferences
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  You can control cookies through your browser settings. Disabling essential cookies may affect website functionality.
+                </p>
+              </div>
+            </div>
+
+            {/* Marketing Communications */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Marketing Communications</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  We will only send you marketing communications if you have opted in to receive them. You can unsubscribe at any time by:
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • Clicking "Unsubscribe" in our emails<br />
+                  • Replying "STOP" to SMS messages<br />
+                  • Contacting us directly
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  Note: Even if you opt out of marketing, we will still send essential service communications related to your projects.
+                </p>
+              </div>
+            </div>
+
+            {/* Photography and Project Showcase */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Photography and Project Showcase</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • We photograph completed projects for marketing and promotional purposes<br />
+                  • Project images may be used on our website, social media, and advertising materials<br />
+                  • We will not disclose your name, address, or personal details without explicit consent<br />
+                  • You may opt out of having your project photographed or showcased publicly
+                </p>
+              </div>
+            </div>
+
+            {/* Children's Privacy */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Children's Privacy</h2>
+              <p className="text-sm leading-[14px] text-secondary/75">
+                Our services are not directed at individuals under 18 years of age. We do not knowingly collect personal information from minors without parental consent.
+              </p>
+            </div>
+
+            {/* Third-Party Websites */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Third-Party Websites</h2>
+              <p className="text-sm leading-[14px] text-secondary/75">
+                Our website may contain links to third-party websites. We are not responsible for their privacy practices. Please review their privacy policies before providing personal information.
+              </p>
+            </div>
+
+            {/* Updates to This Privacy Policy */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Updates to This Privacy Policy</h2>
+              <p className="text-sm leading-[14px] text-secondary/75">
+                We may update this Privacy Policy from time to time. Updated policies will be posted on our website with the "Last Updated" date. Continued use of our services after updates constitutes acceptance of the new policy.
+              </p>
+            </div>
+
+            {/* Contact Information */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Contact Information</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  For questions about this Privacy Policy or to exercise your privacy rights, please contact:
                 </p>
                 <div className="flex h-[216px] flex-col justify-center gap-6 rounded-[22px] border border-ash bg-primary p-8">
-                  <h3 className="text-2xl font-medium leading-6 text-white">Janco Home & Construction</h3>
+                  <h3 className="text-2xl font-medium leading-6 text-white">Janco Homes and Construction Pvt Ltd</h3>
                   <div className="flex h-[104px] flex-col gap-4">
                     <div className="flex h-6 items-center gap-3">
                       <HugeiconsIcon icon={CallingIcon} size={24} color="white" strokeWidth={1.5} />
-                      <span className="text-base font-medium leading-5 text-white">+94 11 234 5678</span>
+                      <span className="text-base font-medium leading-5 text-white">0112 090 090</span>
                     </div>
                     <div className="flex h-6 items-center gap-3">
                       <HugeiconsIcon icon={Mail01Icon} size={24} color="white" strokeWidth={1.5} />
-                      <span className="text-base font-medium leading-5 text-white">info@jancohomeconstruction.lk</span>
+                      <span className="text-base font-medium leading-5 text-white">jancohomearch@gmail.com</span>
                     </div>
                     <div className="flex h-6 items-center gap-3">
                       <HugeiconsIcon icon={InternetIcon} size={24} color="white" strokeWidth={1.5} />
-                      <span className="text-base font-medium leading-5 text-white">www.jancohomeconstruction.lk</span>
+                      <span className="text-base font-medium leading-5 text-white">www.jancohomes.com</span>
                     </div>
                   </div>
                 </div>
+                <p className="text-sm leading-[18px] text-secondary/75">
+                  Privacy-Specific Matters:<br />
+                  Email: jancohomearch@gmail.com<br />
+                  Data Protection Officer: Viraj Perera<br />
+                  Office Address: 458/1/1, High Level Road, Pannipitiya, Sri Lanka
+                </p>
+              </div>
+            </div>
+
+            {/* Data Protection Authority */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Data Protection Authority</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  If you believe your privacy rights have been violated, you can file a complaint with:
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  Data Protection Authority of Sri Lanka<br />
+                  Website: www.dpa.gov.lk
+                </p>
+              </div>
+            </div>
+
+            {/* Acknowledgment */}
+            <div className="flex flex-col gap-3">
+              <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Acknowledgment</h2>
+              <div className="flex flex-col gap-3">
+                <p className="text-sm leading-[14px] text-secondary/75">By using our website or engaging our services, you acknowledge that:</p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  • You have read and understood this Privacy Policy<br />
+                  • You understand how we collect, use, and protect your personal information<br />
+                  • You consent to the processing of your data as described<br />
+                  • You understand your rights and how to exercise them
+                </p>
+                <p className="text-sm leading-[14px] text-secondary/75">
+                  Thank you for trusting Janco Homes and Construction with your personal information and your dream home project.
+                </p>
               </div>
             </div>
           </div>

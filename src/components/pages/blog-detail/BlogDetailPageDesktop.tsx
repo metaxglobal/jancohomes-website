@@ -32,7 +32,18 @@ interface BlogArticle {
     role: string;
     avatar: string;
   };
-  content: string;
+  content: string | {
+    intro?: string;
+    sections?: Array<{
+      title: string;
+      content: string;
+      subsections?: Array<{
+        title: string;
+        content: string;
+      }>;
+    }>;
+    conclusion?: string;
+  };
 }
 
 interface BlogDetailPageDesktopProps {
@@ -141,7 +152,7 @@ export function BlogDetailPageDesktop({
             >
               {/* Title */}
               <div className="inline-flex items-center justify-start gap-2.5">
-                <h1 className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-white">
+                <h1 className="text-[56px] font-medium leading-[64px] tracking-[-0.2rem] text-white">
                   {article.title}
                 </h1>
               </div>
@@ -190,68 +201,76 @@ export function BlogDetailPageDesktop({
               <div className="relative inline-flex items-start justify-start gap-[73px] self-stretch">
               {/* Article Body */}
               <div className="inline-flex w-[1098px] flex-col items-start justify-start gap-[46px]">
-                {/* Quote Block */}
-                <div className="inline-flex w-[1017px] items-center justify-start gap-2.5 border-l-[3px] border-[#7CB342] bg-[#F7F7F7] p-5">
-                  <div className="w-[997px] text-[16px] font-medium leading-5 text-secondary/75">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                {/* Render Introduction Quote if structured content */}
+                {typeof article.content === 'object' && article.content.intro && (
+                  <div className="inline-flex w-[1017px] items-center justify-start gap-2.5 border-l-[3px] border-[#7CB342] bg-[#F7F7F7] p-5">
+                    <div className="w-[997px] text-[16px] font-medium leading-5 text-secondary/75 whitespace-pre-line">
+                      {article.content.intro}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Content Sections */}
                 <div className="flex w-[1017px] flex-col items-start justify-start gap-8">
-                  {/* Section 1 */}
-                  <div className="flex flex-col items-start justify-start gap-6 self-stretch">
-                    <div className="relative h-9 w-[817.33px]">
-                      <h2 className="absolute left-0 top-1 text-[36px] font-medium leading-10 text-secondary">
-                        Lorem ipsum dolor sit amet
-                      </h2>
-                    </div>
-                    <div className="self-stretch text-[14px] font-normal leading-[14px] text-secondary">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
+                  {typeof article.content === 'object' && article.content.sections ? (
+                    <>
+                      {article.content.sections.map((section, sectionIndex) => (
+                        <div key={sectionIndex} className="flex flex-col items-start justify-start gap-6 self-stretch">
+                          {/* Section Title */}
+                          <h2 className="text-[36px] font-medium leading-10 tracking-tight text-secondary">
+                            {section.title}
+                          </h2>
+                          
+                          {/* Section Content */}
+                          <div className="self-stretch text-[14px] font-normal leading-5 text-secondary whitespace-pre-line">
+                            {section.content}
+                          </div>
 
-                  {/* Section 2 */}
-                  <div className="flex flex-col items-start justify-start gap-6 self-stretch">
-                    <div className="self-stretch text-[14px] font-normal leading-[14px] text-secondary">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.Lorem ipsum
-                      dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.Lorem ipsum
-                      dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </div>
-                  </div>
+                          {/* Subsections */}
+                          {section.subsections && section.subsections.map((subsection, subIndex) => (
+                            <div key={subIndex} className="flex flex-col items-start justify-start gap-4 self-stretch pl-6">
+                              <h3 className="text-[24px] font-medium leading-7 tracking-tight text-secondary">
+                                {subsection.title}
+                              </h3>
+                              <div className="self-stretch text-[14px] font-normal leading-5 text-secondary whitespace-pre-line">
+                                {subsection.content}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+
+                      {/* Conclusion */}
+                      {article.content.conclusion && (
+                        <div className="flex flex-col items-start justify-start gap-6 self-stretch">
+                          <div className="self-stretch text-[14px] font-normal leading-5 text-secondary whitespace-pre-line">
+                            {article.content.conclusion}
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    /* Fallback for simple string content */
+                    <>
+                      <div className="inline-flex w-[1017px] items-center justify-start gap-2.5 border-l-[3px] border-[#7CB342] bg-[#F7F7F7] p-5">
+                        <div className="w-[997px] text-[16px] font-medium leading-5 text-secondary/75">
+                          {typeof article.content === 'string' ? article.content : ''}
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col items-start justify-start gap-6 self-stretch">
+                        <h2 className="text-[36px] font-medium leading-10 tracking-tight text-secondary">
+                          Lorem ipsum dolor sit amet
+                        </h2>
+                        <div className="self-stretch text-[14px] font-normal leading-[14px] text-secondary">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                          sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                      </div>
+                    </>
+                  )}
 
                   {/* Spacer */}
                   <div className="h-[126px] self-stretch" />

@@ -42,7 +42,7 @@ function ServiceCard({ imagePath, title }: ServiceCardProps) {
         }}
       >
         <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-          <div className="w-[155px] text-center text-white text-[22px] font-medium leading-6 tracking-tight">
+          <div className="w-[150px] text-center text-white text-[16px] font-medium leading-6 tracking-tight">
             {title}
           </div>
         </div>
@@ -59,7 +59,7 @@ export function ServicesMobile() {
       <div className="w-full flex flex-col items-center justify-start gap-2">
         {/* Label */}
         <div className="self-stretch text-center text-primary text-base font-normal leading-5">
-          OUR SERVICES
+          COMPREHENSIVE SERVICES
         </div>
 
         {/* Heading and Description */}
@@ -76,13 +76,8 @@ export function ServicesMobile() {
 
           {/* Description */}
           <div className="self-stretch text-center text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
-            With our proven track record of excellence, we are committed to
-            creating strategic and innovative designing and construction
-            solutions for our clients that match their unique lifestyles.
-            <br />
-            As Sri Lanka&apos;s number 1 choice for the construction service
-            provider, our services are executed to exceed the expectations of
-            the clients.
+            Janco Home & Construction offers end-to-end building solutions that eliminate the stress of coordinating multiple contractors.
+            From initial concept to final key handover, we manage every aspect of your construction project.
           </div>
         </div>
       </div>
@@ -92,46 +87,49 @@ export function ServicesMobile() {
         {/* Row 1 */}
         <div className="self-stretch inline-flex items-start justify-between gap-5">
           <ServiceCard
-            imagePath="/services/Architectural Designing.png"
-            title="Architectural Designing"
+            imagePath="/services/house constructions-min.jpg"
+            title="Residential House Construction"
           />
           <ServiceCard
-            imagePath="/services/Quantity Surveying.png"
-            title="Quantity Surveying"
+            imagePath="/services/commercial construction.jpg"
+            title="Commercial Building Construction"
           />
         </div>
 
         {/* Row 2 */}
         <div className="self-stretch inline-flex items-start justify-between gap-5">
           <ServiceCard
-            imagePath="/services/Renovation.png"
-            title="Renovation"
+            imagePath="/services/architec design.jpg"
+            title="Architectural Design"
           />
           <ServiceCard
-            imagePath="/services/Land Development.png"
-            title="Land Development"
+            imagePath="/services/interior design.jpg"
+            title="Interior Design"
           />
         </div>
 
         {/* Row 3 */}
         <div className="self-stretch inline-flex items-start justify-between gap-5">
           <ServiceCard
-            imagePath="/services/Structural Designing.png"
-            title="Structural Designing"
+            imagePath="/services/renovation.jpg"
+            title="Renovation & Extension"
           />
           <ServiceCard
-            imagePath="/services/Interior Designing.png"
-            title="Interior Designing"
+            imagePath="/services/commercial renovation.jpg"
+            title="Commercial Renovations"
           />
         </div>
 
         {/* Row 4 */}
         <div className="self-stretch h-[210px] inline-flex items-start justify-between gap-5">
           <ServiceCard
-            imagePath="/services/Construction.png"
-            title="Construction"
+            imagePath="/services/pm.jpg"
+            title="Project Management"
           />
-          <ServiceCard imagePath="/services/Surveying.png" title="Surveying" />
+          <ServiceCard 
+            imagePath="/services/approvals.jpg" 
+            title="Approvals & Documentation" 
+          />
         </div>
       </div>
     </div>

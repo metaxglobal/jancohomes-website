@@ -40,7 +40,7 @@ export function HeroDesktop() {
         <div className="relative w-full flex items-center justify-between">
           
           {/* Left Content Section */}
-          <div className="w-[512px] flex flex-col gap-8">
+          <div className="w-[580px] xl:w-[620px] 2xl:w-[680px] flex flex-col gap-8">
             <div className="self-stretch flex flex-col gap-6">
               {/* Badge */}
               <div 
@@ -56,15 +56,15 @@ export function HeroDesktop() {
               {/* Heading & Description */}
               <div className="self-stretch flex flex-col gap-5">
                 <div>
-                  <div className="text-white text-[72px] font-medium leading-[64px] tracking-[-0.2rem]">
-                    Building the
+                  <div className="text-white text-[56px] xl:text-[58px] 2xl:text-[58px] font-medium leading-[52px] xl:leading-[58px] 2xl:leading-[64px] tracking-[-0.2rem]">
+                    Leading House
                   </div>
-                  <div className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.2rem]">
-                    Future of <br/>Construction
+                  <div className="text-[#7CB342] text-[56px] xl:text-[58px] 2xl:text-[58px] font-medium leading-[52px] xl:leading-[58px] 2xl:leading-[64px] tracking-[-0.2rem]">
+                    Construction Company <br/>in Sri Lanka
                   </div>
                 </div>
-                <p className="w-[523px] text-[#C2C2C2] text-xl font-normal leading-5 tracking-[-0.05rem]">
-                  With 20 years of excellence, we transform architectural visions into reality through precision engineering and innovative design solutions.
+                <p className="w-[523px] xl:w-[580px] 2xl:w-[640px] text-[#C2C2C2] text-xl font-normal leading-6 tracking-[-0.03rem]">
+                  Build your dream home with Janco Homes – 20+ years of trusted expertise in residential construction and turn-key solutions across Sri Lanka.
                 </p>
               </div>
             </div>

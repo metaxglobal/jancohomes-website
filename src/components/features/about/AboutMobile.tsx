@@ -63,16 +63,10 @@ export function AboutMobile() {
             {/* Description */}
             <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex items-center justify-start gap-2.5">
               <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] text-secondary/75 text-sm font-medium leading-[14px]">
-                With 20 years of industry experience, Janco Home & Construction
-                has established itself as a premier construction and real estate
-                company in Sri Lanka. We blend design innovation, engineering
-                excellence, and craftsmanship to create structures that stand
-                the test of time.
+                Premier House Builders in Sri Lanka - Your Dream Home Deserves the Best
                 <br />
                 <br />
-                Our commitment to quality and attention to detail, combined with
-                our team of qualified professionals, has made us one of Sri
-                Lanka&apos;s most trusted construction partners.
+                At Janco Homes, we don’t just build houses—we create homes. As a trusted ICTAD-registered contractor, we deliver quality, detail, and seamless construction across Sri Lanka.
               </div>
             </div>
           </div>
@@ -133,7 +127,7 @@ export function AboutMobile() {
               <div className="self-stretch flex flex-col items-center justify-center gap-2">
                 <div className="flex items-center justify-center gap-2.5">
                   <div className="text-center text-secondary/75 text-xs font-normal leading-4">
-                    20 Years of
+                    20+ Years
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2.5">
@@ -143,13 +137,13 @@ export function AboutMobile() {
                 </div>
                 <div className="self-stretch flex items-center justify-center gap-2.5">
                   <div className="w-[146px] text-center text-secondary/75 text-xs font-normal leading-4">
-                    Two decades of construction excellence
+                    Two decades of building quality homes across Sri Lanka.
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Card 2 - 100+ Projects */}
+            {/* Card 2 - 100+ Happy Clients */}
             <div
               className="flex-1 min-h-[138px] p-3 bg-white rounded-[22px] flex flex-col items-center justify-start gap-1"
               style={{
@@ -168,17 +162,17 @@ export function AboutMobile() {
               <div className="self-stretch flex flex-col items-center justify-center gap-2">
                 <div className="flex items-center justify-center gap-2.5">
                   <div className="text-center text-secondary/75 text-xs font-normal leading-4">
-                    Completion of
+                    Portfolio of
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2.5">
                   <div className="text-center text-secondary text-sm font-medium leading-[14px] tracking-tight">
-                    100+ Projects
+                    100+ Happy Clients
                   </div>
                 </div>
                 <div className="self-stretch flex items-center justify-center gap-2.5">
                   <div className="w-[147px] text-center text-secondary/75 text-xs font-normal leading-4">
-                    Successfully delivered projects
+                    Diverse building portfolio of Success Stories Across Sri Lanka
                   </div>
                 </div>
               </div>
@@ -206,17 +200,17 @@ export function AboutMobile() {
               <div className="self-stretch flex flex-col items-center justify-center gap-2">
                 <div className="flex items-center justify-center gap-2.5">
                   <div className="text-center text-secondary/75 text-xs font-normal leading-4">
-                    Using Only
+                    Expert Team
                   </div>
                 </div>
                 <div className="self-stretch flex items-center justify-center gap-2.5">
                   <div className="w-[152px] text-center text-secondary text-sm font-medium leading-[14px] tracking-tight">
-                    Qualified Professionals
+                    Licensed Professionals
                   </div>
                 </div>
                 <div className="self-stretch flex items-center justify-center gap-2.5">
                   <div className="w-[146px] text-center text-secondary/75 text-xs font-normal leading-4">
-                    Expert team members
+                    ICTAD-registered contractors with expert civil engineers.
                   </div>
                 </div>
               </div>
@@ -241,17 +235,17 @@ export function AboutMobile() {
               <div className="self-stretch flex flex-col items-center justify-center gap-2">
                 <div className="flex items-center justify-center gap-2.5">
                   <div className="text-center text-secondary/75 text-xs font-normal leading-4">
-                    Trusted
+                    Comprehensive Services
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2.5">
                   <div className="text-center text-secondary text-sm font-medium leading-[14px] tracking-tight">
-                    Service
+                    Full turn-key solutions
                   </div>
                 </div>
                 <div className="self-stretch flex items-center justify-center gap-2.5">
                   <div className="w-[145px] text-center text-secondary/75 text-xs font-normal leading-4">
-                    Reliable and dependable
+                    Design, construction, approvals & project management
                   </div>
                 </div>
               </div>

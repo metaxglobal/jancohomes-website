@@ -113,7 +113,7 @@ export function TestimonialsDesktop() {
         '"Janco transformed our vision into reality. Their attention to detail and commitment to quality is exceptional. The team was professional throughout the entire construction process, and they delivered our dream home on time and within budget."',
       name: "Pradeep Jayawardena",
       location: "Colombo 7",
-      image: "/client image.jpg",
+      image: "/person1.png",
       rating: 5,
     },
     {
@@ -122,7 +122,7 @@ export function TestimonialsDesktop() {
         '"Working with Janco was a fantastic experience. Their 20 years of expertise truly shows in every aspect of their work. From initial design to final handover, everything was handled with utmost professionalism. Highly recommended!"',
       name: "Sanduni Perera",
       location: "Kandy",
-      image: "/client image.jpg",
+      image: "/person3.png",
       rating: 5,
     },
     {
@@ -131,7 +131,7 @@ export function TestimonialsDesktop() {
         '"I have worked with Janco on multiple projects, and they never disappoint. Their innovative approach to construction and real estate solutions has helped us deliver exceptional properties. A truly reliable partner."',
       name: "Rohan Fernando",
       location: "Galle",
-      image: "/client image.jpg",
+      image: "/person2.png",
       rating: 5,
     },
   ];

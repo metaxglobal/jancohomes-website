@@ -6,12 +6,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Location04Icon, SchemeIcon } from "@hugeicons/core-free-icons";
+import { Location04Icon, Dollar01Icon } from "@hugeicons/core-free-icons";
 
 interface ProjectCardProps {
   title: string;
   location: string;
-  sqft: string;
+  price: string;
   description: string;
   images: string[];
 }
@@ -19,7 +19,7 @@ interface ProjectCardProps {
 export default function ProjectCard({
   title,
   location,
-  sqft,
+  price,
   description,
   images,
 }: ProjectCardProps) {
@@ -106,18 +106,18 @@ export default function ProjectCard({
                   </div>
                 </div>
 
-                {/* Square Feet */}
+                {/* Price */}
                 <div className="flex items-center justify-start gap-1">
                   <div className="w-4 h-4 relative">
                     <HugeiconsIcon
-                      icon={SchemeIcon}
+                      icon={Dollar01Icon}
                       size={16}
                       color="#7CB342"
                       strokeWidth={1.2}
                     />
                   </div>
                   <div className="text-secondary text-sm font-medium leading-[14px]">
-                    {sqft}
+                    {price}
                   </div>
                 </div>
               </div>
