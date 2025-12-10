@@ -84,12 +84,12 @@ export function BlogCardDesktop({
           {/* Author and CTA */}
           <div className="inline-flex items-center justify-between self-stretch">
             {/* Author Info */}
-            <div className="flex w-[145.90px] items-center justify-start gap-2">
-              <div className="inline-flex flex-col items-start justify-start overflow-hidden rounded-[16777200px]">
+            <div className="flex w-[190px] items-center justify-start gap-2">
+              <div className="inline-flex h-10 w-10 flex-col items-start justify-start overflow-hidden rounded-full">
                 <img
                   src={author.avatar}
                   alt={author.name}
-                  className="relative h-10 w-[34px] self-stretch"
+                  className="relative h-10 w-10 object-cover"
                 />
               </div>
               <div className="inline-flex flex-1 flex-col items-start justify-start gap-1">

@@ -22,22 +22,7 @@ export function HeroMobile() {
 
       {/* Main Content */}
       <div className="relative pt-[144px] px-4">
-        <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto flex flex-col items-center justify-start gap-6">
-          {/* Badge */}
-          <div
-            className="inline-flex items-center justify-start gap-2 px-5 py-[10px] rounded-xl"
-            style={{
-              background: "rgba(255, 255, 255, 0.10)",
-              outline: "1px rgba(255, 255, 255, 0.20) solid",
-              outlineOffset: "-1px",
-            }}
-          >
-            <div className="w-2 h-2 bg-primary rounded-full" />
-            <div className="flex flex-col justify-center text-primary text-sm font-normal uppercase leading-4">
-              Premium Construction Services
-            </div>
-          </div>
-
+        <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto flex flex-col items-start justify-start gap-6">
           {/* Hero Image and Text */}
           <div className="w-full flex flex-col items-center justify-start gap-3">
             {/* Hero Image */}
@@ -50,6 +35,21 @@ export function HeroMobile() {
                 className="w-[299px] h-[212px]"
                 priority
               />
+            </div>
+
+            {/* Badge */}
+            <div
+              className="inline-flex items-center justify-start gap-2 px-3 py-[8px] rounded-xl self-start"
+              style={{
+                background: "rgba(255, 255, 255, 0.10)",
+                outline: "1px rgba(255, 255, 255, 0.20) solid",
+                outlineOffset: "-1px",
+              }}
+            >
+              <div className="w-2 h-2 bg-primary rounded-full" />
+              <div className="flex flex-col justify-center text-primary text-[10px] font-normal uppercase leading-4">
+                Premium Construction Services
+              </div>
             </div>
 
             {/* Main Heading */}

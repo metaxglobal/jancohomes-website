@@ -146,7 +146,7 @@ export function BlogDetailPageMobile({
               }}
             >
               {/* Title */}
-              <h1 className="w-[321px] text-[24px] font-medium leading-9 tracking-[-2px] text-white">
+              <h1 className="w-[321px] text-[24px] font-medium leading-7 tracking-[-1.5px] text-white">
                 {article.title}
               </h1>
 

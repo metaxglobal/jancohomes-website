@@ -75,7 +75,7 @@ export default function BlogArticleCard({
           {/* Author and Read More */}
           <div className="flex items-end justify-between">
             {/* Author Info */}
-            <div className="flex h-10 w-[146px] items-center gap-2">
+            <div className="flex h-10 w-[180px] items-center gap-2">
               <div className="h-[34px] w-[34px] overflow-hidden rounded-full">
                 <Image
                   src={author.avatar}

@@ -10,13 +10,13 @@ export const blogArticles = [
     id: "house-construction-cost-sri-lanka-2025",
     title: "Complete Guide to House Construction Cost in Sri Lanka 2025 – Part 1",
     excerpt:
-      "Discover the complete breakdown of house construction costs in Sri Lanka for 2025. Learn about cost per square foot, material prices, labor costs, and budget planning tips from expert builders at Janco Homes.",
-    date: "December 9, 2025",
+       "Get a full breakdown of Sri Lanka’s 2025 house construction costs—cost per square foot, material and labor prices, plus budget tips from Janco Homes’ experts.",
     image: "/blogs/blog1.png",
+    date: "December 9, 2025",
     author: {
       name: "Viraj Perera",
       role: "Chief Executive Officer",
-      avatar: "/client image.jpg",
+      avatar: "/viraj perera.png",
     },
     content: {
       intro: `Building your dream home in Sri Lanka is an exciting journey, but understanding the financial investment required is crucial for successful planning. Whether you're constructing a modest family residence or a luxury villa, knowing the current construction costs helps you budget accurately and avoid unexpected expenses.
@@ -280,7 +280,7 @@ Contact us today for a detailed, customized quotation for your dream home projec
     author: {
       name: "Viraj Perera",
       role: "Chief Executive Officer",
-      avatar: "/client image.jpg",
+      avatar: "/viraj perera.png",
     },
     content: {
       intro: `Even after understanding the core construction costs, many first-time builders are surprised by additional expenses. At Janco Homes, we've seen how hidden costs can impact the total budget. Here's everything you need to know to avoid surprises and optimize your home construction investment.`,
@@ -688,7 +688,7 @@ Contact us today for a detailed, customized quotation tailored to your specific 
     author: {
       name: "Viraj Perera",
       role: "Chief Executive Officer",
-      avatar: "/client image.jpg",
+      avatar: "/viraj perera.png",
     },
     content: {
       intro: `Modern architecture in Sri Lanka has entered a new era—one defined by minimalism, sustainability, natural light, and smart living. With homeowners now prioritizing comfort, tropical suitability, and long-term value, design trends in 2025 showcase a perfect blend of global elegance and Sri Lankan practicality.
@@ -912,7 +912,7 @@ Ready to build your modern dream home? Contact us today for a consultation and d
     author: {
       name: "Viraj Perera",
       role: "Chief Executive Officer",
-      avatar: "/client image.jpg",
+      avatar: "/viraj perera.png",
     },
     content: {
       intro: `Sri Lankan homeowners are increasingly blending modern minimalism, natural elements, and smart living. While Part 1 explored the first five major trends, this continuation highlights the remaining groundbreaking trends shaping the island's residential architecture in 2025.
