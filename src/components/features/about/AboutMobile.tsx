@@ -210,7 +210,7 @@ export function AboutMobile() {
                 </div>
                 <div className="self-stretch flex items-center justify-center gap-2.5">
                   <div className="w-[146px] text-center text-secondary/75 text-xs font-normal leading-4">
-                    ICTAD-registered contractors with expert civil engineers.
+                    ICTAD-registered contractors and experienced civil engineers
                   </div>
                 </div>
               </div>

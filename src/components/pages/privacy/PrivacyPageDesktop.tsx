@@ -75,7 +75,7 @@ export default function PrivacyPageDesktop() {
               <h2 className="text-4xl font-medium leading-10 tracking-tight text-secondary">Introduction</h2>
               <div className="flex flex-col gap-3">
                 <p className="text-sm leading-[14px] text-secondary/75">
-                  Janco Homes and Construction Pvt Ltd ("Janco Homes," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our website (www.jancohome.lk) or use our construction and real estate services.
+                  Janco Homes and Construction Pvt Ltd ("Janco Homes," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information when you visit our website (www.jancohomes.com) or use our construction and real estate services.
                 </p>
                 <p className="text-sm leading-[14px] text-secondary/75">
                   This Privacy Policy complies with the Personal Data Protection Act No. 9 of 2022 (PDPA) of Sri Lanka.

@@ -326,7 +326,7 @@ export default function PrivacyPageMobile() {
                     </div>
                     <div className="flex items-center gap-3">
                       <HugeiconsIcon icon={InternetIcon} size={24} color="white" strokeWidth={1.5} />
-                      <span className="text-base font-medium leading-5 text-white">www.jancohome.lk</span>
+                      <span className="text-base font-medium leading-5 text-white">www.jancohomes.com</span>
                     </div>
                   </div>
                 </div>
