@@ -7,6 +7,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Calendar03Icon,
@@ -37,11 +38,15 @@ export function BlogCardDesktop({
   return (
     <div className="inline-flex w-[387px] flex-col items-start justify-start rounded-[22px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)] outline outline-1 outline-ash">
       {/* Image */}
-      <img
-        src={image}
-        alt={title}
-        className="relative h-[245px] self-stretch rounded-t-[22px]"
-      />
+      <div className="relative h-[245px] w-full overflow-hidden rounded-t-[22px]">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="387px"
+        />
+      </div>
 
       {/* Content */}
       <div className="flex flex-col items-center justify-start gap-[18px] self-stretch rounded-b-[22px] bg-white p-5">
@@ -85,11 +90,13 @@ export function BlogCardDesktop({
           <div className="inline-flex items-center justify-between self-stretch">
             {/* Author Info */}
             <div className="flex w-[190px] items-center justify-start gap-2">
-              <div className="inline-flex h-10 w-10 flex-col items-start justify-start overflow-hidden rounded-full">
-                <img
+              <div className="relative h-10 w-10 overflow-hidden rounded-full">
+                <Image
                   src={author.avatar}
                   alt={author.name}
-                  className="relative h-10 w-10 object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="40px"
                 />
               </div>
               <div className="inline-flex flex-1 flex-col items-start justify-start gap-1">
