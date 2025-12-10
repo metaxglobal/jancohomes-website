@@ -10,7 +10,7 @@ export const blogArticles = [
     id: "house-construction-cost-sri-lanka-2025",
     title: "Complete Guide to House Construction Cost in Sri Lanka 2025 – Part 1",
     excerpt:
-       "Get a full breakdown of Sri Lanka’s 2025 house construction costs—cost per square foot, material and labor prices, plus budget tips from Janco Homes’ experts.",
+       "Full breakdown of Sri Lanka’s 2025 house construction costs—cost per square foot, material and labor prices, plus budget tips from Janco Homes’ experts.",
     image: "/blogs/blog1.png",
     date: "December 9, 2025",
     author: {

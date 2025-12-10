@@ -42,7 +42,8 @@ export default function TermsPageMobile() {
           />
 
           {/* Hero Content */}
-          <div className="absolute left-4 top-36 flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex-col items-start gap-8">
+          <div className="absolute top-36 left-0 right-0 flex justify-center px-4">
+            <div className="flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex-col items-start gap-8">
             {/* Breadcrumb */}
             <div className="inline-flex h-5 items-center gap-2">
               <Link href="/" className="flex items-center gap-1">
@@ -66,6 +67,7 @@ export default function TermsPageMobile() {
                 <HugeiconsIcon icon={ReloadIcon} size={20} color="#7CB342" strokeWidth={1.5} />
                 <span className="text-sm leading-[14px] text-ash">Last Updated: December 2025</span>
               </div>
+            </div>
             </div>
           </div>
         </section>

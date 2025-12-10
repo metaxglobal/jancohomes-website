@@ -83,7 +83,7 @@ export function MobileNav() {
 
             {/* Email */}
             <a
-              href="mailto:info@janco.lk"
+              href="mailto:jancohomearch@gmail.com"
               className="flex items-center gap-[9px] h-4"
             >
               <HugeiconsIcon
@@ -93,7 +93,7 @@ export function MobileNav() {
                 strokeWidth={1}
               />
               <span className="text-ash text-xs font-normal leading-4">
-                info@janco.lk
+                jancohomearch@gmail.com
               </span>
             </a>
           </div>
