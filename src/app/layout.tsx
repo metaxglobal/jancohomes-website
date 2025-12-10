@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Janco Home & Construction" }],
   creator: "Janco Home & Construction",
   publisher: "Janco Home & Construction",
-  metadataBase: new URL("https://www.jancohomes.com"),
+  metadataBase: new URL("https://jancohomes-website.vercel.app"),
   icons: {
     icon: "/janco-logo.svg",
     shortcut: "/janco-logo.svg",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.jancohomes.com",
+    url: "https://jancohomes-website.vercel.app",
     siteName: "Janco Home & Construction",
     title: "Janco Home & Construction | Quality Home Building Services",
     description:
