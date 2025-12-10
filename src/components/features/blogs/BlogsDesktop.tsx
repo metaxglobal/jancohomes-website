@@ -98,6 +98,11 @@ export function BlogsDesktop() {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const isManualScrollRef = useRef(false); // Track manual scroll to prevent glitch
+  
+  // Mouse drag state
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const scrollLeftRef = useRef(0);
 
   // Get first 4 blog posts - show only 2 pagination dots
   const featuredBlogs = blogArticles.slice(0, 4);
@@ -139,6 +144,31 @@ export function BlogsDesktop() {
     }
   };
 
+  // Mouse drag handlers
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollContainerRef.current) return;
+    isDraggingRef.current = true;
+    startXRef.current = e.pageX - scrollContainerRef.current.offsetLeft;
+    scrollLeftRef.current = scrollContainerRef.current.scrollLeft;
+    scrollContainerRef.current.style.cursor = 'grabbing';
+    scrollContainerRef.current.style.userSelect = 'none';
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDraggingRef.current || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startXRef.current); // Multiply by 2 for faster scroll
+    scrollContainerRef.current.scrollLeft = scrollLeftRef.current - walk;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    if (!scrollContainerRef.current) return;
+    isDraggingRef.current = false;
+    scrollContainerRef.current.style.cursor = 'grab';
+    scrollContainerRef.current.style.userSelect = 'auto';
+  };
+
   return (
     <section className="w-full bg-[#E8E5DC] pt-24 pb-16 flex flex-col justify-center items-center gap-6" id="blogs">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px]">
@@ -174,10 +204,15 @@ export function BlogsDesktop() {
         <div 
           ref={scrollContainerRef}
           onScroll={handleScroll}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUpOrLeave}
+          onMouseLeave={handleMouseUpOrLeave}
           className="w-[1200px] h-[483px] overflow-x-auto overflow-y-hidden flex justify-start items-center gap-6 snap-x snap-mandatory scrollbar-hide"
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
+            cursor: "grab",
           }}
         >
           {featuredBlogs.map((blog) => (
