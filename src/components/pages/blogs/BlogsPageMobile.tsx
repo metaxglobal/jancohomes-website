@@ -28,7 +28,18 @@ interface BlogArticle {
     role: string;
     avatar: string;
   };
-  content: string;
+  content: string | {
+    intro?: string;
+    sections?: Array<{
+      title: string;
+      content: string;
+      subsections?: Array<{
+        title: string;
+        content: string;
+      }>;
+    }>;
+    conclusion?: string;
+  };
 }
 
 interface BlogsPageMobileProps {
