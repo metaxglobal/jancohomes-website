@@ -36,14 +36,14 @@ export function AboutDesktop() {
           {/* Content Container - Constrained to 1440px layout */}
           <div className="flex items-center gap-5 pl-6 md:pl-12 lg:pl-20 xl:pl-[120px]">
             <Image
-              src="/about img1.jpg"
+              src="/about img1.png"
               alt="Janco homes and Constructions"
               width={284}
               height={496}
               className="w-[284px] h-[496px] rounded-[22px] object-cover"
             />
             <Image
-              src="/about img2.jpg"
+              src="/about img2.png"
               alt="janco homes and Constructions"
               width={270}
               height={361}
@@ -82,8 +82,8 @@ export function AboutDesktop() {
                   <p className="w-[497px] text-[rgba(26,26,26,0.75)] text-base font-medium leading-5 tracking-[-0.04rem]">
                     Premier House Builders in Sri Lanka - Your Dream Home Deserves the Best
                     <br /><br />
-                    At Janco Homes & Construction, we don't just build houses—we create homes where memories are made. 
-                    As one of Sri Lanka's most reliable construction companies, we bring meticulous attention to detail, unwavering commitment to quality, and a client-first approach to every residential and commercial building project. 
+                    At Janco Homes & Construction, we don&apos;t just build houses—we create homes where memories are made. 
+                    As one of Sri Lanka&apos;s most reliable construction companies, we bring meticulous attention to detail, unwavering commitment to quality, and a client-first approach to every residential and commercial building project. 
                     From luxury villa construction in Colombo to family homes across the island, our expertise as ICTAD-registered contractors ensures your construction journey is seamless, transparent, and exceptional.
                   </p>
                 </div>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowRight02Icon, CallingIcon } from "@hugeicons/core-free-icons";
+import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
 export function HeroDesktop() {
   return (
@@ -34,7 +34,7 @@ export function HeroDesktop() {
       <div className="relative w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px] flex-1 flex flex-col pt-[160px] pb-[100px]">
         
         {/* Spacer to push content down and center it */}
-        <div className="flex-1 min-h-0"></div>
+        <div className="flex-1 min-h-0" />
         
         {/* Content Grid - Left and Right */}
         <div className="relative w-full flex items-center justify-between">
@@ -107,7 +107,7 @@ export function HeroDesktop() {
         </div>
         
         {/* Bottom spacer to center content */}
-        <div className="flex-1 min-h-0"></div>
+        <div className="flex-1 min-h-0" />
       </div>
 
       {/* Scroll Indicator - Fixed at bottom */}

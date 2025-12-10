@@ -6,9 +6,6 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import {
   ArrowDownRight01Icon,
   Location04Icon,
-  BedIcon,
-  Bathtub01Icon,
-  SchemeIcon,
 } from "@hugeicons/core-free-icons";
 
 export interface Property {

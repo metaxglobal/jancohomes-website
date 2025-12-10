@@ -37,7 +37,7 @@ export function FooterDesktop() {
         e.preventDefault();
         try {
           sessionStorage.setItem("janco_scrollTo", sectionId);
-        } catch (err) {
+        } catch {
           // ignore
         }
         router.push("/");

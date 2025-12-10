@@ -3,7 +3,7 @@
  * Reusable layout containers for consistent grid alignment
  */
 
-import { ReactNode, ElementType } from 'react';
+import type { ReactNode, ElementType } from 'react';
 import { cn } from '@/lib/utils';
 
 interface ContainerProps {

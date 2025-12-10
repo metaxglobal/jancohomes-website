@@ -12,12 +12,11 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({
-  id,
   imagePath,
   title,
   location,
   price,
-}: ProjectCardProps) {
+}: Omit<ProjectCardProps, 'id'> & { id?: string }) {
   return (
     <div
       className="w-full rounded-[22px] inline-flex flex-col items-start justify-start"

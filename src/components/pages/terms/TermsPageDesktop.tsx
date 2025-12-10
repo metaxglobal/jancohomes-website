@@ -12,7 +12,6 @@ import {
   CallingIcon,
   Mail01Icon,
   InternetIcon,
-  ArrowDownRight01Icon,
 } from "@hugeicons/core-free-icons";
 
 export default function TermsPageDesktop() {

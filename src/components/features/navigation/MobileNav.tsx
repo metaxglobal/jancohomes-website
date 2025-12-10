@@ -48,7 +48,7 @@ export function MobileNav() {
       } else {
         try {
           sessionStorage.setItem("janco_scrollTo", sectionId);
-        } catch (err) {
+        } catch {
           // ignore
         }
         router.push("/");

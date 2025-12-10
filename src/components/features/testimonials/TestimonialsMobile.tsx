@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 
 interface Testimonial {
@@ -211,7 +211,7 @@ export function TestimonialsMobile() {
             }}
           >
             <div className="inline-flex items-start justify-start gap-4">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-[calc(100vw-2rem)] max-w-[361px] sm:max-w-[500px] md:max-w-[600px] flex-shrink-0 snap-center" style={{ scrollSnapAlign: 'center', scrollSnapStop: 'always' }}>
                   <TestimonialCard testimonial={testimonial} />
                 </div>

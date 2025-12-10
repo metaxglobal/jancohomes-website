@@ -17,14 +17,14 @@ export function AboutMobile() {
       <div className="w-full py-6 bg-background-3">
         <div className="w-full max-w-[361px] sm:max-w-[500px] md:max-w-[600px] mx-auto px-4 flex items-center justify-center gap-5">
         <Image
-          src="/about img1.jpg"
+          src="/about img1.png"
           alt="Janco Construction Project"
           width={171}
           height={141}
           className="w-[171px] h-[141px] rounded-[22px]"
         />
         <Image
-          src="/about img2.jpg"
+          src="/about img2.png"
           alt="Janco Construction Interior"
           width={170}
           height={101}

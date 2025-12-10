@@ -16,34 +16,25 @@ export function DesktopNav() {
   const router = useRouter();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    console.log("🔵 Desktop Nav Click:", { href, pathname });
-    
     if (href.startsWith("#") || href.startsWith("/#")) {
-      e.preventDefault(); // Prevent default FIRST
+      e.preventDefault();
       const sectionId = href.replace(/^\/?#/, "");
-      console.log("🟢 Section ID:", sectionId);
       
       if (pathname === "/") {
-        console.log("🟡 On homepage, looking for element:", sectionId);
         // Find all elements with this ID and filter for the visible one
         const elements = document.querySelectorAll(`[id="${sectionId}"]`);
         const visibleElement = Array.from(elements).find((el) => {
           const htmlEl = el as HTMLElement;
-          return htmlEl.offsetParent !== null; // offsetParent is null if element or ancestor has display:none
+          return htmlEl.offsetParent !== null;
         });
-        console.log("🟠 Element found:", visibleElement);
         if (visibleElement) {
-          console.log("🔴 Scrolling to element");
           visibleElement.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else {
-          console.log("❌ Element NOT found!");
         }
       } else {
-        console.log("🟣 Not on homepage, storing in sessionStorage and navigating");
         try {
           sessionStorage.setItem("janco_scrollTo", sectionId);
-        } catch (err) {
-          console.error("Session storage error:", err);
+        } catch {
+          // ignore
         }
         router.push("/");
       }

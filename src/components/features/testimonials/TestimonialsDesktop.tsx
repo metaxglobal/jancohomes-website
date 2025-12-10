@@ -1,8 +1,5 @@
 // Desktop Testimonials Component - Refined
 
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 
 interface Testimonial {
@@ -104,8 +101,6 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
 }
 
 export function TestimonialsDesktop() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const testimonials: Testimonial[] = [
     {
       id: "testimonial-1",
