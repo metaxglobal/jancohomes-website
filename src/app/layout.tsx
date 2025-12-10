@@ -32,21 +32,12 @@ export const metadata: Metadata = {
     title: "Janco Home & Construction | Quality Home Building Services",
     description:
       "Professional home construction and renovation services. Building quality homes with excellence and integrity.",
-    images: [
-      {
-        url: "/janco-logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Janco Home & Construction Logo",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Janco Home & Construction | Quality Home Building Services",
     description:
       "Professional home construction and renovation services. Building quality homes with excellence and integrity.",
-    images: ["/janco-logo.png"],
   },
   robots: {
     index: true,
