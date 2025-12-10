@@ -42,7 +42,7 @@ function ServiceCard({ imagePath, title }: ServiceCardProps) {
         }}
       >
         <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-          <div className="w-[150px] text-center text-white text-[16px] font-medium leading-6 tracking-tight">
+          <div className="w-[150px] text-center text-white text-[16px] font-medium leading-4 tracking-tight">
             {title}
           </div>
         </div>
