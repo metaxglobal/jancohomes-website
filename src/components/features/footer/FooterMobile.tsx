@@ -161,12 +161,14 @@ export default function Footer() {
                     strokeWidth={2}
                   />
                 </div>
-                <a
-                  href="tel:0771287374"
-                  className="text-[14px] font-normal leading-[14px] text-ash transition-colors hover:text-primary"
-                >
-                  0771 287 374
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="tel:0771287374"
+                    className="text-[14px] font-normal leading-[14px] text-ash transition-colors hover:text-primary"
+                  >
+                    0771 287 374 / 0112 090 090
+                  </a>
+                </div>
               </div>
 
               {/* Email */}
@@ -180,10 +182,10 @@ export default function Footer() {
                   />
                 </div>
                 <a
-                  href="mailto:info@janco.lk"
+                  href="mailto:jancohomearch@gmail.com"
                   className="text-[14px] font-normal leading-[14px] text-ash transition-colors hover:text-primary"
                 >
-                  info@janco.lk
+                  jancohomearch@gmail.com
                 </a>
               </div>
             </div>

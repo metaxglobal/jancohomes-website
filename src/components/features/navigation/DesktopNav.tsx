@@ -74,7 +74,7 @@ export function DesktopNav() {
                   strokeWidth={1}
                 />
               </div>
-              <span className="text-[#C2C2C2] text-xs font-normal leading-4">+94 777 599 299</span>
+              <span className="text-[#C2C2C2] text-xs font-normal leading-4">0112 090 090</span>
             </div>
             
             {/* Email */}
@@ -87,7 +87,7 @@ export function DesktopNav() {
                   strokeWidth={1}
                 />
               </div>
-              <span className="text-[#C2C2C2] text-xs font-normal leading-4">info@janco.lk</span>
+              <span className="text-[#C2C2C2] text-xs font-normal leading-4">jancohomearch@gmail.com</span>
             </div>
           </div>
         </div>

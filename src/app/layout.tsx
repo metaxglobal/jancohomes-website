@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className="overflow-x-hidden" data-scroll-behavior="smooth">
       <body className="antialiased overflow-x-hidden">
         {children}
-        <WhatsAppWidget />
+        <WhatsAppWidget phoneNumber="94771287374" />
       </body>
     </html>
   );

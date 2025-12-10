@@ -166,9 +166,11 @@ export function FooterDesktop() {
                       strokeWidth={2}
                     />
                   </div>
-                  <span className="text-ash text-sm font-normal leading-[14px]">
-                    0771 287 374
-                  </span>
+                  <div className="flex flex-col gap-0.5">
+                    <a href="tel:0771287374" className="text-ash text-sm font-normal leading-[14px] hover:text-primary transition-colors">
+                      0771 287 374 / 0112 090 090
+                    </a>
+                  </div>
                 </div>
 
                 {/* Email */}
@@ -182,7 +184,7 @@ export function FooterDesktop() {
                     />
                   </div>
                   <span className="text-ash text-sm font-normal leading-[14px]">
-                    info@janco.lk
+                    jancohomearch@gmail.com
                   </span>
                 </div>
               </div>

@@ -67,7 +67,7 @@ export function MobileNav() {
           <div className="w-full h-11 flex items-center justify-end gap-6">
             {/* Phone */}
             <a
-              href="tel:+94777599299"
+              href="tel:0112090090"
               className="flex items-center gap-[9px] h-4"
             >
               <HugeiconsIcon
@@ -77,7 +77,7 @@ export function MobileNav() {
                 strokeWidth={1}
               />
               <span className="text-ash text-xs font-normal leading-4">
-                +94 777 599 299
+                0112 090 090
               </span>
             </a>
 
@@ -152,7 +152,7 @@ export function MobileNav() {
           {/* Contact Info in Menu */}
           <div className="w-full max-w-[361px] flex flex-col items-center gap-3">
             <a
-              href="tel:+94777599299"
+              href="tel:0112090090"
               className="flex items-center gap-[9px] h-4"
             >
               <HugeiconsIcon
@@ -162,7 +162,7 @@ export function MobileNav() {
                 strokeWidth={1}
               />
               <span className="text-ash text-xs font-normal leading-4">
-                +94 777 599 299
+                0112 090 090
               </span>
             </a>
             <a
@@ -176,7 +176,7 @@ export function MobileNav() {
                 strokeWidth={1}
               />
               <span className="text-ash text-xs font-normal leading-4">
-                info@janco.lk
+                jancohomearch@gmail.com
               </span>
             </a>
           </div>

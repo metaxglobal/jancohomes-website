@@ -134,7 +134,7 @@ export function AboutDesktop() {
             <span className="text-center text-[#1A1A1A] text-base font-medium leading-5">
               Industry Experience
             </span>
-            <span className="w-[202px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
+            <span className="w-[250px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
               Two decades of building quality homes across Sri Lanka.
             </span>
           </div>
@@ -160,8 +160,8 @@ export function AboutDesktop() {
             <span className="text-center text-[#1A1A1A] text-base font-medium leading-5">
               100+ Happy Clients
             </span>
-            <span className="w-[203px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
-              DDiverse building portfolio of Success Stories Across Sri Lanka
+            <span className="w-[250px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
+              Diverse building portfolio of Success Stories Across Sri Lanka
             </span>
           </div>
         </div>
@@ -186,7 +186,7 @@ export function AboutDesktop() {
             <span className="text-center text-[#1A1A1A] text-base font-medium leading-5">
               Licensed Professionals
             </span>
-            <span className="w-[188px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
+            <span className="w-[250px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
               ICTAD-registered contractors and experienced civil engineers
             </span>
           </div>
@@ -212,7 +212,7 @@ export function AboutDesktop() {
             <span className="text-center text-[#1A1A1A] text-base font-medium leading-5">
               Full turn-key solutions 
             </span>
-            <span className="w-[188px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
+            <span className="w-[250px] text-center text-[rgba(26,26,26,0.75)] text-sm font-normal leading-[14px]">
               Design, construction, approvals & project management
             </span>
           </div>

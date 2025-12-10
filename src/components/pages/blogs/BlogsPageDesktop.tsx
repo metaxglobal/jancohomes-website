@@ -129,7 +129,7 @@ export function BlogsPageDesktop({
               <div className="flex flex-col items-start justify-start gap-[13px]">
                 <div className="flex items-center justify-center gap-2.5">
                   <div className="w-[760px] text-[16px] font-medium leading-5 tracking-tight text-ash">
-                    Expert insights, industry trends, and practical advice from
+                     Expert insights, industry trends, and practical advice from
                     20 years of building excellence in Sri Lanka.
                   </div>
                 </div>

@@ -23,7 +23,7 @@ export const PROPERTIES: Property[] = [
       "/real states/property1.png",
       "/real states/property1.png",
     ],
-    whatsappNumber: "94777599299",
+    whatsappNumber: "94771287374",
     whatsappMessage:
       "Hi, I'm interested in the Janco Emeral Estates, Polwatta, Pannipitiya. Could you please provide more details?",
   },
@@ -42,7 +42,7 @@ export const PROPERTIES: Property[] = [
       "/real states/property2.png",
       "/real states/property2.png",
     ],
-    whatsappNumber: "94777599299",
+    whatsappNumber: "94771287374",
     whatsappMessage:
       "Hi, I'm interested in the Serenity Acres, Malabe, Sri Lanka. Could you please provide more details?",
   },

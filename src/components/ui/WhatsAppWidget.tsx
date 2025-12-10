@@ -9,7 +9,7 @@ interface WhatsAppWidgetProps {
 }
 
 export default function WhatsAppWidget({
-  phoneNumber = "94712345678",
+  phoneNumber = "94771287374",
   message = "Hello! I'm interested in your construction services.",
 }: WhatsAppWidgetProps) {
   const handleClick = () => {
