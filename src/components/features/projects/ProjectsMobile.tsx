@@ -117,7 +117,7 @@ export function ProjectsMobile() {
           <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] text-secondary/75 text-sm leading-[14px]" style={{ fontWeight: 400 }}>
             Our signature projects reflect our commitment to realize your
             dreams. We have delivered successfully completed residential
-            projects to thousands of happy customers throughout our more than 8
+            projects to thousands of happy customers throughout our more than 20+
             years of journey.
           </div>
         </div>

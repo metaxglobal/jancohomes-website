@@ -6,6 +6,18 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    // Screens OUTSIDE extend to fully override Tailwind defaults
+    screens: {
+      xs: "375px", // Small mobile (iPhone SE)
+      sm: "640px", // Mobile landscape / Large phones
+      md: "768px", // Tablets
+      lg: "1024px", // Laptops / Small desktops
+      xl: "1280px", // Desktops
+      "2xl": "1440px", // Desktop view breakpoint - FIXED from Tailwind's default 1536px
+      "3xl": "1536px", // Large desktops
+      "4xl": "1920px", // Full HD / 2K monitors
+      "5xl": "2560px", // 4K monitors
+    },
     extend: {
       colors: {
         // Primary Brand Color
@@ -89,18 +101,6 @@ const config: Config = {
         '672': '42rem', // 672px - 7-column width (forms)
         '793': '49.5625rem', // 793px - 8-column width (two-thirds)
         '285': '17.8125rem', // 285px - 3-column width (quarter/service cards)
-      },
-
-      // Mobile-first breakpoints (min-width)
-      screens: {
-        xs: "375px", // Small mobile (iPhone SE)
-        sm: "640px", // Mobile landscape / Large phones
-        md: "768px", // Tablets - MOBILE/DESKTOP BREAKPOINT
-        lg: "1024px", // Laptops / Small desktops
-        xl: "1280px", // Desktops
-        "2xl": "1536px", // Large desktops / 2K
-        "3xl": "1920px", // Full HD / 2K monitors
-        "4xl": "2560px", // 4K monitors
       },
 
       // Container settings for responsive layouts

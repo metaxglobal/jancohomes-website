@@ -50,7 +50,7 @@ export function PropertiesPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[180px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col gap-12 px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pt-[180px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center gap-2">
               <Link
@@ -80,11 +80,11 @@ export function PropertiesPageDesktop({
 
             {/* Title and Description */}
             <div className="flex flex-col gap-6">
-              <h1 className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+              <h1 className="text-[48px] lg:text-[72px] font-medium leading-[48px] lg:leading-[64px] tracking-[-0.2rem] lg:tracking-[-0.3rem]">
                 <span className="text-white">Janco </span>
                 <span className="text-[#7CB342]">Real Estate</span>
               </h1>
-              <p className="w-[960px] text-[16px] font-medium leading-5 tracking-tight text-ash">
+              <p className="max-w-[960px] text-sm lg:text-[16px] font-medium leading-5 tracking-tight text-ash">
                 At Janco Real Estate, we specialize in acquiring prime land locations across Sri Lanka and transforming them into fully developed residential land plots ready for immediate construction. 
                 Unlike raw land sales, we provide surveyed, subdivided land plots with complete infrastructure—electricity connections, water supply, proper road access, 
                 and clear legal documentation—making your home building journey effortless and secure.
@@ -94,31 +94,13 @@ export function PropertiesPageDesktop({
         </section>
 
         {/* Properties Grid Section */}
-        <section className="mx-auto flex w-full max-w-[1440px] flex-col gap-5 px-6 md:px-12 lg:px-20 xl:px-[120px] pb-24 pt-16">
-          {/* First Row */}
-          <div className="flex items-center justify-start gap-5">
-            {properties.slice(0, 3).map((property) => (
+        <section className="mx-auto flex w-full max-w-[1440px] flex-col gap-5 px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pb-24 pt-16">
+          {/* Properties Grid - CSS Grid for proper alignment */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 justify-items-center">
+            {properties.map((property) => (
               <PropertyCardDesktop key={property.id} property={property} />
             ))}
           </div>
-
-          {/* Second Row */}
-          {properties.length > 3 && (
-            <div className="flex items-center justify-start gap-5">
-              {properties.slice(3, 6).map((property) => (
-                <PropertyCardDesktop key={property.id} property={property} />
-              ))}
-            </div>
-          )}
-
-          {/* Additional Rows if needed */}
-          {properties.length > 6 && (
-            <div className="flex items-center justify-start gap-5">
-              {properties.slice(6, 9).map((property) => (
-                <PropertyCardDesktop key={property.id} property={property} />
-              ))}
-            </div>
-          )}
         </section>
 
         {/* CTA Section */}
@@ -133,7 +115,7 @@ export function PropertiesPageDesktop({
             style={{ filter: "blur(64px)" }}
           />
 
-          <div className="relative z-10 mx-auto flex h-[376px] w-full max-w-[1440px] flex-col items-center justify-center gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px]">
+          <div className="relative z-10 mx-auto flex h-[376px] w-full max-w-[1440px] flex-col items-center justify-center gap-12 px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px]">
             <div className="flex flex-col items-center gap-3">
               <h2 className="text-center text-[56px] font-medium leading-10 tracking-[-0.2rem]">
                 <span className="text-white">Ready to Start </span>

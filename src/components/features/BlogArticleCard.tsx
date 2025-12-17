@@ -29,9 +29,9 @@ export default function BlogArticleCard({
   author,
 }: BlogArticleCardProps) {
   return (
-    <article className="w-[361px] flex-col rounded-[22px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)] outline outline-1 outline-ash outline-offset-[-1px]">
+    <article className="w-full max-w-[361px] flex-col rounded-[22px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)] outline outline-1 outline-ash outline-offset-[-1px]">
       {/* Image */}
-      <div className="relative h-[245px] w-[361px] overflow-hidden rounded-t-[22px]">
+      <div className="relative h-[245px] w-full overflow-hidden rounded-t-[22px]">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
 
@@ -58,7 +58,7 @@ export default function BlogArticleCard({
 
               {/* Title */}
               <div className="flex items-center justify-start">
-                <h3 className="w-[321px] text-[22px] font-medium leading-6 tracking-[-1px] text-secondary">
+                <h3 className="w-full text-[20px] sm:text-[22px] font-medium leading-6 tracking-[-1px] text-secondary">
                   {title}
                 </h3>
               </div>
@@ -66,7 +66,7 @@ export default function BlogArticleCard({
 
             {/* Excerpt */}
             <div className="flex items-center justify-start">
-              <p className="w-[321px] text-[14px] font-normal leading-[14px] text-secondary/75">
+              <p className="w-full text-[14px] font-normal leading-[14px] text-secondary/75">
                 {excerpt}
               </p>
             </div>
@@ -75,8 +75,8 @@ export default function BlogArticleCard({
           {/* Author and Read More */}
           <div className="flex items-end justify-between">
             {/* Author Info */}
-            <div className="flex h-10 w-[180px] items-center gap-2">
-              <div className="h-[34px] w-[34px] overflow-hidden rounded-full">
+            <div className="flex h-10 items-center gap-2">
+              <div className="h-[34px] w-[34px] flex-shrink-0 overflow-hidden rounded-full">
                 <Image
                   src={author.avatar}
                   alt={author.name}
@@ -85,7 +85,7 @@ export default function BlogArticleCard({
                   className="h-10 object-cover"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-1">
+              <div className="flex flex-col gap-1">
                 <span className="text-[14px] font-normal leading-[14px] text-secondary">
                   {author.name}
                 </span>
@@ -98,9 +98,9 @@ export default function BlogArticleCard({
             {/* Read More Button */}
             <Link
               href={`/blogs/${id}`}
-              className="flex items-center gap-2 rounded-[12px] py-[10px] pl-5 transition-opacity hover:opacity-80"
+              className="flex items-center gap-1 rounded-[12px] py-[10px] pl-3 transition-opacity hover:opacity-80"
             >
-              <span className="text-[16px] font-medium leading-5 text-primary">
+              <span className="text-[14px] sm:text-[16px] font-medium leading-5 text-primary whitespace-nowrap">
                 Read More
               </span>
               <HugeiconsIcon

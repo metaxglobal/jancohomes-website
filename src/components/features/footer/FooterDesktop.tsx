@@ -65,7 +65,7 @@ export function FooterDesktop() {
       {/* Top thin green gradient container placed at footer root so `top-0` aligns with the
           real top of the footer (not shifted by inner padding). This centers the gradient
           to the site's content width so it visually divides the page and footer consistently. */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] px-6 md:px-12 lg:px-20 xl:px-[120px] z-0 pointer-events-none">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1440px] px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] z-0 pointer-events-none">
         <div
           className="w-full h-[2px]"
           style={{
@@ -74,11 +74,11 @@ export function FooterDesktop() {
         />
       </div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col gap-[68px] relative z-10">
-          {/* Main Footer Content */}
-          <div className="w-full max-w-[1200px] flex items-start justify-between">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] flex flex-col gap-12 2xl:gap-[68px] relative z-10">
+          {/* Main Footer Content - Wrap on smaller desktops */}
+          <div className="w-full flex flex-wrap 2xl:flex-nowrap items-start justify-between gap-8 2xl:gap-4">
             {/* Company Info */}
-            <div className="w-[307px] flex flex-col gap-6">
+            <div className="w-full 2xl:w-[307px] flex flex-col gap-6">
               <Image
                 src="/janco-logo.svg"
                 alt="Janco Logo"
@@ -98,7 +98,7 @@ export function FooterDesktop() {
             </div>
 
             {/* Quick Links */}
-            <div className="w-[192px] flex flex-col gap-6">
+            <div className="w-1/3 2xl:w-[192px] min-w-[150px] flex flex-col gap-6">
               <div className="flex flex-col gap-1">
                 <h3 className="text-white text-sm font-normal uppercase leading-4">
                   Quick Links
@@ -133,7 +133,7 @@ export function FooterDesktop() {
             </div>
 
             {/* Contact Us */}
-            <div className="w-[264px] flex flex-col gap-6">
+            <div className="w-1/3 2xl:w-[264px] min-w-[200px] flex flex-col gap-6">
               <div className="flex flex-col gap-1">
                 <h3 className="text-white text-sm font-normal uppercase leading-4">
                   Contact Us
@@ -191,7 +191,7 @@ export function FooterDesktop() {
             </div>
 
             {/* Follow Us */}
-            <div className="w-[264px] flex flex-col gap-6">
+            <div className="w-1/3 2xl:w-[264px] min-w-[200px] flex flex-col gap-6">
               <div className="flex flex-col gap-1">
                 <h3 className="text-white text-sm font-normal uppercase leading-4">
                   Follow Us
@@ -250,13 +250,13 @@ export function FooterDesktop() {
           </div>
 
           {/* Bottom Footer */}
-          <div className="w-[1201px] flex flex-col items-center gap-6">
+          <div className="w-full max-w-[1201px] flex flex-col items-center gap-6">
             {/* Divider */}
             <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-            {/* Footer Bottom Content */}
-            <div className="w-full flex items-center justify-between">
-              <p className="w-[320px] text-ash text-xs font-normal leading-4">
+            {/* Footer Bottom Content - Stack on smaller desktops, row on 1440px+ */}
+            <div className="w-full flex flex-col 2xl:flex-row items-center justify-between gap-4 2xl:gap-0">
+              <p className="text-ash text-xs font-normal leading-4 text-center 2xl:text-left">
                 © 2025 Janco Home & Construction. All rights reserved.
               </p>
 
@@ -269,6 +269,7 @@ export function FooterDesktop() {
                 </Link>
               </div>
 
+              {/* Design & Develop - Always visible */}
               <div className="flex items-center gap-2.5">
                 <span className="text-white text-xs font-normal leading-4">
                   Design & Develop by

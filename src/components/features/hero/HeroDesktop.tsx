@@ -31,7 +31,7 @@ export function HeroDesktop() {
       />
 
       {/* Main Content Container - Centered at 1440px with responsive padding */}
-      <div className="relative w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px] flex-1 flex flex-col pt-[160px] pb-[100px]">
+      <div className="relative w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] flex-1 flex flex-col pt-[160px] pb-[100px]">
         
         {/* Spacer to push content down and center it */}
         <div className="flex-1 min-h-0" />
@@ -40,7 +40,7 @@ export function HeroDesktop() {
         <div className="relative w-full flex items-center justify-between">
           
           {/* Left Content Section */}
-          <div className="w-[580px] xl:w-[620px] 2xl:w-[680px] flex flex-col gap-8">
+          <div className="w-[45%] min-w-[400px] xl:w-[620px] 2xl:w-[680px] flex flex-col gap-8">
             <div className="self-stretch flex flex-col gap-6">
               {/* Badge */}
               <div 
@@ -56,14 +56,14 @@ export function HeroDesktop() {
               {/* Heading & Description */}
               <div className="self-stretch flex flex-col gap-5">
                 <div>
-                  <div className="text-white text-[56px] xl:text-[58px] 2xl:text-[58px] font-medium leading-[52px] xl:leading-[58px] 2xl:leading-[64px] tracking-[-0.2rem]">
+                  <div className="text-white text-[44px] lg:text-[52px] xl:text-[58px] font-medium leading-[48px] lg:leading-[54px] xl:leading-[58px] tracking-[-0.2rem]">
                     Leading House
                   </div>
-                  <div className="text-[#7CB342] text-[56px] xl:text-[58px] 2xl:text-[58px] font-medium leading-[52px] xl:leading-[58px] 2xl:leading-[64px] tracking-[-0.2rem]">
+                  <div className="text-[#7CB342] text-[44px] lg:text-[52px] xl:text-[58px] font-medium leading-[48px] lg:leading-[54px] xl:leading-[58px] tracking-[-0.2rem]">
                     Construction Company <br/>in Sri Lanka
                   </div>
                 </div>
-                <p className="w-[523px] xl:w-[580px] 2xl:w-[640px] text-[#C2C2C2] text-xl font-normal leading-6 tracking-[-0.03rem]">
+                <p className="w-full max-w-[640px] text-[#C2C2C2] text-lg xl:text-xl font-normal leading-6 tracking-[-0.03rem]">
                   Build your dream home with Janco Homes – 20+ years of trusted expertise in residential construction and turn-key solutions across Sri Lanka.
                 </p>
               </div>

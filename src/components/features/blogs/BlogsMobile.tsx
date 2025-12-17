@@ -25,20 +25,20 @@ interface BlogCardProps {
 function BlogCard({ blog }: BlogCardProps) {
   return (
     <div
-      className="w-[320px] overflow-hidden rounded-[22px] inline-flex flex-col items-start justify-start flex-shrink-0"
+      className="w-[calc(100vw-2rem)] max-w-[320px] overflow-hidden rounded-[22px] inline-flex flex-col items-start justify-start flex-shrink-0"
       style={{
         boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
         outline: "1px #C2C2C2 solid",
       }}
     >
       {/* Blog Image */}
-      <div className="relative w-[320px] h-[204px]">
+      <div className="relative w-full h-[204px]">
         <Image
           src={blog.image}
           alt={blog.title}
           width={320}
           height={204}
-          className="w-[320px] h-[204px] relative object-cover"
+          className="w-full h-[204px] object-cover"
         />
 
         {/* Date Badge */}
@@ -61,19 +61,19 @@ function BlogCard({ blog }: BlogCardProps) {
       </div>
 
       {/* Blog Content */}
-      <div className="w-[320px] p-5 bg-white flex flex-col items-center justify-center gap-3">
+      <div className="w-full p-5 bg-white flex flex-col items-center justify-center gap-3">
         <div className="self-stretch flex flex-col items-start justify-start gap-6">
           <div className="self-stretch flex flex-col items-start justify-start gap-3">
             {/* Title */}
             <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-              <div className="w-[280px] text-secondary text-[22px] font-medium leading-6 tracking-tight">
+              <div className="w-full text-secondary text-[20px] sm:text-[22px] font-medium leading-6 tracking-tight">
                 {blog.title}
               </div>
             </div>
 
             {/* Excerpt */}
             <div className="self-stretch inline-flex items-center justify-center gap-2.5">
-              <div className="w-[279px] text-secondary/75 text-sm font-normal leading-[14px]">
+              <div className="w-full text-secondary/75 text-sm font-normal leading-[14px]">
                 {blog.excerpt}
               </div>
             </div>

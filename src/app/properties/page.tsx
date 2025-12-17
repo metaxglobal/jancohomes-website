@@ -19,7 +19,7 @@ export default function PropertiesPage() {
 
   return (
     <>
-      {/* Mobile View */}
+      {/* Mobile/Tablet View */}
       <div className="lg:hidden">
         <PropertiesPageMobile properties={properties} />
       </div>

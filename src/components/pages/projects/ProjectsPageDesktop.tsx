@@ -64,7 +64,7 @@ export function ProjectsPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
@@ -102,17 +102,17 @@ export function ProjectsPageDesktop({
             <div className="flex flex-col items-start justify-start gap-6">
               <div className="flex items-center justify-center gap-2.5">
                 <div className="text-center">
-                  <span className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-white">
+                  <span className="text-[48px] lg:text-[72px] font-medium leading-[48px] lg:leading-[64px] tracking-[-0.2rem] lg:tracking-[-0.3rem] text-white">
                     Featured{" "}
                   </span>
-                  <span className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-primary">
+                  <span className="text-[48px] lg:text-[72px] font-medium leading-[48px] lg:leading-[64px] tracking-[-0.2rem] lg:tracking-[-0.3rem] text-primary">
                     Projects
                   </span>
                 </div>
               </div>
               <div className="flex flex-col items-start justify-start gap-[13px]">
                 <div className="flex items-center justify-center gap-2.5">
-                  <div className="w-[760px] text-base font-medium leading-5 tracking-tight text-ash">
+                  <div className="max-w-[760px] text-sm lg:text-base font-medium leading-5 tracking-tight text-ash">
                     Explore our collection of premium residential and commercial
                     projects across Sri Lanka. Each project showcases our
                     commitment to excellence and innovation in construction.
@@ -125,22 +125,10 @@ export function ProjectsPageDesktop({
 
         {/* Projects Grid */}
         <section className="w-full flex justify-center">
-          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-20 xl:px-[120px] pt-16 pb-16 flex flex-col items-start gap-5">
-            {/* Row 1 - 3 cards */}
-            <div className="flex items-center justify-start gap-5 self-stretch">
-              {projects.slice(0, 3).map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  title={project.title}
-                  location={project.location}
-                  price={project.price}
-                  description={project.description}
-                  images={project.images}
-                />
-              ))}
-            </div>            {/* Row 2 - 3 cards */}
-            <div className="flex items-center justify-start gap-5 self-stretch">
-              {projects.slice(3, 6).map((project) => (
+          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pt-16 pb-16">
+            {/* Projects Grid - CSS Grid for better control */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 justify-items-center">
+              {projects.map((project) => (
                 <ProjectCard
                   key={project.id}
                   title={project.title}
@@ -151,22 +139,6 @@ export function ProjectsPageDesktop({
                 />
               ))}
             </div>
-
-            {/* Row 3 - remaining cards */}
-            {projects.length > 6 && (
-              <div className="flex items-center justify-start gap-5">
-                {projects.slice(6).map((project) => (
-                  <ProjectCard
-                    key={project.id}
-                    title={project.title}
-                    location={project.location}
-                    price={project.price}
-                    description={project.description}
-                    images={project.images}
-                  />
-                ))}
-              </div>
-            )}
           </div>
         </section>
 
@@ -188,7 +160,7 @@ export function ProjectsPageDesktop({
             }}
           />
 
-          <div className="self-stretch h-[376px] px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
+          <div className="self-stretch h-[376px] px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
             <div className="flex flex-col items-center justify-start gap-3 self-stretch">
               <div className="self-stretch text-center">
                 <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-white">

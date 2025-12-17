@@ -18,7 +18,7 @@ interface TestimonialCardProps {
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <div
-      className="w-[387px] p-5 rounded-[22px] flex flex-col justify-center items-start gap-2.5"
+      className="w-[320px] 2xl:w-[387px] flex-shrink-0 p-5 rounded-[22px] flex flex-col justify-center items-start gap-2.5"
       style={{
         background: "rgba(255, 255, 255, 0.10)",
         outline: "1px rgba(255, 255, 255, 0.20) solid",
@@ -133,17 +133,17 @@ export function TestimonialsDesktop() {
 
   return (
     <section className="w-full bg-[#1A1A1A] pt-24 pb-16 flex flex-col items-start gap-2.5 relative overflow-hidden" id="testimonials">
-      <div className="self-stretch h-[642px] px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col justify-center items-center gap-12 relative z-10">
+      <div className="self-stretch min-h-[642px] px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] flex flex-col justify-center items-center gap-12 relative z-10">
         {/* Header */}
-        <div className="self-stretch px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col items-center gap-2.5">
+        <div className="self-stretch flex flex-col items-center gap-2.5">
           <div className="self-stretch text-center text-[#7CB342] text-xl font-normal leading-5 tracking-[-0.05rem]">
             TESTIMONIALS
           </div>
           <div className="self-stretch text-center">
-            <span className="text-white text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+            <span className="text-white text-[48px] 2xl:text-[72px] font-medium leading-[48px] 2xl:leading-[64px] tracking-[-0.2rem] 2xl:tracking-[-0.3rem]">
               What Our{" "}
             </span>
-            <span className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+            <span className="text-[#7CB342] text-[48px] 2xl:text-[72px] font-medium leading-[48px] 2xl:leading-[64px] tracking-[-0.2rem] 2xl:tracking-[-0.3rem]">
               Clients Say
             </span>
           </div>
@@ -152,9 +152,9 @@ export function TestimonialsDesktop() {
           </p>
         </div>
 
-        {/* Testimonial Cards */}
-        <div className="w-[1201px] flex flex-col gap-8">
-          <div className="self-stretch flex items-center gap-5">
+        {/* Testimonial Cards - Always show as horizontal row (slider-like) */}
+        <div className="w-full max-w-[1201px] flex flex-col gap-8">
+          <div className="self-stretch flex items-stretch justify-center gap-5">
             {testimonials.map((testimonial) => (
               <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}

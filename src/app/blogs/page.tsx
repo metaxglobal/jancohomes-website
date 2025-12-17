@@ -14,8 +14,8 @@ export const blogArticles = [
     image: "/blogs/blog1.png",
     date: "December 9, 2025",
     author: {
-      name: "Viraj Perera",
-      role: "Chief Executive Officer",
+      name: "Mr. Premlal Kariyawasam",
+      role: "Managing Director",
       avatar: "/viraj perera.png",
     },
     content: {
@@ -278,8 +278,8 @@ Contact us today for a detailed, customized quotation for your dream home projec
     date: "December 9, 2025",
     image: "/blogs/blog2.png",
     author: {
-      name: "Viraj Perera",
-      role: "Chief Executive Officer",
+      name: "Mr. Premlal Kariyawasam",
+      role: "Managing Director",
       avatar: "/viraj perera.png",
     },
     content: {
@@ -686,8 +686,8 @@ Contact us today for a detailed, customized quotation tailored to your specific 
     date: "December 9, 2025",
     image: "/blogs/blog3.png",
     author: {
-      name: "Viraj Perera",
-      role: "Chief Executive Officer",
+      name: "Mr. Premlal Kariyawasam",
+      role: "Managing Director",
       avatar: "/viraj perera.png",
     },
     content: {
@@ -910,8 +910,8 @@ Ready to build your modern dream home? Contact us today for a consultation and d
     date: "December 9, 2025",
     image: "/blogs/blog4.png",
     author: {
-      name: "Viraj Perera",
-      role: "Chief Executive Officer",
+      name: "Mr. Premlal Kariyawasam",
+      role: "Managing Director",
       avatar: "/viraj perera.png",
     },
     content: {
@@ -1097,7 +1097,7 @@ export default function BlogsPage() {
 
   return (
     <>
-      {/* Mobile View */}
+      {/* Mobile/Tablet View */}
       <div className="lg:hidden">
         <BlogsPageMobile
           articles={blogArticles}

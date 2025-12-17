@@ -32,7 +32,7 @@ export default function BlogArticlePage({
 
   return (
     <>
-      {/* Mobile View */}
+      {/* Mobile/Tablet View */}
       <div className="lg:hidden">
         <BlogDetailPageMobile article={article} />
       </div>

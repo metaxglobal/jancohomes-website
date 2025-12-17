@@ -117,7 +117,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      {/* Mobile View */}
+      {/* Mobile/Tablet View */}
       <div className="lg:hidden">
         <ProjectsPageMobile
           projects={projects}

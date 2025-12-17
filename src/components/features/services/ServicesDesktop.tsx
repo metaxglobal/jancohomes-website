@@ -1,18 +1,32 @@
 // Desktop Services Component - Refined
 
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface ServiceCardProps {
   imagePath: string;
   title: string;
-  height: number;
+  desktopHeight: number; // Height for 1440px+ masonry layout
 }
 
-function ServiceCard({ imagePath, title, height }: ServiceCardProps) {
+function ServiceCard({ imagePath, title, desktopHeight }: ServiceCardProps) {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsLargeScreen(window.innerWidth >= 1440);
+    };
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+
   return (
     <div 
       className="relative w-full overflow-hidden rounded-[22px] shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.10)] group" 
-      style={{ height: `${height}px` }}
+      style={{ height: isLargeScreen ? `${desktopHeight}px` : '280px' }}
     >
       {/* Background Image */}
       <Image
@@ -45,7 +59,7 @@ function ServiceCard({ imagePath, title, height }: ServiceCardProps) {
 export function ServicesDesktop() {
   return (
     <section className="w-full bg-white pt-24 pb-16">
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px]">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px]">
         {/* Header Section */}
         <div className="w-full flex flex-col items-center gap-2.5 mb-12">
           {/* Label */}
@@ -55,10 +69,10 @@ export function ServicesDesktop() {
 
           {/* Title */}
           <div className="self-stretch text-center">
-            <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+            <span className="text-[#1A1A1A] text-[48px] 2xl:text-[72px] font-medium leading-[48px] 2xl:leading-[64px] tracking-[-0.2rem] 2xl:tracking-[-0.3rem]">
               What We{" "}
             </span>
-            <span className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+            <span className="text-[#7CB342] text-[48px] 2xl:text-[72px] font-medium leading-[48px] 2xl:leading-[64px] tracking-[-0.2rem] 2xl:tracking-[-0.3rem]">
               Do
             </span>
           </div>
@@ -70,60 +84,60 @@ export function ServicesDesktop() {
           </p>
         </div>
 
-        {/* Masonry Layout - 4 Columns with exact heights */}
-        <div className="flex items-start justify-start gap-6">
-          {/* Column 1 - Width 285px */}
-          <div className="w-[285px] flex flex-col gap-6">
+        {/* Grid Layout - 2 Columns with equal heights until 1440px, then 4 Column Masonry */}
+        <div className="grid grid-cols-2 2xl:grid-cols-4 gap-6 w-full">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-6">
             <ServiceCard
               imagePath="/services/house constructions-min.jpg"
               title="Residential House Construction"
-              height={320}
+              desktopHeight={320}
             />
             <ServiceCard
                 imagePath="/services/commercial construction.jpg"
                 title="Commercial Building Construction"
-              height={360}
+              desktopHeight={360}
             />
           </div>
-          {/* Column 2 - Width 285px */}
-          <div className="w-[285px] flex flex-col gap-6">
+          {/* Column 2 */}
+          <div className="flex flex-col gap-6">
             <ServiceCard
               imagePath="/services/architec design.jpg"
               title="Architectural Design "
-              height={380}
+              desktopHeight={380}
             />
             <ServiceCard
               imagePath="/services/interior design.jpg"
               title="Interior Design "
-              height={380}
+              desktopHeight={380}
             />
           </div>
 
-          {/* Column 3 - Width 285px */}
-          <div className="w-[285px] flex flex-col gap-6">
+          {/* Column 3 */}
+          <div className="flex flex-col gap-6">
             <ServiceCard
               imagePath="/services/renovation.jpg"
               title="Renovation & Extension "
-              height={370}
+              desktopHeight={370}
             />
             <ServiceCard
               imagePath="/services/commercial renovation.jpg"
               title="Commercial Renovations"
-              height={340}
+              desktopHeight={340}
             />
           </div>
 
-          {/* Column 4 - Width 282px */}
-          <div className="w-[282px] flex flex-col gap-6">
+          {/* Column 4 */}
+          <div className="flex flex-col gap-6">
             <ServiceCard
               imagePath="/services/pm.jpg"
               title="Project management"
-              height={390}
+              desktopHeight={390}
             />
             <ServiceCard
               imagePath="/services/approvals.jpg"
               title="Approvals & Documentation"
-              height={300}
+              desktopHeight={300}
             />
           </div>
         </div>

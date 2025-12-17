@@ -49,7 +49,7 @@ export default function PropertyCardDesktop({ property, onContactClick }: Proper
 
   return (
     <div
-      className="w-[387px] rounded-[22px] inline-flex flex-col items-start justify-start"
+      className="w-full max-w-[387px] rounded-[22px] inline-flex flex-col items-start justify-start"
       style={{
         boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.10)",
         outline: "1px #C2C2C2 solid",
@@ -63,7 +63,7 @@ export default function PropertyCardDesktop({ property, onContactClick }: Proper
             alt={property.title}
             width={387}
             height={296}
-            className="w-[387px] h-[296px] object-cover"
+            className="w-full h-[296px] object-cover"
           />
           {/* Gradient Overlay */}
           <div
@@ -75,7 +75,7 @@ export default function PropertyCardDesktop({ property, onContactClick }: Proper
           />
 
           {/* Image Pagination Dots */}
-          <div className="h-[30px] absolute left-[166px] top-[266px] inline-flex items-center justify-start gap-2">
+          <div className="h-[30px] absolute left-1/2 -translate-x-1/2 top-[266px] inline-flex items-center justify-start gap-2">
             {property.images.map((_, index) => (
               <button
                 key={index}
@@ -101,7 +101,7 @@ export default function PropertyCardDesktop({ property, onContactClick }: Proper
 
           {/* Price Badge */}
           <div
-            className="w-[101px] h-[68px] absolute left-[270px] top-4 bg-white rounded-[11px] inline-flex flex-col items-center justify-center"
+            className="w-[101px] h-[68px] absolute right-4 top-4 bg-white rounded-[11px] inline-flex flex-col items-center justify-center"
             style={{
               boxShadow: "0px 0px 3.5px rgba(0, 0, 0, 0.25)",
             }}

@@ -36,7 +36,7 @@ export function BlogCardDesktop({
   author,
 }: BlogCardDesktopProps) {
   return (
-    <div className="inline-flex w-[387px] flex-col items-start justify-start rounded-[22px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)] outline outline-1 outline-ash">
+    <div className="inline-flex w-full max-w-[387px] flex-col items-start justify-start rounded-[22px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)] outline outline-1 outline-ash">
       {/* Image */}
       <div className="relative h-[245px] w-full overflow-hidden rounded-t-[22px]">
         <Image
@@ -44,7 +44,7 @@ export function BlogCardDesktop({
           alt={title}
           fill
           className="object-cover"
-          sizes="387px"
+          sizes="(max-width: 1024px) 100vw, 387px"
         />
       </div>
 
@@ -89,8 +89,8 @@ export function BlogCardDesktop({
           {/* Author and CTA */}
           <div className="inline-flex items-center justify-between self-stretch">
             {/* Author Info */}
-            <div className="flex w-[190px] items-center justify-start gap-2">
-              <div className="relative h-10 w-10 overflow-hidden rounded-full">
+            <div className="flex items-center justify-start gap-2">
+              <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full">
                 <Image
                   src={author.avatar}
                   alt={author.name}
@@ -99,13 +99,13 @@ export function BlogCardDesktop({
                   sizes="40px"
                 />
               </div>
-              <div className="inline-flex flex-1 flex-col items-start justify-start gap-1">
-                <div className="text-[14px] font-normal leading-[14px] text-secondary">
+              <div className="flex flex-col gap-1">
+                <span className="text-[14px] font-normal leading-[14px] text-secondary">
                   {author.name}
-                </div>
-                <div className="text-[12px] font-normal leading-4 text-secondary/75">
+                </span>
+                <span className="text-[12px] font-normal leading-4 text-secondary/75">
                   {author.role}
-                </div>
+                </span>
               </div>
             </div>
 
@@ -114,17 +114,15 @@ export function BlogCardDesktop({
               href={`/blogs/${id}`}
               className="flex items-center justify-center gap-2 rounded-[12px] px-5 py-2.5 outline outline-1 outline-ash transition-opacity hover:opacity-80"
             >
-              <div className="flex items-center justify-start gap-2">
-                <div className="text-[16px] font-medium leading-5 text-[#7CB342]">
-                  Read More
-                </div>
-                <HugeiconsIcon
-                  icon={ArrowDownRight01Icon}
-                  size={20}
-                  color="#7CB342"
-                  strokeWidth={2}
-                />
-              </div>
+              <span className="text-[16px] font-medium leading-5 text-[#7CB342] whitespace-nowrap">
+                Read More
+              </span>
+              <HugeiconsIcon
+                icon={ArrowDownRight01Icon}
+                size={20}
+                color="#7CB342"
+                strokeWidth={2}
+              />
             </Link>
           </div>
         </div>

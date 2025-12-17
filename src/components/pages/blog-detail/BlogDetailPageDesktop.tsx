@@ -81,7 +81,7 @@ export function BlogDetailPageDesktop({
           />
 
           {/* Breadcrumb Navigation */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pt-[202px]">
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
                 href="/"
@@ -134,7 +134,7 @@ export function BlogDetailPageDesktop({
 
         {/* Article Content Section */}
         <section className="w-full flex justify-center">
-          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-20 xl:px-[120px] pt-8 pb-24 flex flex-col items-start gap-8">
+          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pt-8 pb-24 flex flex-col items-start gap-8">
             {/* Hero Image with Overlay */}
             <div className="relative h-[450px] self-stretch overflow-hidden rounded-[22px] outline outline-1 outline-ash outline-offset-[-1px]">
             <Image
@@ -144,15 +144,15 @@ export function BlogDetailPageDesktop({
               className="object-cover"
             />
             <div
-              className="absolute inset-0 flex h-[450px] w-[1200px] flex-col items-start justify-end gap-6 px-8 pb-8 pt-[72px]"
+              className="absolute inset-0 flex flex-col items-start justify-end gap-6 px-8 pb-8 pt-[72px]"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.70) 70%, black 100%)",
               }}
             >
               {/* Title */}
-              <div className="inline-flex items-center justify-start gap-2.5">
-                <h1 className="text-[56px] font-medium leading-[64px] tracking-[-0.2rem] text-white">
+              <div className="inline-flex items-center justify-start gap-2.5 max-w-full">
+                <h1 className="text-[36px] lg:text-[48px] xl:text-[56px] font-medium leading-[40px] lg:leading-[52px] xl:leading-[64px] tracking-[-0.1rem] lg:tracking-[-0.15rem] xl:tracking-[-0.2rem] text-white">
                   {article.title}
                 </h1>
               </div>
@@ -160,8 +160,8 @@ export function BlogDetailPageDesktop({
               {/* Author and Date */}
               <div className="inline-flex items-center justify-start gap-6 self-stretch">
                 {/* Author Info */}
-                <div className="flex w-[145.90px] items-center justify-start gap-2">
-                  <div className="inline-flex flex-col items-start justify-start overflow-hidden rounded-[16777200px]">
+                <div className="flex items-center justify-start gap-2">
+                  <div className="flex-shrink-0 overflow-hidden rounded-full">
                     <Image
                       src={article.author.avatar}
                       alt={article.author.name}
@@ -170,13 +170,13 @@ export function BlogDetailPageDesktop({
                       className="relative h-10 self-stretch"
                     />
                   </div>
-                  <div className="inline-flex flex-1 flex-col items-start justify-start gap-1">
-                    <div className="text-[14px] font-normal leading-[14px] text-white">
+                  <div className="flex items-center gap-1">
+                    <span className="text-[14px] font-normal leading-[14px] text-white">
                       {article.author.name}
-                    </div>
-                    <div className="text-[12px] font-normal leading-4 text-ash">
-                      {article.author.role}
-                    </div>
+                    </span>
+                    <span className="text-[12px] font-normal leading-4 text-ash">
+                      , {article.author.role}
+                    </span>
                   </div>
                 </div>
 
@@ -198,26 +198,26 @@ export function BlogDetailPageDesktop({
 
             {/* Article Content and Social Share */}
             <div className="flex flex-col items-end justify-start gap-14 self-stretch">
-              <div className="relative inline-flex items-start justify-start gap-[73px] self-stretch">
+              <div className="flex items-start justify-start gap-8 self-stretch">
               {/* Article Body */}
-              <div className="inline-flex w-[1098px] flex-col items-start justify-start gap-[46px]">
+              <div className="inline-flex flex-1 flex-col items-start justify-start gap-[46px]">
                 {/* Render Introduction Quote if structured content */}
                 {typeof article.content === 'object' && article.content.intro && (
-                  <div className="inline-flex w-[1017px] items-center justify-start gap-2.5 border-l-[3px] border-[#7CB342] bg-[#F7F7F7] p-5">
-                    <div className="w-[997px] text-[16px] font-medium leading-5 text-secondary/75 whitespace-pre-line">
+                  <div className="inline-flex w-full items-center justify-start gap-2.5 border-l-[3px] border-[#7CB342] bg-[#F7F7F7] p-5">
+                    <div className="flex-1 text-[14px] lg:text-[16px] font-medium leading-5 text-secondary/75 whitespace-pre-line">
                       {article.content.intro}
                     </div>
                   </div>
                 )}
 
                 {/* Content Sections */}
-                <div className="flex w-[1017px] flex-col items-start justify-start gap-8">
+                <div className="flex w-full flex-col items-start justify-start gap-8">
                   {typeof article.content === 'object' && article.content.sections ? (
                     <>
                       {article.content.sections.map((section, sectionIndex) => (
                         <div key={sectionIndex} className="flex flex-col items-start justify-start gap-6 self-stretch">
                           {/* Section Title */}
-                          <h2 className="text-[36px] font-medium leading-10 tracking-tight text-secondary">
+                          <h2 className="text-[28px] lg:text-[36px] font-medium leading-9 lg:leading-10 tracking-tight text-secondary">
                             {section.title}
                           </h2>
                           
@@ -228,8 +228,8 @@ export function BlogDetailPageDesktop({
 
                           {/* Subsections */}
                           {section.subsections && section.subsections.map((subsection, subIndex) => (
-                            <div key={subIndex} className="flex flex-col items-start justify-start gap-4 self-stretch pl-6">
-                              <h3 className="text-[24px] font-medium leading-7 tracking-tight text-secondary">
+                            <div key={subIndex} className="flex flex-col items-start justify-start gap-4 self-stretch pl-4 lg:pl-6">
+                              <h3 className="text-[20px] lg:text-[24px] font-medium leading-6 lg:leading-7 tracking-tight text-secondary">
                                 {subsection.title}
                               </h3>
                               <div className="self-stretch text-[14px] font-normal leading-5 text-secondary whitespace-pre-line">
@@ -252,17 +252,17 @@ export function BlogDetailPageDesktop({
                   ) : (
                     /* Fallback for simple string content */
                     <>
-                      <div className="inline-flex w-[1017px] items-center justify-start gap-2.5 border-l-[3px] border-[#7CB342] bg-[#F7F7F7] p-5">
-                        <div className="w-[997px] text-[16px] font-medium leading-5 text-secondary/75">
+                      <div className="inline-flex w-full items-center justify-start gap-2.5 border-l-[3px] border-[#7CB342] bg-[#F7F7F7] p-5">
+                        <div className="flex-1 text-[14px] lg:text-[16px] font-medium leading-5 text-secondary/75">
                           {typeof article.content === 'string' ? article.content : ''}
                         </div>
                       </div>
 
                       <div className="flex flex-col items-start justify-start gap-6 self-stretch">
-                        <h2 className="text-[36px] font-medium leading-10 tracking-tight text-secondary">
+                        <h2 className="text-[28px] lg:text-[36px] font-medium leading-9 lg:leading-10 tracking-tight text-secondary">
                           Lorem ipsum dolor sit amet
                         </h2>
-                        <div className="self-stretch text-[14px] font-normal leading-[14px] text-secondary">
+                        <div className="self-stretch text-[14px] font-normal leading-5 text-secondary">
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                           sed do eiusmod tempor incididunt ut labore et dolore magna
                           aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -273,82 +273,74 @@ export function BlogDetailPageDesktop({
                   )}
 
                   {/* Spacer */}
-                  <div className="h-[126px] self-stretch" />
+                  <div className="h-[60px] self-stretch" />
                 </div>
               </div>
+            </div>
 
-              {/* Social Share Buttons - Fixed Position */}
-              <div className="absolute left-[1150px] top-[-265px] inline-flex h-[827px] flex-col items-start justify-center gap-4">
-                {/* Facebook */}
-                <a
-                  href="https://www.facebook.com/share/191WuVH49X/?mibextid=wwXIfr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] transition-opacity hover:opacity-80"
-                  aria-label="Share on Facebook"
-                >
-                  <div className="relative h-5 w-5 overflow-hidden">
-                    <HugeiconsIcon
-                      icon={Facebook02Icon}
-                      size={20}
-                      color="white"
-                      strokeWidth={1.67}
-                    />
-                  </div>
-                </a>
+            {/* Social Share Buttons - Bottom of article (same style as mobile) */}
+            <div className="flex items-center justify-center gap-4 py-6">
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/share/191WuVH49X/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1877F2] transition-opacity hover:opacity-80"
+                aria-label="Share on Facebook"
+              >
+                <HugeiconsIcon
+                  icon={Facebook02Icon}
+                  size={20}
+                  color="white"
+                  strokeWidth={1.67}
+                />
+              </a>
 
-                {/* Twitter/Instagram */}
-                <a
-                  href="https://www.instagram.com/jancohome/#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#1DA1F2] transition-opacity hover:opacity-80"
-                  aria-label="Share on Instagram"
-                >
-                  <div className="relative h-5 w-5 overflow-hidden">
-                    <HugeiconsIcon
-                      icon={InstagramIcon}
-                      size={20}
-                      color="white"
-                      strokeWidth={1.67}
-                    />
-                  </div>
-                </a>
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/jancohome/#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1DA1F2] transition-opacity hover:opacity-80"
+                aria-label="Share on Instagram"
+              >
+                <HugeiconsIcon
+                  icon={InstagramIcon}
+                  size={20}
+                  color="white"
+                  strokeWidth={1.67}
+                />
+              </a>
 
-                {/* LinkedIn */}
-                <a
-                  href="https://www.linkedin.com/company/janco-home-and-construction"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#0A66C2] transition-opacity hover:opacity-80"
-                  aria-label="Share on LinkedIn"
-                >
-                  <div className="relative h-5 w-5 overflow-hidden">
-                    <HugeiconsIcon
-                      icon={Linkedin02Icon}
-                      size={20}
-                      color="white"
-                      strokeWidth={1.67}
-                    />
-                  </div>
-                </a>
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/company/janco-home-and-construction"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0A66C2] transition-opacity hover:opacity-80"
+                aria-label="Share on LinkedIn"
+              >
+                <HugeiconsIcon
+                  icon={Linkedin02Icon}
+                  size={20}
+                  color="white"
+                  strokeWidth={1.67}
+                />
+              </a>
 
-                {/* Email */}
-                <a
-                  href="mailto:info@janco.lk"
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#4A5565] transition-opacity hover:opacity-80"
-                  aria-label="Share via Email"
-                >
-                  <div className="relative h-5 w-5 overflow-hidden">
-                    <HugeiconsIcon
-                      icon={Mail01Icon}
-                      size={20}
-                      color="white"
-                      strokeWidth={1.67}
-                    />
-                  </div>
-                </a>
-              </div>
+              {/* Email */}
+              <a
+                href="mailto:info@janco.lk"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-[#4A5565] transition-opacity hover:opacity-80"
+                aria-label="Share via Email"
+              >
+                <HugeiconsIcon
+                  icon={Mail01Icon}
+                  size={20}
+                  color="white"
+                  strokeWidth={1.67}
+                />
+              </a>
             </div>
           </div>
         </div>

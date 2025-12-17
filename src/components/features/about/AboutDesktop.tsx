@@ -30,35 +30,35 @@ export function AboutDesktop() {
   return (
     <section className="w-full pb-5 flex flex-col items-center gap-8">
       {/* Split Background Section - Full Width Backgrounds */}
-      <div className="w-full min-h-[600px] flex">
+      <div className="w-full min-h-[500px] lg:min-h-[600px] flex">
         {/* Left Side - Images with #F7F7F7 Background - Full Width */}
-        <div className="w-1/2 min-h-[600px] bg-[#F7F7F7] flex items-center justify-end pr-5">
+        <div className="w-1/2 min-h-[500px] lg:min-h-[600px] bg-[#F7F7F7] flex items-center justify-end pr-3 2xl:pr-5 overflow-visible">
           {/* Content Container - Constrained to 1440px layout */}
-          <div className="flex items-center gap-5 pl-6 md:pl-12 lg:pl-20 xl:pl-[120px]">
+          <div className="flex items-center gap-2 2xl:gap-5 pl-6 lg:pl-8 xl:pl-12 2xl:pl-[120px]">
             <Image
               src="/about img1.png"
               alt="Janco homes and Constructions"
               width={284}
               height={496}
-              className="w-[284px] h-[496px] rounded-[22px] object-cover"
+              className="w-[140px] lg:w-[200px] xl:w-[284px] h-auto aspect-[284/496] rounded-[22px] object-cover flex-shrink-0"
             />
             <Image
               src="/about img2.png"
               alt="janco homes and Constructions"
               width={270}
               height={361}
-              className="w-[270px] h-[361px] rounded-[22px] object-cover"
+              className="w-[130px] lg:w-[190px] xl:w-[270px] h-auto aspect-[270/361] rounded-[22px] object-cover flex-shrink-0"
             />
           </div>
         </div>
 
         {/* Right Side - Content with #E8E5DC Background - Full Width */}
-        <div className="w-1/2 min-h-[600px] bg-[#E8E5DC] flex items-center justify-start pl-5">
+        <div className="w-1/2 min-h-[500px] lg:min-h-[600px] bg-[#E8E5DC] flex items-center justify-start pl-3 2xl:pl-5">
           {/* Content Container - Constrained to 1440px layout */}
-          <div className="py-8 pl-6 md:pl-12 lg:pl-16 xl:pl-[83px] pr-8 flex flex-col items-start justify-center gap-6 max-w-[605px]">
-            <div className="flex flex-col gap-6">
-              <div className="flex flex-col gap-6">
-                <div className="w-[398px] flex flex-col gap-3">
+          <div className="py-6 2xl:py-8 pl-4 lg:pl-8 xl:pl-12 2xl:pl-[83px] pr-4 2xl:pr-8 flex flex-col items-start justify-center gap-4 2xl:gap-6 max-w-[605px]">
+            <div className="flex flex-col gap-4 lg:gap-6">
+              <div className="flex flex-col gap-4 lg:gap-6">
+                <div className="w-full max-w-[398px] flex flex-col gap-3">
                   {/* Label */}
                   <div className="self-stretch flex items-center justify-start">
                     <span className="flex-1 text-[#7CB342] text-xl font-normal leading-5 tracking-[-0.05rem]">ABOUT</span>
@@ -67,10 +67,10 @@ export function AboutDesktop() {
                   {/* Heading */}
                   <div className="self-stretch flex items-center justify-start">
                     <div className="flex-1">
-                      <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+                      <span className="text-[#1A1A1A] text-[48px] 2xl:text-[72px] font-medium leading-[48px] 2xl:leading-[64px] tracking-[-0.2rem] 2xl:tracking-[-0.3rem]">
                         Why Choose<br/>
                       </span>
-                      <span className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+                      <span className="text-[#7CB342] text-[48px] 2xl:text-[72px] font-medium leading-[48px] 2xl:leading-[64px] tracking-[-0.2rem] 2xl:tracking-[-0.3rem]">
                         Janco?
                       </span>
                     </div>
@@ -79,10 +79,10 @@ export function AboutDesktop() {
 
                 {/* Description */}
                 <div className="flex items-center justify-start">
-                  <p className="w-[497px] text-[rgba(26,26,26,0.75)] text-base font-medium leading-5 tracking-[-0.04rem]">
+                  <p className="max-w-[497px] text-[rgba(26,26,26,0.75)] text-sm lg:text-base font-medium leading-5 tracking-[-0.04rem]">
                     Premier House Builders in Sri Lanka - Your Dream Home Deserves the Best
                     <br /><br />
-                    At Janco Homes & Construction, we don&apos;t just build houses—we create homes where memories are made. 
+                    At Janco Homes & Construction, we don&apos;t just build houses, we create homes where memories are made. 
                     As one of Sri Lanka&apos;s most reliable construction companies, we bring meticulous attention to detail, unwavering commitment to quality, and a client-first approach to every residential and commercial building project. 
                     From luxury villa construction in Colombo to family homes across the island, our expertise as ICTAD-registered contractors ensures your construction journey is seamless, transparent, and exceptional.
                   </p>
@@ -112,11 +112,11 @@ export function AboutDesktop() {
         </div>
       </div>
 
-      {/* Stats Cards - Centered in 1200px */}
-      <div className="w-full max-w-[1200px] px-4 flex items-center justify-between">
+      {/* Stats Cards - Flex layout on smaller screens, grid on 1440px+ */}
+      <div className="w-full max-w-[600px] 2xl:max-w-[1200px] mx-auto px-4 grid grid-cols-2 2xl:grid-cols-4 gap-4 lg:gap-5 justify-items-center">
         {/* Card 1 - 20 Years */}
         <div 
-          className="w-[270px] h-[198px] py-8 bg-white rounded-[22px] flex flex-col items-center justify-center gap-1"
+          className="w-full max-w-[270px] h-[198px] py-8 bg-white rounded-[22px] flex flex-col items-center justify-center gap-1"
           style={{ outline: '1px #C2C2C2 solid', outlineOffset: '-1px' }}
         >
           <div className="w-12 h-12 relative">
@@ -142,7 +142,7 @@ export function AboutDesktop() {
 
         {/* Card 2 - 100+ Projects */}
         <div 
-          className="w-[270px] h-[198px] py-8 bg-white rounded-[22px] flex flex-col items-center justify-center gap-1"
+          className="w-full max-w-[270px] h-[198px] py-8 bg-white rounded-[22px] flex flex-col items-center justify-center gap-1"
           style={{ outline: '1px #C2C2C2 solid', outlineOffset: '-1px' }}
         >
           <div className="w-12 h-12 relative">
@@ -168,7 +168,7 @@ export function AboutDesktop() {
 
         {/* Card 3 - Qualified Professionals */}
         <div 
-          className="w-[270px] h-[198px] py-8 bg-white rounded-[22px] flex flex-col items-center justify-center gap-1"
+          className="w-full max-w-[270px] h-[198px] py-8 bg-white rounded-[22px] flex flex-col items-center justify-center gap-1"
           style={{ outline: '1px #C2C2C2 solid', outlineOffset: '-1px' }}
         >
           <div className="w-12 h-12 relative">
@@ -194,7 +194,7 @@ export function AboutDesktop() {
 
         {/* Card 4 - Trusted Service */}
         <div 
-          className="w-[270px] h-[198px] py-8 bg-white rounded-[22px] flex flex-col items-center justify-center gap-1"
+          className="w-full max-w-[270px] h-[198px] py-8 bg-white rounded-[22px] flex flex-col items-center justify-center gap-1"
           style={{ outline: '1px #C2C2C2 solid', outlineOffset: '-1px' }}
         >
           <div className="w-12 h-12 relative">

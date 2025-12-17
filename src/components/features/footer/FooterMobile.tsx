@@ -146,7 +146,7 @@ export default function Footer() {
                     strokeWidth={2}
                   />
                 </div>
-                <a href="https://maps.app.goo.gl/X9zNe9UcxMWEhTsx9" target="_blank" rel="noopener noreferrer" className="flex h-8 w-[318px] flex-col justify-center text-[14px] font-normal leading-[14px] tracking-tight text-ash">
+                <a href="https://maps.app.goo.gl/X9zNe9UcxMWEhTsx9" target="_blank" rel="noopener noreferrer" className="flex h-8 flex-1 flex-col justify-center text-[13px] sm:text-[14px] font-normal leading-[14px] tracking-tight text-ash">
                   No: 458 1/1, High Level Rd, Pannipitiya, Sri Lanka
                 </a>
               </div>

@@ -9,8 +9,8 @@ import type { Property } from "@/components/features/PropertyCard";
  */
 export const PROPERTIES: Property[] = [
   {
-    id: "Janco Emeral Estates",
-    title: "Janco Emeral Estates",
+    id: "Janco Emerald Estates",
+    title: "Janco Emerald Estates",
     location: "Polwatta, Pannipitiya",
     description:
       "Exclusive residential land plots for sale in the sought-after Polawatta area, Pannipitiya. Fully developed with electricity, water, and wide road access. Close to town, schools, hospitals, and major transport routes—perfect for your dream home in a growing community.",

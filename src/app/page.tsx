@@ -14,12 +14,12 @@ export default function Home() {
   return (
     <>
       {/* ========== NAVIGATION ========== */}
-      {/* Mobile Navigation (< 1024px - includes tablets/iPads) */}
+      {/* Mobile/Tablet Navigation (< 1024px) */}
       <header className="fixed top-0 left-0 right-0 z-50 lg:hidden">
         <MobileNav />
       </header>
 
-      {/* Desktop Navigation (>= 1024px - laptops and larger) */}
+      {/* Desktop Navigation (>= 1024px) */}
       <header className="hidden lg:block fixed top-0 left-0 right-0 z-50">
         <DesktopNav />
       </header>

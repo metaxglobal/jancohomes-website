@@ -171,14 +171,14 @@ export function BlogsDesktop() {
 
   return (
     <section className="w-full bg-[#E8E5DC] pt-24 pb-16 flex flex-col justify-center items-center gap-6" id="blogs">
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 xl:px-[120px]">
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px]">
         {/* Header */}
-        <div className="self-stretch flex justify-between items-center mb-6">
+        <div className="self-stretch flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-6">
           <div>
-            <span className="text-[#1A1A1A] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+            <span className="text-[#1A1A1A] text-[48px] 2xl:text-[72px] font-medium leading-[48px] 2xl:leading-[64px] tracking-[-0.2rem] 2xl:tracking-[-0.3rem]">
               Latest{" "}
             </span>
-            <span className="text-[#7CB342] text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+            <span className="text-[#7CB342] text-[48px] 2xl:text-[72px] font-medium leading-[48px] 2xl:leading-[64px] tracking-[-0.2rem] 2xl:tracking-[-0.3rem]">
               Blogs
             </span>
           </div>
@@ -208,7 +208,7 @@ export function BlogsDesktop() {
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUpOrLeave}
           onMouseLeave={handleMouseUpOrLeave}
-          className="w-[1200px] h-[483px] overflow-x-auto overflow-y-hidden flex justify-start items-center gap-6 snap-x snap-mandatory scrollbar-hide"
+          className="w-full max-w-[1200px] h-[483px] overflow-x-auto overflow-y-hidden flex justify-start items-center gap-6 snap-x snap-mandatory scrollbar-hide"
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
@@ -229,7 +229,7 @@ export function BlogsDesktop() {
         </div>
 
         {/* Pagination Dots - Only 2 dots */}
-        <div className="w-[1200px] h-12 flex justify-center items-center gap-4 mt-6">
+        <div className="w-full max-w-[1200px] h-12 flex justify-center items-center gap-4 mt-6">
           <div className="w-20 h-2 flex items-start gap-2">
             {paginationDots.map((dotIndex) => (
               <button

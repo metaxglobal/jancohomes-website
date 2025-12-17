@@ -54,7 +54,7 @@ export default function FeaturedProjectCard({
   };
 
   return (
-    <div className="w-[361px] flex-col rounded-[22px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)] outline outline-1 outline-ash outline-offset-[-1px]">
+    <div className="w-full max-w-[361px] flex-col rounded-[22px] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.10)] outline outline-1 outline-ash outline-offset-[-1px]">
       {/* Image Section with Pagination */}
       <div 
         className="relative h-[250px] overflow-hidden rounded-t-[22px] touch-pan-y"
@@ -101,15 +101,15 @@ export default function FeaturedProjectCard({
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col items-center gap-[18px] rounded-b-[22px] bg-white p-5">
-        <div className="flex flex-col gap-10">
+      <div className="flex flex-col items-center gap-[18px] rounded-b-[22px] bg-white p-4 xs:p-5">
+        <div className="flex flex-col gap-10 w-full">
           <div className="flex flex-col gap-4">
             {/* Title and Meta Info */}
             <div className="flex flex-col gap-3">
-              <h3 className="text-[22px] font-medium leading-6 tracking-tight text-secondary">
+              <h3 className="text-[20px] xs:text-[22px] font-medium leading-6 tracking-tight text-secondary">
                 {title}
               </h3>
-              <div className="flex items-start gap-6">
+              <div className="flex flex-wrap items-start gap-3 xs:gap-6">
                 {/* Location */}
                 <div className="flex items-center gap-1">
                   <HugeiconsIcon
@@ -140,7 +140,7 @@ export default function FeaturedProjectCard({
 
             {/* Description */}
             <div className="flex items-center justify-center">
-              <p className="w-[319px] text-[14px] font-normal leading-[14px] text-secondary/75">
+              <p className="w-full text-[14px] font-normal leading-[14px] text-secondary/75">
                 {description}
               </p>
             </div>

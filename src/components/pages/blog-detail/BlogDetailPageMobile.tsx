@@ -129,9 +129,9 @@ export function BlogDetailPageMobile({
         </section>
 
         {/* Article Content */}
-        <section className="flex flex-col gap-8 px-4 pb-12 pt-12">
+        <section className="flex flex-col gap-8 px-4 md:px-8 lg:px-12 pb-12 pt-12">
           {/* Hero Image with Overlay */}
-          <div className="relative h-[396px] overflow-hidden rounded-[22px] outline outline-1 outline-ash outline-offset-[-1px]">
+          <div className="relative h-[396px] md:h-[450px] lg:h-[500px] overflow-hidden rounded-[22px] outline outline-1 outline-ash outline-offset-[-1px] max-w-[900px] mx-auto w-full">
             <Image
               src={article.image}
               alt={article.title}
@@ -146,7 +146,7 @@ export function BlogDetailPageMobile({
               }}
             >
               {/* Title */}
-              <h1 className="w-[321px] text-[24px] font-medium leading-7 tracking-[-1.5px] text-white">
+              <h1 className="w-full text-[22px] sm:text-[24px] font-medium leading-7 tracking-[-1.5px] text-white">
                 {article.title}
               </h1>
 
@@ -190,9 +190,9 @@ export function BlogDetailPageMobile({
           </div>
 
           {/* Article Body */}
-          <div className="flex flex-col items-start justify-center gap-14">
-            <div className="flex items-start justify-start gap-[73px]">
-              <div className="flex w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex-col gap-10">
+          <div className="flex flex-col items-center justify-center gap-14 w-full">
+            <div className="flex items-start justify-center w-full">
+              <div className="w-full max-w-[361px] sm:max-w-[600px] md:max-w-[720px] lg:max-w-[800px] flex flex-col gap-10 mx-auto">
                 {/* Render Introduction Quote if structured content */}
                 {typeof article.content === 'object' && article.content.intro && (
                   <div className="flex items-center justify-start gap-[10px] border-l-[3px] border-primary bg-[#F7F7F7] p-5">

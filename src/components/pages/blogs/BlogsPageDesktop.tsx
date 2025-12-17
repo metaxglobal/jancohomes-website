@@ -80,7 +80,7 @@ export function BlogsPageDesktop({
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start justify-start gap-12 px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="flex h-5 items-center justify-start gap-2 self-stretch">
               <Link
@@ -118,17 +118,17 @@ export function BlogsPageDesktop({
             <div className="flex flex-col items-start justify-start gap-6">
               <div className="flex items-center justify-center gap-2.5">
                 <div className="text-center">
-                  <span className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-white">
+                  <span className="text-[48px] lg:text-[72px] font-medium leading-[48px] lg:leading-[64px] tracking-[-0.2rem] lg:tracking-[-0.3rem] text-white">
                     Construction & Design{" "}
                   </span>
-                  <span className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem] text-[#7CB342]">
+                  <span className="text-[48px] lg:text-[72px] font-medium leading-[48px] lg:leading-[64px] tracking-[-0.2rem] lg:tracking-[-0.3rem] text-[#7CB342]">
                     Blog
                   </span>
                 </div>
               </div>
               <div className="flex flex-col items-start justify-start gap-[13px]">
                 <div className="flex items-center justify-center gap-2.5">
-                  <div className="w-[760px] text-[16px] font-medium leading-5 tracking-tight text-ash">
+                  <div className="max-w-[760px] text-sm lg:text-[16px] font-medium leading-5 tracking-tight text-ash">
                     Expert insights, industry trends, and practical advice from
                     20 years of building excellence in Sri Lanka.
                   </div>
@@ -140,31 +140,13 @@ export function BlogsPageDesktop({
 
         {/* Blog Articles Grid */}
         <section className="w-full flex justify-center">
-          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-20 xl:px-[120px] pt-16 pb-24 flex flex-col items-start gap-5">
-            {/* Row 1 - 3 cards */}
-            <div className="inline-flex items-center justify-start gap-5 self-stretch">
-              {articles.slice(0, 3).map((article) => (
+          <div className="max-w-[1440px] w-full px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pt-16 pb-24">
+            {/* Blog Cards Grid - CSS Grid for proper alignment */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 justify-items-center">
+              {articles.map((article) => (
                 <BlogCardDesktop key={article.id} {...article} />
               ))}
             </div>
-
-            {/* Row 2 - 3 cards */}
-            {articles.length > 3 && (
-              <div className="inline-flex items-center justify-start gap-5 self-stretch">
-                {articles.slice(3, 6).map((article) => (
-                  <BlogCardDesktop key={article.id} {...article} />
-                ))}
-              </div>
-            )}
-
-            {/* Row 3 - remaining cards */}
-            {articles.length > 6 && (
-              <div className="flex items-center justify-start gap-5">
-                {articles.slice(6).map((article) => (
-                  <BlogCardDesktop key={article.id} {...article} />
-                ))}
-              </div>
-            )}
           </div>
         </section>
 
@@ -186,7 +168,7 @@ export function BlogsPageDesktop({
             }}
           />
 
-          <div className="relative z-10 flex h-[376px] flex-col items-center justify-center gap-12 self-stretch px-6 md:px-12 lg:px-20 xl:px-[120px]">
+          <div className="relative z-10 flex h-[376px] flex-col items-center justify-center gap-12 self-stretch px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px]">
             <div className="flex flex-col items-center justify-start gap-3 self-stretch">
               <div className="self-stretch text-center">
                 <span className="text-[56px] font-medium leading-10 tracking-[-0.2rem] text-white">

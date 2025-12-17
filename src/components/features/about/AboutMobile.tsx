@@ -66,7 +66,7 @@ export function AboutMobile() {
                 Premier House Builders in Sri Lanka - Your Dream Home Deserves the Best
                 <br />
                 <br />
-                At Janco Homes, we don’t just build houses—we create homes. As a trusted ICTAD-registered contractor, we deliver quality, detail, and seamless construction across Sri Lanka.
+                At Janco Homes, we don’t just build houses, we create homes. As a trusted ICTAD-registered contractor, we deliver quality, detail, and seamless construction across Sri Lanka.
               </div>
             </div>
           </div>

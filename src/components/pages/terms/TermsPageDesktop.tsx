@@ -37,7 +37,7 @@ export default function TermsPageDesktop() {
           />
 
           {/* Hero Content */}
-          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start gap-12 px-6 md:px-12 lg:px-20 xl:px-[120px] pt-[202px]">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-start gap-12 px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] pt-[202px]">
             {/* Breadcrumb */}
             <div className="inline-flex h-5 items-center gap-2">
               <Link href="/" className="flex items-center gap-1">
@@ -50,12 +50,12 @@ export default function TermsPageDesktop() {
 
             {/* Title and Description */}
             <div className="flex flex-col gap-6">
-              <h1 className="text-[72px] font-medium leading-[64px] tracking-[-0.3rem]">
+              <h1 className="text-[48px] lg:text-[72px] font-medium leading-[48px] lg:leading-[64px] tracking-[-0.2rem] lg:tracking-[-0.3rem]">
                 <span className="text-white">Terms & </span>
                 <span className="text-primary">Conditions</span>
               </h1>
               <div className="flex flex-col gap-[13px]">
-                <p className="w-[760px] text-base font-medium leading-5 tracking-tight text-ash">
+                <p className="max-w-[760px] text-sm lg:text-base font-medium leading-5 tracking-tight text-ash">
                   Please read these terms and conditions carefully before using our website and services.
                 </p>
                 <div className="flex w-[270px] items-center gap-2">
@@ -68,7 +68,7 @@ export default function TermsPageDesktop() {
         </section>
 
         {/* Terms Content */}
-        <section className="flex justify-center px-6 md:px-12 lg:px-20 xl:px-[120px] py-24">
+        <section className="flex justify-center px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] py-24">
           <div className="flex w-full max-w-[1200px] flex-col gap-10">
             {/* Introduction */}
             <div className="flex flex-col gap-3">

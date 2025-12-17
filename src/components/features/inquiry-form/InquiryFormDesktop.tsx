@@ -112,17 +112,17 @@ export function InquiryFormDesktop() {
 
   return (
     <section className="w-full bg-[#1A1A1A] flex flex-col items-start gap-2.5 relative overflow-hidden">
-      <div className="self-stretch h-[642px] px-6 md:px-12 lg:px-20 xl:px-[120px] flex flex-col items-center justify-center gap-12 relative z-10">
+      <div className="self-stretch min-h-[642px] px-6 md:px-12 lg:px-12 xl:px-16 2xl:px-[120px] py-16 flex flex-col items-center justify-center gap-12 relative z-10">
           {/* Header */}
           <div className="flex flex-col items-center gap-3">
             <h2 className="text-center">
-              <span className="text-white text-[56px] font-medium leading-10 tracking-[-0.2rem]">
+              <span className="text-white text-[40px] 2xl:text-[56px] font-medium leading-10 tracking-[-0.15rem] 2xl:tracking-[-0.2rem]">
                 Let&apos;s Build Something{" "}
               </span>
-              <span className="text-primary text-[56px] font-medium leading-10 tracking-[-0.2rem]">
+              <span className="text-primary text-[40px] 2xl:text-[56px] font-medium leading-10 tracking-[-0.15rem] 2xl:tracking-[-0.2rem]">
                 Great
               </span>
-              <span className="text-white text-[56px] font-medium leading-10 tracking-[-0.2rem]">
+              <span className="text-white text-[40px] 2xl:text-[56px] font-medium leading-10 tracking-[-0.15rem] 2xl:tracking-[-0.2rem]">
                 {" "}Together
               </span>
             </h2>
@@ -132,11 +132,11 @@ export function InquiryFormDesktop() {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="w-[672px] flex flex-col gap-6">
+          <form onSubmit={handleSubmit} className="w-full max-w-[672px] flex flex-col gap-6">
             {/* Name & Phone Row */}
-            <div className="w-[672px] flex items-center justify-between">
+            <div className="w-full flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 lg:gap-6">
               {/* Name Field */}
-              <div className="w-[324px] flex flex-col gap-2">
+              <div className="flex-1 flex flex-col gap-2">
                 <label className="text-white text-base font-medium leading-5">
                   Name
                 </label>
@@ -154,7 +154,7 @@ export function InquiryFormDesktop() {
               </div>
 
               {/* Phone Field */}
-              <div className="w-[324px] flex flex-col gap-2">
+              <div className="flex-1 flex flex-col gap-2">
                 <label className="text-white text-base font-medium leading-5">
                   Phone
                 </label>
@@ -211,7 +211,7 @@ export function InquiryFormDesktop() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-[672px] h-12 bg-primary rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full h-12 bg-primary rounded-xl flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span className="text-white text-base font-medium leading-5">
                 {isSubmitting ? "Submitting..." : "Enquire Now"}
@@ -228,14 +228,14 @@ export function InquiryFormDesktop() {
 
             {/* Status Messages */}
             {submitStatus === "success" && (
-              <div className="w-[672px] px-4 py-3 bg-primary/20 border border-primary rounded-xl">
+              <div className="w-full px-4 py-3 bg-primary/20 border border-primary rounded-xl">
                 <p className="text-white text-sm text-center">
                   ✓ Thank you! Our expert will contact you soon.
                 </p>
               </div>
             )}
             {submitStatus === "error" && (
-              <div className="w-[672px] px-4 py-3 bg-red-500/20 border border-red-500 rounded-xl">
+              <div className="w-full px-4 py-3 bg-red-500/20 border border-red-500 rounded-xl">
                 <p className="text-white text-sm text-center">
                   Something went wrong. Please try again.
                 </p>

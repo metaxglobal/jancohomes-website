@@ -115,8 +115,8 @@ export function ProjectsPageMobile({
         />
 
         {/* Projects Grid */}
-        <section className="relative z-10 flex flex-col items-center gap-5 px-4 pb-12 pt-12">
-          <div className="w-full max-w-[361px] sm:max-w-[640px] md:max-w-[720px] flex flex-col items-center gap-5">
+        <section className="relative z-10 flex flex-col items-center gap-5 px-4 md:px-8 lg:px-12 pb-12 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 justify-items-center max-w-[1200px] mx-auto w-full">
             {projects.map((project) => (
               <FeaturedProjectCard key={project.id} {...project} />
             ))}

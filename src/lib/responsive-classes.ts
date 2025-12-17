@@ -110,6 +110,7 @@ export const gapLarge =
   "gap-6 md:gap-8 lg:gap-12";
 
 // Show/Hide Utilities
+// Note: Desktop view shows at 1024px (lg breakpoint) - industry standard
 export const showMobile = "block md:hidden";
 export const showTablet = "hidden md:block lg:hidden";
 export const showDesktop = "hidden lg:block";
