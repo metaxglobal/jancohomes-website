@@ -138,7 +138,7 @@ export function DesktopNav() {
               className="h-10 px-3 xl:px-5 py-2.5 bg-[#7CB342] rounded-xl flex items-center gap-2 hover:bg-[#7CB342]/90 transition-colors whitespace-nowrap"
             >
               <span className="text-white text-sm xl:text-base font-medium leading-5">
-                Book Consultation
+                Book Your Free Consultation
               </span>
               <div className="w-5 h-5 relative overflow-hidden">
                 <HugeiconsIcon
