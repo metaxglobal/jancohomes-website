@@ -257,27 +257,6 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-
-            {/* Design & Develop Credit */}
-            <div className="flex items-center gap-[10px]">
-              <span className="text-[12px] font-normal leading-4 text-white">
-                Design & Develop by
-              </span>
-              <a
-                href="https://www.nexgenlab.global/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-opacity hover:opacity-80"
-              >
-                <Image
-                  src="/nexgen logo.png"
-                  alt="NexGen Lab"
-                  width={86}
-                  height={12}
-                  className="h-3 w-[86px]"
-                />
-              </a>
-            </div>
           </div>
         </div>
       </div>

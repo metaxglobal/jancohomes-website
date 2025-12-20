@@ -268,27 +268,6 @@ export function FooterDesktop() {
                   Privacy Policy
                 </Link>
               </div>
-
-              {/* Design & Develop - Always visible */}
-              <div className="flex items-center gap-2.5">
-                <span className="text-white text-xs font-normal leading-4">
-                  Design & Develop by
-                </span>
-                <a
-                  href="https://www.nexgenlab.global"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block"
-                >
-                  <Image
-                    src="/nexgen logo.png"
-                    alt="nexgen labs"
-                    width={86}
-                    height={12}
-                    className="w-[86px] h-3"
-                  />
-                </a>
-              </div>
             </div>
           </div>
         </div>
