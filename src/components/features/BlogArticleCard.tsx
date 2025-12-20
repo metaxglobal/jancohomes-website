@@ -75,24 +75,13 @@ export default function BlogArticleCard({
           {/* Author and Read More */}
           <div className="flex items-end justify-between">
             {/* Author Info */}
-            <div className="flex h-10 items-center gap-2">
-              <div className="h-[34px] w-[34px] flex-shrink-0 overflow-hidden rounded-full">
-                <Image
-                  src={author.avatar}
-                  alt={author.name}
-                  width={34}
-                  height={40}
-                  className="h-10 object-cover"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-[14px] font-normal leading-[14px] text-secondary">
-                  {author.name}
-                </span>
-                <span className="text-[12px] font-normal leading-4 text-secondary/75">
-                  {author.role}
-                </span>
-              </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-[14px] font-normal leading-[14px] text-secondary">
+                {author.name}
+              </span>
+              <span className="text-[12px] font-normal leading-4 text-secondary/75">
+                {author.role}
+              </span>
             </div>
 
             {/* Read More Button */}

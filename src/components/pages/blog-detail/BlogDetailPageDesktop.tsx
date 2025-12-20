@@ -160,24 +160,13 @@ export function BlogDetailPageDesktop({
               {/* Author and Date */}
               <div className="inline-flex items-center justify-start gap-6 self-stretch">
                 {/* Author Info */}
-                <div className="flex items-center justify-start gap-2">
-                  <div className="flex-shrink-0 overflow-hidden rounded-full">
-                    <Image
-                      src={article.author.avatar}
-                      alt={article.author.name}
-                      width={34}
-                      height={40}
-                      className="relative h-10 self-stretch"
-                    />
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <span className="text-[14px] font-normal leading-[14px] text-white">
-                      {article.author.name}
-                    </span>
-                    <span className="text-[12px] font-normal leading-4 text-ash">
-                      , {article.author.role}
-                    </span>
-                  </div>
+                <div className="flex items-center gap-1">
+                  <span className="text-[14px] font-normal leading-[14px] text-white">
+                    {article.author.name}
+                  </span>
+                  <span className="text-[12px] font-normal leading-4 text-ash">
+                    , {article.author.role}
+                  </span>
                 </div>
 
                 {/* Date */}

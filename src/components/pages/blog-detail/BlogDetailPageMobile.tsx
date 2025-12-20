@@ -153,24 +153,13 @@ export function BlogDetailPageMobile({
               {/* Author and Date */}
               <div className="flex items-end justify-between self-stretch">
                 {/* Author Info */}
-                <div className="flex w-[145.90px] items-center gap-2">
-                  <div className="h-[34px] w-[34px] overflow-hidden rounded-full bg-[#E5E7EB]">
-                    <Image
-                      src={article.author.avatar}
-                      alt={article.author.name}
-                      width={34}
-                      height={40}
-                      className="h-10 object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col gap-1">
-                    <span className="text-[14px] font-normal leading-[14px] text-white">
-                      {article.author.name}
-                    </span>
-                    <span className="text-[12px] font-normal leading-4 text-ash">
-                      {article.author.role}
-                    </span>
-                  </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-[14px] font-normal leading-[14px] text-white">
+                    {article.author.name}
+                  </span>
+                  <span className="text-[12px] font-normal leading-4 text-ash">
+                    {article.author.role}
+                  </span>
                 </div>
 
                 {/* Date */}

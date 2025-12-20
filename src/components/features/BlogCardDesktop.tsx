@@ -89,24 +89,13 @@ export function BlogCardDesktop({
           {/* Author and CTA */}
           <div className="inline-flex items-center justify-between self-stretch">
             {/* Author Info */}
-            <div className="flex items-center justify-start gap-2">
-              <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full">
-                <Image
-                  src={author.avatar}
-                  alt={author.name}
-                  fill
-                  className="object-cover"
-                  sizes="40px"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-[14px] font-normal leading-[14px] text-secondary">
-                  {author.name}
-                </span>
-                <span className="text-[12px] font-normal leading-4 text-secondary/75">
-                  {author.role}
-                </span>
-              </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-[14px] font-normal leading-[14px] text-secondary">
+                {author.name}
+              </span>
+              <span className="text-[12px] font-normal leading-4 text-secondary/75">
+                {author.role}
+              </span>
             </div>
 
             {/* Read More Button */}
