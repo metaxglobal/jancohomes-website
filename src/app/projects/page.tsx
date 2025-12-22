@@ -1,8 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import type { Metadata } from "next";
 import { ProjectsPageMobile, ProjectsPageDesktop } from "@/components/pages/projects";
 import ConsultationModal from "@/components/features/ConsultationModal";
+
+// Note: Metadata must be exported from a Server Component
+// For now, this will be handled by layout.tsx template
+// TODO: Convert to Server Component for full metadata support
 
 // Projects data structure with unique IDs
 const projects = [
