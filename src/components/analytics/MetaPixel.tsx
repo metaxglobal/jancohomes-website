@@ -1,11 +1,10 @@
 'use client';
 
 import Script from 'next/script';
-import { metaPixelId } from '@/lib/seo-config';
+
+const META_PIXEL_ID = '1166358882272505';
 
 export default function MetaPixel() {
-  if (!metaPixelId) return null;
-
   return (
     <>
       <Script id="meta-pixel" strategy="afterInteractive">
@@ -18,7 +17,7 @@ export default function MetaPixel() {
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '${metaPixelId}');
+          fbq('init', '${META_PIXEL_ID}');
           fbq('track', 'PageView');
         `}
       </Script>
@@ -27,7 +26,7 @@ export default function MetaPixel() {
           height="1"
           width="1"
           style={{ display: 'none' }}
-          src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`}
+          src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
           alt=""
         />
       </noscript>

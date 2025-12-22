@@ -46,8 +46,7 @@ export const siteConfig = {
   businessHours: 'Monday - Saturday: 8:00 AM - 6:00 PM',
 };
 
-export const gtmId = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-5QRKP5FW';
-export const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1166358882272505';
+// Google Site Verification for Search Console
 export const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '';
 
 /**
